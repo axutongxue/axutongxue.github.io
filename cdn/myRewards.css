@@ -24,8 +24,8 @@
 .myRewards-list .myR-on a:hover{ background-color:#fff;}
 .myRewards-detail{ display:inline-block; *display:inline; *zoom:1; vertical-align:middle; width:150px; height:400px; font-size:12px; background-color:#fff;}
 .myRewards-ubox{ padding:14px 0 0 10px;}
-.myRewards-notice{ margin:0 0 20px; padding:12px; width:106px; min-height: 106px; box-sizing: content-box; border:1px solid #ccc; border-radius: 14px; background-color: #fff;height: 250px;overflow-y:scroll;}
-.myRewards-code-tit{ margin:0 0 20px; width:132px; height:30px; line-height:30px; font-size:12px; text-align:center; background-color: #e7e7e7; border-radius: 10px;}
+.myRewards-notice{margin-top: -10px;padding: 0 4 0 4; width:120px; min-height: 106px; box-sizing: content-box; border:1px solid #ccc; border-radius: 14px; background-color: #fff;height:295px;overflow-y:scroll;}
+.myRewards-code-tit{ margin:0 0 20px; width:132px; line-height:30px; font-size:13px; text-align:center; background-color: #e7e7e7; border-radius: 10px;}
 .myRewards-code{ margin:0 0 20px; padding:12px; width:106px; min-height: 106px; box-sizing: content-box; border:1px solid #ccc; border-radius: 14px; background-color: #fff;}
 .myRewards-code img{ width:106px; height:106px;}
 .i-myRewards{ position:absolute; right:6px; top:16px; width:23px; height:23px; line-height:23px; font-size:14px; color:#44b973; text-align:center; background:url(../img/tab_shang.png) no-repeat;}
