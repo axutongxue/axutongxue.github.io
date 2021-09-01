@@ -52,12 +52,12 @@ if(document.getElementById("clickCanvas")) {
         if (particles.length >= MAX_PARTICLES)
             pool.push(particles.shift());
         particle = pool.length ? pool.pop() : new Particle();
-        particle.init(x, y, random(1, 6));//圆点大小范围
+        particle.init(x, y, random(2, 4));//圆点大小范围
         particle.wander = random(0.5, 2.0);
         particle.color = random(COLOURS);
         particle.drag = random(0.9, 0.99);
         theta = random(TWO_PI);
-        force = random(1, 5);
+        force = random(2, 3);
         particle.vx = sin(theta) * force;
         particle.vy = cos(theta) * force;
         particles.push(particle);
