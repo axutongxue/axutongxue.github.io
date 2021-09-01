@@ -31,6 +31,7 @@ li {
     list-style-type: none;
     padding-left: 3px;
     line-height: 150%;
+    cursor:pointer;
 }
 
 li ul {
