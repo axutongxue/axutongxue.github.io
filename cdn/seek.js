@@ -1,24 +1,8 @@
-// $(document).ready(function (e) {
-//     $("ul li").click(function (e) {
-//         $(this).children("ul").toggle();
-//         e.stopPropagation(); //阻止冒泡事件
-//     });
-// });
-
-// $(document).ready(function (e) {
-//     $("a").click(function (e) {
-//         $(this).next(".menu").toggle();
-//         e.stopPropagation(); //阻止冒泡事件
-//     });
-// });
-
 $(document).ready(function () {
  $("a").click(function () {
         $(this).next(".menu").toggle();
     });
 });
-
-
 
 var oldKey = "";
 var index = -1;
