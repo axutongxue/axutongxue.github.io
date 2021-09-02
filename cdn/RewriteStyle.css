@@ -13,9 +13,9 @@ a {
 
 a:hover {
     COLOR: cornflowerblue;
-    TEXT-DECORATION: none
+    TEXT-DECORATION: none;
+    cursor:pointer;
 }
-
 
 .menu {
     border-left: 1px solid black;
@@ -26,12 +26,10 @@ a:hover {
     margin-left: 13px;
 }
 
-
 li {
     list-style-type: none;
     padding-left: 3px;
     line-height: 150%;
-    cursor:pointer;
 }
 
 li ul {
@@ -47,6 +45,14 @@ li ul {
 }
 .fa-cog{
    margin-top:2px;
+}
+
+#footer{
+text-align:center;
+margin-top:-30px;
+color:#5C5C5C;
+font-size:9px;
+-webkit-text-size-adjust: 100%;
 }
 
 .res {
