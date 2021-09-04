@@ -67,6 +67,9 @@ li ul {
 .fa-moon-o {
 	opacity:0;
 }
+.fa-sun-o {
+	color: orangered;
+}
 .res {
     border-style: solid;
     border-width: 1;
