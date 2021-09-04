@@ -44,6 +44,16 @@ li ul {
     border-radius: 4px;
 }
 
+#bottomSerach{
+    position: fixed;
+    right: 0;
+    text-align: center;
+    bottom: 20;
+    left: 0;
+    background-color: whitesmoke;
+    opacity: 0.8;
+}
+
 .fa-internet-explorer {
     color: cornflowerblue;
 }
@@ -64,7 +74,7 @@ li ul {
     margin-top: -30px;
     color: #5C5C5C;
     font-size: 9px;
-    -webkit-text-size-adjust: 100%;
+    /* -webkit-text-size-adjust: 100%; */
     -webkit-transform: scale(0.80);
 }
 
