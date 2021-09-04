@@ -20,6 +20,11 @@ a{
 color: #000;
 background: WHITESMOKE;
 }
+
+.result{
+	background: dodgerblue !important;
+}
+
 .darkmode-toggle--white {
 	border:none;
 	background: none;
