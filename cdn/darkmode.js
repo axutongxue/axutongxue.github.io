@@ -17,12 +17,12 @@
     }
 	function adddarkcss(){
 		var creatHead = $('head');
-		creatHead.append('<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/axutongxue/axutongxue.github.io@main/cdn/dark.css">');
+		creatHead.append('<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/axutongxue/axutongxue.github.io/cdn/dark.css">');
 		}
 	function removedarkcss(){
 		var allsuspects=document.getElementsByTagName('link');
 		for (var i=allsuspects.length; i>=0;i--){
-		if (allsuspects[i] &&allsuspects[i].getAttribute('href')!=null && allsuspects[i].getAttribute('href').indexOf('https://cdn.jsdelivr.net/gh/axutongxue/axutongxue.github.io@main/cdn/dark.css')!=-1)
+		if (allsuspects[i] &&allsuspects[i].getAttribute('href')!=null && allsuspects[i].getAttribute('href').indexOf('https://cdn.jsdelivr.net/gh/axutongxue/axutongxue.github.io/cdn/dark.css')!=-1)
 		  allsuspects[i].parentNode.removeChild(allsuspects[i]);
 		}
 	}
