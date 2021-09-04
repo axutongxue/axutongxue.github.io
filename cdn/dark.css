@@ -25,10 +25,12 @@ background: WHITESMOKE;
 	background: none;
 }
 
-.fa-internet-explorer{
-	color: aqua !important;
+.fa-bullhorn{
+	color: chartreuse !important;
 }
-
+.fa-internet-explorer{
+	color:deepskyblue !important;
+}
 .fa-weixin {
     color: #FFF;
 }
