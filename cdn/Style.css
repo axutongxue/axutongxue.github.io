@@ -74,8 +74,7 @@ li ul {
     margin-top: -30px;
     color: #5C5C5C;
     font-size: 9px;
-    /* -webkit-text-size-adjust: 100%; */
-    -webkit-transform: scale(0.80);
+    -webkit-text-size-adjust: 100%;
 }
 
 .fa-moon-o {
