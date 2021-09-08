@@ -16,6 +16,11 @@ a{
 	background-color: unset !important;
     opacity: 1  !important;
 }
+
+#split{
+	color: #fff !important;
+}
+
 .forkit .tag {
 color: #000;
 background: WHITESMOKE;
