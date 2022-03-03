@@ -45,12 +45,11 @@ background: WHITESMOKE;
     color: #FFF;
 }
 
-.fa-moon-o {
-	opacity:1;
-	color: yellow;
-	left: 2px;
+.fa-toggle-off {
+	opacity:0.9;
+	color: white;
 }
-.fa-sun-o {
+.fa-toggle-on {
 	opacity:0;
 }
 

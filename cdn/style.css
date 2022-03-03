@@ -64,11 +64,13 @@ li ul {
     font-size: 9px;
     -webkit-text-size-adjust: 100%;
 }
-.fa-moon-o {
+.fa-toggle-off {
 	opacity:0;
 }
-.fa-sun-o {
-	color: orangered;
+
+.fa-toggle-on {
+	opacity:1;
+    color:darkslategrey;
 }
 .res {
     border-style: solid;
