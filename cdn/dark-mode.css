@@ -45,11 +45,10 @@ background: WHITESMOKE;
     color: #FFF;
 }
 
-.fa-toggle-off {
-	opacity:0.9;
-	color: white;
+.dark {
+	opacity:1;
 }
-.fa-toggle-on {
+.light {
 	opacity:0;
 }
 
