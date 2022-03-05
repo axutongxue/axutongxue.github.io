@@ -6,7 +6,37 @@ on:
       - main    # master 分支 push 的时候触发
       
 jobs:
-    
+  deploy: #执行部署Hugo生成静态代码，默认放在gh-pages分支
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.81.0'
+          extended: true #不需要extended版本就可以注释
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploypage
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.ACCESS_TOKEN }}
+          external_repository: axutongxue/axutongxue.github.io
+          publish_branch: main  # default: gh-pages
+          publish_dir: ./public
+          
+      - name: Deploygitee
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.ACCESS_TOKEN }}
+          publish_dir: ./public            
+  
   sync: #同步到gitee仓库
     needs: deploy
     runs-on: ubuntu-latest
