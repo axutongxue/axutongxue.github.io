@@ -12,8 +12,8 @@ jobs:
     - name: Sync Github Repos To Gitee  # 名字随便起
       uses: Yikun/hub-mirror-action@mappings  # 使用Yikun/hub-mirror-action
       with:
-        src: gitee/axutongxue  # 源端账户名(github)
-        dst: github/axutongxue  # 目的端账户名(gitee)
+        src: github/axutongxue  # 源端账户名(github)
+        dst: gitee/axutongxue  # 目的端账户名(gitee)
         dst_key: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}  # SSH密钥对中的私钥
         dst_token:  ${{ secrets.GITEE_TOKEN }}  # Gitee账户的私人令牌
         mappings: "axutongxue.github.io=>axutongxue"
