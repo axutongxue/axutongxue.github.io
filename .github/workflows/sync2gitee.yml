@@ -9,15 +9,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: mirror with mappings
-        uses: Yikun/hub-mirror-action@mappings
-        with:
-          src: axutongxue/axutongxue.github.io
-          dst: axutongxue/axutongxue
-          dst_key: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
-          dst_token: ${{ secrets.GITEE_TOKEN }}
-          mappings: "axutongxue.github.io=>axutongxue"
-          static_list: "axutongxue.github.io"    
+    - name: Sync Github Repos To Gitee  # 名字随便起
+      uses: Yikun/hub-mirror-action@mappings  # 使用Yikun/hub-mirror-action
+      with:
+        src: gitee/axutongxue  # 源端账户名(github)
+        dst: github/axutongxue  # 目的端账户名(gitee)
+        dst_key: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}  # SSH密钥对中的私钥
+        dst_token:  ${{ secrets.GITEE_TOKEN }}  # Gitee账户的私人令牌
+        mappings: "axutongxue.github.io=>axutongxue"
+        static_list: "axutongxue.github.io"  # 静态同步列表，在此填写需要同步的仓库名称，可填写多个
+        account_type: user  # 账户类型
+        clone_style: "https"  # 使用https方式进行clone，也可以使用ssh
+        force_update: true  # 启用后，强制同步，即强制覆盖目的端仓库
+        timeout: '600s'  # git超时设置，超时后会自动重试git操作 
 
       - name: Build Gitee Pages
         uses: yanglbme/gitee-pages-action@main
