@@ -6,152 +6,163 @@
 <title>阿虚同学的储物间</title>
 <body> <button onclick="changemode();" class="darkmode-toggle--white darkmode-toggle"><div class="light">☀️</div><div class="dark">🌙</div></button><div id="clickCanvas" style="position:fixed;left:0;top:0;z-index:99;pointer-events:none;"></div><a href="reply.html" style="transform: translate(60px,-10px);" class="forkit"><span class="tag" style="transform: rotate(45deg) scale(0.7);">获取公众号设置的自动回复</span></a><div id="top"><a class="topSerach" href="https://data.newrank.cn/m/s.html?s=NykqOiw2LjJJPw" target="_blank">搜索公众号文章 <i class="fa fa-weixin"></i></a><a class="topSerach" href="https://axutongxue.cn/" target="_blank">搜索历史回复<i class="fa fa-commenting-o"></i></a></div><div id="bottomSearch" style="position:fixed;right:0;text-align:center;bottom:20;left:0;background-color:whitesmoke;opacity:0.8;"><input id="complete" type="button" value="完成" style="font-size:16px;margin-right:4px;display:none;" onclick="complete()"><input id="key" type="text" style="font-size:14px;" placeholder="点击右方即可展开 or 搜索"><input type="button" value="<" style="font-size:14px;margin:0 2 0 6;" onclick="previous()"><input type="button" value=">" style="font-size:14px;margin-left:4px;" onclick="next()"></div>
 <ul><ul id="mainmenu">
-        <li><i class="fa fa-folder fa-lg"></i><a> 01　电影／电视剧／综艺／动漫／纪录片</a>
+        <li><i class="fa fa-folder fa-lg"></i><a style="color:#07C160 !important;"> 01　电影／电视剧／综艺／动漫／纪录片</a>
         <ul class="menu">
             <li><i class="fa fa-folder fa-lg"></i><a> 01.网页　综合（聚合搜索）🔍</a>
             <ul class="menu">
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://7080.wang/" target="_blank"> 🌕7080影视搜（聚合搜索）</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://7080.wang/" target="_blank"> 🌕7080影视搜（聚合搜索）</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://cupfox.app/" target="_blank"> 🌕茶杯狐（聚合搜索）</a><a HREF="https://cupfox.com/" target="_blank" class="bei">备</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.dianyinggou.com/" target="_blank"> 🌕电影狗（聚合搜索）</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://xsear.ch/" target="_blank"> 🌕未知搜索（聚合搜索）</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.yszy5.com/" target="_blank"> 🌕资源影视屋（聚合搜索）</a></li>
-                <li id="split">————————</li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.wuhaozhan.net/" target="_blank"> 🌗五号站（聚合搜索）－PC右下角弹窗广告／手机端半屏弹窗广告</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.wuhaozhan.net/" target="_blank"> 🌗五号站（聚合搜索）</a></li>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 02.网页　综合（在线／下载）</a>
             <ul class="menu">
+                <li><i class="fa fa-bullhorn"></i><a> 月亮符号表示：在没有进行广告拦截的情况下，网站的广告程度</a></li>
+                <li><i class="fa fa-bullhorn"></i><a> IDM：表示支持IDM直接下载／M3U8：表示需要抓包M3U8地址后用专门下载器来下载</a></li>
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/Fhr0ji-izW7VNWGh3p2-1w" target="_blank"> 针对这类网站广告的解决方案：全平台网页去广告规则+使用教程👍</a></a><i class="fa fa-windows"></i><i class="fa fa-laptop"></i><i class="fa fa-android"></i><i class="fa fa-apple"></i>
                 <li id="split">————————</li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://qianoo.cn/" target="_blank"> 🌕厂长资源－无广告－磁力－支持IDM整段下载</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://loli.magedn.com/" target="_blank"> 🌕MaGeDN－无广告－提供蓝光磁力－支持IDM整段下载</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.btsj5.com/" target="_blank"> 🌕BT世界－无广告－电驴－支持IDM整段下载</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://bdys.me/" target="_blank"> 🌖哔嘀影视地址发布页（备用：mp4er.com／bde4.icu）－PC端右下角棋牌广告／手机端无广告－磁力／ed2k</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://qianoo.cn/" target="_blank"> 🌕厂长资源－磁力（IDM）</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://loli.magedn.com/" target="_blank"> 🌕MaGeDN－蓝光磁力（IDM）</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.btsj5.com/" target="_blank"> 🌕BT世界－ed2k（IDM）</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.btbdys.com/" target="_blank"> 🌖哔嘀影视－磁力／ed2k</a><a HREF="https://txt.fyi/-/2281/f5f850d8/" target="_blank" class="bei">备</a></li>
                 <li id="split">————————</li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.feijisu8.com/" target="_blank"> 🌗飞极速在线（备用：feijisu6.com／feijisu.com）－PC无广告／手机端新窗口色情广告－百度云</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.bttwo.com/" target="_blank"> 🌗两个BT－PC端无广告／手机端新窗口色情广告－支持IDM整段下载－种子</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.idybee.com/" target="_blank"> 🌗电影蜜蜂－PC端无广告／手机端新窗口色情广告－百度云／磁力－支持IDM整段下载</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.btnull.in/" target="_blank"> 🌗片库－PC端无广告／手机端底部棋牌广告－磁力－支持IDM整段下载</a><a HREF="https://www.btnull.re/" target="_blank" class="bei">备</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.dygangs.com/" target="_blank"> 🌘电影港－大幅背景广告－支持IDM整段下载－磁力／百度云</a><a HREF="https://www.dygang.cc/" target="_blank" class="bei">备</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.feijisu8.com/" target="_blank"> 🌗飞极速在线－百度云</a><a HREF="https://txt.fyi/-/2281/6fbffc98/" target="_blank" class="bei">备</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.bttwo.com/" target="_blank"> 🌗两个BT－种子（IDM）</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.idybee.com/" target="_blank"> 🌗电影蜜蜂－百度云／磁力（IDM）</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.btnull.in/" target="_blank"> 🌗片库－磁力（IDM）</a><a HREF="https://www.btnull.re/" target="_blank" class="bei">备</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.dygangs.com/" target="_blank"> 🌘电影港－磁力／百度云（IDM）</a><a HREF="https://www.dygang.cc/" target="_blank" class="bei">备</a></li>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 03.网页　综合（仅在线）</a>
             <ul class="menu">
+                <li><i class="fa fa-bullhorn"></i><a> 月亮符号表示：在没有进行广告拦截的情况下，网站的广告程度</a></li>
+                <li><i class="fa fa-bullhorn"></i><a> IDM：表示支持IDM直接下载／M3U8：表示需要抓包M3U8地址后用专门下载器来下载</a></li>
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/Fhr0ji-izW7VNWGh3p2-1w" target="_blank"> 针对这类网站广告的解决方案：全平台网页去广告规则+使用教程👍</a></a><i class="fa fa-windows"></i><i class="fa fa-laptop"></i><i class="fa fa-android"></i><i class="fa fa-apple"></i>
                 <li id="split">————————</li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://fantuan.tv/" target="_blank"> 🌕饭团影院（TG群：t.me/fantuantv）－无广告－支持IDM整段下载－🆕</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://vip.8kvod.com:888/" target="_blank"> 🌕8K影视 -无广告－支持IDM整段下载</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://dianying.im/" target="_blank"> 🌕电影先生（备用：dianying.in／dianying.im／dianyingim.com／dyxs8.com）－无广告－支持IDM整段下载</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.dixidixi.com/" target="_blank"> 🌕嘀嘻嘀嘻－无广告－支持IDM整段下载</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://fantuan.tv/" target="_blank"> 🌕饭团影院（IDM）</a><a HREF="https://txt.fyi/-/2281/afdead97/" target="_blank" class="bei">备</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://vip.8kvod.com:888/" target="_blank"> 🌕8K影视（IDM）</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://dianying.im/" target="_blank"> 🌕电影先生（IDM）</a><a HREF="https://txt.fyi/-/2281/f72bd036/" target="_blank" class="bei">备</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.dixidixi.com/" target="_blank"> 🌕嘀嘻嘀嘻（IDM）</a></li>
                 <li id="split">————————</li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.nunuyy1.top/" target="_blank"> 🌖努努影院－手机端有悬浮窗色情广告－支持IDM整段下载</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://123456.li/" target="_blank"> 🌖核桃影院（备用：video.tf／htoo.vip）－播放页面广告－支持IDM整段下载</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://yanetflix.com/" target="_blank"> 🌖4K鸭奈飞资源站（备用：4kya.com、netflix.com、netflixya.com）－PC端无广告／手机端播放页面莆田广告－无广告－需用M3U8方式下载</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.nunuyy1.top/" target="_blank"> 🌖努努影院（IDM）</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://123456.li/" target="_blank"> 🌖核桃影院（IDM）</a><a HREF="https://txt.fyi/-/2281/e6ae3d3f/" target="_blank" class="bei">备</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://yanetflix.com/" target="_blank"> 🌖4K鸭奈飞资源站（M3U8）</a><a HREF="https://txt.fyi/-/2281/0385d589/" target="_blank" class="bei">备</a></li>
                 <li id="split">————————</li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.yatu.tv:2082/" target="_blank"> 🌖雅图在线－有游戏广告／未适配移动端－超10年以上站点</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://redianyy.cn/tv.html" target="_blank"> 🌗热点影院－PC无广告／手机底部棋牌广告－支持IDM整段下载</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://dsxys.com/" target="_blank"> 🌗大师兄影视（TG群：t.me/joinchat/R-1Nfm1p9tXrDi9C）－PC端横幅广告／手机端底部色情广告－部分线路支持IDM整段下载</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.jiujiukanpian.com/" target="_blank"> 🌗久久影视网－PC端无广告／手机端底部色情广告－支持IDM整段下载</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.naisitv.com/" target="_blank"> 🌗奈斯TV－PC端无广告／手机端底部色情广告－支持IDM整段下载</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://susudm.com/" target="_blank"> 🌗速速电影院－PC无广告／手机端底部色情广告－支持IDM整段下载</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://gimy.app/" target="_blank"> 🌗Gimy TV 剧迷－PC无广告／手机端播放页面色情广告－支持IDM整段下载</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.yatu.tv:2082/" target="_blank"> 🌖雅图在线－未适配移动端－超10年以上站点</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://redianyy.cn/tv.html" target="_blank"> 🌗热点影院（IDM）</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://dsxys.com/" target="_blank"> 🌗大师兄影视（IDM）</a><a HREF="https://txt.fyi/-/2281/23572d52/" target="_blank" class="bei">备</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.jiujiukanpian.com/" target="_blank"> 🌗久久影视网（IDM）</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.naisitv.com/" target="_blank"> 🌗奈斯TV（IDM）</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://susudm.com/" target="_blank"> 🌗速速电影院（IDM）</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://gimy.app/" target="_blank"> 🌗Gimy TV 剧迷（IDM）</a></li>
                 <li id="split">————————</li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.o8tv.com/" target="_blank"> 🌘555电影（备用：555dy.site、555movie.me／.cc／.fun）－PC端横幅广告／手机端播放页面棋牌广告／支持IDM整段下载</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.zhenbuka3.com/" target="_blank"> 🌘真不卡影院－有大面积广告－需用M3U8方式下载</a><a HREF="http://zhenbuka.fun/" target="_blank" class="bei">备</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.nfmovies.com/" target="_blank"> 🌘奈菲影视（TG群： https://t.me/joinchat/KmUaGRMWdO29JVd3wcCHCg）－大面积广告且会要求关闭屏蔽广告－支持IDM整段下载</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.dudu2020.com/" target="_blank"> 🌘嘟嘟电影网－有大面积广告－支持IDM整段下载</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.o8tv.com/" target="_blank"> 🌘555电影（IDM）</a><a HREF="https://txt.fyi/-/2281/8125b673/" target="_blank" class="bei">备</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.zhenbuka3.com/" target="_blank"> 🌘真不卡影院（M3U8）</a><a HREF="http://zhenbuka.fun/" target="_blank" class="bei">备</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.nfmovies.com/" target="_blank"> 🌘奈菲影视（IDM）</a><a HREF="https://txt.fyi/-/2281/b0889456/" target="_blank" class="bei">备</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.dudu2020.com/" target="_blank"> 🌘嘟嘟电影网（IDM）</a></li>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 04.网页　综合（仅下载）</a>
             <ul class="menu">
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.rrdynb.com/index.html" target="_blank"> 🌕人人电影（备用：rrdyw.net、rr2023.com、rr2022.com）－阿里云／百度云／迅雷云</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.yinfans.me/" target="_blank"> 🌕音范丝（蓝光））－磁力</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://ppxzy.cc/" target="_blank"> 🌖皮皮虾资源－提供百度云／阿里云盘</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.xijing.tv/movie/index" target="_blank"> 🌕戏精TV－百度云－支持RSS🐢</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.uump4.net/" target="_blank"> 🌕悠悠MP4－提供磁力／电驴／种子</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.rrdynb.com/index.html" target="_blank"> 🌕人人电影－阿里云／百度云／迅雷云</a><a HREF="https://txt.fyi/-/2281/f855a32e/" target="_blank" class="bei">备</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.yinfans.me/" target="_blank"> 🌕音范丝（蓝光）－磁力</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://ppxzy.cc/" target="_blank"> 🌖皮皮虾资源－百度云／阿里云盘</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.xijing.tv/movie/index" target="_blank"> 🌕戏精TV（支持RSS）－百度云🐢</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.uump4.net/" target="_blank"> 🌕悠悠MP4－磁力／ed2k／种子</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="http://258.tv/" target="_blank"> 🌕爱我吧（蓝光）－磁力</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://ifenpaidy.com/" target="_blank"> 🌕分派电影－提供迅雷网盘</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://ifenpaidy.com/" target="_blank"> 🌕分派电影－迅雷网盘</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.xunleicang.in/" target="_blank"> 🌗迅雷仓－磁力</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://yyds.fans/index" target="_blank"> 🌕YYDS电影－迅雷／百度／阿里云盘／115🐢</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.dlkoo.cc/" target="_blank"> 🌕大连生活网（备用dlkoo.com／dlkoo.me）－百度云</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.jsr9.com/" target="_blank"> 🌕BT天堂－提供磁力</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.dlkoo.cc/" target="_blank"> 🌕大连生活网－百度云</a><a HREF="https://txt.fyi/-/2281/ae11f46a/" target="_blank" class="bei">备</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.jsr9.com/" target="_blank"> 🌕BT天堂－磁力</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.hao4k.cn/?fromuid=515573" target="_blank"> 🌕Hao4K影音（蓝光）－磁力</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.hao6v.net/" target="_blank"> 🌖6V电影（备用：hao6v.com／6vhao.tv）－磁力</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.ck180.net/" target="_blank"> 🌖CK电影部落－提供磁力／种子</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.ck180.net/" target="_blank"> 🌖CK电影部落－磁力／种子</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="http://blu-raydisc.tv/" target="_blank"> 🌗蓝光电影（名字是这个而已，非蓝光资源）</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.youzhidy.com/" target="_blank"> 🌗优质电影网－提供下载直链</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.cilixiong.com/" target="_blank"> 🌗磁力熊－横幅色情广告－磁力</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.dygod.net/" target="_blank"> 🌗电影天堂（备用：dytt79.com／dy2018.com）－磁力</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.youzhidy.com/" target="_blank"> 🌗优质电影网－直链</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.cilixiong.com/" target="_blank"> 🌗磁力熊－磁力</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.dygod.net/" target="_blank"> 🌗电影天堂－磁力</a><a HREF="https://txt.fyi/-/2281/cabb477f/" target="_blank" class="bei">备</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="http://gaoqing.la/" target="_blank"> 🌗中国高清网（蓝光）－磁力</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.7meiju.com/" target="_blank"> 🌗七汉影视－百度云／磁力－需关注公众号</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.bd2020.com/" target="_blank"> 🌘BD影视分享－大面积广告－ed2k／迅雷云盘</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.7meiju.com/" target="_blank"> 🌗七汉影视（需关注公众号）－百度云／磁力</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.bd2020.com/" target="_blank"> 🌘BD影视分享－ed2k／迅雷云盘</a></li>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 05.网页　仅电视剧（在线／下载）</a>
             <ul class="menu">
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.hanfan.cc/" target="_blank"> 🌕韩饭网－无广告－提供百度云🐢</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://ywtrzm.com/" target="_blank"> 🌖亿万同人字幕组－提供UC／115／百度云－免费注册后可在线</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.meijutt.tv/" target="_blank"> 🌘美剧天堂－大面积广告－提供磁力／百度云</a><a HREF="http://mjtt.tv/" target="_blank" class="bei">备</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.zxzjtv.com/" target="_blank"> 🌖在线之家－美／韩／日／泰－阿里云盘／百度云（IDM）</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.hanfan.cc/" target="_blank"> 🌕韩饭网－百度云🐢</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://ywtrzm.com/" target="_blank"> 🌖亿万同人字幕组（免费注册后可在线）－UC／115／百度云</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.meijutt.tv/" target="_blank"> 🌘美剧天堂－磁力／百度云</a><a HREF="http://mjtt.tv/" target="_blank" class="bei">备</a></li>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 06.网页　仅电视剧（仅在线）</a>
             <ul class="menu">
+                <li><i class="fa fa-bullhorn"></i><a> 月亮符号表示：在没有进行广告拦截的情况下，网站的广告程度</a></li>
+                <li><i class="fa fa-bullhorn"></i><a> IDM：表示支持IDM直接下载／M3U8：表示需要抓包M3U8地址后用专门下载器来下载</a></li>
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/Fhr0ji-izW7VNWGh3p2-1w" target="_blank"> 针对这类网站广告的解决方案：全平台网页去广告规则+使用教程👍</a></a><i class="fa fa-windows"></i><i class="fa fa-laptop"></i><i class="fa fa-android"></i><i class="fa fa-apple"></i>
                 <li id="split">————————</li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.wwmulu.com/" target="_blank"> 🌕91日剧－无广告</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.novipnoad.com/" target="_blank"> 🌖NO视频（港台／日／欧美／土耳其／韩／泰剧）－无广告但很多资源目前失效了－支持IDM下载</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.jjhanju.com/frim/list1.html" target="_blank"> 🌕九九韩剧－无广告－支持IDM整段下载</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.zxzj.fun/" target="_blank"> 🌖在线之家（美／韩／日／泰）－横幅赌博广告</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://ddrk.me/" target="_blank"> 🌗低端影视（日韩／华语／欧美／其他）－横幅赌博广告</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.wwmulu.com/" target="_blank"> 🌕91日剧</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.jjhanju.com/frim/list1.html" target="_blank"> 🌕九九韩剧（IDM）</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.novipnoad.com/" target="_blank"> 🌖NO视频－港台／日／欧美／土耳其／韩／泰剧（IDM）</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://ddrk.me/" target="_blank"> 🌗低端影视－日韩／华语／欧美／其他（IDM）</a></li>
                 <li id="split">————————</li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.tvbs.cc/" target="_blank"> 🌗八零九零港剧网－PC端无广告／手机端大幅色情广告</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.yayameiju.com/" target="_blank"> 🌘爱美剧－PC端右下角弹窗广告／手机端底部色情广告</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.meijubs.com/" target="_blank"> 🌘美剧巴士－PC端右下角弹窗广告／手机端底部色情广告</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.bkmeiju.com/" target="_blank"> 🌘不卡美剧－PC端右下角弹窗广告／手机端底部色情广告</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.tvbs.cc/" target="_blank"> 🌗八零九零港剧网</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.yayameiju.com/" target="_blank"> 🌘爱美剧</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.meijubs.com/" target="_blank"> 🌘美剧巴士</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.bkmeiju.com/" target="_blank"> 🌘不卡美剧</a></li>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 07.网页　仅电视剧（仅下载）</a>
             <ul class="menu">
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.yysub.net/" target="_blank"> 人人影视</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.tnhsub.com/" target="_blank"> 东京不够热（日剧）－提供百度云／115</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.ii166.com/" target="_blank"> 港剧下载（磁力）－顶部有广告</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.ii166.com/" target="_blank"> 港剧下载（磁力）</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.nnmeiju.com/" target="_blank"> 牛牛美剧 （蓝光）</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://v.dsb.ink/#/" target="_blank"> SOZMZ－提供人人影视往日的所有影片信息及资源</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://yyets.dmesg.app/home" target="_blank"> 人人影视下载分享（人人凉凉之前有人爬了全站资源进而做的网站）👍</a></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i0tMRvy8dvc" target="_blank"> 人人影视全站17517部作品资源（内含被隐藏的磁力／ed2k／网盘链接）🔥</a></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i0tMRvy8dvc" target="_blank"> 人人影视全站17517部作品资源（磁力／ed2k／网盘链接）🔥</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.chapianyuan.com/" target="_blank"> 查片源－磁力</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://gaoqing.fm/" target="_blank"> 高清电台－磁力</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://newzmz.com/index.html" target="_blank"> NEW字幕组－磁力／阿里云盘／百度云🐢</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.icezmz.com/" target="_blank"> 冰冰字幕组（未适配移动端）－阿里云／百度云</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://subs.kamigami.org/category/drama" target="_blank"> 诸神字幕组（日剧）－种子／百度云</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.zimuxia.cn/%e6%88%91%e4%bb%ac%e7%9a%84%e4%bd%9c%e5%93%81" target="_blank"> FIX字幕侠－提供阿里云／115／百度云／磁力／ed2k</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.zimuxia.cn/%e6%88%91%e4%bb%ac%e7%9a%84%e4%bd%9c%e5%93%81" target="_blank"> FIX字幕侠－阿里云／115／百度云／磁力／ed2k</a></li>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 08.网页　动漫（在线／下载）</a>
             <ul class="menu">
+                <li><i class="fa fa-bullhorn"></i><a> 月亮符号表示：在没有进行广告拦截的情况下，网站的广告程度</a></li>
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/Fhr0ji-izW7VNWGh3p2-1w" target="_blank"> 针对这类网站广告的解决方案：全平台网页去广告规则+使用教程👍</a></a><i class="fa fa-windows"></i><i class="fa fa-laptop"></i><i class="fa fa-android"></i><i class="fa fa-apple"></i>
                 <li id="split">————————</li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://yhdm.nl/" target="_blank"> 🌕樱花动漫－无广告</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://agefans.one/" target="_blank"> 🌕AGE动漫－无广告</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://yhdm.nl/" target="_blank"> 🌕樱花动漫</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://agefans.one/" target="_blank"> 🌕AGE动漫</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.agemys.com/" target="_blank"> 🌖AGE动漫</a><a HREF="http://www.age.tv/" target="_blank" class="bei">备</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://halihali3.com/" target="_blank"> 🌕哈哩哈哩（备用域名：halihali2.com／halihali.icu）－无广告</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.silisili.in/" target="_blank"> 🌖嘶哩嘶哩（也可看电视剧）－横幅广告</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://halihali1.com/" target="_blank"> 🌕哈哩哈哩（域名中的数字可替换为1、2、3）</a><a HREF="https://halihali.icu/" target="_blank" class="bei">备</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.silisili.in/" target="_blank"> 🌖嘶哩嘶哩（也可看电视剧）</a></li>
                 <li id="split">————————</li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.nicotv.biz/" target="_blank"> 🌘妮可动漫－大幅广告</a><a HREF="http://www.nicotv.club/" target="_blank" class="bei">备</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.sbdm.net/" target="_blank"> 🌘异世界动漫（永久地址：tsdm.vip／天使动漫论坛：tsdm39.net）－大幅广告🆕</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.nicotv.biz/" target="_blank"> 🌘妮可动漫</a><a HREF="http://www.nicotv.club/" target="_blank" class="bei">备</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.sbdm.net/" target="_blank"> 🌘异世界动漫</a><a HREF="http://tsdm.vip/" target="_blank" class="bei">备</a></li>
             </ul></li>
-            <li><i class="fa fa-folder fa-lg"></i><a> 09.网页　动漫（仅在线）</a>
+            <li><i class="fa fa-folder fa-lg"></i><a style="color:#07C160 !important;"> 09.网页　动漫（仅在线）</a>
             <ul class="menu">
+                <li><i class="fa fa-bullhorn"></i><a> 月亮符号表示：在没有进行广告拦截的情况下，网站的广告程度</a></li>
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/Fhr0ji-izW7VNWGh3p2-1w" target="_blank"> 针对这类网站广告的解决方案：全平台网页去广告规则+使用教程👍</a></a><i class="fa fa-windows"></i><i class="fa fa-laptop"></i><i class="fa fa-android"></i><i class="fa fa-apple"></i>
                 <li id="split">————————</li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.12wo.com/" target="_blank"> 🌕12WO动漫－无广告</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://dilidili.online/" target="_blank"> 🌕嘀哩嘀哩－无广告</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.qimiqimi.co/" target="_blank"> 🌕奇米奇米－无广告</a><a HREF="http://qimiqimi.com/" target="_blank" class="bei">备</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://omofun.tv/" target="_blank"> 🌕🆕OmoFun动漫视频网</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.ysjdm.net/" target="_blank"> 🌕🆕異世界動漫</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.12wo.com/" target="_blank"> 🌕12WO动漫</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://dilidili.online/" target="_blank"> 🌕嘀哩嘀哩</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.qimiqimi.co/" target="_blank"> 🌕奇米奇米</a><a HREF="http://qimiqimi.com/" target="_blank" class="bei">备</a></li>
                 <li id="split">————————</li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.milimili.tv/" target="_blank"> 🌖咪哩咪哩－横幅广告🐢</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.nieta.co/" target="_blank"> 🌖捏它追剧－横幅广告</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://anime1.me/" target="_blank"> 🌖Anime1.me 動畫線上看－二次元广告</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.milimili.tv/" target="_blank"> 🌖咪哩咪哩🐢</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.nieta.co/" target="_blank"> 🌖捏它追剧</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://anime1.me/" target="_blank"> 🌖Anime1.me 動畫線上看</a></li>
                 <li id="split">————————</li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.ktkkt.top/" target="_blank"> 🌗卡通站（提供粤语版）－PC端无广告／手机端底部色情广告</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://tucao.one/" target="_blank"> 🌗吐槽弹幕网－大量横幅广告／未适配移动端</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.fengchedm.com/" target="_blank"> 🌗风车动漫－PC端右下角弹窗广告／手机端底部横幅广告</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.bimiacg4.net/" target="_blank"> 🌗哔咪动漫－大面积广告</a><a HREF="http://bimiacg.one/" target="_blank" class="bei">备</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.imomoe.live/" target="_blank"> 🌘樱花动漫（邮箱：m20208888@hotmail.com）－底部大面积广告－超10年以上站点</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.yinghuacd.com/" target="_blank"> 🌘樱花动漫（邮箱：yhdmtv@outlook.com）－大面积广告</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.995dm.com/" target="_blank"> 🌘久久动漫（永久地址：dm55.cc）－大面积广告</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.dmdm2020.com/" target="_blank"> 🌘哆咪动漫－大面积广告</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.senfun.net/" target="_blank"> 🌗🆕森之屋动漫</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://tucao.one/" target="_blank"> 🌗吐槽弹幕网－未适配移动端</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.fengchedm.com/" target="_blank"> 🌗风车动漫</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.bimiacg4.net/" target="_blank"> 🌗哔咪动漫</a><a HREF="http://bimiacg.one/" target="_blank" class="bei">备</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.ktkkt.top/" target="_blank"> 🌘卡通站（提供粤语版）</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.imomoe.live/" target="_blank"> 🌘樱花动漫－超10年以上站点</a><a HREF="https://txt.fyi/-/2281/89f2e543/" target="_blank" class="bei">备</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.yinghuacd.com/" target="_blank"> 🌘樱花动漫</a><a HREF="https://txt.fyi/-/2281/96c32e5b/" target="_blank" class="bei">备</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.995dm.com/" target="_blank"> 🌘久久动漫</a><a HREF="http://www.dm55.cc/" target="_blank" class="bei">备</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.dmdm2020.com/" target="_blank"> 🌘哆咪动漫</a></li>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 10.网页　动漫（仅下载）</a>
             <ul class="menu">
@@ -171,7 +182,7 @@
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://share.dmhy.org/" target="_blank"> 动漫花园🚫</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://nyaa.si/" target="_blank"> Nyaa🚫</a></li>
             </ul></li>
-            <li><i class="fa fa-folder fa-lg"></i><a> 11.ＴＶ　ＶIP影视／直播 📺</a>
+            <li><i class="fa fa-folder fa-lg"></i><a> 11.ＴＶ　ＶIP影视／直播 </a>
             <ul class="menu">
                 <li><i class="fa fa-folder fa-lg"></i><a> TV版浏览器</a>
                 <ul class="menu">
@@ -195,14 +206,15 @@
                 <li><i class="fa fa-link"></i><a HREF="https://www.fengcaizb.com/" target="_blank"> 高清电视（1月13日测试可用）📺</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i3Kw5w7r64b" target="_blank"> HDP直播 3.5.7 去广告版（1月13日测试可用）📺</a><i class="fa fa-android"></i>
             </ul></li>
-            <li><i class="fa fa-folder fa-lg"></i><a> 12.电脑　ＶIP影视／直播 💻</a>
+            <li><i class="fa fa-folder fa-lg"></i><a> 12.电脑　ＶIP影视／直播 </a>
             <ul class="menu">
                 <li><i class="fa fa-link"></i><a HREF="http://zyplayer.fun/" target="_blank"> ZY Player👍</a><i class="fa fa-windows"></i><i class="fa fa-laptop"></i>
-                <li><i class="fa fa-link"></i><a HREF="https://www.lanzoui.com/u/GoldRiver" target="_blank"> 海阔视界</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://blog.haikuoshijie.com/archives/fang-yuan-ying-shi-chang-jian-wen-ti" target="_blank"> 海阔视界</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://jianpian.app/" target="_blank"> 荐片播放器</a><i class="fa fa-windows"></i></li>
             </ul></li>
-            <li><i class="fa fa-folder fa-lg"></i><a> 13.安卓　ＶIP影视／直播 📱</a>
+            <li><i class="fa fa-folder fa-lg"></i><a> 13.安卓　ＶIP影视／直播 </a>
             <ul class="menu">
+                <li><i class="fa fa-link"></i><a HREF="http://blog.haikuoshijie.com/archives/fang-yuan-ying-shi-chang-jian-wen-ti" target="_blank"> 海阔视界👍</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/iPaODyqq2yh" target="_blank"> 青娃视频 1.7.8去广告纯净版（1月13日测试可用）</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/i7I3my14icj" target="_blank"> 小恋恋影视 6.2 VIP纯净版（12月27日测试可用）</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/iLHAAy158gj" target="_blank"> 酷享影视 1.1.0 去广告版（12月27日测试可用）</a><i class="fa fa-android"></i>
@@ -210,7 +222,6 @@
                 <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/i2R6Yy14h8j" target="_blank"> 麻瓜视频 8.8.8 纯净版（12月27日测试可用）</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/iqSRqy14tqj" target="_blank"> 好猫影视 1.0.5 破解版（12月27日测试可用）</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/iIrVfy159nc" target="_blank"> 百淘影视 1.1.6 纯净版（12月27日测试可用）</a><i class="fa fa-android"></i>
-                <li><i class="fa fa-link"></i><a HREF="https://txt.fyi/-/21360/1104b0a3/" target="_blank"> 海阔视界👍</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i40lUw7ujwf" target="_blank"> 点点新影视 9.3.9（12月27日测试可用）</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://www.lanzoui.com/b04s6a3re" target="_blank"> ZY Player 提取码：95px</a><i class="fa fa-android"></i>
                 <li id="split">————————</li>
@@ -219,7 +230,7 @@
                 <li id="split">————————</li>
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYXlBZGVNWkFnTXVP" target="_blank"> IPTV Pro 6.1.11（直播／可看港澳台）</a><i class="fa fa-android"></i>
             </ul></li>
-            <li><i class="fa fa-folder fa-lg"></i><a> 14.IＯS　ＶIP影视 📱</a>
+            <li><i class="fa fa-folder fa-lg"></i><a> 14.IＯS　ＶIP影视 </a>
             <ul class="menu">
                 <li><i class="fa fa-link"></i><a HREF="https://dd88.app/" target="_blank"> 迪迪影院－AppStore版／1月18日测试：目前无任何广告</a><i class="fa fa-apple"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://txt.fyi/-/21113/2f05b093/" target="_blank"> Launcher－AppStore版／11月6日测试：有启屏广告+APP内横幅广告</a><i class="fa fa-apple"></i>
@@ -234,21 +245,18 @@
                 <li><i class="fa fa-link"></i><a HREF="http://www.yunsheng.online/" target="_blank"> 美兰影视－AppStore版／11月6日测试：看1次广告免费看3个小时</a><i class="fa fa-apple"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://apps.apple.com/cn/app/id1551759655" target="_blank"> 尼克影视－AppStore版做了伪装／11月6日测试：有启屏+有时视频开头会有广告（5秒后可跳过）</a><i class="fa fa-apple"></i>
             </ul></li>
-            <li><i class="fa fa-folder fa-lg"></i><a> 15.网页　电视／体育直播⚽</a>
+            <li><i class="fa fa-folder fa-lg"></i><a> 15.通用　体育直播</a>
             <ul class="menu">
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://iptv.xiner.store/" target="_blank"> 电视直播</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.zhuafan.tech/" target="_blank"> 抓饭直播</a><i class="fa fa-windows"></i><i class="fa fa-android"></i>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.zhibo8.cc/" target="_blank"> 直播吧</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.52waha.com/" target="_blank"> 哇哈体育</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.qm5.cc/" target="_blank"> 球迷网（比赛录像下载）</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://sports.qq.com/kbsweb/" target="_blank"> 腾讯体育直播（很多体育比赛国内直播权都在腾讯这里）</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.zhuafan.tech/" target="_blank"> 抓饭直播</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.zhibo8.cc/" target="_blank"> 直播吧</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.heibaizhibo.com/" target="_blank"> 黑白直播</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.jrszb.com/" target="_blank"> JRS直播站</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.ballbar.cc/" target="_blank"> 球吧网</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.zyz98.com/" target="_blank"> 看全球</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.52waha.com/" target="_blank"> 哇哈体育</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.qw183.com/" target="_blank"> 球王直播</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://iptv.xiner.store/" target="_blank"> 电视直播</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.jrszb.com/" target="_blank"> JRS直播站</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.zyz98.com/" target="_blank"> 看全球</a></li>
             </ul></li>
-            <li><i class="fa fa-folder fa-lg"></i><a> 16.通用　只和纪录片相关</a>
+            <li><i class="fa fa-folder fa-lg"></i><a> 16.通用　纪录片</a>
             <ul class="menu">
                 <li><i class="fa fa-folder fa-lg"></i><a> 01.国内几大影视网站（在线／下载）</a>
                 <ul class="menu">
@@ -299,13 +307,13 @@
             <ul class="menu">
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://assrt.net/" target="_blank"> 射手网（伪）</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://subhd.tv/" target="_blank"> Sub HD</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://zmk.pw/" target="_blank"> 字幕库（备用：zimuku.pw／zimuku.org）</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://zmk.pw/" target="_blank"> 字幕库</a><a HREF="https://txt.fyi/-/2281/672c33d0/" target="_blank" class="bei">备</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.ddzimu.com/" target="_blank"> 点点字幕</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.r3sub.com/" target="_blank"> R3字幕網（繁体字幕）</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://bbs.acgrip.com/" target="_blank"> VCB-Studio分享论坛（ACG字幕）</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.a4k.net/" target="_blank"> A4K字幕网</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.mytvbt.net/forumdisplay.php?fid=6" target="_blank"> 日菁字幕（日剧）</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.hanmi520.com/forum.php" target="_blank"> 韩迷网字幕（韩剧）</a></li>
-                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.a4k.net/" target="_blank"> A4K字幕网</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.r3sub.com/" target="_blank"> R3字幕網（繁体字幕）</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://bbs.acgrip.com/" target="_blank"> VCB-Studio分享论坛（ACG字幕）</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.moviesubtitles.org/" target="_blank"> Moviesubtitles（国外网站，但也有中文字幕）</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://subscene.com/" target="_blank"> Subscene（国外网站，但也有中文字幕）</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.opensubtitles.org/zh" target="_blank"> Open Subtitle（国外网站，但也有中文字幕）</a></li>
@@ -837,9 +845,10 @@
                 <li><i class="fa fa-link"></i><a HREF="https://kyon.118pan.com/b1079928" target="_blank"> 微信3.6.0.6 多开／防撤回／绿色版－地址1</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://pan.bilnn.cn/s/6OQJIL" target="_blank"> 微信3.6.0.6 多开／防撤回／绿色版－地址2</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/ixYEI01dmota" target="_blank"> 腾讯QQ 9.5.8.28186 绿色版 NtrQQ 7.1.2－地址1</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://firestorage.com/download/0cbcecb7af23ca3b98c9d41fc78e02fbcb96c022" target="_blank"> 腾讯QQ 9.5.8.28186 绿色版 NtrQQ 7.1.2－地址2</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://pan.bilnn.com/s/96rPHQ" target="_blank"> 腾讯QQ 9.5.8.28186 绿色版 NtrQQ 7.1.2－地址2</a><i class="fa fa-windows"></i></li>
             </ul></li>
-            <li><i class="fa fa-folder fa-lg"></i><a style="color:#07C160 !important;"> 05.浏览器</a>
+            <li><i class="fa fa-folder fa-lg"></i><a> 05.浏览器</a>
             <ul class="menu">
                 <li><i class="fa fa-folder fa-lg"></i><a> 1.常用扩展推荐</a>
                 <ul class="menu">
@@ -867,11 +876,11 @@
                     <li><i class="fa fa-link"></i><a HREF="http://www.pullywood.com/ImageAssistant/" target="_blank"> 图片助手－图片批量下载👍</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://csser.top/" target="_blank"> Bilibili下载助手－帮你下载B站版权受限（能看不能缓存）的 番剧</a></li>
                 </ul></li>
-                <li><i class="fa fa-folder fa-lg"></i><a style="color:#07C160 !important;"> 2.常用油猴脚本推荐</a>
+                <li><i class="fa fa-folder fa-lg"></i><a> 2.常用油猴脚本推荐</a>
                 <ul class="menu">
-                    <li><i class="fa fa-link"></i><a HREF="https://greasyfork.org/zh-CN/scripts/431289" target="_blank" style="color:#07C160 !important;"> 哔哩哔哩丨B站丨Bilibili 自动宽屏</a></li>
-                    <li><i class="fa fa-link"></i><a HREF="https://greasyfork.org/zh-CN/scripts/404602" target="_blank" style="color:#07C160 !important;"> 知乎免登陆自动跳转发现页</a></li>
-                    <li><i class="fa fa-link"></i><a HREF="https://greasyfork.org/zh-CN/scripts/417216" target="_blank" style="color:#07C160 !important;"> 屏蔽HTML5播放器P2P上传（斗鱼／虎牙／B站等）</a></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://greasyfork.org/zh-CN/scripts/431289" target="_blank"> 哔哩哔哩丨B站丨Bilibili 自动宽屏</a></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://greasyfork.org/zh-CN/scripts/404602" target="_blank"> 知乎免登陆自动跳转发现页</a></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://greasyfork.org/zh-CN/scripts/417216" target="_blank"> 屏蔽HTML5播放器P2P上传（斗鱼／虎牙／B站等）</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://greasyfork.org/zh-CN/scripts/380918" target="_blank"> 隐藏常见下载站的高速下载按钮</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://greasyfork.org/zh-CN/scripts/412245" target="_blank"> Github 增强 - 高速下载</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://greasyfork.org/zh-CN/scripts/383143" target="_blank"> 哔哩哔哩丨B站丨Bilibili 收藏夹失效AV号恢复显示</a></li>
@@ -887,6 +896,7 @@
                     <li><i class="fa fa-link"></i><a HREF="https://greasyfork.org/zh-CN/scripts/394497" target="_blank"> 斗鱼直播间增强插件</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://greasyfork.org/zh-CN/scripts/14178" target="_blank"> 去百度搜狗谷歌必应广告／优化搜索结果</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://greasyfork.org/zh-CN/scripts/381682" target="_blank"> HTML5视频播放器增强脚本</a></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://greasyfork.org/zh-CN/scripts/431153" target="_blank" style="color:#07C160 !important;"> 哔哩哔哩丨B站丨Bilibili 精简＋自动宽屏</a></li>
                 </ul></li>
                 <li><i class="fa fa-folder fa-lg"></i><a> 3.免翻墙Chrome扩展下载站</a>
                 <ul class="menu">
@@ -916,7 +926,8 @@
             <ul class="menu">
                 <li><i class="fa fa-folder fa-lg"></i><a> 清理优化</a>
                 <ul class="menu">
-                    <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/hNHq8Q0yvY6z3sawkRoreQ" target="_blank"> 给电脑资源管理器增加标签页（像浏览器那样）</a></li>
+                    <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/isiJmU2vfvPRSipQ34QHkA" target="_blank"> 卸载流氓软件教程</a></li>
+                    <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/hNHq8Q0yvY6z3sawkRoreQ" target="_blank"> 给资源管理器增加标签页（像浏览器那样）</a></li>
                     <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/1aeyU73PSmrMKDq-Ptnmrg" target="_blank"> 透明任务栏／显示网速／快速清理内存（加速球）／温度监控</a></li>
                     <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/pUOXl3W5IvGrXtY_Knfzpw" target="_blank"> 垃圾清理／微信清理／系统设置优化软件推荐</a></li>
                 </ul></li>
@@ -995,7 +1006,8 @@
                     <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYVdRWHFxTEd2anFS" target="_blank"> Honeyview 5.32</a><i class="fa fa-windows"></i></li>
                     <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/b069zjfdi" target="_blank"> IrfanView 4.54中文绿色便携全功能版</a><a HREF="https://pan.bilnn.cn/s/6OYlcL" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
                     <li><i class="fa fa-link"></i><a HREF="https://kyon.118pan.com/b1079289" target="_blank"> ACDSee旗舰版2020 13.0.2.2057 汉化精简激活版</a><a HREF="https://pan.bilnn.cn/s/mB79Ux" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/iHCpn01k0ilg" target="_blank"> ACDSee Pro 11.2.0.888 精简中文汉化版</a><a HREF="https://my.syncplicity.com/share/xamo9tiiribzx1m/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/iHCpn01k0ilg" target="_blank"> ACDSee Pro 11.2.0.888 精简中文汉化版</a><a HREF="https://firestorage.com/download/966e31f2ca542c323fbf3044b07458e96afb62cc" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://my.syncplicity.com/share/xamo9tiiribzx1m/" target="_blank"> ACDSee Pro 11.2.0.888 精简中文汉化版－地址2</a><i class="fa fa-windows"></i></li>
                 </ul></li>
                 <li><i class="fa fa-folder fa-lg"></i><a> 2.截图</a>
                 <ul class="menu">
@@ -1016,9 +1028,12 @@
                 <li><i class="fa fa-folder fa-lg"></i><a> 4.HEIC格式转换</a>
                 <ul class="menu">
                     <li><i class="fa fa-internet-explorer"></i><a HREF="https://tiomg.org/heif" target="_blank"> HEIF或HEVC免费在线转JPG、PNG和GIF</a></li>
-                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iR0Oqoh4v5g" target="_blank"> HeicToJPEG</a><a HREF="https://my.syncplicity.com/share/59tx6ddka5ibk6g/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/icwYGoh4vcd" target="_blank"> 迅捷图片格式转换器 1.0.0.1（HEIC转换功能在软件顶部进行切换）</a><a HREF="https://my.syncplicity.com/share/mjdbzvvrqmoxil3/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ia1yNoh4uvg" target="_blank"> HEICFileConverter绿色版</a><a HREF="https://my.syncplicity.com/share/tgaucamaafhun2o/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iR0Oqoh4v5g" target="_blank"> HeicToJPEG</a><a HREF="https://secufiles.com/bd693b3da0cf0466" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/icwYGoh4vcd" target="_blank"> 迅捷图片格式转换器 1.0.0.1（HEIC转换功能在软件顶部进行切换）</a><a HREF="https://secufiles.com/6400ac0b8c638290" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ia1yNoh4uvg" target="_blank"> HEICFileConverter绿色版</a><a HREF="https://secufiles.com/83348cafb07b597f" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://my.syncplicity.com/share/59tx6ddka5ibk6g/" target="_blank"> HeicToJPEG－地址2</a><i class="fa fa-windows"></i></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://my.syncplicity.com/share/mjdbzvvrqmoxil3/" target="_blank"> 迅捷图片格式转换器 1.0.0.1（HEIC转换功能在软件顶部进行切换）－地址2</a><i class="fa fa-windows"></i></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://my.syncplicity.com/share/tgaucamaafhun2o/" target="_blank"> HEICFileConverter绿色版－地址2</a><i class="fa fa-windows"></i></li>
                 </ul></li>
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/-MdF3VL8qBVdWVQvVbvgig" target="_blank"> 阿虚的以图搜图心得</a></li>
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/5l0c7lhCVoj72WxVAvOJiA" target="_blank"> 图片去重软件推荐</a></a><i class="fa fa-windows"></i><i class="fa fa-android"></i><i class="fa fa-apple"></i>
@@ -1050,8 +1065,8 @@
                 <li><i class="fa fa-folder fa-lg"></i><a> 3.YouTube视频下载</a>
                 <ul class="menu">
                     <li><i class="fa fa-file-text-o"></i><a HREF="https://demo.hedgedoc.org/s/x7n_3ZqsF" target="_blank"> YouTube视频下载教程（全平台适用）👍</a></a><i class="fa fa-windows"></i><i class="fa fa-laptop"></i><i class="fa fa-android"></i><i class="fa fa-apple"></i>
-                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iESKEt0guid" target="_blank"> YouTube批量下载 4KVideoDownloader 4.16.3.4290 64位破解版</a><a HREF="https://my.syncplicity.com/share/e4vnwb8piuuhtj9/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iXWIGs0ic7a" target="_blank"> YouTube下载 Gihosoft TubeGet 6.3.4 破解版</a><a HREF="https://my.syncplicity.com/share/vcbfgefcrlnqcda/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iESKEt0guid" target="_blank"> YouTube批量下载 4KVideoDownloader 4.16.3.4290 64位破解版</a><a HREF="https://secufiles.com/ea8632c606cdf544" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iXWIGs0ic7a" target="_blank"> YouTube下载 Gihosoft TubeGet 6.3.4 破解版</a><a HREF="https://secufiles.com/b87b798719d8fb9b" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
                     <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.converto.io/" target="_blank"> Converto</a></li>
                     <li><i class="fa fa-internet-explorer"></i><a HREF="https://catchvideo.net/" target="_blank"> CatchVideo</a></li>
                     <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.clipconverter.cc/" target="_blank"> clipconverter</a></li>
@@ -1060,8 +1075,10 @@
                     <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.vidpaw.com/video-downloader-online/" target="_blank"> vidpaw</a></li>
                     <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.apowersoft.cn/online-video-downloader" target="_blank"> Apowersoft</a></li>
                     <li><i class="fa fa-internet-explorer"></i><a HREF="https://zh.savefrom.net/" target="_blank"> savefrom</a></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://my.syncplicity.com/share/e4vnwb8piuuhtj9/" target="_blank"> YouTube批量下载 4KVideoDownloader 4.16.3.4290 64位破解版－地址2</a><i class="fa fa-windows"></i></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://my.syncplicity.com/share/vcbfgefcrlnqcda/" target="_blank"> YouTube下载 Gihosoft TubeGet 6.3.4 破解版－地址2</a><i class="fa fa-windows"></i></li>
                 </ul></li>
-                <li><i class="fa fa-folder fa-lg"></i><a> 4.B站视频下载</a>
+                <li><i class="fa fa-folder fa-lg"></i><a> 4.B站下载</a>
                 <ul class="menu">
                     <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/7amYVqxLxTe7SKYcH9TLaQ" target="_blank"> B站收藏夹视频下载软件推荐</a></li>
                     <li><i class="fa fa-link"></i><a HREF="http://client.jijidown.com/" target="_blank"> BiliBili 哔哩哔哩视频下载器</a><i class="fa fa-windows"></i></li>
@@ -1071,7 +1088,7 @@
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYU9mbWt4ZXBuTmh1" target="_blank"> IDM 6.40.2 lrepacks破解版🔥</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-gift"></i><a HREF="https://store.lizhi.io/site/products/id/325?cid=ds7afku3" target="_blank"> IDM－阿虚正版特惠仅需35年／129永久！平台首单再减5元！</a></li>
                 <li><i class="fa fa-link"></i><a HREF="https://www.freedownloadmanager.org/zh/" target="_blank"> Free Download Manager（FDM）</a></a><i class="fa fa-windows"></i><i class="fa fa-laptop"></i><i class="fa fa-linux"></i><i class="fa fa-android"></i>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iwnLanau8ja" target="_blank"> 中国慕课下载器</a><a HREF="http://uppit.com/x907x67u9xy5" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iwnLanau8ja" target="_blank"> 中国慕课下载器</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYUJVdXd6ZmREeUtw" target="_blank"> MiPony P汉化便携版（国外网盘真实链接嗅探下载器）</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://github.com/PyJun/Mooc_Downloader/releases" target="_blank"> 慕课网／网易云课堂／中国大学／爱课程／学堂在线／超星／B站／爱奇艺／优酷／腾讯视频下载</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="http://www.oceancoder.cn/post/net-disk-download-helper.html" target="_blank"> 网赚网盘下载辅助工具（仅帮忙获取正确下载链接／无加速）</a><i class="fa fa-windows"></i></li>
@@ -1082,6 +1099,12 @@
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/n4TTQm1nJWy_p2gMYHISQQ" target="_blank"> 嗅探下载网页视频、音频资源教程</a><i class="fa fa-windows"></i><i class="fa fa-laptop"></i>
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/7f77caHoGw9UCkGRxdJoXQ" target="_blank"> 教你下载只能在线观看的PDF</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/lFYCbreL9A8HEIhYN9ATuw" target="_blank"> QQ空间照片原图批量下载教程</a></a><i class="fa fa-windows"></i><i class="fa fa-laptop"></i><i class="fa fa-linux"></i><i class="fa fa-android"></i><i class="fa fa-apple"></i>
+                <li><i class="fa fa-folder fa-lg"></i><a> 4.B站视频下载</a>
+                <ul class="menu">
+                    <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/7amYVqxLxTe7SKYcH9TLaQ" target="_blank"> B站收藏夹视频下载软件推荐</a></li>
+                    <li><i class="fa fa-link"></i><a HREF="http://client.jijidown.com/" target="_blank"> BiliBili 哔哩哔哩视频下载器</a><i class="fa fa-windows"></i></li>
+                </ul></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iwnLanau8ja" target="_blank"> 中国慕课下载器</a><a HREF="http://uppit.com/x907x67u9xy5" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 11.音乐</a>
             <ul class="menu">
@@ -1091,30 +1114,39 @@
                 <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/ie8MF00nohoj" target="_blank"> 酷我音乐 9.1.1.6 W4 VIP破解版</a><a HREF="http://uppit.com/hix87ww9ddyp" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ic8cnbg" target="_blank"> 酷狗音乐 8.3.73.21433 便携精简去广告纯净版</a><a HREF="http://uppit.com/nu5t1h8r6320" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://www.microsoft.com/zh-cn/p/qq%E9%9F%B3%E4%B9%90/9wzdncrfj1q1?activetab=pivot:overviewtab" target="_blank"> QQ音乐－UWP版👍</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ic8c6tc" target="_blank"> QQ音乐 16.65.0.0去广告纯净版👍</a><a HREF="https://my.syncplicity.com/share/sjmh2rshjsu3ze0/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ic8c6tc" target="_blank"> QQ音乐 16.65.0.0去广告纯净版👍</a><a HREF="https://firestorage.com/download/33a1641aae7f2cd89671bfec2cb0ffdb68e6214b" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://www.microsoft.com/zh-cn/p/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90uwp/9nblggh6g0jf?activetab=pivot:overviewtab" target="_blank"> 网易云音乐－UWP版👍</a></li>
                 <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ic8c6yh" target="_blank"> 网易云音乐 2.5.0.196623 便捷版👍</a><a HREF="https://pan.bilnn.cn/s/BDnkTN" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ic8ca4b" target="_blank"> 千千静听5.7单文件版（本地播放器）</a><a HREF="https://pan.bilnn.cn/s/NYwOsl" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://my.syncplicity.com/share/sjmh2rshjsu3ze0/" target="_blank"> QQ音乐 16.65.0.0去广告纯净版👍－地址2</a><i class="fa fa-windows"></i></li>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 12.输入法</a>
             <ul class="menu">
                 <li><i class="fa fa-folder fa-lg"></i><a> 打字练习</a>
                 <ul class="menu">
-                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/idKc2gig2if" target="_blank"> 打字高手（WIN10以下可用）</a><a HREF="https://my.syncplicity.com/share/ra3q1xeuyr6ux5r/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ivm4enbbing" target="_blank"> 金山打字通2013去广告绿色版</a><a HREF="https://my.syncplicity.com/share/0qlh7kypaeticrv/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iToUvgig11c" target="_blank"> 金山打字通2010</a><a HREF="https://my.syncplicity.com/share/nhxsod6nzm0whre/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/idKc2gig2if" target="_blank"> 打字高手（WIN10以下可用）</a><a HREF="https://secufiles.com/94cb95035353efbb" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ivm4enbbing" target="_blank"> 金山打字通2013去广告绿色版</a><a HREF="https://secufiles.com/b99d4746ad9cc399" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iToUvgig11c" target="_blank"> 金山打字通2010</a><a HREF="https://secufiles.com/3e3714b41c1f1db0" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://my.syncplicity.com/share/ra3q1xeuyr6ux5r/" target="_blank"> 打字高手（WIN10以下可用）－地址2</a><i class="fa fa-windows"></i></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://my.syncplicity.com/share/0qlh7kypaeticrv/" target="_blank"> 金山打字通2013去广告绿色版－地址2</a><i class="fa fa-windows"></i></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://my.syncplicity.com/share/nhxsod6nzm0whre/" target="_blank"> 金山打字通2010－地址2</a><i class="fa fa-windows"></i></li>
                 </ul></li>
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYWF2R2tNdHB6d21T" target="_blank"> 百度输入法去升级办法+精简去升级旧版👍</a></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ic8bzhi" target="_blank"> QQ拼音输入法 4.7经典无广告版</a><a HREF="https://my.syncplicity.com/share/ack6a0ebabbbwz1/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/d6bee1c29c9b7824" target="_blank"> QQ拼音输入法 4.7经典无广告版</a><a HREF="https://axu.lanzoui.com/ic8bzhi" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://srf.xunfei.cn/" target="_blank"> 讯飞输入法</a></a><i class="fa fa-windows"></i><i class="fa fa-android"></i><i class="fa fa-apple"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://pinyin.thunisoft.com/" target="_blank"> 华宇拼音</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="http://www.xinshuru.com/index.html?p=win" target="_blank"> 手心输入法</a></a><i class="fa fa-windows"></i><i class="fa fa-laptop"></i><i class="fa fa-android"></i><i class="fa fa-apple"></i>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ic0j6da" target="_blank"> Google拼音2.7.25</a><a HREF="https://my.syncplicity.com/share/bmasqw8ksakcapy/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i98w2ja" target="_blank"> 搜狗输入法 9.6 去广告精简优化版</a><a HREF="https://my.syncplicity.com/share/o83vflcztylmv55/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/32f838ce65055267" target="_blank"> Google拼音2.7.25</a><a HREF="https://axu.lanzoui.com/ic0j6da" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/3af55cd1b509c83e" target="_blank"> 搜狗输入法 9.6 去广告精简优化版</a><a HREF="https://axu.lanzoui.com/i98w2ja" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
                 <li id="split">————————</li>
                 <li><i class="fa fa-link"></i><a HREF="http://www.freewb.org/" target="_blank"> 极点五笔（最好用、功能最多、码表最开放的五笔输入法，也可挂接郑码、二笔的词库）</a><i class="fa fa-windows"></i><i class="fa fa-linux"></i>
                 <li><i class="fa fa-link"></i><a HREF="http://qq.pinyin.cn/wubi/" target="_blank"> QQ五笔</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://rime.im/" target="_blank"> RIME（支持多种输入方案：拼音／极点五笔／拼音五笔混合／粤拼／吴语等）</a></a><i class="fa fa-windows"></i><i class="fa fa-laptop"></i><i class="fa fa-linux"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/61113c8a3f92d4fd" target="_blank"> 小鸭五笔（极轻巧简洁的输入法，适合不爱折腾词库的五笔用户）</a><a HREF="https://axu.lanzouj.com/iNNuivslokj" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/37cf7afa2ac80286" target="_blank"> 数字五笔2013破解版</a><a HREF="https://axu.lanzouj.com/ieWeGg9u1hi" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ic8bzhi" target="_blank"> QQ拼音输入法 4.7经典无广告版</a><a HREF="https://my.syncplicity.com/share/ack6a0ebabbbwz1/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ic0j6da" target="_blank"> Google拼音2.7.25</a><a HREF="https://my.syncplicity.com/share/bmasqw8ksakcapy/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i98w2ja" target="_blank"> 搜狗输入法 9.6 去广告精简优化版</a><a HREF="https://my.syncplicity.com/share/o83vflcztylmv55/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/iNNuivslokj" target="_blank"> 小鸭五笔（极轻巧简洁／适合不爱折腾词库的人）</a><a HREF="https://my.syncplicity.com/share/kbuwvqwiib9tjpo/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/ieWeGg9u1hi" target="_blank"> 数字五笔2013破解版</a><a HREF="https://my.syncplicity.com/share/3op74mmsndwa4p3/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
             </ul></li>
@@ -1139,7 +1171,7 @@
                     <li id="split">————————</li>
                     <li><i class="fa fa-gift"></i><a HREF="https://store.lizhi.io/site/products/id/392?cid=ds7afku3" target="_blank"> 简悦 高级版 永久授权仅需18元</a></li>
                 </ul></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ic8fdle" target="_blank"> 印象笔记6.24.2.8919绿色版</a><a HREF="http://uppit.com/3tcn6u8niyq3" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ic8fdle" target="_blank"> 印象笔记6.24.2.8919绿色版</a><a HREF="https://shandianpan.com/f/3C85" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://www.microsoft.com/zh-cn/p/evernote/9wzdncrfj3mb?activetab=pivot:overviewtab" target="_blank"> Evernote－UWP版</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYURyTURBQklQVHdj" target="_blank"> 有道云笔记 去广告版</a><i class="fa fa-windows"></i></li>
                 <li id="split">————————</li>
@@ -1149,6 +1181,7 @@
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYXFoTWtBUFpVeW5U" target="_blank"> 亿图图示 Edraw Max 破解版</a><i class="fa fa-windows"></i></li>
                 <li id="split">————————</li>
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/tlh6w7pv9Sm8Aon4jG412A" target="_blank"> 流程图／甘特图软件推荐</a></a><i class="fa fa-windows"></i><i class="fa fa-laptop"></i><i class="fa fa-linux"></i>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/3tcn6u8niyq3" target="_blank"> 印象笔记6.24.2.8919绿色版－地址2</a><i class="fa fa-windows"></i></li>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 15.杀毒／安全</a>
             <ul class="menu">
@@ -1417,7 +1450,8 @@
                     <li><i class="fa fa-link"></i><a HREF="http://bbs.wuyou.net/forum.php?mod=viewthread&tid=424331" target="_blank"> 微PE工具箱增强版及网络版合盘版</a><i class="fa fa-windows"></i></li>
                     <li><i class="fa fa-link"></i><a HREF="https://firpe.cn/" target="_blank"> FirPE</a><i class="fa fa-windows"></i></li>
                     <li><i class="fa fa-link"></i><a HREF="http://www.bfgho.com/" target="_blank"> 冰封PE</a><i class="fa fa-windows"></i></li>
-                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iD8wiu9nqib" target="_blank"> UltraISO（软碟通）中文免注册便携版</a><a HREF="https://my.syncplicity.com/share/mdtwa2dx3dsl0h6/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iD8wiu9nqib" target="_blank"> UltraISO（软碟通）中文免注册便携版</a><a HREF="http://shandianpan.com/f/86X8" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://my.syncplicity.com/share/mdtwa2dx3dsl0h6/" target="_blank"> UltraISO（软碟通）中文免注册便携版－地址2</a><i class="fa fa-windows"></i></li>
                 </ul></li>
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/e2MRTnG_Tlkw1X5c8oF3bQ" target="_blank"> 使用VMware安装Windows虚拟机教程</a></li>
                 <li><i class="fa fa-youtube-play"></i><a HREF="https://www.bilibili.com/video/BV1DJ411D79y" target="_blank"> 超详细WIN10系统安装教程－ 硬件茶谈👍</a></li>
@@ -1470,7 +1504,7 @@
                 <li><i class="fa fa-internet-explorer"></i><a HREF="http://gbtgame.ysepan.com/" target="_blank"> GBT乐赏游戏空间（超全破解版游戏种子）👍</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="http://flysheep.ysepan.com/" target="_blank"> Flysheep资源避难所（资源全，但提供的是网赚网盘链接）</a></li>
                 <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iMfUwsg8ggj" target="_blank"> GBT游戏小组（2006年－2020年10月）种子合集.zip</a></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i3P3vsd7i0b" target="_blank"> 好司机游戏下载器5.2.3.0（Steam游戏须在Steam上购买了才能通过验证）</a><a HREF="http://uppit.com/bbnlir6nhq0a" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i3P3vsd7i0b" target="_blank"> 好司机游戏下载器5.2.3.0（Steam游戏须在Steam上购买了才能通过验证）</a><a HREF="http://shandianpan.com/f/7Gvv" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://pcstory.ml/" target="_blank"> 蘑菇游戏下载器5.0（Steam游戏须在Steam上购买了这款游戏才能通过Steam验证）</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.gityx.com/" target="_blank"> Git游戏（汉化游戏下载）</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://dl.3dmgame.com/" target="_blank"> 3DM游戏网（俗称三大妈，老牌破解版游戏下载站）</a></li>
@@ -1483,42 +1517,61 @@
                 <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.okemu.com/1/r_20_1.html" target="_blank"> OK模拟器网（被隐藏的网站，误点击首页，否则会退出隐藏页面）</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.oldmanemu.net/" target="_blank"> 老男人游戏网（10TB掌机＋家机游戏大全）</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="http://psp.istudy.win/psp_hack/1021803" target="_blank"> PSP吧大佬－PSP游戏最全合集</a></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/bbnlir6nhq0a" target="_blank"> 好司机游戏下载器5.2.3.0（Steam游戏须在Steam上购买了才能通过验证）－地址2</a><i class="fa fa-windows"></i></li>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 07.变声器</a>
             <ul class="menu">
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ici8jcj" target="_blank"> AU／SAM／FL Studio变声器插件 - PitchMonster32／64位注册版</a><a HREF="http://uppit.com/udlr9cld1bm9" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ici8k7a" target="_blank"> VcsCore（变声器）中文破解版 7.0.29</a><a HREF="http://uppit.com/4itwwut0ou8e" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ici7xsd" target="_blank"> 变声器MorphVOX Pro附使用教程</a><a HREF="http://uppit.com/1i3ryc3qu04b" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ici8cdi" target="_blank"> 一键变声（美硕音频）</a><a HREF="https://my.syncplicity.com/share/cfnsahcwjvsjffn/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ici8jcj" target="_blank"> AU／SAM／FL Studio变声器插件 - PitchMonster32／64位注册版</a><a HREF="https://shandianpan.com/f/3COI" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ici8k7a" target="_blank"> VcsCore（变声器）中文破解版 7.0.29</a><a HREF="https://shandianpan.com/f/3CON" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ici7xsd" target="_blank"> 变声器MorphVOX Pro附使用教程</a><a HREF="https://shandianpan.com/f/3COP" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ici8cdi" target="_blank"> 一键变声（美硕音频）</a><a HREF="https://shandianpan.com/f/3COJ" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/udlr9cld1bm9" target="_blank"> AU／SAM／FL Studio变声器插件 - PitchMonster32／64位注册版－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/4itwwut0ou8e" target="_blank"> VcsCore（变声器）中文破解版 7.0.29－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/1i3ryc3qu04b" target="_blank"> 变声器MorphVOX Pro附使用教程－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://my.syncplicity.com/share/cfnsahcwjvsjffn/" target="_blank"> 一键变声（美硕音频）－地址2</a><i class="fa fa-windows"></i></li>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 08.CAJ转换</a>
             <ul class="menu">
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ib2zenbb70h" target="_blank"> CAJ转WORD教程</a><a HREF="http://uppit.com/1s0sqxowaybw" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ib2zenbb70h" target="_blank"> CAJ转WORD教程</a><a HREF="https://shandianpan.com/f/3COU" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://github.com/ElonH/caj2pdf_gui/releases" target="_blank"> CAJ转PDF</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://www.hack520.com/255.html" target="_blank"> CAJ转PDF（虚拟打印机）</a><i class="fa fa-windows"></i><i class="fa fa-laptop"></i>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/1s0sqxowaybw" target="_blank"> CAJ转WORD教程－地址2</a><i class="fa fa-windows"></i></li>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 09.CAD相关／CASS</a>
             <ul class="menu">
                 <li><i class="fa fa-link"></i><a HREF="https://share.weiyun.com/5H1fiX8" target="_blank"> CAD版本大全－微云（阿虚搬运） ● 密码：li97fn</a></li>
                 <li><i class="fa fa-bullhorn"></i><a> CAD2018以后就自带PDF转DWG功能了</a></li>
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYXBad1F3RnVKVWxT" target="_blank"> CASS 7.0／9.1／9.2</a></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iZKYzndcqhg" target="_blank"> 广联达CAD快速看图5.6破解版+禁止广联达联网程序</a><a HREF="http://uppit.com/9gf33snes5nj" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ieqK1nbbd1e" target="_blank"> PDF转CAD 12.2020.12</a><a HREF="http://uppit.com/td4u9v49oirx" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ixZ1tnbbczc" target="_blank"> PDF FLY单文件版（PDF转CAD）</a><a HREF="https://my.syncplicity.com/share/ix0mbirfmzcbr7o/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i1rSVnbbd4h" target="_blank"> PDF转CAD 9.0 破解单文件版</a><a HREF="https://my.syncplicity.com/share/qtde3bmlmz5mlxv/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iZKYzndcqhg" target="_blank"> 广联达CAD快速看图5.6破解版+禁止广联达联网程序</a><a HREF="https://shandianpan.com/f/3GoC" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ieqK1nbbd1e" target="_blank"> PDF转CAD 12.2020.12</a><a HREF="https://shandianpan.com/f/3COl" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ixZ1tnbbczc" target="_blank"> PDF FLY单文件版（PDF转CAD）</a><a HREF="https://shandianpan.com/f/3COi" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i1rSVnbbd4h" target="_blank"> PDF转CAD 9.0 破解单文件版</a><a HREF="https://shandianpan.com/f/3COf" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://txt.fyi/-/21353/1d669923/" target="_blank"> 浩辰CAD GstarCAD Pro 2020／2021 x64</a></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ip9N5nbbcuh" target="_blank"> CAD最强插件之贱人工具箱5.9免注册</a><a HREF="http://uppit.com/739s43pesm75" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iERaJnbbcpc" target="_blank"> CAD依云批量打印（只能打一种图纸）</a><a HREF="http://uppit.com/lxotiss73l9j" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iwyFxnbbc6d" target="_blank"> BatchPlot 3.6.1AutoCAD批量打印工具（支持至CAD2019）</a><a HREF="http://uppit.com/7xek7eleiknk" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ihEnYnbbd7a" target="_blank"> 广联达CAD快速看图 5.9.4.60破解版</a><a HREF="http://uppit.com/zlcw2evmmhqm" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iIJ8Tnbbche" target="_blank"> CAD迷你看图</a><a HREF="http://uppit.com/xznc679vgj06" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iIQirnbbcif" target="_blank"> CAD批量打印大师</a><a HREF="http://uppit.com/z828662l4qkh" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i2JNonbbcbi" target="_blank"> CADSeePlus（看图纸）7.2.0.1企业版</a><a HREF="http://uppit.com/bvxd4d1qsl9p" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ip9N5nbbcuh" target="_blank"> CAD最强插件之贱人工具箱5.9免注册</a><a HREF="https://shandianpan.com/f/3COm" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iERaJnbbcpc" target="_blank"> CAD依云批量打印（只能打一种图纸）</a><a HREF="https://shandianpan.com/f/3COo" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iwyFxnbbc6d" target="_blank"> BatchPlot 3.6.1AutoCAD批量打印工具（支持至CAD2019）</a><a HREF="https://shandianpan.com/f/3COj" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ihEnYnbbd7a" target="_blank"> 广联达CAD快速看图 5.9.4.60破解版</a><a HREF="https://shandianpan.com/f/3COp" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iIJ8Tnbbche" target="_blank"> CAD迷你看图</a><a HREF="https://shandianpan.com/f/3COq" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iIQirnbbcif" target="_blank"> CAD批量打印大师</a><a HREF="https://shandianpan.com/f/3COk" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i2JNonbbcbi" target="_blank"> CADSeePlus（看图纸）7.2.0.1企业版</a><a HREF="https://shandianpan.com/f/3COn" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://share.weiyun.com/5W9ZHdB" target="_blank"> CASS教程汇总 ● 密码：e74gjn</a></li>
                 <li><i class="fa fa-link"></i><a HREF="https://share.weiyun.com/5gmr6Sa" target="_blank"> 测量教程／测绘书籍等 ● 密码：ggcimr</a></li>
                 <li><i class="fa fa-link"></i><a HREF="https://share.weiyun.com/572TsCq" target="_blank"> CAD插件合集大全 ● 密码：53u6yf</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="http://www.summercad.com/chn/smplot.asp" target="_blank"> CAD批量打印大师－SmartPlot</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ivp8Jnbbcjg" target="_blank"> CAD图片转换器</a><a HREF="http://uppit.com/ou41rk2updwl" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ivp8Jnbbcjg" target="_blank"> CAD图片转换器</a><a HREF="https://shandianpan.com/f/3COe" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://www.123pan.com/s/bjcA-otzw" target="_blank"> CAD高效绘图辅助工具 TSSD（探索者）2016完美破解版 </a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/9gf33snes5nj" target="_blank"> 广联达CAD快速看图5.6破解版+禁止广联达联网程序－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/td4u9v49oirx" target="_blank"> PDF转CAD 12.2020.12－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://my.syncplicity.com/share/ix0mbirfmzcbr7o/" target="_blank"> PDF FLY单文件版（PDF转CAD）－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://my.syncplicity.com/share/qtde3bmlmz5mlxv/" target="_blank"> PDF转CAD 9.0 破解单文件版－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/739s43pesm75" target="_blank"> CAD最强插件之贱人工具箱5.9免注册－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/lxotiss73l9j" target="_blank"> CAD依云批量打印（只能打一种图纸）－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/7xek7eleiknk" target="_blank"> BatchPlot 3.6.1AutoCAD批量打印工具（支持至CAD2019）－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/zlcw2evmmhqm" target="_blank"> 广联达CAD快速看图 5.9.4.60破解版－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/xznc679vgj06" target="_blank"> CAD迷你看图－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/z828662l4qkh" target="_blank"> CAD批量打印大师－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/bvxd4d1qsl9p" target="_blank"> CADSeePlus（看图纸）7.2.0.1企业版－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/ou41rk2updwl" target="_blank"> CAD图片转换器－地址2</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://www.123pan.com/s/bjcA-otzw" target="_blank"> CAD高效绘图辅助工具 TSSD（探索者）2016完美破解版 </a><a HREF="http://uppit.com/lpmk87sh6rwa" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a style="color:#07C160 !important;"> 10.论文查重／降重</a>
@@ -1535,66 +1588,92 @@
             <li><i class="fa fa-folder fa-lg"></i><a> 11.文献管理</a>
             <ul class="menu">
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYVpadE9VRmx3aG93" target="_blank"> Endnote X9.2 科研文献管理 学校批量授权版</a><i class="fa fa-windows"></i><i class="fa fa-laptop"></i>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i9Gwioh11cf" target="_blank"> EndNote 20 中科大批量授权版</a><a HREF="http://uppit.com/e8ajlmrc0e7m" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iGXFcoh0z1c" target="_blank"> NoteExpress 3.2.0.7409 批量授权版</a><a HREF="https://my.syncplicity.com/share/shosbjjfexxbjns/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i9Gwioh11cf" target="_blank"> EndNote 20 中科大批量授权版</a><a HREF="http://shandianpan.com/f/4MeF" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iGXFcoh0z1c" target="_blank"> NoteExpress 3.2.0.7409 批量授权版</a><a HREF="http://shandianpan.com/f/4MeE" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/e8ajlmrc0e7m" target="_blank"> EndNote 20 中科大批量授权版－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://my.syncplicity.com/share/shosbjjfexxbjns/" target="_blank"> NoteExpress 3.2.0.7409 批量授权版－地址2</a><i class="fa fa-windows"></i></li>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 12.排课系统</a>
             <ul class="menu">
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iteSJnra0za" target="_blank"> 尧佥排课系统</a><a HREF="http://uppit.com/gmnlp5n383ey" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iPZPBnr9omf" target="_blank"> 书生排课系统</a><a HREF="http://uppit.com/0ybt49wkxgti" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ikWUZnr9oeh" target="_blank"> 水晶排课11.31</a><a HREF="http://uppit.com/438sj3yk6sfo" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iEkQHnr9myf" target="_blank"> 洪仔排课分班</a><a HREF="http://uppit.com/6464blkmgtj3" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iteSJnra0za" target="_blank"> 尧佥排课系统</a><a HREF="https://shandianpan.com/f/3eyo" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iPZPBnr9omf" target="_blank"> 书生排课系统</a><a HREF="https://shandianpan.com/f/3eyn" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ikWUZnr9oeh" target="_blank"> 水晶排课11.31</a><a HREF="https://shandianpan.com/f/3eyr" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iEkQHnr9myf" target="_blank"> 洪仔排课分班</a><a HREF="https://shandianpan.com/f/3eyj" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/gmnlp5n383ey" target="_blank"> 尧佥排课系统－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/0ybt49wkxgti" target="_blank"> 书生排课系统－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/438sj3yk6sfo" target="_blank"> 水晶排课11.31－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/6464blkmgtj3" target="_blank"> 洪仔排课分班－地址2</a><i class="fa fa-windows"></i></li>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 13.鼠标连点器</a>
             <ul class="menu">
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iODxPseu6sb" target="_blank"> 鼠大侠1.20 单文件版（勿升级）👍</a><a HREF="https://my.syncplicity.com/share/eeqqoagsrfup74w/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iuGAdsev36h" target="_blank"> Specher鼠标连点器单文件版</a><a HREF="https://my.syncplicity.com/share/widandyhfuyskt8/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iSDhRseu3oj" target="_blank"> VibraClick鼠标连点器</a><a HREF="http://uppit.com/sn9zg3mcrtys" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iMDijseup0h" target="_blank"> 小柒鼠标连点器1.7</a><a HREF="http://uppit.com/2gyuc954v8q5" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iaYMUseu3pa" target="_blank"> 楼月鼠标连点器3.0</a><a HREF="http://uppit.com/vssv2ngb8n2p" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iODxPseu6sb" target="_blank"> 鼠大侠1.20 单文件版（勿升级）👍</a><a HREF="http://shandianpan.com/f/7I5T" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iuGAdsev36h" target="_blank"> Specher鼠标连点器单文件版</a><a HREF="http://shandianpan.com/f/7I5R" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iSDhRseu3oj" target="_blank"> VibraClick鼠标连点器</a><a HREF="http://shandianpan.com/f/7I5P" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iMDijseup0h" target="_blank"> 小柒鼠标连点器1.7</a><a HREF="http://shandianpan.com/f/7I6T" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iaYMUseu3pa" target="_blank"> 楼月鼠标连点器3.0</a><a HREF="http://shandianpan.com/f/7I5Q" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://my.syncplicity.com/share/eeqqoagsrfup74w/" target="_blank"> 鼠大侠1.20 单文件版（勿升级）👍－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://my.syncplicity.com/share/widandyhfuyskt8/" target="_blank"> Specher鼠标连点器单文件版－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/sn9zg3mcrtys" target="_blank"> VibraClick鼠标连点器－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/2gyuc954v8q5" target="_blank"> 小柒鼠标连点器1.7－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/vssv2ngb8n2p" target="_blank"> 楼月鼠标连点器3.0－地址2</a><i class="fa fa-windows"></i></li>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 14.护眼</a>
             <ul class="menu">
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/icbnbkh" target="_blank"> Iris Pro 绿色破解版 v1.2.0 电脑防蓝光软件</a><a HREF="http://uppit.com/9etdh49wlu18" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/icbnbmj" target="_blank"> 护眼小工具CareUEyes 1.1.13.0便携版（勿更新）</a><a HREF="http://uppit.com/tp9fgcgmawea" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/icbnbob" target="_blank"> 联想护眼管理 2.6.50.4081单文件版</a><a HREF="https://my.syncplicity.com/share/er1a02mvmnp0rf6/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/icbnbre" target="_blank"> 猎豹护眼大师 单文件版</a><a HREF="https://my.syncplicity.com/share/9nwo0al7dyveiw0/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i9ebjng" target="_blank"> 驱动精灵护眼大师</a><a HREF="http://uppit.com/whixf870nwch" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/icbnbkh" target="_blank"> Iris Pro 绿色破解版 v1.2.0 电脑防蓝光软件</a><a HREF="https://shandianpan.com/f/3CMr" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/icbnbmj" target="_blank"> 护眼小工具CareUEyes 1.1.13.0便携版（勿更新）</a><a HREF="https://shandianpan.com/f/3CMn" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/icbnbob" target="_blank"> 联想护眼管理 2.6.50.4081单文件版</a><a HREF="https://shandianpan.com/f/3CMp" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/icbnbre" target="_blank"> 猎豹护眼大师 单文件版</a><a HREF="https://shandianpan.com/f/3CMo" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i9ebjng" target="_blank"> 驱动精灵护眼大师</a><a HREF="https://shandianpan.com/f/3CMq" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/9etdh49wlu18" target="_blank"> Iris Pro 绿色破解版 v1.2.0 电脑防蓝光软件－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/tp9fgcgmawea" target="_blank"> 护眼小工具CareUEyes 1.1.13.0便携版（勿更新）－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://my.syncplicity.com/share/er1a02mvmnp0rf6/" target="_blank"> 联想护眼管理 2.6.50.4081单文件版－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://my.syncplicity.com/share/9nwo0al7dyveiw0/" target="_blank"> 猎豹护眼大师 单文件版－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/whixf870nwch" target="_blank"> 驱动精灵护眼大师－地址2</a><i class="fa fa-windows"></i></li>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 15.桌面整理</a>
             <ul class="menu">
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iYm8lnbad0h" target="_blank"> Fences 3.0.9.11（需要断网安装激活）</a><a HREF="http://uppit.com/08ae9n57top3" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iYm8lnbad0h" target="_blank"> Fences 3.0.9.11（需要断网安装激活）</a><a HREF="https://shandianpan.com/f/3CNG" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-gift"></i><a HREF="https://store.lizhi.io/site/products/id/39?cid=ds7afku3" target="_blank"> Fences－阿虚特惠正版仅需49元永久授权！</a></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/ihziuz8rjkj" target="_blank"> DropIt 8.5.1绿色版</a><a HREF="http://uppit.com/cb78b380a49v" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/ihziuz8rjkj" target="_blank"> DropIt 8.5.1绿色版</a><a HREF="http://shandianpan.com/f/AeeG" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="http://www.360.cn/desktop" target="_blank"> 360桌面助手</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="http://xzdesktop.cqttech.com/" target="_blank"> 小智桌面（支持云备份桌面）</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://guanjia.qq.com/product/zmzl/" target="_blank"> 腾讯电脑管家桌面整理－独立版</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://sspai.com/post/43187" target="_blank"> 桌面窗口排列布局／分屏工具合辑</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://www.coodesker.com/" target="_blank"> 酷呆桌面</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/08ae9n57top3" target="_blank"> Fences 3.0.9.11（需要断网安装激活）－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/cb78b380a49v" target="_blank"> DropIt 8.5.1绿色版－地址2</a><i class="fa fa-windows"></i></li>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 16.进销存管理</a>
             <ul class="menu">
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYXVldmFpaklyc1Nm" target="_blank"> YC_ERP3企业管理系统单机版 2020.2.0.1</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYUNjUVJ3dml5dmxs" target="_blank"> 华讯库存管理免费版 3.7.7.3</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iGUg1ol7ich" target="_blank"> 开博送货单进销存 标准版 3.62</a><a HREF="http://uppit.com/gellg1fwtw5x" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iGUg1ol7ich" target="_blank"> 开博送货单进销存 标准版 3.62</a><a HREF="http://shandianpan.com/f/4UKB" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://kyon.118pan.com/b1079215" target="_blank"> 赛丽麦进销存软件 0.99</a><a HREF="https://pan.bilnn.cn/s/Q3pnux" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/if8FDoiy1cj" target="_blank"> 百货通进销存7.0（小商超、夫妻店推荐）</a><a HREF="http://shandianpan.com/f/4UK9" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i3NQTol7hti" target="_blank"> 通用进销存（金诚软件）</a><a HREF="http://shandianpan.com/f/4UKA" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/gellg1fwtw5x" target="_blank"> 开博送货单进销存 标准版 3.62－地址2</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://pan.bilnn.cn/s/Q3pnux" target="_blank"> 赛丽麦进销存软件 0.99</a><a HREF="http://uppit.com/al5wa138e1ah" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/if8FDoiy1cj" target="_blank"> 百货通进销存7.0（小商超、夫妻店推荐）</a><a HREF="http://uppit.com/56ik9wubjegs" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i3NQTol7hti" target="_blank"> 通用进销存（金诚软件）</a><a HREF="http://uppit.com/mdga267n4izu" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/56ik9wubjegs" target="_blank"> 百货通进销存7.0（小商超、夫妻店推荐）－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/mdga267n4izu" target="_blank"> 通用进销存（金诚软件）－地址2</a><i class="fa fa-windows"></i></li>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 17.财务</a>
             <ul class="menu">
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/KC3u30KAIYAq9B82FicBog#:~:text=excel%20%E6%8F%92%E4%BB%B6%E5%AF%B9%E7%9B%B8%E5%85%B3%E4%BB%8E%E4%B8%9A%E4%BA%BA%E5%91%98%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87%E7%9A%84%E6%8F%90%E5%8D%87" target="_blank"> Excel 插件推荐</a></li>
                 <li id="split">————————</li>
-                <li><i class="fa fa-link"></i><a HREF="http://cloud.ananas.chaoxing.com/view/fileview?objectid=bf0c00566b12d19fdae6f31592563621" target="_blank"> 用友财务通v8.21+驱动+破解补丁</a><a HREF="http://uppit.com/mijvoa5yy7of" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ijtBetvjv4j" target="_blank"> 用友U8 12-13注册机（可自义群号）</a><a HREF="http://uppit.com/tqg73bo3jvc4" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://cloud.ananas.chaoxing.com/view/fileview?objectid=bf0c00566b12d19fdae6f31592563621" target="_blank"> 用友财务通v8.21+驱动+破解补丁</a><a HREF="https://firestorage.com/download/5784a2a9f7b27876c3e86ac5f243a2b2672e6c35" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ijtBetvjv4j" target="_blank"> 用友U8 12-13注册机（可自义群号）</a><a HREF="http://shandianpan.com/f/BCet" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
                 <li id="split">————————</li>
-                <li><i class="fa fa-link"></i><a HREF="http://cloud.ananas.chaoxing.com/view/fileview?objectid=54db3051dcbb67073145f07037b6a9e4" target="_blank"> 金蝶KIS专业版 14.0破解版</a><a HREF="https://my.syncplicity.com/share/tlzo02ppzissrzx/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
-                <li><i class="fa fa-link"></i><a HREF="http://cloud.ananas.chaoxing.com/view/fileview?objectid=e608fe053460c72db14af6bf2aac76dd" target="_blank"> 金蝶KIS云专业版 15.0 不限计算机／不限时间／模块／10用户</a><a HREF="https://my.syncplicity.com/share/ouikxiba1bpzwzi/" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://cloud.ananas.chaoxing.com/view/fileview?objectid=54db3051dcbb67073145f07037b6a9e4" target="_blank"> 金蝶KIS专业版 14.0破解版</a><a HREF="https://firestorage.com/download/97d9802f3ced049ce37480aeadb469204debbaa5" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://cloud.ananas.chaoxing.com/view/fileview?objectid=e608fe053460c72db14af6bf2aac76dd" target="_blank"> 金蝶KIS云专业版 15.0 不限计算机／不限时间／模块／10用户</a><a HREF="https://firestorage.com/download/d7d64d237b49147b4b433cd587b3e07194d71828" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/mijvoa5yy7of" target="_blank"> 用友财务通v8.21+驱动+破解补丁－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/tqg73bo3jvc4" target="_blank"> 用友U8 12-13注册机（可自义群号）－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://my.syncplicity.com/share/tlzo02ppzissrzx/" target="_blank"> 金蝶KIS专业版 14.0破解版－地址2</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://my.syncplicity.com/share/ouikxiba1bpzwzi/" target="_blank"> 金蝶KIS云专业版 15.0 不限计算机／不限时间／模块／10用户－地址2</a><i class="fa fa-windows"></i></li>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 18.电源和电池管理</a>
             <ul class="menu">
                 <li><i class="fa fa-bullhorn"></i><a> 以下软件并不限制电脑品牌，但能否在你电脑上正常使用，请自行测试⚠️</a></li>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouo.com/i2KODxclohc" target="_blank"> 金山笔记本电池医生PC电脑独立版 4.2.1.39</a><a HREF="http://uppit.com/uxmcsd1es854" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouo.com/i2KODxclohc" target="_blank"> 金山笔记本电池医生PC电脑独立版 4.2.1.39</a><a HREF="http://shandianpan.com/f/9efw" target="_blank" class="bei">备</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://iknow.lenovo.com.cn/detail/dc_100828.html" target="_blank"> 联想电源管理软件－Energy Management</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://think.lenovo.com.cn/support/driver/driverdetail.aspx?DEditid=87466&docTypeID=DOC_TYPE_DRIVER&driverID=undefined&treeid=undefined&args=undefined" target="_blank"> ThinkPad 电源管理软件（WIN10－11）</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://think.lenovo.com.cn/support/driver/detail.aspx?docID=DR1197862934453" target="_blank"> ThinkPad 电源管理软件（Vista－WIN7）</a><i class="fa fa-windows"></i></li>
@@ -1602,6 +1681,7 @@
                 <li><i class="fa fa-link"></i><a HREF="https://www.dell.com/support/contents/zh-cn/article/product-support/self-support-knowledgebase/software-and-downloads/dell-power-manager" target="_blank"> 戴尔电源管理－Dell Power Manager</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://www.asus.com/tw/support/FAQ/1032726/" target="_blank"> 华硕电源管理－ASUS Battery Health Charging</a><i class="fa fa-windows"></i></li>
                 <li><i class="fa fa-link"></i><a HREF="https://acer-epower-management.updatestar.com/" target="_blank"> 宏基电源管理－Acer ePower Management</a><i class="fa fa-windows"></i></li>
+                <li><i class="fa fa-link"></i><a HREF="http://uppit.com/uxmcsd1es854" target="_blank"> 金山笔记本电池医生PC电脑独立版 4.2.1.39－地址2</a><i class="fa fa-windows"></i></li>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 19.年会抽奖</a>
             <ul class="menu">
@@ -1665,6 +1745,7 @@
                 <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/c3767834ec769596/" target="_blank"> 贴吧Lite 3.8.0.5（第三方开源版）👍</a><a HREF="https://axu.lanzoui.com/i159Ynddg5a" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYUdWTk1RSnhtTXd3" target="_blank"> 贴吧内部版 1.0.5（完全无广告）</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYWlZU0ZxZElsaHJS" target="_blank"> 酷安VN版7.9.6（功能精简／广告较少）</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/id97a015sgde" target="_blank"> 李跳跳－真实好友3.0（自动化检测微信好友／清理僵尸粉）</a><a HREF="https://pan.bilnn.cn/s/41ApCp" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 02.购物／支付</a>
             <ul class="menu">
@@ -1678,7 +1759,7 @@
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/dY7Eh3W_hT6Ds_QlPPX2Pw" target="_blank"> 淘宝／京东购物省钱教程 💴🤏</a></li>
                 <li><i class="fa fa-bullhorn"></i><a> 京东购物－微信小程序（功能全／无广告）</a></li>
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYXdaZVNrTW9QalZC" target="_blank"> 京东 OnePlus9R定制版 9.1.2</a><i class="fa fa-android"></i>
-                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/39f143461402da4f/" target="_blank"> 京东 9.3.2 谷歌市场版</a><a HREF="https://axu.lanzoui.com/iymyonatsaf" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iymyonatsaf" target="_blank"> 京东 9.3.2 谷歌市场版</a><a HREF="https://shandianpan.com/f/3BvP" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                 <li id="split">————————</li>
                 <li><i class="fa fa-bullhorn"></i><a> 拼多多－微信小程序（功能全／无广告）</a></li>
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYUl2TkVIUWNHZVhr" target="_blank"> 拼多多内部版 5.84.0</a><i class="fa fa-android"></i>
@@ -1687,6 +1768,7 @@
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYUl4cmZRaVFZc2Fr" target="_blank"> 美团极简版（不能点外卖／提供的是美团优选、美团电商等功能）</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-bullhorn"></i><a> 饿了么－支付宝小程序</a></li>
                 <li><i class="fa fa-bullhorn"></i><a> 饿了么PWA版（功能全／无广告）具体见本文2.2节👍</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/39f143461402da4f/" target="_blank"> 京东 9.3.2 谷歌市场版</a><a HREF="https://axu.lanzoui.com/iymyonatsaf" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 03.影视／短视频／直播</a>
             <ul class="menu">
@@ -1717,7 +1799,7 @@
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYUpPclRuUlBPalZ1" target="_blank"> 斗鱼直播极速版（精简无广告）</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://app.zhibo.at/" target="_blank"> Ｚ直播（完全无广告／所有平台都能看）</a><i class="fa fa-android"></i>
             </ul></li>
-            <li><i class="fa fa-folder fa-lg"></i><a style="color:#07C160 !important;"> 04.效率／办公／网盘</a>
+            <li><i class="fa fa-folder fa-lg"></i><a style="color:#07C160 !important;"> 04.效率／办公／网盘／证照</a>
             <ul class="menu">
                 <li><i class="fa fa-folder fa-lg"></i><a> 1.WPS</a>
                 <ul class="menu">
@@ -1742,22 +1824,26 @@
                 <ul class="menu">
                     <li><i class="fa fa-link"></i><a HREF="https://store.gaaiho.cn/download/central.aspx" target="_blank"> Gaaiho 文电通（PDF阅读器）</a></a><i class="fa fa-windows"></i><i class="fa fa-android"></i><i class="fa fa-apple"></i>
                     <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYXJiVnZ2bHJTVkRB" target="_blank"> Xodo PDF 阅读器和编辑器 7.1.14解锁专业版👍</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i5p5Ovurslc" target="_blank"> Flexcil PDF阅读批注 1.1.0.1高级版</a><a HREF="http://shandianpan.com/f/9GHK" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iUR0twml00f" target="_blank"> PDF Extra Pro 7.4.1183直装高级版</a><a HREF="http://shandianpan.com/f/9GB1" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ie4zoqu9xjc" target="_blank"> 福昕PDF阅读器 9.2已付费企业版</a><a HREF="http://shandianpan.com/f/9GGk" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYWtzR0FtT3lESERx" target="_blank"> Adobe Acrobat Reader Pro v21.10.0.19961解锁专业版</a><i class="fa fa-android"></i>
                     <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/a66fca6ba60895a7/" target="_blank"> Flexcil PDF阅读批注 1.1.0.1高级版</a><a HREF="https://axu.lanzoui.com/i5p5Ovurslc" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                     <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/97d810a8ccce5f6b/" target="_blank"> PDF Extra Pro 7.4.1183直装高级版</a><a HREF="https://axu.lanzoui.com/iUR0twml00f" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                     <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/f12a96b8d1f71fcc/" target="_blank"> 福昕PDF阅读器 9.2已付费企业版</a><a HREF="https://axu.lanzoui.com/ie4zoqu9xjc" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
-                    <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYWtzR0FtT3lESERx" target="_blank"> Adobe Acrobat Reader Pro v21.10.0.19961解锁专业版</a><i class="fa fa-android"></i>
                 </ul></li>
                 <li><i class="fa fa-folder fa-lg"></i><a> 3.证件照</a>
                 <ul class="menu">
-                    <li><i class="fa fa-internet-explorer"></i><a HREF="https://koutu.gaoding.com/passport" target="_blank"> 稿定设计证件照换底色（一个用户免费5张）</a></li>
-                    <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.remove.bg/zh/upload" target="_blank"> Remove.bg 抠图换底色（普通像素免费下载，对于证件照完全足够了）</a></li>
+                    <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/6NibXXfZjffQ36hVWLQ9ww" target="_blank"> 11款完全免费的证件照工具推荐</a></li>
+                    <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/EXs3n0fhYo4t2b50EUsgcw" target="_blank"> 警察叔叔－杭州公安出品（需要实名注册）</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
+                    <li><i class="fa fa-gift"></i><a HREF="https://apsgo.cn/mCTgQb" target="_blank"> 白描证件照－阿虚特惠仅需5元永久（可离线使用）</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
                 </ul></li>
+                <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/wq0_ttbpxGzptflRzWtglA" target="_blank"> 离线本地身份证加水印工具</a></a><i class="fa fa-windows"></i><i class="fa fa-laptop"></i><i class="fa fa-linux"></i><i class="fa fa-android"></i><i class="fa fa-apple"></i>
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/EcgnF0GWFVAQ0HQQMKCJqg" target="_blank"> 免费扫描APP推荐（支持表格识别）</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
-                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/id97a015sgde" target="_blank"> 李跳跳－真实好友3.0（自动化检测微信好友／清理僵尸粉）</a><a HREF="https://pan.bilnn.cn/s/41ApCp" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYUJUWEZtU0NHckRN" target="_blank"> 百度网盘内部版 11.16.3（没有任何广告）</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/02bfda0dd5c0fe47" target="_blank" style="color:#07C160 !important;"> 番茄TODO 10.2.9.93会员版</a><a HREF="https://axu.lanzouj.com/igENw01on7ta" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
-                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/71b97d91189fddd4/" target="_blank"> SleepTown（睡眠小镇）3.2.4破解版</a><a HREF="https://axu.lanzoui.com/icb837g" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
-                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/a77172cefa5256bd/" target="_blank"> Forest（保持专注） 4.9.6 破解版</a><a HREF="https://axu.lanzoui.com/icfocud" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/icb837g" target="_blank"> SleepTown（睡眠小镇）3.2.4破解版</a><a HREF="https://shandianpan.com/f/3ClM" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/icfocud" target="_blank"> Forest（保持专注） 4.9.6 破解版</a><a HREF="https://shandianpan.com/f/3ClP" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/rIs5e9msYO9fwiLBGi3T-g" target="_blank"> 计算器APP推荐（下载页面较文章内容有更新）</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/splPPKWJoBzAvo9qm4EUyA" target="_blank"> 投屏APP推荐</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/or0BnIAwota4twuaIIgJUw" target="_blank"> 录屏APP推荐</a><i class="fa fa-android"></i>
@@ -1765,6 +1851,8 @@
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/7TURBbxn9aSG7LqJRiFoDQ" target="_blank"> 手机电脑无缝同步剪贴板</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/rgxnX5UJcZUKHOCBtGwwjw" target="_blank"> 手机远程协助／手机远程控制手机APP推荐（免ROOT）</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/nX9oY6abpKLVk1IA_r8G2g" target="_blank"> 安卓手机自动化APP推荐（自动签到／自动打卡等）</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/71b97d91189fddd4/" target="_blank"> SleepTown（睡眠小镇）3.2.4破解版</a><a HREF="https://axu.lanzoui.com/icb837g" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/a77172cefa5256bd/" target="_blank"> Forest（保持专注） 4.9.6 破解版</a><a HREF="https://axu.lanzoui.com/icfocud" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a style="color:#07C160 !important;"> 05.学习／考试／健身</a>
             <ul class="menu">
@@ -1776,10 +1864,11 @@
                 </ul></li>
                 <li><i class="fa fa-folder fa-lg"></i><a> 2.笔记</a>
                 <ul class="menu">
-                    <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/a39e5cd11c4e2d4e/" target="_blank"> 印象笔记 10.7.38破解版</a><a HREF="https://pan.bilnn.cn/s/bDJ9SO" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
-                    <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/e5087a86052a6976/" target="_blank"> 有道云笔记 7.1.4 本地会员／去更新版</a><a HREF="https://axu.lanzoui.com/itclBtgznra" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://kyon.118pan.com/b1076794" target="_blank"> 印象笔记 10.7.38破解版</a><a HREF="https://pan.bilnn.cn/s/bDJ9SO" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/itclBtgznra" target="_blank"> 有道云笔记 7.1.4 本地会员／去更新版</a><a HREF="http://shandianpan.com/f/7jtJ" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                     <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYUxYRHB6ZGVDaE1O" target="_blank"> 为知笔记 8.1.4直装破解版</a><i class="fa fa-android"></i>
                     <li><i class="fa fa-gift"></i><a HREF="https://store.lizhi.io/site/products/id/399?cid=ds7afku3" target="_blank"> 为知笔记－阿虚正版特惠仅需59年／119两年／179三年</a></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/a39e5cd11c4e2d4e/" target="_blank"> 印象笔记 10.7.38破解版</a><a HREF="https://secufiles.com/e5087a86052a6976/" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                 </ul></li>
                 <li><i class="fa fa-folder fa-lg"></i><a style="color:#07C160 !important;"> 3.英语</a>
                 <ul class="menu">
@@ -1793,23 +1882,27 @@
                     <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYVNwaXFRamtYWWJK" target="_blank"> 韦氏词典 Merriam-Webster Dictionary（复杂单词必查的英英词典）</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
                     <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYUd0aEZRYVV3dmdw" target="_blank"> VDO  English（练习听力／口语阿虚用过最棒的英语视频类APP）👍</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
                     <li id="split">————————</li>
-                    <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/4b095a7e98907a9a" target="_blank" style="color:#07C160 !important;"> 墨墨背单词 3.8.40 破解版（阿虚粉丝提供／据悉已稳定一年多／遇到闪退属于你系统问题，无解）</a><a HREF="https://pan.bilnn.cn/s/wb49FG" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/1bbe27becc39eee2/" target="_blank" style="color:#07C160 !important;"> 可可英语 4.6.2 破解版</a><a HREF="https://axu.lanzouj.com/icmfE01wg4gf" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/4b095a7e98907a9a" target="_blank" style="color:#07C160 !important;"> 墨墨背单词 3.8.40 破解版（阿虚粉丝提供／据悉已稳定一年多／旧版系统可用／Android12会闪退）</a><a HREF="https://pan.bilnn.cn/s/wb49FG" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                     <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/4eb55044d2e12204" target="_blank"> Quizlet 6.2.3 高级版</a><a HREF="https://axu.lanzoui.com/idLW8v1j5wd" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
-                    <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/e189294d83f3e3b9" target="_blank"> 可可英语 4.5.4 会员版</a><a HREF="https://axu.lanzoui.com/i0l59v1immj" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                     <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/732220891682a7cf" target="_blank"> 知米背单词 4.8.11高级版</a><a HREF="https://axu.lanzoui.com/ib6pcze" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                     <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/492283285b531805" target="_blank"> 不背单词 4.4.3 仅去广告版</a><a HREF="https://axu.lanzoui.com/iuN9zv1i67i" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                     <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/e707b89fb29c559e" target="_blank"> U-Dictionary 有道词典国际版 5.0.5纯净版</a><a HREF="https://axu.lanzoui.com/ineeEv1jr9c" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                 </ul></li>
                 <li><i class="fa fa-folder fa-lg"></i><a> 4.驾照</a>
                 <ul class="menu">
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iWL4Tqakh1e" target="_blank"> 驾考宝典 7.6.9 直装去广告解锁会员版</a><a HREF="http://shandianpan.com/f/BEKV" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://kyon.118pan.com/b1079600" target="_blank"> 车轮驾考通 8.3.4 会员版</a><a HREF="https://pan.bilnn.cn/s/b4KDIO" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/ib7pY01ansoh" target="_blank"> 驾校一点通极速版 1.5.0 会员版</a><a HREF="http://shandianpan.com/f/BELD" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                     <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/a109760e67fe0215/" target="_blank"> 驾考宝典 7.6.9 直装去广告解锁会员版</a><a HREF="https://axu.lanzoui.com/iWL4Tqakh1e" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
-                    <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/6cc278d47ba75214/" target="_blank"> 车轮驾考通 8.3.4 会员版</a><a HREF="https://pan.bilnn.cn/s/b4KDIO" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
-                    <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/2615173048e9311f/" target="_blank"> 驾校一点通极速版 1.5.0 会员版</a><a HREF="https://axu.lanzouj.com/ib7pY01ansoh" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/6cc278d47ba75214/" target="_blank"> 车轮驾考通 8.3.4 会员版</a><a HREF="https://secufiles.com/2615173048e9311f/" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                 </ul></li>
                 <li><i class="fa fa-folder fa-lg"></i><a> 5.健身</a>
                 <ul class="menu">
                     <li><i class="fa fa-link"></i><a HREF="https://txt.fyi/-/2269/21ff7f58/" target="_blank"> 7分钟运动（完全免费）</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
                     <li><i class="fa fa-link"></i><a HREF="https://txt.fyi/-/2269/e8064dcb/" target="_blank"> 好轻（完全免费）</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/iBxFK01allva" target="_blank"> Leap 1.0.31（完全免费）</a><a HREF="http://shandianpan.com/f/BEFL" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/iMH8eyhiqqb" target="_blank"> 健身Keep 3.1.0 解锁全部课程</a><a HREF="http://shandianpan.com/f/BEFd" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                     <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/bbf183573ed80082/" target="_blank"> Leap 1.0.31（完全免费）</a><a HREF="https://axu.lanzouj.com/iBxFK01allva" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                     <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/a01d379e3ebf09ae/" target="_blank"> 健身Keep 3.1.0 解锁全部课程</a><a HREF="https://axu.lanzouj.com/iMH8eyhiqqb" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                 </ul></li>
@@ -1860,18 +1953,23 @@
                     <li><i class="fa fa-link"></i><a HREF="https://apps.apple.com/cn/app/id1455355839" target="_blank"> Reposter for Instagram</a><i class="fa fa-apple"></i>
                     <li id="split">————————</li>
                     <li><i class="fa fa-bullhorn"></i><a> 复制ins图片链接，然后在夸克／百度／QQ浏览器打开，长按图片即可保存</a><i class="fa fa-android"></i>
-                    <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/632cdc0d43dd5f1d/" target="_blank"> Regram 2.2.1破解版</a><a HREF="https://axu.lanzouo.com/iFnxox4s5je" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
-                    <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/03f20bb634b61286/" target="_blank"> FastSave 60.0 破解付费版</a><a HREF="https://axu.lanzouo.com/iExbMx4s2tg" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
-                    <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/320b4a2529e937f3/" target="_blank"> Downloader for Instagram Video1.88 破解版</a><a HREF="https://axu.lanzouo.com/iua4Bx4s54j" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouo.com/iFnxox4s5je" target="_blank"> Regram 2.2.1破解版</a><a HREF="http://shandianpan.com/f/9XNM" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouo.com/iExbMx4s2tg" target="_blank"> FastSave 60.0 破解付费版</a><a HREF="http://shandianpan.com/f/9XNK" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouo.com/iua4Bx4s54j" target="_blank"> Downloader for Instagram Video1.88 破解版</a><a HREF="http://shandianpan.com/f/9XNL" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                     <li id="split">————————</li>
                     <li><i class="fa fa-internet-explorer"></i><a HREF="https://instagram.iiilab.com/" target="_blank"> Instagram图片视频解析下载 </a></li>
                     <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.instaloadgram.com/zh/" target="_blank"> InstaLoadGram （支持照片和视频）</a></li>
                     <li><i class="fa fa-internet-explorer"></i><a HREF="https://inflact.com/downloader/" target="_blank"> Infalct（Instagram／Facebook,／Twitter／Twitch）</a></li>
                     <li><i class="fa fa-internet-explorer"></i><a HREF="https://bigbangram.com/content/instagram-downloader/instagram-profile-downloader/" target="_blank"> Bigbangram</a></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/632cdc0d43dd5f1d/" target="_blank"> Regram 2.2.1破解版</a><a HREF="https://axu.lanzouo.com/iFnxox4s5je" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/03f20bb634b61286/" target="_blank"> FastSave 60.0 破解付费版</a><a HREF="https://axu.lanzouo.com/iExbMx4s2tg" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/320b4a2529e937f3/" target="_blank"> Downloader for Instagram Video1.88 破解版</a><a HREF="https://axu.lanzouo.com/iua4Bx4s54j" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                 </ul></li>
                 <li><i class="fa fa-folder fa-lg"></i><a> 3.YouTube下载</a>
                 <ul class="menu">
                     <li><i class="fa fa-bullhorn"></i><a> 你也可以用4－10栏的在线解析网站来下载 🈯</a></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/iIsZv01cwumd" target="_blank"> TubeMate_v.3.4.7 破解版</a><a HREF="http://shandianpan.com/f/BFrR" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/iyyjN01cwv2j" target="_blank"> YouTube Go 3.25.54</a><a HREF="http://shandianpan.com/f/BFrQ" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                     <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/590a446c78e06279/" target="_blank"> TubeMate_v.3.4.7 破解版</a><a HREF="https://axu.lanzouj.com/iIsZv01cwumd" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                     <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/2ba9199064ee075f/" target="_blank"> YouTube Go 3.25.54</a><a HREF="https://axu.lanzouj.com/iyyjN01cwv2j" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                 </ul></li>
@@ -1895,11 +1993,13 @@
                     <li><i class="fa fa-internet-explorer"></i><a HREF="https://ouotool.com/dy" target="_blank"> ouo工具－抖音去水印</a></li>
                     <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.expertsphp.com/tiktok-video-downloader.php" target="_blank"> Tiktok 国际版抖音无水印解析</a></li>
                     <li id="split">————————</li>
-                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iIUmDnbidrc" target="_blank"> 抖音无水印地址解析2.0</a><i class="fa fa-android"></i>
-                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iUW12nbidvg" target="_blank"> 全能解析</a><i class="fa fa-android"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iIUmDnbidrc" target="_blank"> 抖音无水印地址解析2.0</a><a HREF="https://shandianpan.com/f/3CxK" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iUW12nbidvg" target="_blank"> 全能解析</a><a HREF="https://shandianpan.com/f/3CxL" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                     <li id="split">————————</li>
                     <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/qjawNHW0Bikli3aLQH3hpw" target="_blank"> 一键视频去水印教程</a><i class="fa fa-windows"></i><i class="fa fa-android"></i>
                     <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/QJpbBmo31Nm-7iuOJCr3Jw" target="_blank"> 网页视频嗅探下载教程</a></a><i class="fa fa-windows"></i><i class="fa fa-android"></i><i class="fa fa-apple"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iIUmDnbidrc" target="_blank"> 抖音无水印地址解析2.0</a><i class="fa fa-android"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iUW12nbidvg" target="_blank"> 全能解析</a><i class="fa fa-android"></i>
                 </ul></li>
                 <li><i class="fa fa-bullhorn"></i><a> BT磁力下载工具推荐请见2－6栏 🈯</a></li>
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/Bdmi_6T_jhYqPGDfqsxEcA" target="_blank"> 微信视频号下载教程</a><i class="fa fa-windows"></i><i class="fa fa-laptop"></i>
@@ -1939,17 +2039,21 @@
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYXl3U290SkhicE9W" target="_blank"> QQ音乐MIUI定制版 4.3.0.5</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYXpub3JJTE1YZU9Q" target="_blank"> QQ音乐Play版 9.13.0.4</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYWNJU3NRTnNqQWJa" target="_blank"> 酷狗音乐概念版（首次登录送3个月会员／每天听歌满3分钟送1天会员）👍</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
-                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/852762dd5a9d668e/" target="_blank"> 酷狗音乐 10.5.5 去广告破解会员版</a><a HREF="https://axu.lanzouj.com/iTLuizgzjch" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
-                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/292926a5b5079416/" target="_blank"> 酷我音乐 10.0.8.0高级版</a><a HREF="https://pan.bilnn.cn/s/Ny1wul" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/iTLuizgzjch" target="_blank"> 酷狗音乐 10.5.5 去广告破解会员版</a><a HREF="http://shandianpan.com/f/Ai8g" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://pan.bilnn.cn/s/Ny1wul" target="_blank"> 酷我音乐 10.0.8.0高级版</a><i class="fa fa-android"></i>
                 <li id="split">————————</li>
                 <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/inrqmppwtab" target="_blank"> 网易云音乐极速版 1.0.0 👍</a><a HREF="https://v2.fangcloud.com/share/1b0d04df620b6afb34314e2d83" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYWdNZFdHVVpqbXVQ" target="_blank"> 网易云音乐 9.3.1.567509去广告解锁VIP版</a><i class="fa fa-android"></i>
-                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/168655db9f4d4d6f/" target="_blank"> 网易云音乐 5.1.0.225980 去广告／自动签到版地</a><a HREF="https://axu.lanzouj.com/ishLTxmpqcd" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/ishLTxmpqcd" target="_blank"> 网易云音乐 5.1.0.225980 去广告／自动签到版地</a><a HREF="http://shandianpan.com/f/9px8" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYVNoblNmcUdSV3VG" target="_blank"> 网易云音乐 机车版（2款）</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/zkolfG0Tvj8ImgKrJB80Vg" target="_blank"> 网易云 3.75 旧版－安装教程（3.75版无任何广告＋无视频栏目）</a><i class="fa fa-apple"></i>
                 <li id="split">————————</li>
                 <li><i class="fa fa-link"></i><a HREF="https://github.com/listen1/listen1_mobile/releases/" target="_blank"> Listen1（Github官网）</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYUdXdWpKdE5HS2V0" target="_blank"> Poweramp 破解版</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i98rv2h" target="_blank"> Avee播放器 1.2.73汉化版</a><a HREF="https://shandianpan.com/f/3CpZ" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/852762dd5a9d668e/" target="_blank"> 酷狗音乐 10.5.5 去广告破解会员版</a><a HREF="https://axu.lanzouj.com/iTLuizgzjch" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/292926a5b5079416/" target="_blank"> 酷我音乐 10.0.8.0高级版</a><a HREF="https://pan.bilnn.cn/s/Ny1wul" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/168655db9f4d4d6f/" target="_blank"> 网易云音乐 5.1.0.225980 去广告／自动签到版地</a><a HREF="https://axu.lanzouj.com/ishLTxmpqcd" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/e51ca64ca0f2ff17/" target="_blank"> Avee播放器 1.2.73汉化版</a><a HREF="https://axu.lanzoui.com/i98rv2h" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 10.视频</a>
@@ -1963,6 +2067,7 @@
                 <li><i class="fa fa-link"></i><a HREF="https://apps.apple.com/cn/app/id1116905928" target="_blank"> nPlayer（￥30.00）</a><i class="fa fa-apple"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://apps.apple.com/cn/app/id395680819" target="_blank"> Aplayer（￥18.00）</a><i class="fa fa-apple"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://apps.apple.com/cn/app/id650377962" target="_blank"> VLC</a><i class="fa fa-apple"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://pan.lanzoui.com/b0f19eo3c" target="_blank"> Mx player去广告破解版（423Down提供）</a><i class="fa fa-android"></i>
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 12.广播FM</a>
             <ul class="menu">
@@ -2009,7 +2114,7 @@
                 <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iwPMep9sh9i" target="_blank"> Firefox Nightly 90.0a1－支持浏览器扩展</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://viayoo.com/zh-cn/" target="_blank"> Via浏览器（支持安装插件）</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://txt.fyi/-/21346/14545bae/" target="_blank"> Via浏览器插件市场⤴️　</a></li>
-                <li><i class="fa fa-link"></i><a HREF="https://www.lanzoui.com/u/GoldRiver" target="_blank"> 海阔视界－官方提供的下载地址（大量影视站聚合，还可以安装Via插件与油猴脚本）</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="http://blog.haikuoshijie.com/archives/fang-yuan-ying-shi-chang-jian-wen-ti" target="_blank"> 海阔视界（大量影视站聚合，还可以安装Via插件与油猴脚本）</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/DIwoDpkzG6xwZIMG7A4Clg" target="_blank"> 海阔视界－必看使用教程⤴️</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://www.coolapk.com/apk/alook.browser" target="_blank"> Alook浏览器</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://www.coolapk.com/apk/com.mmbox.xbrowser" target="_blank"> Ｘ浏览器</a><i class="fa fa-android"></i>
@@ -2067,12 +2172,12 @@
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYWlpUUl2ZW1LYkd1" target="_blank"> VMOS Pro＋Lataclysm</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYVpWQ2pmVGhjVHdt" target="_blank"> 太极＋钉钉助手</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYU9YbXh0RFBqZklx" target="_blank"> 虫子伪装 1.0.9.4 破解版（兼容华为）</a><i class="fa fa-android"></i>
-                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/83e551fd07ac3cf3/" target="_blank"> 牛牛穿越 3.2.0会员版</a><a HREF="https://axu.lanzoui.com/isMJhnpb99c" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
-                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/11412e93401d29eb/" target="_blank"> 天下游 13.1.22纯净高级版（需ROOT）</a><a HREF="https://axu.lanzoui.com/iiJ38npasja" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/isMJhnpb99c" target="_blank"> 牛牛穿越 3.2.0会员版</a><a HREF="https://shandianpan.com/f/3aRj" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iiJ38npasja" target="_blank"> 天下游 13.1.22纯净高级版（需ROOT）</a><a HREF="https://shandianpan.com/f/3aQy" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYWZzV1FremVmakh0" target="_blank"> MockGPS</a><i class="fa fa-android"></i>
-                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/ce696d506b64bdcd/" target="_blank"> 云游虚拟定位 6.1 会员版</a><a HREF="https://axu.lanzouj.com/ixTkWyeok4b" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
-                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/09a408ee37064488/" target="_blank"> 定位猫 1.7.2特别会员版</a><a HREF="https://axu.lanzoui.com/i9Kq4nbjazi" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
-                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/efee7cb471b12b64/" target="_blank"> Fake Location 1.2.1.2（有模拟运动功能，可用于刷步）</a><a HREF="https://axu.lanzoui.com/i7i2fnbjaxg" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/ixTkWyeok4b" target="_blank"> 云游虚拟定位 6.1 会员版</a><a HREF="http://shandianpan.com/f/AJJ6" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i9Kq4nbjazi" target="_blank"> 定位猫 1.7.2特别会员版</a><a HREF="https://shandianpan.com/f/3D4J" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i7i2fnbjaxg" target="_blank"> Fake Location 1.2.1.2（有模拟运动功能，可用于刷步）</a><a HREF="https://shandianpan.com/f/3D4L" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                 <li id="split">————————</li>
                 <li><i class="fa fa-link"></i><a HREF="https://freel.vip/" target="_blank"> Freel（收费）</a><i class="fa fa-apple"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYXp2VVl2UUNwWnlP" target="_blank"> Location-Cleaned</a><i class="fa fa-apple"></i>
@@ -2102,13 +2207,145 @@
             </ul></li>
             <li><i class="fa fa-folder fa-lg"></i><a> 24.文件管理器／解压缩软件</a>
             <ul class="menu">
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i01hmrs5vlc" target="_blank"> MT管理器VIP版</a><a HREF="http://shandianpan.com/f/6zZz" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ig8SYnbjfle" target="_blank"> 解压缩软件ZArchiver Pro 0.9.3</a><a HREF="https://shandianpan.com/f/3D5d" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i98rxhe" target="_blank"> RE管理器 4.5付费去验证修改版</a><a HREF="https://shandianpan.com/f/3D5c" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYXZVS2dIWWx5Smdq" target="_blank"> ES文件浏览器3.2.55（原团队最后一版／简洁／无广告）</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iZrqTepmech" target="_blank"> ES文件浏览器 4.2.2.8去广告解锁VIP版</a><a HREF="https://shandianpan.com/f/3D5h" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+            </ul></li>
+            <li><i class="fa fa-folder fa-lg"></i><a> 25.音频编辑／变声器</a>
+            <ul class="menu">
+                <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYUJMZ1p5cUVKclBE" target="_blank"> 多款变声器APP合集</a><i class="fa fa-android"></i>
+                <li id="split">————————</li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iIVwUnmnwhc" target="_blank"> Audio Evolution Mobile 4.1.4破解版</a><a HREF="https://shandianpan.com/f/3Yys" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/i92JPnmnwqb" target="_blank"> AudioLab 1.1.6专业版</a><a HREF="https://shandianpan.com/f/3Yyq" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iPPj1nmnxfg" target="_blank"> 音频编辑器 7.0.6高级版</a><a HREF="https://shandianpan.com/f/3Yyr" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzouj.com/iMoV500k2pxg" target="_blank"> Audio Editor  1.01.30.0210 破解版</a><a HREF="http://shandianpan.com/f/AyJO" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+            </ul></li>
+            <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYW1HTkVMVVFFSXBZ" target="_blank"> 3款蓝奏云资源搜索APP</a></li>
+            <li><i class="fa fa-folder fa-lg"></i><a style="color:#07C160 !important;"> 11.阅读器</a>
+            <ul class="menu">
+                <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/fUOj5cU7bVRMPdBwHXlUVA" target="_blank"> 利用RSS实现纯净阅读教程（务必在微信客户端内查看文章置顶留言⚠️）</a></li>
+                <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/w7Vf2VWIQ-0d6TFQj34Bug" target="_blank"> 利用RSS订阅公众号教程（文章第3点）</a></li>
+                <li><i class="fa fa-bullhorn"></i><a> 电子书免费下载见3－1－1栏</a></li>
+                <li id="split">————————</li>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/icathcf" target="_blank"> 掌阅iReader 7.8.3.1去广告直装版（华为似乎会闪退）</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/icathsb" target="_blank"> 静读天下 专业版 5.2.8</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-bullhorn"></i><a> 微信读书白嫖免费无限卡方法：点击听书 » 后台运行或者锁屏静音播放都会被记入阅读时长 » 阅读时长可免费兑换无限卡</a></li>
+                <li><i class="fa fa-link"></i><a HREF="https://weread.qq.com/" target="_blank" style="color:#07C160 !important;"> 微信读书－支持导入txt／epub／pdf／doc／docx／mobi／azw3丨免费云同步</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://apps.apple.com/cn/app/id1307517930" target="_blank"> 山丘阅读器－支持导入txt／epub／pdf／word／excel／ppt／mobi／azw3／压缩包</a><i class="fa fa-apple"></i>
+            </ul></li>
+            <li><i class="fa fa-folder fa-lg"></i><a> 14.浏览器</a>
+            <ul class="menu">
+                <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/Fhr0ji-izW7VNWGh3p2-1w" target="_blank"> 必备广告拦截规则（在浏览器设置中导入）👍👍👍</a></li>
+                <li id="split">————————</li>
+                <li><i class="fa fa-link"></i><a HREF="https://apps.apple.com/cn/app/id1491605477" target="_blank"> Foxok浏览器（目前￥6）－支持设置为默认浏览器／安装油猴脚本</a><i class="fa fa-apple"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://apps.apple.com/cn/app/id1458962238" target="_blank"> Gear浏览器－支持设置为默认浏览器／安装油猴脚本（60元／年）</a><i class="fa fa-apple"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://www.alookweb.com/" target="_blank"> Alook浏览器（iOS￥6／安卓免费）</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYURoZkRUUVlWUVV3" target="_blank"> Iceraven－火狐内核－支持浏览器扩展</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYVN2aEZBbHh6eFVy" target="_blank"> Kiwi Browser－谷歌内核－支持浏览器扩展</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://kyon.118pan.com/o14489" target="_blank"> Yandex Browser 21.11.1.114－支持浏览器扩展</a><a HREF="https://pan.bilnn.com/s/nDpeuv" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://viayoo.com/zh-cn/" target="_blank"> Via浏览器（支持安装插件）</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://txt.fyi/-/21346/14545bae/" target="_blank"> Via浏览器插件市场⤴️　</a></li>
+                <li><i class="fa fa-link"></i><a HREF="http://blog.haikuoshijie.com/archives/fang-yuan-ying-shi-chang-jian-wen-ti" target="_blank"> 海阔视界（大量影视站聚合，还可以安装Via插件与油猴脚本）</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/DIwoDpkzG6xwZIMG7A4Clg" target="_blank"> 海阔视界－必看使用教程⤴️</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://www.coolapk.com/apk/com.mmbox.xbrowser" target="_blank"> Ｘ浏览器</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ijUIvnax2ud" target="_blank"> Firefox 国际版 86.1.1</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYVBsem9STUxHdHJI" target="_blank"> UC Browser Turbo 1.10.6.900（挂名UC但相当于夸克浏览器国际版）</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYXZxdWJ6VkFpbUZs" target="_blank"> QQ浏览器中兴定制版 8.2.1.3982（可登录免流／无内置更新）</a><i class="fa fa-android"></i>
+            </ul></li>
+            <li><i class="fa fa-folder fa-lg"></i><a> 15.新闻</a>
+            <ul class="menu">
+                <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/WZvkwPXYUxg23hRVEoECVg" target="_blank"> 阿虚的新闻事实热点APP推荐👍</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYUVTRVJ0WktZa0hB" target="_blank"> 今日头条 华为定制版（无广告）</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYVJVdUNhQ2lxTE9D" target="_blank"> 今日头条 6.4.8 Google Play 无广告／去更新版</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYWZKVUpIcFVzWFJj" target="_blank"> 腾讯新闻 OnePlus9R定制版  6.1.30 无广告／支持免流／无更新</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYW5uQlhmeWRHVENo" target="_blank"> 网易新闻 乐檬定制版 v4.4.1（无广告）</a><i class="fa fa-android"></i>
+            </ul></li>
+            <li><i class="fa fa-folder fa-lg"></i><a> 16.游戏</a>
+            <ul class="menu">
+                <li><i class="fa fa-bullhorn"></i><a> 手游加速器见４－２４栏 🈯</a></li>
+                <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/e_duscNKDbiZcv7MiGPQMA" target="_blank"> 安卓汉化版／破解版／免谷歌版手游下载＋IOS还能白嫖付费APP办法</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
+                <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/GB9IJctmgmlzxj6sipg6Cw" target="_blank"> 模拟器／家机／街机／掌机游戏ROM与模拟器下载</a></a><i class="fa fa-windows"></i><i class="fa fa-android"></i><i class="fa fa-apple"></i>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://apps.qoo-app.com/" target="_blank"> Qoo（补充）</a></li>
+                <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.ccplay.cc/" target="_blank"> 虫虫助手（补充）</a></li>
+            </ul></li>
+            <li><i class="fa fa-folder fa-lg"></i><a> 17.安全／清理</a>
+            <ul class="menu">
+                <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/gzXMmg89ItkGJJ014M4Iwg" target="_blank"> 清理垃圾App推荐👍</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://m.qq.com/" target="_blank"> 腾讯手机管家</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="http://www.3h3.com/az/191391.html" target="_blank"> Avast</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="http://jijiu.360.cn/index.html" target="_blank"> 360手机急救箱</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="http://www.lbesec.com/#/products/2" target="_blank"> LBE安全大师</a><i class="fa fa-android"></i>
+            </ul></li>
+            <li><i class="fa fa-folder fa-lg"></i><a> 18.日记／记账</a>
+            <ul class="menu">
+                <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/z3wYSG-RBNb4gyC8IDLhQA" target="_blank"> 50款记账APP评测与推荐</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
+                <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/_SOnfpP4-f08wdd783MG2w" target="_blank"> 40款日记APP评测与推荐</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
+                <li><i class="fa fa-gift"></i><a HREF="https://store.lizhi.io/site/products/id/313?cid=ds7afku3" target="_blank"> 卡片日记－阿虚正版特惠5月／45终身（原价88）</a></li>
+            </ul></li>
+            <li><i class="fa fa-folder fa-lg"></i><a> 19.屏蔽／自动跳过广告</a>
+            <ul class="menu">
+                <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/Fhr0ji-izW7VNWGh3p2-1w" target="_blank"> Adguard＋正确使用教程＋阿虚正版特惠 👍</a></a><i class="fa fa-windows"></i><i class="fa fa-laptop"></i><i class="fa fa-android"></i><i class="fa fa-apple"></i>
+                <li id="split">————————</li>
+                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/c69f6acc69e3952b" target="_blank"> 李跳跳 1.75（自动帮你跳过启屏广告／支持Android 12）👍</a><a HREF="https://axu.lanzouj.com/iyxnD01q2d6j" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://www.wandoujia.com/apps/8098141" target="_blank"> 轻启动（自动帮你跳过启屏广告）👍</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-gift"></i><a HREF="https://store.lizhi.io/site/products/id/439?cid=ds7afku3" target="_blank"> 轻启动－阿虚正版特惠仅需12.9</a></li>
+                <li id="split">————————</li>
+                <li><i class="fa fa-link"></i><a HREF="https://apps.apple.com/cn/app/id1576858756" target="_blank"> 拦截100👍</a><i class="fa fa-apple"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://apps.apple.com/cn/app/id1042957996" target="_blank"> Infy拦截</a><i class="fa fa-apple"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://apps.apple.com/cn/app/id1116014161" target="_blank"> 乐网</a><i class="fa fa-apple"></i>
+            </ul></li>
+            <li><i class="fa fa-folder fa-lg"></i><a> 20.虚拟定位／刷步</a>
+            <ul class="menu">
+                <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/CHIpFS7XiSXVG28TGvXnWg" target="_blank"> 关于钉钉虚拟定位打卡已经能被识别的说明⚠️</a></li>
+                <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/eg_vJzKwmPy1GPSaX-UePA" target="_blank"> 微信／支付宝等刷步数教程（部分已失效）</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
+                <li id="split">————————</li>
+                <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYWlpUUl2ZW1LYkd1" target="_blank"> VMOS Pro＋Lataclysm</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYVpWQ2pmVGhjVHdt" target="_blank"> 太极＋钉钉助手</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYU9YbXh0RFBqZklx" target="_blank"> 虫子伪装 1.0.9.4 破解版（兼容华为）</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/83e551fd07ac3cf3/" target="_blank"> 牛牛穿越 3.2.0会员版</a><a HREF="https://axu.lanzoui.com/isMJhnpb99c" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/11412e93401d29eb/" target="_blank"> 天下游 13.1.22纯净高级版（需ROOT）</a><a HREF="https://axu.lanzoui.com/iiJ38npasja" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYWZzV1FremVmakh0" target="_blank"> MockGPS</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/ce696d506b64bdcd/" target="_blank"> 云游虚拟定位 6.1 会员版</a><a HREF="https://axu.lanzouj.com/ixTkWyeok4b" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/09a408ee37064488/" target="_blank"> 定位猫 1.7.2特别会员版</a><a HREF="https://axu.lanzoui.com/i9Kq4nbjazi" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/efee7cb471b12b64/" target="_blank"> Fake Location 1.2.1.2（有模拟运动功能，可用于刷步）</a><a HREF="https://axu.lanzoui.com/i7i2fnbjaxg" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li id="split">————————</li>
+                <li><i class="fa fa-link"></i><a HREF="https://freel.vip/" target="_blank"> Freel（收费）</a><i class="fa fa-apple"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYXp2VVl2UUNwWnlP" target="_blank"> Location-Cleaned</a><i class="fa fa-apple"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://www.i4.cn/news_detail_31175.html" target="_blank"> 爱思助手</a><i class="fa fa-apple"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://gitee.com/BruceChin1513/SimulateLocation/" target="_blank"> Xcode的Simulate Location功能</a><i class="fa fa-laptop"></i>
+            </ul></li>
+            <li><i class="fa fa-folder fa-lg"></i><a> 21.应用多开／手机分身</a>
+            <ul class="menu">
+                <li><i class="fa fa-folder fa-lg"></i><a> 安卓各大手机厂自带的分身功能</a>
+                <ul class="menu">
+                    <li><i class="fa fa-internet-explorer"></i><a HREF="https://consumer.huawei.com/cn/support/content/zh-cn00770662/" target="_blank"> 华为－多用户模式</a></li>
+                    <li><i class="fa fa-internet-explorer"></i><a HREF="https://bbs.meizu.cn/thread-6877300-2-1.html" target="_blank"> 魅族－隐私模式</a></li>
+                    <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.samsungmembers.cn/thread-623413-6-71.html" target="_blank"> 三星－安全文件夹</a></li>
+                    <li><i class="fa fa-internet-explorer"></i><a HREF="http://hd.mi.com/y/09111p/index.html" target="_blank"> 小米－手机分身</a></li>
+                    <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.oneplusbbs.com/thread-4808392-1-1.html" target="_blank"> 一加－多用户模式（通知栏里切换）</a></li>
+                    <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.coloros.com/instruction?id=503&version=ColorOS%207" target="_blank"> OPPO－多用户模式（需要ColorOS 7以上）</a></li>
+                    <li><i class="fa fa-bullhorn"></i><a> VIVO－Funtouch OS 3.0以下系统有访客模式／Funtouch OS 3.0及以上系统没有访客模式</a></li>
+                </ul></li>
+                <li><i class="fa fa-link"></i><a HREF="https://www.coolapk.com/apk/io.virtualapp.sandvxposed64" target="_blank"> SlimVXP</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iZkMItkb9uj" target="_blank"> 多开助手谷歌版 1.5.9 解锁高级版</a><a HREF="https://pan.bilnn.cn/s/963BHQ" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ivWbotkb5lg" target="_blank"> 多开空间 1.5.40.0329解锁高级版</a><a HREF="https://pan.bilnn.cn/s/xXEvIA" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="http://www.vmos.cn/" target="_blank"> VMOS（虚拟大师）</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="http://www.lbesec.com/#/home" target="_blank"> LBE平行空间</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://fenshen.360.cn/" target="_blank"> 分身大师（360出品）</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-link"></i><a HREF="https://www.coolapk.com/apk/com.oasisfeng.island" target="_blank"> 炼妖壶</a><i class="fa fa-android"></i>
+                <li><i class="fa fa-file-text-o"></i><a HREF="https://mp.weixin.qq.com/s/fDtU19-QNB3tdDCaPaKOFw" target="_blank"> iPhone手机变相应用双开教程</a><i class="fa fa-apple"></i>
+            </ul></li>
+            <li><i class="fa fa-folder fa-lg"></i><a> 22.文件管理器／解压缩软件</a>
+            <ul class="menu">
                 <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/6be3701359aa4f8b/" target="_blank"> MT管理器VIP版</a><a HREF="https://axu.lanzoui.com/i01hmrs5vlc" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/0ec7d9676cfc9c77/" target="_blank"> 解压缩软件ZArchiver Pro 0.9.3</a><a HREF="https://axu.lanzoui.com/ig8SYnbjfle" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/0452b9adf005079d/" target="_blank"> RE管理器 4.5付费去验证修改版</a><a HREF="https://axu.lanzoui.com/i98rxhe" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYXZVS2dIWWx5Smdq" target="_blank"> ES文件浏览器3.2.55（原团队最后一版／简洁／无广告）</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/c3f3931105b32c5a/" target="_blank"> ES文件浏览器 4.2.2.8去广告解锁VIP版</a><a HREF="https://axu.lanzoui.com/iZrqTepmech" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
             </ul></li>
-            <li><i class="fa fa-folder fa-lg"></i><a> 25.音频编辑／变声器</a>
+            <li><i class="fa fa-folder fa-lg"></i><a> 23.音频编辑／变声器</a>
             <ul class="menu">
                 <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYUJMZ1p5cUVKclBE" target="_blank"> 多款变声器APP合集</a><i class="fa fa-android"></i>
                 <li id="split">————————</li>
@@ -2117,7 +2354,6 @@
                 <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/27606dab66696226/" target="_blank"> 音频编辑器 7.0.6高级版</a><a HREF="https://axu.lanzoui.com/iPPj1nmnxfg" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
                 <li><i class="fa fa-link"></i><a HREF="https://secufiles.com/716c792233443591/" target="_blank"> Audio Editor 1.01.30.0210 破解版</a><a HREF="https://axu.lanzouj.com/iMoV500k2pxg" target="_blank" class="bei">备</a><i class="fa fa-android"></i>
             </ul></li>
-            <li><i class="fa fa-link"></i><a HREF="https://docs.qq.com/doc/DYW1HTkVMVVFFSXBZ" target="_blank"> 3款蓝奏云资源搜索APP</a></li>
         </ul></li>
         <i class="fa fa-cog fa-spin fa-fw" style="color:violet;"></i><li><i class="fa fa-folder fa-lg"></i><a> 07　常用网站</a>
         <ul class="menu">
@@ -2474,7 +2710,7 @@
             <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.bypass.cn/" target="_blank"> 抢火车票</a></li>
             <li><i class="fa fa-internet-explorer"></i><a HREF="https://webtorrent.io/desktop/" target="_blank"> 在线磁力播放－Webtorrent</a></li>
         </ul></li>
-        <li><i class="fa fa-folder fa-lg"></i><a style="color:#07C160 !important;"> 08　冷门网站</a>
+        <li><i class="fa fa-folder fa-lg"></i><a> 08　冷门网站</a>
         <ul class="menu">
             <li><i class="fa fa-folder fa-lg"></i><a> 01.表情包</a>
             <ul class="menu">
@@ -2604,7 +2840,7 @@
                 <li><i class="fa fa-internet-explorer"></i><a HREF="http://www.quickmark.com.tw/cht/qrcode-datamatrix-generator/default.asp?dmDLink" target="_blank"> QuickMark | 製作條碼</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://barcode.tec-it.com/zh/DataMatrix" target="_blank"> 免费在线条码生成器: Data Matrix</a></li>
             </ul></li>
-            <li><i class="fa fa-folder fa-lg"></i><a style="color:#07C160 !important;"> 08.网址缩短</a>
+            <li><i class="fa fa-folder fa-lg"></i><a> 08.网址缩短</a>
             <ul class="menu">
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://inx.inbox.lv/short" target="_blank"> inbox.lv 短链接👍</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="http://sina.lt/" target="_blank"> 新浪短网址（未通过审核的短网址将20天后失效）</a></li>
@@ -2749,7 +2985,7 @@
                     <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.doseeing.com/huya" target="_blank"> 在看直播排行榜 - 实时虎牙直播排行</a></li>
                 </ul></li>
             </ul></li>
-            <li><i class="fa fa-folder fa-lg"></i><a style="color:#07C160 !important;"> 14.文字转语音</a>
+            <li><i class="fa fa-folder fa-lg"></i><a> 14.文字转语音</a>
             <ul class="menu">
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://azure.microsoft.com/zh-cn/services/cognitive-services/text-to-speech/#overview" target="_blank"> 微软－文本转语音</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://cloud.tencent.com/product/tts" target="_blank"> 腾讯－文本转语音（每次限100字）</a></li>
@@ -2768,7 +3004,7 @@
             <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.wentu.io/showcase" target="_blank"> 文图－数据报告／周报模板</a></li>
             <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.iloveimg.com/zh-cn" target="_blank"> iLoveImg－图像文件在线编辑工具</a></li>
         </ul></li>
-        <li><i class="fa fa-folder fa-lg"></i><a style="color:#07C160 !important;"> 09　学习网站</a>
+        <li><i class="fa fa-folder fa-lg"></i><a> 09　学习网站</a>
         <ul class="menu">
             <li><i class="fa fa-folder fa-lg"></i><a> 01.中外文献下载</a>
             <ul class="menu">
@@ -3026,7 +3262,7 @@
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.youkaoshi.cn/price.html" target="_blank"> 优考试</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://www.qingsuyun.com/price/" target="_blank"> 轻速云</a></li>
             </ul></li>
-            <li><i class="fa fa-folder fa-lg"></i><a style="color:#07C160 !important;"> 10.免费课件／教案</a>
+            <li><i class="fa fa-folder fa-lg"></i><a> 10.免费课件／教案</a>
             <ul class="menu">
                 <li><i class="fa fa-internet-explorer"></i><a HREF="http://xn--55qk62gk1bq7gj5ik6ettqgwdmvy560cls5a/" target="_blank"> 国家教育资源公共服务平台－课件／教案（小初高）</a></li>
                 <li><i class="fa fa-internet-explorer"></i><a HREF="https://ykt.eduyun.cn/" target="_blank"> 国家中小学网络云平台（视频播放页提供：小初高免费教案）</a><a HREF="https://ykt.xue.eduyun.cn/" target="_blank" class="bei">备</a></li>
@@ -3627,13 +3863,12 @@
                 <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/10_Bus-e4h7eD9EIm2nIXOQ&#160;" target="_blank"> 2020国考（粉笔）提取码：tb5y</a></li>
                 <li><i class="fa fa-link"></i><a HREF="https://www.lanzoui.com/i588mqj" target="_blank"> 公务员资料分析速算练习软件</a><i class="fa fa-windows"></i></li>
             </ul></li>
-            <li><i class="fa fa-folder fa-lg"></i><a> 02.各种工程师🔨</a>
+            <li><i class="fa fa-folder fa-lg"></i><a style="color:#07C160 !important;"> 02.各种工程师🔨</a>
             <ul class="menu">
-                <li><i class="fa fa-folder fa-lg"></i><a> 建造工程师</a>
+                <li><i class="fa fa-folder fa-lg"></i><a style="color:#07C160 !important;"> 建造工程师</a>
                 <ul class="menu">
                     <li><i class="fa fa-folder fa-lg"></i><a> 二建</a>
                     <ul class="menu">
-                        <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1cpu8AmL_gOc42CAR9cKfyw" target="_blank"> 2022年二级建造师 各大机构 🆕 提取码：3gtx</a></li>
                         <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1CWvuyCi609WqvcubYmwLqg" target="_blank"> 2022二建【水利】提取码：3dbv</a></li>
                         <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1Ddh_9KE8I8i6aBKcJleZ9g" target="_blank"> 2022二建【公路】提取码：27yb</a></li>
                         <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1fXbcA-4iCxfH5sMplf28qA" target="_blank"> 2022二建【机电】提取码：yku0</a></li>
@@ -3668,9 +3903,10 @@
                         <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1EuFIhmeMdaZZmJOaQZ2tUg" target="_blank"> 2020一建 链接  提取码：1817</a></li>
                         <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/18Cp5lw_bk-3D5gLbRsf9TQ" target="_blank"> 2020年 一级建造师课程 提取码：5xhp</a></li>
                     </ul></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1nRiAWa87Np6ThcCv9ye3xw" target="_blank" style="color:#07C160 !important;"> 2022超大量超多名师一建／二建／监理／咨询真题解析精讲班 🔥 提取码：y5bt</a></li>
+                    <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1cOwDamWJ28BtBzusAqO-XQ" target="_blank"> 一建／二建／造价（考点+课件+历年真题）提取码：ftpk</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://cbu01.alicdn.com/img/ibank/O1CN01aq8fmu1Bs2f7DGZbP_!!0-0-cib.jpg" target="_blank"> 学习强国APP上有大量一建、二建免费优质课程（点击查看截图）👍</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
                     <li><i class="fa fa-internet-explorer"></i><a HREF="http://mfkskj.ys168.com/" target="_blank"> 一个含建造师资源的永硕E盘（持续更新）</a></li>
-                    <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1cOwDamWJ28BtBzusAqO-XQ" target="_blank"> 一建／二建／造价（考点+课件+历年真题）提取码：ftpk</a></li>
                 </ul></li>
                 <li><i class="fa fa-folder fa-lg"></i><a> 造价工程师</a>
                 <ul class="menu">
@@ -3706,18 +3942,15 @@
                     <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/share/init?surl=5Tq8WoAaTwwCO-QKtTFjxw" target="_blank"> 2019－2020注册公用设备工程师 排水、建水、给水工程师 提取码：97zm</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1RWALxowNvLJEQND6p7IRvQ" target="_blank"> 2017注册设备工程师、2018暖通动力基础全套 提取码：4v8y</a></li>
                 </ul></li>
-                <li><i class="fa fa-folder fa-lg"></i><a> 安全工程师</a>
+                <li><i class="fa fa-folder fa-lg"></i><a style="color:#07C160 !important;"> 安全工程师</a>
                 <ul class="menu">
+                    <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1RLpth20eBhNdnNgEJKNluw" target="_blank" style="color:#07C160 !important;"> 2022年安全工程师SVIP小班资料 提取码：shan</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/15idbk6MZeEnr9tO47LBdLA" target="_blank"> 2021年安全工程师 各科精讲版、习题班、冲刺、押题 提取码: x3hv</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1hUhYGAw0vJGjYjs_PP_BUQ" target="_blank"> 2021年安全工程师各科 提取码：1111</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1Nvx_D8TBXvqUkKya9wbDqw" target="_blank"> 2021年注安各科 提取码：wwy7</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1fBjxHim01Cn6g_O8Cyojpw" target="_blank"> 2021注安各科 提取码：r1u8</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1AbFsRjvU78glO5XzTZCz3g" target="_blank"> 2021版注安各科（新版教材 、历年真题、纸质习题）提取码: 6rbx</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1eDuFeZbZl6D_RNTGO1TPcw" target="_blank"> 2021安全工程师各科电子教材＋往年真题 提取码: g7vt</a></li>
-                    <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/197DYzaPbzIxRbLtuP0jl1g" target="_blank"> 2020胜运安全口袋书 提取码：9wj7</a></li>
-                    <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1HOXY5TusWI6AoDJHcEKISA" target="_blank"> 2020注安－管理／法规／技术精讲班 提取码：j0jk</a></li>
-                    <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1tnIYBbgXkxuoKMJ7RWIthg" target="_blank"> 2020注安技术精讲 提取码：unt1</a></li>
-                    <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1vlAs6PfI1Hj27W4xsYHhRw" target="_blank"> 2019注安实务－建筑精讲班（林轩）提取码：nkcd</a></li>
                 </ul></li>
                 <li><i class="fa fa-folder fa-lg"></i><a> 道路工程师</a>
                 <ul class="menu">
@@ -3732,8 +3965,9 @@
                     <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1L8AZw_WMTGEaqKlFsU7mzg" target="_blank"> 注电考试必备书籍等 提取码：ehun</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1vzizWnaMfGxeslRIY-fJEA" target="_blank"> 注电基础历年真题与解析 提取码：7v5a</a></li>
                 </ul></li>
-                <li><i class="fa fa-folder fa-lg"></i><a> 监理工程师</a>
+                <li><i class="fa fa-folder fa-lg"></i><a style="color:#07C160 !important;"> 监理工程师</a>
                 <ul class="menu">
+                    <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1RLpth20eBhNdnNgEJKNluw" target="_blank" style="color:#07C160 !important;"> 2022年监理工程师SVIP小班资料（学习材料文件夹下） 提取码：shan</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1yQ3huYnkCB5qyK4oHxFIsQ" target="_blank"> 2021年监理多机构课件 提取密码：ycaq</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://cloud.189.cn/t/NfAn2uqyeEFz" target="_blank"> 2020监理法规 + 三控（孙玉保）－天翼云资源－访问码：b8ne</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/share/init?surl=4DmHHohhFoiKwuc_agQ2tw" target="_blank"> 2019监理案例（58G）提取码：12px</a></li>
@@ -3752,9 +3986,10 @@
                     <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/share/init?surl=BsCOi43FtI8X3Wy1_dbi7A" target="_blank"> 2020中级通信工程真题+解析视频 提取码：5cx3</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1jIETcYM" target="_blank"> 华为数据通信工程师初级教程</a></li>
                 </ul></li>
-                <li><i class="fa fa-folder fa-lg"></i><a> 消防工程师</a>
+                <li><i class="fa fa-folder fa-lg"></i><a style="color:#07C160 !important;"> 消防工程师</a>
                 <ul class="menu">
                     <li><i class="fa fa-link"></i><a HREF="https://cbu01.alicdn.com/img/ibank/O1CN01xUrwSP1Bs2f8pwOzq_!!0-0-cib.jpg" target="_blank"> 学习强国APP上有不少「消防工程师」优质视频课程（点击查看截图）👍</a><i class="fa fa-android"></i><i class="fa fa-apple"></i>
+                    <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1RLpth20eBhNdnNgEJKNluw" target="_blank" style="color:#07C160 !important;"> 2022年安全工程师SVIP小班资料 提取码：shan</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://eyun.baidu.com/s/3pNhVUtl" target="_blank"> 2021最新三合一超精讲消防【更新中】密码：zufT</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1ajFhiojWNtMLe2p0eTpofA" target="_blank"> 2021消防／二级消防等 提取码：ohn1</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1q9jYIyyTSt9gHPMT7zN3XQ" target="_blank"> 2021年消防工程师 提取码：42fj</a></li>
@@ -3762,9 +3997,6 @@
                     <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/163fa8VfXUaf1L1Odt7BoHw" target="_blank"> 2021 消防工程师 提取码：z90l</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1vdNiA8_tTQUYbOwwMXSo3Q" target="_blank"> 2021+2020年消防3门总 提取码：v9gv</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1A7xtbJGrHbctHVCt51vfyQ" target="_blank"> 2021年多机构课件 提取密码：nvjg</a></li>
-                    <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1mm2s-QVH8rW2hPioeQ1LzA" target="_blank">  2020年消防综合 提取码：f3am</a></li>
-                    <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1YuSDCo6O3ygBVsDiQr2bgQ" target="_blank"> 2020年消防技术 提取码：3zta</a></li>
-                    <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1y6lbE-DiKTJiYUV-JpAfLw" target="_blank"> 2020年消防案例 提取码：ed39</a></li>
                 </ul></li>
                 <li><i class="fa fa-folder fa-lg"></i><a> 信息安全工程师</a>
                 <ul class="menu">
@@ -3783,8 +4015,9 @@
                     <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1k8alUt3k7YApxX6mir5r9A" target="_blank"> 2011-2019环评工程师真题（免费下载）提取码：hwj6</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1XvW2uNhCv7bwk3j2s4wvyQ" target="_blank"> 2018环境评价工程师 提取码：lst3</a></li>
                 </ul></li>
-                <li><i class="fa fa-folder fa-lg"></i><a> 咨询工程师</a>
+                <li><i class="fa fa-folder fa-lg"></i><a style="color:#07C160 !important;"> 咨询工程师</a>
                 <ul class="menu">
+                    <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1RLpth20eBhNdnNgEJKNluw" target="_blank" style="color:#07C160 !important;"> 2022年咨询工程师SVIP小班资料（学习材料文件夹下） 提取码：shan</a></li>
                     <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/123_oJ7QvSItvOO7LKKN8vw" target="_blank"> 2021一级造价／消防／监理／咨询工程师 提取码：8888</a></li>
                 </ul></li>
                 <li><i class="fa fa-folder fa-lg"></i><a> 岩土工程师</a>
@@ -3871,6 +4104,7 @@
                 <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ixaCZskoljc" target="_blank"> 专四词汇 词根+联想记忆法（乱序版）.pdf</a></li>
                 <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iEnGped3v8j" target="_blank"> 专八词汇 词根+联想记忆法（乱序版）.mobi</a></li>
                 <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/ihqfcskogmf" target="_blank"> 专四高频200词.pdf</a></li>
+                <li><i class="fa fa-link"></i><a HREF="https://shandianpan.com/f/2bFe" target="_blank"> 专四真题核心词汇.pdf</a></li>
                 <li><i class="fa fa-link"></i><a HREF="https://axu.lanzoui.com/iaBZss7ab5g" target="_blank"> 华研外语《专四语法与词汇》1000题.pdf</a></li>
                 <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1wd175yuezCaQ0EnN6ryu6g" target="_blank"> 2020专四全程班 提取码：6au2</a></li>
                 <li><i class="fa fa-link"></i><a HREF="https://pan.baidu.com/s/1sfiBUU9d2chF0CgQtKcM2A" target="_blank"> 2020英语专八 提取码:jdve</a></li>
@@ -3994,4 +4228,4 @@
     </ul></li>
     
 </ul></li>
-<div style="text-align:center;"><img src="https://pic.rmb.bdstatic.com/bjh/cf893a875aa0bbdf8add1dc58a9c1c4d.png" style ="width:300px;margin-bottom:40px;"></div><div id="footer"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv" title="总访客量">Calculating...</span>丨<i class="fa fa-battery-3"></i> <span id="sitetime">Calculating...</span></div><script>window.tctipConfig = {headText: "赞赏什么内容🌏创造什么世界",siderText: "公告 & 打赏",siderTextTop: "-72px",siderBgcolor: "#323d45",siderTop:"118px",buttomText:"储物间备用站",buttomLink:"https://txt.fyi/-/2263/547fa3af/",list:{notice: {name:"公告栏", className:"myR-on",icon: "https://pic.rmb.bdstatic.com/bjh/341268f274b1fa389580225ed0c25c5a.png", text:'<p style="line-height:30px;font-size:13px;text-align:center;background-color:#e7e7e7;border-radius:10px;margin-top:-8px;color:cornflowerblue;">最后更新时间</p><p style="line-height:30px;font-size:9px;text-align:center;background-color:#e7e7e7;margin-top:-23px;color:cornflowerblue;">03月21日 23:49</p>🎉阿虚杂货铺<br><br>自家的「陕西天然白洋槐蜂蜜」🐝，新品特惠中，欢迎大家<a style="border-bottom: 1px solid rgb(143, 177, 247);color: rgb(30, 107, 184);" href="https://cbu01.alicdn.com/img/ibank/O1CN01MqUjwR1Bs2kAC3PGY_!!0-0-cib.jpg">点击此处微信扫码</a>来购！<br><br>✅3月21日<br><br>     3－6栏：更新多个VIP音乐免费下载网站<br><br>     3－7栏：清理失效VIP音乐免费下载软件，并更新2款新的<br><br>     4－7－4栏：新增B站专用视频压制软件推荐<br><br>     4－7－5栏：新增免费视频剪辑软件推荐<br><br>     5－4栏：新增VEP／ev1／ev4解密工具<br><br>     5－5栏：超星刷课可用油猴脚本更新<br><br>     6－14栏：更新电子书阅读器推荐<br><br>     13－5栏：更新1个提供大量考研资料的良心网站<br><br>     其他：优化储物间移动端样式：增加首行缩进＋增大间距<br><br>     ✅3月20日<br><br>     4－5－2栏：新增①B站自动宽屏②知乎免登陆③屏蔽斗鱼虎牙B站等P2P上传－油猴脚本推荐<br><br>     8－8栏：更新长链接转短链接网站推荐<br><br>     8－14栏：新增①百度②腾讯③阿里④微软⑤讯飞的免费在线文本转语音服务<br><br>     其他：储物间功能增强，现在最近更新栏目／资源有颜色标注了<br><br>     ✅3月19日<br><br>     5－10栏：新增「论文查重／降重」软件一栏<br><br>     6－1栏：更新微博国际版－去广告版／微博－内置Xposed框架微博猪手修改版<br><br>     6－4栏：更新番茄ToDo会员版<br><br>     6－5－3栏：更新墨墨背单词破解版（阿虚粉丝提供）<br><br>     6－20：李跳跳更新到1.7.5（支持Android 12）<br><br>     9－10栏：新增「免费课件／教案」网站一栏<br><br>     ✅3月18日<br><br>     1－11栏：新增爱奇艺小爱音箱提取版<br><br>     4－16栏：之前分享的「旧版好压」最近貌似出现了强制更新的情况，在下载页面更新了完美屏蔽更新的方法<br><br>     6－3栏：删除失效的爱奇艺 10.2.0 Google Play 最后一版，更新新版<br><br>     其他：备用网盘闪电盘似乎凉凉了，慢慢替换备用资源链接中...<br><br>     ✅3月16日<br><br>     从昨天到今天花了10多个小时再次升级了储物间功能：现在链接尾部支持标注「软件所支持的平台」了！<br><br>     同时现在在链接左端对链接进行简单分类（网页／视频／文章等）<br><br>     也因为这些功能的更新，稍微合并了一些栏目，后续争取再优化下栏目的细分<br><br>'},weixin: {name:"微信",desc: "点击公众号文章底部的广告，也是支持阿虚的一种方式😜，无需关注or下载广告内容，只需点击一下再关掉页面即可🤪（1次有效／微信号／日）",icon:"https://pic.rmb.bdstatic.com/bjh/1d03b99925fa323a97e40f4ad597215b.png",qrimg:"https://cbu01.alicdn.com/img/ibank/O1CN01gvheqO1WC0JiFMMxx_!!2793632751-0-cib.jpg"},alipay: {name:"支付宝", desc: "公众号不时会接一些推广（这也是阿虚主要的收入来源），大家能在阿虚接广告的时候贡献1个阅读量，就算是对阿虚莫大的支持了！",icon:"https://pic.rmb.bdstatic.com/bjh/8f3d342f2087632dd42af8dde6503616.png",qrimg:"https://cbu01.alicdn.com/img/ibank/O1CN019WMB1k1WC0Jos6LPP_!!2793632751-0-cib.jpg"}}};</script><script src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-77dcb12e-0d5c-428f-b806-fe4745ddacc6/1a94ef35-3668-404d-b596-0b02abbbcc9f.js"></script><script src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-77dcb12e-0d5c-428f-b806-fe4745ddacc6/8540ac39-37f6-44a0-8403-42fdf32d5823.js"></script><script src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-77dcb12e-0d5c-428f-b806-fe4745ddacc6/3a95176a-ee2b-4f59-8497-6ebeefd89302.js"></script></body></html>
+<div style="text-align:center;"><img src="https://pic.rmb.bdstatic.com/bjh/cf893a875aa0bbdf8add1dc58a9c1c4d.png" style ="width:300px;margin-bottom:40px;"></div><div id="footer"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv" title="总访客量">Calculating...</span>丨<i class="fa fa-battery-3"></i> <span id="sitetime">Calculating...</span></div><script>window.tctipConfig = {headText: "赞赏什么内容🌏创造什么世界",siderText: "公告 & 打赏",siderTextTop: "-72px",siderBgcolor: "#323d45",siderTop:"118px",buttomText:"储物间备用站",buttomLink:"https://txt.fyi/-/2263/547fa3af/",list:{notice: {name:"公告栏", className:"myR-on",icon: "https://pic.rmb.bdstatic.com/bjh/341268f274b1fa389580225ed0c25c5a.png", text:'<p style="line-height:30px;font-size:13px;text-align:center;background-color:#e7e7e7;border-radius:10px;margin-top:-8px;color:cornflowerblue;">最后更新时间</p><p style="line-height:30px;font-size:9px;text-align:center;background-color:#e7e7e7;margin-top:-23px;color:cornflowerblue;">03月23日 23:44</p>🎉阿虚杂货铺<br><br>自家的「陕西天然白洋槐蜂蜜」🐝，新品特惠中，欢迎大家<a style="border-bottom: 1px solid rgb(143, 177, 247);color: rgb(30, 107, 184);" href="https://cbu01.alicdn.com/img/ibank/O1CN01MqUjwR1Bs2kAC3PGY_!!0-0-cib.jpg">点击此处微信扫码</a>来购！<br><br> ✅3月23日<br><br>     1栏：整体修改对网站的介绍方式，现在更加简洁了！<br><br>     1－9栏：新增几个免费看动漫网站<br><br>     6－5－3栏：更新可可英语 4.6.2 破解版<br><br>     13栏：更新超大量2022一建／二建／监理／安全／消防工程师资源<br><br>     ✅3月21日<br><br>     3－6栏：更新多个VIP音乐免费下载网站<br><br>     3－7栏：清理失效VIP音乐免费下载软件，并更新2款新的<br><br>     4－7－4栏：新增B站专用视频压制软件推荐<br><br>     4－7－5栏：新增免费视频剪辑软件推荐<br><br>     5－4栏：新增VEP／ev1／ev4解密工具<br><br>     5－5栏：超星刷课可用油猴脚本更新<br><br>     6－5－3栏：更新墨墨英语3.8.4破解版<br><br>     6－14栏：更新电子书阅读器推荐<br><br>     13－5栏：更新1个提供大量考研资料的良心网站<br><br>     其他：优化储物间移动端样式：增加首行缩进＋增大间距<br><br>     ✅3月20日<br><br>     4－5－2栏：新增①B站自动宽屏②知乎免登陆③屏蔽斗鱼虎牙B站等P2P上传－油猴脚本推荐<br><br>     8－8栏：更新长链接转短链接网站推荐<br><br>     8－14栏：新增①百度②腾讯③阿里④微软⑤讯飞的免费在线文本转语音服务<br><br>     其他：储物间功能增强，现在最近更新栏目／资源有颜色标注了<br><br>     ✅3月19日<br><br>     5－10栏：新增「论文查重／降重」软件一栏<br><br>     6－1栏：更新微博国际版－去广告版／微博－内置Xposed框架微博猪手修改版<br><br>     6－4栏：更新番茄ToDo会员版<br><br>     6－5－3栏：更新墨墨背单词破解版（阿虚粉丝提供）<br><br>     6－20：李跳跳更新到1.7.5（支持Android 12）<br><br>     9－10栏：新增「免费课件／教案」网站一栏<br><br>     ✅3月18日<br><br>     1－11栏：新增爱奇艺小爱音箱提取版<br><br>     4－16栏：之前分享的「旧版好压」最近貌似出现了强制更新的情况，在下载页面更新了完美屏蔽更新的方法<br><br>     6－3栏：删除失效的爱奇艺 10.2.0 Google Play 最后一版，更新新版<br><br>     其他：备用网盘闪电盘似乎凉凉了，慢慢替换备用资源链接中...<br><br>'},weixin: {name:"微信",desc: "点击公众号文章底部的广告，也是支持阿虚的一种方式😜，无需关注or下载广告内容，只需点击一下再关掉页面即可🤪（1次有效／微信号／日）",icon:"https://pic.rmb.bdstatic.com/bjh/1d03b99925fa323a97e40f4ad597215b.png",qrimg:"https://cbu01.alicdn.com/img/ibank/O1CN01gvheqO1WC0JiFMMxx_!!2793632751-0-cib.jpg"},alipay: {name:"支付宝", desc: "公众号不时会接一些推广（这也是阿虚主要的收入来源），大家能在阿虚接广告的时候贡献1个阅读量，就算是对阿虚莫大的支持了！",icon:"https://pic.rmb.bdstatic.com/bjh/8f3d342f2087632dd42af8dde6503616.png",qrimg:"https://cbu01.alicdn.com/img/ibank/O1CN019WMB1k1WC0Jos6LPP_!!2793632751-0-cib.jpg"}}};</script><script src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-77dcb12e-0d5c-428f-b806-fe4745ddacc6/1a94ef35-3668-404d-b596-0b02abbbcc9f.js"></script><script src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-77dcb12e-0d5c-428f-b806-fe4745ddacc6/8540ac39-37f6-44a0-8403-42fdf32d5823.js"></script><script src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-77dcb12e-0d5c-428f-b806-fe4745ddacc6/3a95176a-ee2b-4f59-8497-6ebeefd89302.js"></script></body></html>
