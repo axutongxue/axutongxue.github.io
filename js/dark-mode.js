@@ -17,12 +17,12 @@
     }
 	function adddarkcss(){
 		var creatHead = $('head');
-		creatHead.append('<link rel="stylesheet" href="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-77dcb12e-0d5c-428f-b806-fe4745ddacc6/fc3f8aa5-2a97-4609-9126-6a705fd24836.css">');
+		creatHead.append('<link rel="stylesheet" href="https://axu.nos-eastchina1.126.net/dark-mode.css">');
 		}
 	function removedarkcss(){
 		var allsuspects=document.getElementsByTagName('link');
 		for (var i=allsuspects.length; i>=0;i--){
-		if (allsuspects[i] &&allsuspects[i].getAttribute('href')!=null && allsuspects[i].getAttribute('href').indexOf('https://vkceyugu.cdn.bspapp.com/VKCEYUGU-77dcb12e-0d5c-428f-b806-fe4745ddacc6/fc3f8aa5-2a97-4609-9126-6a705fd24836.css')!=-1)
+		if (allsuspects[i] &&allsuspects[i].getAttribute('href')!=null && allsuspects[i].getAttribute('href').indexOf('https://axu.nos-eastchina1.126.net/dark-mode.css')!=-1)
 		  allsuspects[i].parentNode.removeChild(allsuspects[i]);
 		}
 	}
