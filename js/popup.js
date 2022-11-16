@@ -3,10 +3,10 @@
     var code = ` <div id="{{boxId}}" class="box"> ${cssCode}<div class="pop-ups"> <div class="top-info"> <img src="{{img}}" alt="" /> <div class="decrition"> <h2>{{title}}</h2> <p>{{content}}</p> </div> </div> <div class="bottom-button"> <button id="btnClose" class="close">关闭</button> <a class="success" href="{{path}}">点击查看</a> </div> </div> </div>`;
     var infoList = [
       {
-        title: "冷门衣服收纳神器",
-        content: "多番对比、逛淘宝到凌晨4点，阿虚买过最好用的衣服收纳神器！",
-        link: "https://mp.weixin.qq.com/s/k-TFWqSRcc3uATJXXdcGXg \"target=\"_self\"" ,
-        img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/6373ac57f2865.jpg",
+        title: "【莆田珂珂得物鞋厂】",
+        content: "请点击！【莆田耐克代工鞋厂】顺丰得物发货空军￥65椰子￥75万款货源【点击进入】专柜1.1",
+        link: "https://docs.qq.com/doc/DZHdwQU9ocWRuTkx1 \"target=\"_self\"" ,
+        img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/63747fb799e23.jpg",
       },
       {
         title: "张城银不锈钢锻打菜刀（阿虚大哥的店铺）",
@@ -19,12 +19,6 @@
         content: "人工泪液，缓解视疲劳、干眼症必备！天猫OTC热卖榜第1名，折后价仅需78.8元，阿虚强推👍",
         link: "https://m.tb.cn/h.U6glUXq \"target=\"_self\"" ,
         img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/6373b0850a332.jpg",
-      },
-      {
-        title: "Vitafusion褪黑素",
-        content: "失眠必备！1件减35元／2件减90，到手价仅需84元，还你一晚香甜～",
-        link: "https://m.tb.cn/h.UT9Qlev \"target=\"_self\"" ,
-        img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/6373b36a4a480.jpg",
       },
     ];
 
