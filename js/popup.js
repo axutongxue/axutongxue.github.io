@@ -4,19 +4,19 @@ var infoList = [
   title: "【莆田珂珂得物鞋厂】",
   content: "请点击！【莆田耐克代工鞋厂】顺丰得物发货空军￥65椰子￥75万款货源【点击进入】专柜1.1",
   link: "https://docs.qq.com/doc/DZHdwQU9ocWRuTkx1 \"target=\"_self\"" ,
-  img: "https://cdn-ak.f.st-hatena.com/images/fotolife/K/Kyon945/20221116/20221116204334.jpg",
+  img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/6374e4ef42330.jpg",
 },
 {
   title: "张城银不锈钢锻打菜刀（阿虚大哥的店铺）",
   content: "张师傅是我家老朋友了，他的菜刀驰名厨师界，阿虚家还有亲戚基本上都在用！",
   link: "https://p.pinduoduo.com/oXgAXO8g \"target=\"_self\"" , 
-  img: "https://cdn-ak.f.st-hatena.com/images/fotolife/K/Kyon945/20221116/20221116204337.jpg",
+  img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/6374e4fda384b.jpg",
 },
 {
   title: "海露玻璃酸钠滴眼药水",
   content: "人工泪液，缓解视疲劳、干眼症必备！天猫OTC热卖榜第1名，折后价仅需78.8元，阿虚强推👍",
   link: "https://m.tb.cn/h.U6glUXq \"target=\"_self\"" ,
-  img: "https://cdn-ak.f.st-hatena.com/images/fotolife/K/Kyon945/20221116/20221116204330.jpg",
+  img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/6374e4cd36374.jpg",
 },
 ];
 
