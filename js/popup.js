@@ -7,16 +7,16 @@ var infoList = [
     img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/6374e4ef42330.jpg",
   },
   {
-    title: "张城银不锈钢锻打菜刀（阿虚大哥的店铺）",
-    content: "张师傅是我家老朋友了，他的菜刀驰名厨师界，阿虚家还有亲戚基本上都在用！",
-    link: "https://p.pinduoduo.com/oXgAXO8g \"target=\"_self\"",
-    img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/6374e4fda384b.jpg",
+    title: "马应龙眼霜",
+    content: "阿虚一直在用的淡化黑眼圈神器！便宜又好用，买一支用一年，京东旗舰店原价¥109，劵后价仅需￥29！",
+    link: "https://u.jd.com/FCXqJ7p \"target=\"_self\"",
+    img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/637851c4d023a.jpg",
   },
   {
-    title: "海露玻璃酸钠滴眼药水",
-    content: "人工泪液，缓解视疲劳、干眼症必备！天猫OTC热卖榜第1名，折后价仅需78.8元，阿虚强推👍",
-    link: "https://m.tb.cn/h.U6glUXq \"target=\"_self\"",
-    img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/6374e4cd36374.jpg",
+    title: "海露滴眼液",
+    content: "人工泪液，缓解视疲劳、干眼症必备！天猫OTC热卖榜第1名，京东价仅需¥65，阿虚强推👍",
+    link: "https://u.jd.com/FKXOPn1 \"target=\"_self\"",
+    img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/637854325e393.jpg",
   },
 ];
 
@@ -82,7 +82,7 @@ function checkCookie() {
         checkCookie();
       }, timeOut);
     }
-  }, 2000);
+  }, 2000);//延时2秒展示
 }
   function RandomNumBoth(Min, Max) {
   var Range = Max - Min;
