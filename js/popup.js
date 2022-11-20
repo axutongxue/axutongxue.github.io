@@ -13,10 +13,10 @@ var infoList = [
     img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/637851c4d023a.jpg",
   },
   {
-    title: "海露滴眼液",
-    content: "人工泪液，缓解视疲劳、干眼症必备！天猫OTC热卖榜第1名，京东价仅需¥65，阿虚强推👍",
-    link: "https://u.jd.com/FKXOPn1 \"target=\"_self\"",
-    img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/637854325e393.jpg",
+    title: "京东官方！话费特惠慢充",
+    content: "正规渠道：移动96折，联通更是低至91折！👍",
+    link: "https://u.jd.com/FtkmVdP \"target=\"_self\"",
+    img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/6379e74377ad8.jpg",
   },
 ];
 
