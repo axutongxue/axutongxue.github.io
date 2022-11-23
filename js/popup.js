@@ -8,8 +8,8 @@ var infoList = [
   },
   {
     title: "马应龙眼霜",
-    content: "阿虚一直在用的淡化黑眼圈神器！便宜又好用，买一支用一年，京东旗舰店原价¥109，劵后价仅需￥29！",
-    link: "https://u.jd.com/FCXqJ7p \"target=\"_self\"",
+    content: "阿虚一直在用的淡化黑眼圈神器！便宜又好用，买一支用一年，拼多多旗舰店原价¥88.9，劵后价仅需￥29.9！",
+    link: "https://p.pinduoduo.com/mpGAjemn \"target=\"_self\"",
     img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/637851c4d023a.jpg",
   },
   {
