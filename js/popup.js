@@ -7,16 +7,16 @@ var infoList = [
     img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/6374e4ef42330.jpg",
   },
   {
-    title: "马应龙眼霜",
-    content: "阿虚一直在用的淡化黑眼圈神器！便宜又好用，买一支用一年，拼多多旗舰店原价¥88.9，劵后价仅需￥29.9！",
-    link: "https://p.pinduoduo.com/mpGAjemn \"target=\"_self\"",
-    img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/637851c4d023a.jpg",
+    title: "尚德考研",
+    content: "价值699元在职研考研资料，阿虚粉丝限额0元领取！",
+    link: "https://flowus.cn/share/1c2067a2-82eb-460b-afd5-77b7bf591b3b \"target=\"_self\"",
+    img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/6374e5a144e2b.png",
   },
   {
-    title: "京东官方！话费特惠慢充",
-    content: "销量超10W+：联通100话费91折！👍",
-    link: "https://u.jd.com/Fd53pXw \"target=\"_self\"",
-    img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/6379e74377ad8.jpg",
+    title: "魔撰写作",
+    content: "【３.２折立享】AI写作／智能润色／实时纠错／AI续写...",
+    link: "https://flowus.cn/share/17ef16a2-5974-4b7a-9e54-3fe62496591c \"target=\"_self\"",
+    img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/6374e5bdd9add.png",
   },
 ];
 
