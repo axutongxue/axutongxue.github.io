@@ -7,16 +7,10 @@ var infoList = [
     img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/6374e4ef42330.jpg",
   },
   {
-    title: "尚德考研",
-    content: "价值699元在职研考研资料，阿虚粉丝限额0元领取！",
-    link: "https://flowus.cn/share/1c2067a2-82eb-460b-afd5-77b7bf591b3b \"target=\"_self\"",
-    img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/6374e5a144e2b.png",
-  },
-  {
-    title: "魔撰写作",
-    content: "【３.２折立享】AI写作／智能润色／实时纠错／AI续写...",
-    link: "https://flowus.cn/share/17ef16a2-5974-4b7a-9e54-3fe62496591c \"target=\"_self\"",
-    img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/6374e5bdd9add.png",
+    title: "黑五软件特惠合集！",
+    content: "扫描全能王、截图神器FastStone Capture、网络优化加速器cFosSpeed...各种秒杀特惠价，不要错过！",
+    link: "https://apsgo.com/search?keyword=&cate=32&id=725 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic/46565_fxngH6wqR-ykBsx_1669368182/0",
   },
 ];
 
