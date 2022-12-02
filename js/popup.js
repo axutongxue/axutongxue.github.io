@@ -4,7 +4,7 @@ var infoList = [
     title: "【莆田珂珂得物鞋厂】",
     content: "请点击！【莆田耐克代工鞋厂】顺丰得物发货空军￥65椰子￥75万款货源【点击进入】专柜1.1",
     link: "https://docs.qq.com/doc/DZHdwQU9ocWRuTkx1 \"target=\"_self\"",
-    img: "http://img.mail.sina.com/signature/9d31f5319985c64329c237b7c61bc41147306b4d/6374e4ef42330.jpg",
+    img: "https://wework.qpic.cn/wwpic/654570_DIJtzL7fQx-GQFM_1669981454/0",
   },
   {
     title: "黑五软件特惠合集！",
