@@ -7,10 +7,16 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic/654570_DIJtzL7fQx-GQFM_1669981454/0",
   },
   {
-    title: "黑五软件特惠合集！",
-    content: "扫描全能王、截图神器FastStone Capture、网络优化加速器cFosSpeed...各种秒杀特惠价，不要错过！",
-    link: "https://apsgo.com/search?keyword=&cate=32&id=725 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic/46565_fxngH6wqR-ykBsx_1669368182/0",
+   title: "京东官方！话费特惠慢充",
+   content: "销量超10W+：联通100话费91折！",
+   link: "https://u.jd.com/Fd53pXw \"target=\"_self\"",
+   img: "https://wework.qpic.cn/wwpic/834930_RbQURKf6QSGo06u_1669981474/0",
+  },
+  {
+    title: "马应龙眼霜",
+    content: "阿虚一直在用的淡化黑眼圈神器！便宜又好用，买一支用一年，拼多多旗舰店原价¥88.9，劵后价仅需￥29.9！",
+    link: "https://p.pinduoduo.com/mpGAjemn \"target=\"_self\"",
+    img: "https://p1.music.126.net/8h5_hp5jaPeAuKQ4mXt6wQ==/109951168114295062.jpg",
   },
 ];
 
