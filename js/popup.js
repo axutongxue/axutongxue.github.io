@@ -3,20 +3,20 @@ var infoList = [
   {
     title: "【莆田珂珂得物鞋厂】",
     content: "请点击！【莆田耐克代工鞋厂】顺丰得物发货空军￥65椰子￥75万款货源【点击进入】专柜1.1",
-    link: "https://docs.qq.com/doc/DZHdwQU9ocWRuTkx1 \"target=\"_self\"",
+    link: "https://docs.qq.com/doc/DZFNwQmJ4SVhNcVRn \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic/654570_DIJtzL7fQx-GQFM_1669981454/0",
+  },
+  {
+    title: "连花清瘟",
+    content: "《新型冠状病毒肺炎诊疗方案（试行第九版）》明确推荐，新冠轻症必备！一盒24粒装仅需￥34.8！",
+    link: "https://m.tb.cn/h.U7dXqZC \"target=\"_self\"",
+    img: "https://p1.music.126.net/OPyEiHMrcbhM4mlX7eg2mA==/109951168117974767.jpg",
   },
   {
    title: "布洛芬缓释胶囊",
    content: "止痛、缓解感冒发热症状必备：京东原价¥59，劵后价3盒仅需¥29！",
    link: "https://u.jd.com/et8wLRz \"target=\"_self\"",
    img: "https://p1.music.126.net/47zyIRL91m8zYUXLPtZpFg==/109951168117954268.jpg",
-  },
-  {
-    title: "莲花清瘟",
-    content: "《新型冠状病毒肺炎诊疗方案（试行第九版）》明确推荐，新冠轻症必备！一盒24粒装仅需￥39！",
-    link: "https://m.tb.cn/h.U72JsAg \"target=\"_self\"",
-    img: "https://p1.music.126.net/OPyEiHMrcbhM4mlX7eg2mA==/109951168117974767.jpg",
   },
 ];
 
