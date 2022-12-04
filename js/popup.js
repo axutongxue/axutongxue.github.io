@@ -7,16 +7,16 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic/654570_DIJtzL7fQx-GQFM_1669981454/0",
   },
   {
-   title: "京东官方！话费特惠慢充",
-   content: "销量超10W+：联通100话费91折！",
-   link: "https://u.jd.com/Fd53pXw \"target=\"_self\"",
-   img: "https://wework.qpic.cn/wwpic/834930_RbQURKf6QSGo06u_1669981474/0",
+   title: "布洛芬缓释胶囊",
+   content: "止痛、缓解感冒发热症状必备：京东原价¥59，劵后价3盒仅需¥29！",
+   link: "https://u.jd.com/et8wLRz \"target=\"_self\"",
+   img: "https://p1.music.126.net/47zyIRL91m8zYUXLPtZpFg==/109951168117954268.jpg",
   },
   {
-    title: "马应龙眼霜",
-    content: "阿虚一直在用的淡化黑眼圈神器！便宜又好用，买一支用一年，拼多多旗舰店原价¥88.9，劵后价仅需￥29.9！",
-    link: "https://p.pinduoduo.com/mpGAjemn \"target=\"_self\"",
-    img: "https://p1.music.126.net/8h5_hp5jaPeAuKQ4mXt6wQ==/109951168114295062.jpg",
+    title: "莲花清瘟",
+    content: "《新型冠状病毒肺炎诊疗方案（试行第九版）》明确推荐，新冠轻症必备！一盒24粒装仅需￥39！",
+    link: "https://m.tb.cn/h.U72JsAg \"target=\"_self\"",
+    img: "https://p1.music.126.net/OPyEiHMrcbhM4mlX7eg2mA==/109951168117974767.jpg",
   },
 ];
 
