@@ -12,6 +12,12 @@ var infoList = [
     link: "https://flowus.cn/share/9d13333d-121b-4ce2-ac82-e5267de5a3bd \"target=\"_self\"",
     img: "https://p1.music.126.net/U3PX0VWdI-trqGYmJWjFig==/109951168120062472.jpg",
   },
+  {
+    title: "FlowUs",
+    content: "国产笔记软件，阿虚储物间已全面采用其分享文档，内含无限网盘空间！！",
+    link: "https://flowus.cn/login?code=CZ3ECT&promotionChannel=WX_axtx_02 \"target=\"_self\"",
+    img: "https://p1.music.126.net/Xei1NpC4jHQF7noyqSNv_w==/109951168144774921.png",
+  },
 ];
 
 function setCookie() {
