@@ -7,16 +7,16 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic/654570_DIJtzL7fQx-GQFM_1669981454/0",
   },
   {
-    title: "向日葵远程控制",
-    content: "【长期优惠活动】免费领取！向日葵远控VIP兑换码，畅享7天精英版网络速度！",
-    link: "https://flowus.cn/share/9d13333d-121b-4ce2-ac82-e5267de5a3bd \"target=\"_self\"",
-    img: "https://p1.music.126.net/U3PX0VWdI-trqGYmJWjFig==/109951168120062472.jpg",
+    title: "魔撰写作",
+    content: "AI写作／智能润色／实时纠错...注册即可免费领会员，付费VIP阿虚粉丝享3折优惠！",
+    link: "https://flowus.cn/share/17ef16a2-5974-4b7a-9e54-3fe62496591c \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic/462197_07Ti87bDSP6G9zz_1670299439/0",
   },
   {
-    title: "FlowUs",
-    content: "国产笔记软件，阿虚储物间已全面采用其分享文档，内含无限网盘空间！！",
-    link: "https://flowus.cn/login?code=CZ3ECT&promotionChannel=WX_axtx_02 \"target=\"_self\"",
-    img: "https://p1.music.126.net/Xei1NpC4jHQF7noyqSNv_w==/109951168144774921.png",
+    title: "魔音工坊",
+    content: "国内顶尖AI配音神器，注册即可免费领会员，付费VIP阿虚粉丝享9折优惠！",
+    link: "https://flowus.cn/share/0ee85362-74eb-4167-9a1c-3622204ee815 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic/770968_o07Z3IsIQCe_s7m_1670299441/0",
   },
 ];
 
