@@ -7,16 +7,16 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic/654570_DIJtzL7fQx-GQFM_1669981454/0",
   },
   {
-    title: "魔撰写作",
-    content: "AI写作／智能润色／实时纠错...注册即可免费领会员，付费VIP阿虚粉丝享3折优惠！",
-    link: "https://flowus.cn/share/17ef16a2-5974-4b7a-9e54-3fe62496591c \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic/462197_07Ti87bDSP6G9zz_1670299439/0",
+    title: "4.8折爱奇艺＆腾讯视频会员",
+    content: "同程旅行内部活动：原价25/月爱奇艺＆腾讯视频会员仅需１２元/月！！还送10元打车券",
+    link: "https://wework.qpic.cn/wwpic/395395_Af60qTGzSlKBpeG_1672842611 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic/40156_9DIqRwHnRXaMQPY_1672843718",
   },
   {
-    title: "魔音工坊",
-    content: "国内顶尖AI配音神器，注册即可免费领会员，付费VIP阿虚粉丝享9折优惠！",
-    link: "https://flowus.cn/share/0ee85362-74eb-4167-9a1c-3622204ee815 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic/770968_o07Z3IsIQCe_s7m_1670299441/0",
+    title: "４折优酷会员",
+    content: "同程旅行内部活动：原价25/月优酷会员仅需１０元/月！！还送10元打车券",
+    link: "https://wework.qpic.cn/wwpic/400651_NMTe-z7vQma1v-A_1672842611 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic/367806_ZWOr3OjRT1ajZNh_1672843483",
   },
 ];
 
