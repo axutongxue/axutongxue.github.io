@@ -7,16 +7,16 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic/654570_DIJtzL7fQx-GQFM_1669981454/0",
   },
   {
-    title: "4.8折爱奇艺＆腾讯视频会员",
-    content: "同程旅行内部活动：原价25/月爱奇艺＆腾讯视频会员仅需１２元/月！！还送10元打车券",
-    link: "https://wework.qpic.cn/wwpic/395395_Af60qTGzSlKBpeG_1672842611 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic/40156_9DIqRwHnRXaMQPY_1672843718",
+    title: "出大问题了！",
+    content: "公众号疑似被限流了，最近文章阅读量持续走低😭！希望大家能帮忙点进主页增加一下文章阅读量，谢谢大家",
+    link: "https://wework.qpic.cn/wwpic/20524_4ZhbRYl8Td61J0s_1674140629 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic/536483_5qgUw6zbRYSi2L-_1674140614",
   },
   {
-    title: "４折优酷会员",
-    content: "同程旅行内部活动：原价25/月优酷会员仅需１０元/月！！还送10元打车券",
-    link: "https://wework.qpic.cn/wwpic/400651_NMTe-z7vQma1v-A_1672842611 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic/367806_ZWOr3OjRT1ajZNh_1672843483",
+    title: "救救阿虚( ˃̣̣̥⌓˂̣̣̥ )",
+    content: "公众号疑似被限流了，最近文章阅读量持续走低！希望大家能帮忙点进主页增加一下文章阅读量，再三感谢",
+    link: "https://wework.qpic.cn/wwpic/20524_4ZhbRYl8Td61J0s_1674140629 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic/347214_M20UWcqDSeKTloA_1674140708",
   },
 ];
 
