@@ -7,16 +7,16 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic/654570_DIJtzL7fQx-GQFM_1669981454/0",
   },
   {
-    title: "出大问题了！",
-    content: "公众号疑似被限流了，最近文章阅读量持续走低😭！希望大家能帮忙点进主页增加一下文章阅读量，谢谢大家",
-    link: "https://wework.qpic.cn/wwpic/20524_4ZhbRYl8Td61J0s_1674140629 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic/536483_5qgUw6zbRYSi2L-_1674140614",
+    title: "XMind",
+    content: "返工限时５折，思维导图 Xmind 仅需 194 元/年！限时优惠时间 2 月 2 日至 7 日",
+    link: "https://flowus.cn/share/b3d89f33-79a7-40c8-b732-4dfa0ac61db9 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic/219083_ma2TZoXlSGCPil7_1675397322",
   },
   {
-    title: "救救阿虚( ˃̣̣̥⌓˂̣̣̥ )",
-    content: "公众号疑似被限流了，最近文章阅读量持续走低！希望大家能帮忙点进主页增加一下文章阅读量，再三感谢",
-    link: "https://wework.qpic.cn/wwpic/20524_4ZhbRYl8Td61J0s_1674140629 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic/347214_M20UWcqDSeKTloA_1674140708",
+    title: "淘票票",
+    content: "淘票票官方春节档电影券，无套路直接免费领，最高３０元电影优惠券！",
+    link: "https://mp.weixin.qq.com/s/OunQzw-_MU2r1ZLbmo1n7Q \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic/120985_E_HDcRw2S16kWvn_1675398072",
   },
 ];
 
