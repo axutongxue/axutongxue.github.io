@@ -7,10 +7,10 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic/654570_DIJtzL7fQx-GQFM_1669981454/0",
   },
   {
-    title: "XMind",
-    content: "返工限时５折，思维导图 Xmind 仅需 194 元/年！限时优惠时间 2 月 2 日至 7 日",
-    link: "https://flowus.cn/share/b3d89f33-79a7-40c8-b732-4dfa0ac61db9 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic/219083_ma2TZoXlSGCPil7_1675397322",
+    title: "喵小二【阿虚邀请码110011】",
+    content: "全网优惠合集：低价会员／电影票优惠／特惠加油／93折充话费／外卖优惠／网购返利／快餐饮品优惠点餐...",
+    link: "https://sj.qq.com/appdetail/com.miaoxiaoer.app \"target=\"_self\"",
+    img: "https://pp.myapp.com/ma_icon/0/icon_53290304_1667901684/256",
   },
   {
     title: "淘票票",
