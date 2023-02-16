@@ -21,7 +21,7 @@ function setCookie() {
   let expires = date.getTime() + expireTime;
   date.setTime(expires);
   document.cookie =
-    "ad=" + RandomNumBoth(1, 10000) + "; expires=" + date.toGMTString();
+    "a1d=" + RandomNumBoth(1, 10000) + "; expires=" + date.toGMTString();
   document.cookie =
     "testexp=" + expires + "; expires=" + date.toGMTString();
   // 过了这个时间就没用过期时间
@@ -39,18 +39,18 @@ function getCookie(cookie_name) {
 }
 function checkCookie() {
   setTimeout(function () {
-    if (!getCookie("ad")) {
+    if (!getCookie("a1d")) {
       setCookie();
       let btnClose = document.querySelector("#btnClose");
       if (btnClose) {
         return;
       }
-      let ad = infoList[RandomNumBoth(0, infoList.length - 1)];
+      let a1d = infoList[RandomNumBoth(0, infoList.length - 1)];
       let boxId = RandomNumBoth(10000, 100000);
-      let newCode = code.replace("{{title}}", ad.title);
-      newCode = newCode.replace("{{content}}", ad.content);
-      newCode = newCode.replace("{{path}}", ad.link);
-      newCode = newCode.replace("{{img}}", ad.img);
+      let newCode = code.replace("{{title}}", a1d.title);
+      newCode = newCode.replace("{{content}}", a1d.content);
+      newCode = newCode.replace("{{path}}", a1d.link);
+      newCode = newCode.replace("{{img}}", a1d.img);
       newCode = newCode.replace("{{boxId}}", boxId);
 
       let div = document.createElement("div");
