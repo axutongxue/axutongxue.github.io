@@ -7,10 +7,10 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic/522455_UYKgnWMtSOima7J_1676521068/0",
   },
   {
-    title: "喵小二【阿虚邀请码110011】",
-    content: "全网优惠合集：低价会员／电影票优惠／特惠加油／93折充话费／外卖优惠／网购返利／快餐饮品优惠点餐...",
-    link: "https://sj.qq.com/appdetail/com.miaoxiaoer.app \"target=\"_self\"",
-    img: "https://pp.myapp.com/ma_icon/0/icon_53290304_1667901684/256",
+    title: "AI智能创作平台",
+    content: "AI剪视频，AI写作，AI作画一站式搞定！",
+    link: "https://flowus.cn/share/e459ce14-c1ba-496b-8b9f-e4a622fcbbb2 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic/944285_FCQUITEARL-lsLe_1677568548",
   },
 ];
 
