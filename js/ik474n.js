@@ -4,7 +4,7 @@ var infoList = [
     title: "【莆田珂珂得物鞋厂】",
     content: "请点击！【莆田耐克代工鞋厂】顺丰得物发货空军￥65椰子￥75万款货源【点击进入】专柜1.1",
     link: "https://docs.qq.com/doc/DZFNwQmJ4SVhNcVRn \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic/522455_UYKgnWMtSOima7J_1676521068/0",
+    img: "https://wework.qpic.cn/wwpic/278319_xS7_Gc-rTyeXVSu_1678893477/0",
   },
   {
     title: "AI智能创作平台",
