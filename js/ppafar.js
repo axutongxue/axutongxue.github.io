@@ -12,12 +12,6 @@ var infoList = [
     link: "https://docs.qq.com/doc/DZFNwQmJ4SVhNcVRn \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic/278319_xS7_Gc-rTyeXVSu_1678893477/0",
   },
-  {
-    title: "官方大流量卡",
-    content: "【福利】19元/130G，全国通用，套餐营业厅可查不限速，不虚量，点击领取！⚠️",
-    link: "http://55co.cn/#ax \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic/293232_t3wZ4bW4Try9Igs_1680024610/0",
-  },
 ];
 
 function setCookie() {
