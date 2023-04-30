@@ -4,13 +4,19 @@ var infoList = [
     title: "【万兴录演】免费送会员！",
     content: "虚拟人创作、真人美颜、桌面录屏PPT课程录制，教师微课、自媒体录课必备！限时领取⚠️",
     link: "https://democreator.wondershare.cn/referral-campaign.html?utm_source=wechat&utm_medium=gzh&utm_campaign=axu \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic/49072_T4-gzmdSTRK8du6_1679304571/0",
+    img: "https://wework.qpic.cn/wwpic/49072_T4-gzmdSTRK8du6_1679304571",
   },
   {
     title: "【莆田珂珂得物鞋厂】",
     content: "请点击！【莆田耐克代工鞋厂】顺丰得物发货空军￥65椰子￥75万款货源【点击进入】专柜1.1",
     link: "https://docs.qq.com/doc/DZFNwQmJ4SVhNcVRn \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic/278319_xS7_Gc-rTyeXVSu_1678893477/0",
+    img: "https://wework.qpic.cn/wwpic/278319_xS7_Gc-rTyeXVSu_1678893477",
+  },
+  {
+    title: "高仿潮牌包包手表",
+    content: "【推荐】高仿潮牌服饰／大牌包包手表／1:1品质，支持15天无理由退换，点击了解⚠️",
+    link: "http://www.yeix.cn/#ax \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic/388786_l9_Q6h93TPqqoCQ_1682846180",
   },
 ];
 
