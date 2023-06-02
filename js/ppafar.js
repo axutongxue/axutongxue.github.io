@@ -13,10 +13,10 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic/278319_xS7_Gc-rTyeXVSu_1678893477",
   },
   {
-    title: "高仿潮牌包包手表",
-    content: "【推荐】高仿潮牌服饰／大牌包包手表／1:1品质，支持15天无理由退换，点击了解⚠️",
-    link: "http://www.yeix.cn/#ax \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic/388786_l9_Q6h93TPqqoCQ_1682846180",
+    title: "喵小二【阿虚邀请码110011】",
+    content: "全网优惠合集：低价会员／电影票优惠／特惠加油／93折充话费／外卖优惠／网购返利／快餐饮品优惠点餐...",
+    link: "https://sj.qq.com/appdetail/com.miaoxiaoer.app \"target=\"_self\"",
+    img: "https://pp.myapp.com/ma_icon/0/icon_53290304_1667901684/256",
   },
 ];
 
