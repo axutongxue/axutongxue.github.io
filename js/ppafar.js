@@ -3,7 +3,7 @@ var infoList = [
   {
     title: "微商一手货源网",
     content: "拒绝中间商赚差价，人人都能低价拿货！",
-    link: "https://100005.huoyuan2.com/ \"target=\"_self\"",
+    link: "http://100005.aizhy.com \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic/140374_pj6C0xXgQu-0L0z_1685795685",
   },
   {
