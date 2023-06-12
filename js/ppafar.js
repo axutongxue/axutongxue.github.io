@@ -13,10 +13,10 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic/278319_xS7_Gc-rTyeXVSu_1678893477",
   },
   {
-    title: "喵小二【阿虚邀请码110011】",
-    content: "全网优惠合集：低价会员／电影票优惠／特惠加油／93折充话费／外卖优惠／网购返利／快餐饮品优惠点餐...",
-    link: "https://sj.qq.com/appdetail/com.miaoxiaoer.app \"target=\"_self\"",
-    img: "https://pp.myapp.com/ma_icon/0/icon_53290304_1667901684/256",
+    title: "ChatGPT加强版4.0，已上线！！（安卓+电脑）",
+    content: "无需梯子、极速体验、GPT4通道、超强接口、快速稳定！",
+    link: "https://wws.lanzoul.com/b0czq1fgb \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic/124822_T2o42DSBTqOYCNB_1686537148",
   },
 ];
 
