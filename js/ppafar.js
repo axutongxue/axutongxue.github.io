@@ -10,7 +10,7 @@ var infoList = [
     title: "【莆田珂珂得物鞋厂】",
     content: "请点击！【莆田耐克代工鞋厂】顺丰得物发货空军￥65椰子￥75万款货源【点击进入】专柜1.1",
     link: "https://kdocs.cn/l/ccoN3h5gXwp5 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic/278319_xS7_Gc-rTyeXVSu_1678893477",
+    img: "https://wework.qpic.cn/wwpic/590045_IbwXR5rbRzOlEvL_1692353681",
   },
   {
     title: "ChatGPT加强版4.0，已上线！！（安卓+电脑）",
