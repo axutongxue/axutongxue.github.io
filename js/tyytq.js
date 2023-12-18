@@ -2,9 +2,9 @@ var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100v
 var infoList = [
   {
     title: "【莆田珂珂得物鞋厂】",
-    content: "请点击！【莆田耐克代工鞋厂】顺丰得物发货空军￥65椰子￥75万款货源【点击进入】专柜1.1",
-    link: "https://www.kekexc.com/dp/13he/axu13 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic/48926_3A7b7uj-TW-mA5-_1700318830",
+    content: "莆田鞋厂【得物】发货nike空军￥65//Aj1￥85专柜1.1珂珂鞋厂全网货源！请点击！",
+    link: "https://kdocs.cn/l/ccoN3h5gXwp5 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/537493_Ng4vZq5BRZS4TOe_1702873316",
   },
   {
     title: "微商一手货源网",
