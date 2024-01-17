@@ -4,7 +4,7 @@ var infoList = [
     title: "【莆田珂珂得物鞋厂】",
     content: "莆田鞋厂【得物】发货nike空军￥65//Aj1￥85专柜1.1珂珂鞋厂全网货源！请点击！",
     link: "https://kdocs.cn/l/ccoN3h5gXwp5 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/537493_Ng4vZq5BRZS4TOe_1702873316",
+    img: "https://wework.qpic.cn/wwpic3az/738906_T2W8h02xQDqvV5H_1705476360",
   },
   {
     title: "微商一手货源网",
@@ -20,7 +20,7 @@ var infoList = [
   },
   {
     title: "【阿虚自营】三网低价流量卡",
-    content: "低至19/月100+G流量！运营商直营授权，三网套餐任选，可打电话发短信，无任何套路放心选购！",
+    content: "低至9/月100+G流量！运营商直营授权，三网套餐任选，可打电话发短信，无任何套路放心选购！",
     link: "https://simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/486090_vU9ToHSnRTeeXP9_1702133137",
   },
