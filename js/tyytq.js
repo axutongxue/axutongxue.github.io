@@ -15,7 +15,7 @@ var infoList = [
   {
     title: "【阿虚自营】三网低价流量卡",
     content: "低至9/月100+G流量！运营商直营授权，三网套餐任选，可打电话发短信，无任何套路放心选购！",
-    link: "https://simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF \"target=\"_self\"",
+    link: "https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/486090_vU9ToHSnRTeeXP9_1702133137",
   },
 
