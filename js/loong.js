@@ -19,8 +19,8 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/738906_T2W8h02xQDqvV5H_1705476360",
   },
   {
-    title: "AI破局俱乐部第二期200元优惠券",
-    content: "近3W人／国内最大AI付费社群 200 元入群优惠券🔥🔥🔥（第一期就产出200W字图文教程+200多期直播回放）",
+    title: "AI破局第二期200元优惠券🔥",
+    content: "近3W人国内最大AI付费社群！第一期就产出200W字图文教程＋200多期直播回放＋几百份精华帖，进群全可看",
     link: "https://mp.weixin.qq.com/s/ptT5bEMViumFfVPMyBD7ew \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/455283_Obs7qLmARwOE6sE_1708323980/0",
   },
