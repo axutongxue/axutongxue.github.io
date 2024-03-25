@@ -18,6 +18,12 @@ var infoList = [
     link: "http://mtw.so/69t0YN \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/738906_T2W8h02xQDqvV5H_1705476360",
   },
+  {
+    title: "无法被封锁！用IPFS下载电子书或成未来最稳方案",
+    content: "🆕阿虚公众号最新文章！点击后通过客服跳转微信查看",
+    link: "https://work.weixin.qq.com/kfid/kfc99ea93cc35f3a93d \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/391738_aaudRmR4RXiCzfI_1711332736/0",
+  },
 ];
 
 function setCookie() {
