@@ -19,10 +19,10 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/738906_T2W8h02xQDqvV5H_1705476360",
   },
   {
-    title: "无法被封锁！用IPFS下载电子书或成未来最稳方案",
-    content: "🆕阿虚公众号最新文章！点击后通过客服跳转微信查看",
-    link: "https://work.weixin.qq.com/kfid/kfc99ea93cc35f3a93d \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/391738_aaudRmR4RXiCzfI_1711332736/0",
+    title: "删个照片还能让人上瘾？整理相册从未如此酸爽",
+    content: "👍推荐一期阿虚公众号冷门文章！点击后通过客服跳转微信查看",
+    link: "https://work.weixin.qq.com/kfid/kfcd40df0818c5c9d78 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/343668_l_9tTX82TnCT62b_1711448277/0",
   },
 ];
 
