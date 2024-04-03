@@ -7,22 +7,16 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic/124822_T2o42DSBTqOYCNB_1686537148",
   },
   {
+    title: "【莆田珂珂得物鞋厂】",
+    content: "莆田鞋厂【得物】发货Adidas椰子￥85//Aj1￥85专柜1.1珂珂鞋厂全网货源！请点击！",
+    link: "http://mtw.so/69t0YN \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/970353_BL0rIDMoQyesbPL_1712133727/0",
+  },
+  {
     title: "【阿虚自营】三网低价流量卡",
     content: "低至9/月100+G流量！运营商直营授权，三网套餐任选，可打电话发短信，无任何套路放心选购！",
     link: "https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/486090_vU9ToHSnRTeeXP9_1702133137",
-  },
-  {
-    title: "【莆田珂珂得物鞋厂】",
-    content: "莆田鞋厂【得物】发货nike空军￥65//Aj1￥85专柜1.1珂珂鞋厂全网货源！请点击！",
-    link: "http://mtw.so/69t0YN \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/738906_T2W8h02xQDqvV5H_1705476360",
-  },
-  {
-    title: "删个照片还能让人上瘾？整理相册从未如此酸爽",
-    content: "👍推荐一期阿虚公众号冷门文章！点击后通过客服跳转微信查看",
-    link: "https://work.weixin.qq.com/kfid/kfcd40df0818c5c9d78 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/343668_l_9tTX82TnCT62b_1711448277/0",
   },
 ];
 
