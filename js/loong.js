@@ -9,8 +9,8 @@ var infoList = [
   {
     title: "【莆田珂珂得物鞋厂】",
     content: "莆田鞋厂【得物】发货Adidas椰子￥85//Aj1￥85专柜1.1珂珂鞋厂全网货源！请点击！",
-    link: "http://mtw.so/69t0YN \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/970353_BL0rIDMoQyesbPL_1712133727/0",
+    link: "http://t.nxw.so/chsTT \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/683829_Ev7HJbOBSWqaVc9_1714222136/0",
   },
   {
     title: "阿虚的店铺丨运营商直营授权",
