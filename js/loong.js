@@ -7,12 +7,6 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic/124822_T2o42DSBTqOYCNB_1686537148",
   },
   {
-    title: "【莆田珂珂得物鞋厂】",
-    content: "莆田鞋厂【得物】发货Adidas椰子￥85//Aj1￥85专柜1.1珂珂鞋厂全网货源！请点击！",
-    link: "http://t.nxw.so/chsTT \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/683829_Ev7HJbOBSWqaVc9_1714222136/0",
-  },
-  {
     title: "阿虚的店铺丨运营商直营授权",
     content: "低至19/月188G流量！电信、联通、移动套餐任选，可打电话发短信，免费包邮放心选购！",
     link: "https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF \"target=\"_self\"",
