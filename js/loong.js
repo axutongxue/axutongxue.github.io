@@ -7,6 +7,12 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic/124822_T2o42DSBTqOYCNB_1686537148",
   },
   {
+    title: "ChatGPT4.0 + Midjourney　国内站-IMYAI智能助手！",
+    content: "站长力荐！人工智能聊天绘画机器人，支持国内外10+款大模型！你身边同学都在用的超级生产力工具！",
+    link: "https://link3.cc/imyai?channel=6 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/724900_hn9UJh0xS1ysGUt_1714390616",
+  },
+  {
     title: "阿虚的店铺丨运营商直营授权",
     content: "低至19/月188G流量！电信、联通、移动套餐任选，可打电话发短信，免费包邮放心选购！",
     link: "https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF \"target=\"_self\"",
