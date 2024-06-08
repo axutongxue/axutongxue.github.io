@@ -18,6 +18,12 @@ var infoList = [
     link: "https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
+  {
+    title: "正版软件丨数码荔枝年中618大促",
+    content: "100多款软件限时直降！Xmind、Typora、白描、Adguard等等年中大促低至 5 折起！",
+    link: "https://lizhi.shop/site/discount/id/618?cid=ds7afku3 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/65192_SLOeX6wFRXSUswS_1717835872/0",
+  },
 ];
 
 function setCookie() {
