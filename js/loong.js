@@ -19,10 +19,10 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
   {
-    title: "正版软件丨数码荔枝年中618大促",
-    content: "100多款软件限时直降！Xmind、Typora、白描、Adguard等等年中大促低至 5 折起！",
-    link: "https://lizhi.shop/site/discount/id/618?cid=ds7afku3 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/65192_SLOeX6wFRXSUswS_1717835872/0",
+    title: "限量丨阿虚建了个粉丝群...",
+    content: "6月11日－6月18日，群里持续分享干货，还会请行业超级IP做直播分享，想要加入的粉丝拼手速吧...",
+    link: "https://mp.weixin.qq.com/s/ITfsNPaG6jzk_4tewUwniA \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/894400_cYxYgtFuQb-xL9Z_1718166189/0",
   },
 ];
 
