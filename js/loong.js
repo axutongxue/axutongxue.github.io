@@ -10,7 +10,7 @@ var infoList = [
     title: "【莆田珂珂得物鞋厂】",
     content: "【得物】货莆田鞋厂nike倒钩￥85//空军￥65专柜1.1鞋厂全网货源！请点击！",
     link: "https://sourl.cn/czHN7i \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/117056_zJjoe6epSKOSNww_1715389225/0",
+    img: "https://wework.qpic.cn/wwpic3az/861904_N5FEgY-XQ7OrTwe_1718167955/0",
   },
   {
     title: "阿虚的店铺丨运营商直营授权",
