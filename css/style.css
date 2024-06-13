@@ -15,7 +15,7 @@ a:hover {
 }
 .menu {
     border-left: 1px solid #000;
-	margin: 5 0 5 -16;
+	margin: 5px 0 5px -16px;
     padding-left: 32px;
 }
 li {
@@ -36,34 +36,34 @@ li ul {
 	padding:3px;
 	font-size:15px;
 	border-radius:4px;
-	margin:0 3 0 3
+	margin:0 3px 0 3px
 }
 #mainmenu {
 	margin-left: -45px;
 	font-size: 17px;
 }
 .fa-windows {
-	padding-left:4;
-	text-indent:0px;
+	padding-left:4px;
+	text-indent:0;
 	color:#007bda
 }
 .fa-laptop {
-	padding-left:4;
-	text-indent:0px;
+	padding-left:4px;
+	text-indent:0;
 	color:grey
 }
 .fa-linux {
-	padding-left:4;
-	text-indent:0px;
+	padding-left:4px;
+	text-indent:0;
 }
 .fa-android {
-	padding-left:4;
-	text-indent:0px;
+	padding-left:4px;
+	text-indent:0;
 	color:#7cb342
 }
 .fa-apple {
-	padding-left:4;
-	text-indent:0px;
+	padding-left:4px;
+	text-indent:0;
 	color:grey
 }
 .fa-folder {
@@ -74,23 +74,23 @@ li ul {
 	margin-left: -25px;
 }
 .fa-bullhorn {
-	padding-left:4;
+	padding-left:4px;
 	color:yellowgreen
 }
 .fa-file-text-o{
-    padding: 0 3 0 5;
+    padding: 0 4px 0 4px;
     color:teal
 }
 .fa-youtube-play{
-    padding: 0 2 0 2;
+    padding: 0 2px 0 2px;
     color: tomato
 }
 .fa-gift{
-	padding: 0 3 0 4;
+	padding: 0 3px 0 4px;
     color: coral;
 }
 .fa-shopping-cart{
-	padding: 0 3 0 2;
+	padding: 0 3px 0 2px;
     color: #FF5B00;
 }
 .fa-weixin {
@@ -101,7 +101,7 @@ li ul {
 }
 #footer {
 	text-align:center;
-	margin-top:0px;
+	margin-top:0;
 	color:#5c5c5c;
 	font-size:12px;
 	-webkit-text-size-adjust:100%
@@ -123,19 +123,19 @@ li ul {
 .res {
 	border-style:solid;
 	border-width:1;
-	margin:0 2;
-	padding:0 2
+	margin:0 2px;
+	padding:0 2px
 }
 .fa-link {
-	padding:0 2 0 4;
+	padding:0 2px 0 4px;
 	color:cornflowerblue
 }
 .fa-internet-explorer {
-	padding:0 2 0 3;
+	padding:0 2px 0 3px;
 	color:cornflowerblue
 }
 .bei {
-	margin: 0 0 -7 4;
+	margin: 0 0 -7px 4px;
 }
 .result {
 	background:#ff0
@@ -200,7 +200,7 @@ li ul {
 }
 
 .fa-info-circle{
-	margin:5 8 5 20;
+	margin:5px 8px 5px 20px;
 	color: darkgray;
 }
 
