@@ -90,7 +90,7 @@ li ul {
     color: coral;
 }
 .fa-shopping-cart{
-	padding: 0 3px 0 2px;
+	padding: 0 4px 0 2px;
     color: #FF5B00;
 }
 .fa-weixin {
@@ -217,3 +217,16 @@ li ul {
 	font-size: 15px;
 	line-height: 17px;
 }
+
+@keyframes blink {
+    0%, 100% {
+	  color: #FFF;	  
+    }
+    50% {
+	  color: #000;
+    }
+  }
+
+  .blink {
+    animation: blink 3s linear infinite;
+  }
