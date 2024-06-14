@@ -6,7 +6,11 @@ body {
 }
 a {
 	color:#000;
-	text-decoration:none
+	text-decoration:none;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
 }
 a:hover {
 	color:#6495ed;
