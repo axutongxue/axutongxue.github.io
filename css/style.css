@@ -231,6 +231,10 @@ li ul {
 	padding:0 4px 0 4px;
 	color: #FF5B00;
 }
+.fa-exclamation-triangle{
+	padding:0 3px 0 3px;
+	color: #FFC83D;
+}
 
 @keyframes blink {
     0%, 100% {
