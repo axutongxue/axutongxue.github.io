@@ -77,10 +77,6 @@ li ul {
 	margin-top:2px;
 	margin-left: -25px;
 }
-.fa-bullhorn {
-	padding-left:4px;
-	color:yellowgreen
-}
 .fa-file-text-o{
     padding: 0 4px 0 4px;
     color:teal
@@ -220,6 +216,11 @@ li ul {
 	padding-left: 4px;
 	font-size: 15px;
 	line-height: 17px;
+}
+
+.fa-quote-left{
+	padding:0 4px 0 4px;
+	color:yellowgreen;
 }
 
 @keyframes blink {
