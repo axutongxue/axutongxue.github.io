@@ -223,6 +223,15 @@ li ul {
 	color:yellowgreen;
 }
 
+.fa-ban{
+	padding:0 4px 0 4px;
+	color: #FF5B00;
+}
+.fa-medkit{
+	padding:0 4px 0 4px;
+	color: #FF5B00;
+}
+
 @keyframes blink {
     0%, 100% {
 	  color: #FFF;	  
