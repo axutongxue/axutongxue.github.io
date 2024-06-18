@@ -12,12 +12,6 @@ var infoList = [
     link: "https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
-  {
-    title: "限量丨阿虚建了个粉丝群...",
-    content: "6月11日－6月18日，群里持续分享干货，还会请行业超级IP做直播分享，想要加入的粉丝拼手速吧...",
-    link: "https://mp.weixin.qq.com/s/ITfsNPaG6jzk_4tewUwniA \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/894400_cYxYgtFuQb-xL9Z_1718166189/0",
-  },
 ];
 
 function setCookie() {
