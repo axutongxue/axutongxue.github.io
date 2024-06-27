@@ -15,13 +15,13 @@ var infoList = [
   {
     title: "教育部出品丨高考志愿填报",
     content: "近期是各位高考生填志愿的关键时刻，大家可以把这篇文章转发给你身边的高考生看看！良心高考志愿填报辅助工具",
-    link: "https://mp.weixin.qq.com/s/xMuuFpAo9z5WBGXC2dCd6Q \"target=\"_self\"",
+    link: "https://work.weixin.qq.com/kfid/kfcd40df0818c5c9d78 \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/103467_Q3MRimUNTIWzsoz_1719204576/0",
   },
   {
     title: "抢疯了！云电脑仅需36块钱一年",
     content: "阿里云618大促还没结束，36元服务器秒没，挂网课、挂网盘下载、挂BT下载、云游戏、搭私服等作用多多，速抢！",
-    link: "https://work.weixin.qq.com/kfid/kfcd40df0818c5c9d78 \"target=\"_self\"",
+    link: "https://www.aliyun.com/activity/Mid-promotion/lqfx618?clubTaskBiz=subTask..11444113..10213..&userCode=mafx9aa9 \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/979881_-RFNJK-LSfWceTD_1719205053/0",
   },  
 ];
