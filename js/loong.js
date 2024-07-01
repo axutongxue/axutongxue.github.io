@@ -7,23 +7,17 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/861904_N5FEgY-XQ7OrTwe_1718167955/0",
   },
   {
-    title: "阿虚的店铺丨运营商直营授权",
+    title: "阿虚自营店铺丨运营商授权",
     content: "低至19/月188G流量！电信、联通、移动、广电套餐任选，可打电话发短信，免费包邮放心选购！",
     link: "https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
   {
-    title: "教育部出品丨高考志愿填报",
-    content: "近期是各位高考生填志愿的关键时刻，大家可以把这篇文章转发给你身边的高考生看看！良心高考志愿填报辅助工具",
-    link: "https://work.weixin.qq.com/kfid/kfcd40df0818c5c9d78 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/103467_Q3MRimUNTIWzsoz_1719204576/0",
+    title: "抖音做ＡＩ，真的有一手",
+    content: "豆包ＡＩ做2024河南卷超一本线！支持实时联网，拍照解题！现已超3000W用户的黑马级选手",
+    link: "https://m.paluai.com/?code=dh01 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/111133_u68RkfMQStu9J8n_1719813300/0",
   },
-  {
-    title: "抢疯了！云电脑仅需36块钱一年",
-    content: "阿里云618大促还没结束，36元服务器秒没，挂网课、挂网盘下载、挂BT下载、云游戏、搭私服等作用多多，速抢！",
-    link: "https://www.aliyun.com/activity/Mid-promotion/lqfx618?clubTaskBiz=subTask..11444113..10213..&userCode=mafx9aa9 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/979881_-RFNJK-LSfWceTD_1719205053/0",
-  },  
 ];
 
 function setCookie() {
