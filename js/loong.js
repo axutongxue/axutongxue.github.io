@@ -13,8 +13,8 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
   {
-    title: "抖音做ＡＩ，真的有一手",
-    content: "豆包ＡＩ做2024河南卷超一本线！支持实时联网，拍照解题！现已超3000W用户的黑马级选手",
+    title: "抖音做AI，真的有一手",
+    content: "豆包AI做2024河南卷超一本线！支持【实时对话】、联网，拍照解题、聊天、翻译、写文、资讯查询的黑马级全能选手！",
     link: "https://m.paluai.com/?code=dh01 \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/111133_u68RkfMQStu9J8n_1719813300/0",
   },
