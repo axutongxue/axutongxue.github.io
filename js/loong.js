@@ -4,13 +4,13 @@ var infoList = [
     title: "【莆田珂珂得物鞋厂】",
     content: "【得物】货莆田鞋厂nike倒钩￥85//空军￥65专柜1.1鞋厂全网货源！请点击！",
     link: "https://sourl.cn/czHN7i \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/861904_N5FEgY-XQ7OrTwe_1718167955/0",
+    img: "http://p1.music.126.net/_-wHuTt7mEAzGJ-6c8nT0A==/109951169771415737.jpg",
   },
   {
     title: "阿虚自营店铺丨运营商授权",
     content: "低至19/月188G流量！电信、联通、移动、广电套餐任选，可打电话发短信，免费包邮放心选购！",
     link: "https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
+    img: "http://p1.music.126.net/_-wHuTt7mEAzGJ-6c8nT0A==/109951169771415737.jpg",
   },
   {
     title: "抖音豆包AI丨可实时对话！",
@@ -19,7 +19,7 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/111133_u68RkfMQStu9J8n_1719813300/0",
   },
   {
-    title: "阿虚推荐丨蓝海副业AI代写",
+    title: "阿虚倾情推荐丨AI代写副业",
     content: "上至50岁阿姨下至17岁高中生，依靠AI，零基础也能做！眼界决定赚钱上限，无数群员已实现正反馈",
     link: "https://mp.weixin.qq.com/s/ITfsNPaG6jzk_4tewUwniA \"target=\"_self\"",
     img: "https://p1.music.126.net/JnI0_7BKEaP2AHXNXb4utA==/109951169770606854.jpg",
