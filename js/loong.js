@@ -18,11 +18,17 @@ var infoList = [
     link: "https://m.paluai.com/?code=dh01 \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/111133_u68RkfMQStu9J8n_1719813300/0",
   },
+  {
+    title: "阿虚推荐丨蓝海副业AI代写",
+    content: "上至50岁阿姨下至17岁高中生，依靠AI，零基础也能做！眼界决定赚钱上限，无数群员已实现正反馈",
+    link: "https://mp.weixin.qq.com/s/ITfsNPaG6jzk_4tewUwniA \"target=\"_self\"",
+    img: "https://p1.music.126.net/JnI0_7BKEaP2AHXNXb4utA==/109951169770606854.jpg",
+  },
 ];
 
 function setCookie() {
   var date = new Date();
-  var Hour = 6; //设置每小时过期时间
+  var Hour = 4; //设置每小时过期时间
   let expireTime = Hour * 3600 * 1000;
   let expires = date.getTime() + expireTime;
   date.setTime(expires);
