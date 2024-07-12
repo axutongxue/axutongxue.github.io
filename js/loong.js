@@ -19,10 +19,10 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/608488_cjHDpb7nSomla08_1720751142/0",
   },
   {
-    title: "阿虚倾情推荐丨AI代写副业",
-    content: "上至50岁阿姨下至17岁高中生，依靠AI，零基础也能做！眼界决定赚钱上限，无数学员已实现正反馈，点击查看案例",
-    link: "https://mp.weixin.qq.com/s/ITfsNPaG6jzk_4tewUwniA \"target=\"_self\"",
-    img: "https://p1.music.126.net/JnI0_7BKEaP2AHXNXb4utA==/109951169770606854.jpg",
+    title: "帮阿虚涨涨文章阅读量吧！",
+    content: "最近被限流的太严重，公众号简直要做不下去了！大家帮忙打开微信看一下最新文章，涨点阅读量吧！（或者点击查看快速跳转微信）",
+    link: "https://work.weixin.qq.com/kfid/kfcd40df0818c5c9d78 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/990172_8iKFKqBgQIiIAZP_1720788549/0",
   },
 ];
 
