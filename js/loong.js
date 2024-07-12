@@ -8,19 +8,19 @@ var infoList = [
   },
   {
     title: "阿虚自营店铺丨运营商授权",
-    content: "低至19/月188G流量！电信、联通、移动、广电套餐任选，可打电话发短信，免费包邮放心选购！",
+    content: "线下运营商不会透露的宝藏流量卡，低至19/月188G流量！电信、联通、移动任选，资费官方APP可查，能打电话发短信，免费包邮！",
     link: "https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF \"target=\"_self\"",
-    img: "http://p1.music.126.net/_-wHuTt7mEAzGJ-6c8nT0A==/109951169771415737.jpg",
+    img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
   {
     title: "抖音豆包AI丨可实时对话！",
     content: "字节跳动旗下免费AI！支持聊天对话、读取文件、联网搜索，拍照解题、翻译写文，超3000W用户的黑马级全能选手！",
     link: "https://m.paluai.com/?code=dh01 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/111133_u68RkfMQStu9J8n_1719813300/0",
+    img: "https://wework.qpic.cn/wwpic3az/608488_cjHDpb7nSomla08_1720751142/0",
   },
   {
     title: "阿虚倾情推荐丨AI代写副业",
-    content: "上至50岁阿姨下至17岁高中生，依靠AI，零基础也能做！眼界决定赚钱上限，无数群员已实现正反馈",
+    content: "上至50岁阿姨下至17岁高中生，依靠AI，零基础也能做！眼界决定赚钱上限，无数学员已实现正反馈，点击查看案例",
     link: "https://mp.weixin.qq.com/s/ITfsNPaG6jzk_4tewUwniA \"target=\"_self\"",
     img: "https://p1.music.126.net/JnI0_7BKEaP2AHXNXb4utA==/109951169770606854.jpg",
   },
