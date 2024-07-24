@@ -19,10 +19,10 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/608488_cjHDpb7nSomla08_1720751142/0",
   },
   {
-    title: "阿虚倾情推荐丨AI代写副业",
-    content: "上至50岁阿姨下至17岁高中生，依靠AI，零基础也能做！眼界决定赚钱上限，无数学员已实现正反馈，点击查看案例",
-    link: "https://mp.weixin.qq.com/s/ITfsNPaG6jzk_4tewUwniA \"target=\"_self\"",
-    img: "https://p1.music.126.net/JnI0_7BKEaP2AHXNXb4utA==/109951169770606854.jpg",
+    title: "115网盘限时特惠中！",
+    content: "原价500/年，现在活动只要115/年，妈的比之前500三年还要便宜！几乎所有磁力都能秒离线，不和谐资源你懂的，已稳定１５年！",
+    link: "https://115.com/u/7VGRNH/ \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/828096_Iw9WWivqTAidEN-_1721793652/0",
   },
 ];
 
