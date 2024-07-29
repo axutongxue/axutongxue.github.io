@@ -19,10 +19,10 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/608488_cjHDpb7nSomla08_1720751142/0",
   },
   {
-    title: "115网盘限时特惠中！",
-    content: "原价500/年，现在活动只要115/年，妈的比之前500三年还要便宜！几乎所有磁力都能秒离线，不和谐资源你懂的，已稳定１５年！",
-    link: "https://115.com/u/7VGRNH/ \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/828096_Iw9WWivqTAidEN-_1721793652/0",
+    title: "吐司AI丨免费AI绘画",
+    content: "超多功能的免费在线生图网站！拥有全网更齐全的模型库，满足你的一切要求！超百万用户的实力型选手",
+    link: "https://tusiart.com/?utm_source=axu&source_id=axu \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/639370_P4trYfb_She-b5Y_1722239441/0",
   },
 ];
 
