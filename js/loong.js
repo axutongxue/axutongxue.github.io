@@ -12,12 +12,6 @@ var infoList = [
     link: "https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
-  {
-    title: "抖音豆包AI丨可实时对话！",
-    content: "字节跳动旗下免费AI！支持聊天对话、读取文件、联网搜索，拍照解题、翻译写文，超3000W用户的黑马级全能选手！",
-    link: "https://m.paluai.com/?code=dh01 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/608488_cjHDpb7nSomla08_1720751142/0",
-  },
   {
     title: "吐司AI丨免费AI绘画",
     content: "超多功能的免费在线生图网站！拥有全网更齐全的模型库，满足你的一切要求！超百万用户的实力型选手",
