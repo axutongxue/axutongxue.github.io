@@ -4,11 +4,11 @@ var infoList = [
     title: "【莆田珂珂得物鞋厂】",
     content: "【得物】货莆田鞋厂nike倒钩￥85//空军￥65专柜1.1鞋厂全网货源！请点击！",
     link: "https://sourl.cn/czHN7i \"target=\"_self\"",
-    img: "http://p1.music.126.net/_-wHuTt7mEAzGJ-6c8nT0A==/109951169771415737.jpg",
+    img: "https://wework.qpic.cn/wwpic3az/165327_-Z5t1e4QSBCZbN6_1723514540/0",
   },
   {
     title: "阿虚自营店铺丨运营商授权",
-    content: "线下运营商不会透露的宝藏流量卡，低至19/月188G流量！电信、联通、移动任选，资费官方APP可查，能打电话发短信，免费包邮！",
+    content: "低至19/月 192G 流量！电信、联通、移动任选，资费官方APP可查，能打电话发短信，免费包邮！",
     link: "https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
@@ -22,7 +22,7 @@ var infoList = [
 
 function setCookie() {
   var date = new Date();
-  var Hour = 4; //设置每小时过期时间
+  var Hour = 5; //设置每小时过期时间
   let expireTime = Hour * 3600 * 1000;
   let expires = date.getTime() + expireTime;
   date.setTime(expires);
