@@ -12,12 +12,12 @@ var infoList = [
     link: "https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
-  {
-    title: "吐司AI丨免费AI绘画",
-    content: "超多功能的免费在线生图网站！拥有全网更齐全的模型库，满足你的一切要求！超百万用户的实力型选手",
-    link: "https://tusiart.com/?utm_source=axu&source_id=axu \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/639370_P4trYfb_She-b5Y_1722239441/0",
-  },
+  {
+  title: "阿虚倾情推荐丨AI代写副业",
+  content: "上至50岁阿姨下至17岁高中生，依靠AI，零基础也能做！眼界决定赚钱上限，无数学员已实现正反馈，点击查看案例",
+  link: "https://mp.weixin.qq.com/s/ITfsNPaG6jzk_4tewUwniA \"target=\"_self\"",
+  img: "https://p1.music.126.net/JnI0_7BKEaP2AHXNXb4utA==/109951169770606854.jpg",
+  },
 ];
 
 function setCookie() {
