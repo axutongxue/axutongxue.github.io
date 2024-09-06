@@ -13,11 +13,17 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
   {
-  title: "阿虚倾情推荐丨AI代写副业",
-  content: "上至50岁阿姨下至17岁高中生，依靠AI，零基础也能做！眼界决定赚钱上限，无数学员已实现正反馈，点击查看案例",
-  link: "https://mp.weixin.qq.com/s/ITfsNPaG6jzk_4tewUwniA \"target=\"_self\"",
-  img: "https://p1.music.126.net/JnI0_7BKEaP2AHXNXb4utA==/109951169770606854.jpg",
+      title: "数码荔枝丨开学季特惠",
+      content: "MarginNote、BookxNote、Typora、UPDF、Anki批量制卡神器、Adobe CC摄影计划、EndNote等极少打折软件均有折扣！",
+      link: "https://lizhi.shop/site/discount/id/202409?cid=ds7afku3 \"target=\"_self\"",
+      img: "https://wework.qpic.cn/wwpic3az/717034_t1YUrUcsTsajh2h_1725601257/0",
   },
+  {
+    title: "豆包 MarsCode",
+    content: "抖音旗下的免费AI编程插件，提供智能补全、智能预测、智能问答等能力，支持超过 100 种编程语言，大大节省开发时间！",
+    link: "https://marscode.cn/?utm_source=axutongxue.com&utm_medium=xycpa&utm_campaign= \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/600855_1TyhIR25RbqC90L_1725602260/0",
+},
 ];
 
 function setCookie() {
