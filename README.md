@@ -5,6 +5,4 @@
 
 备用站：[axutongxue.net](https://axutongxue.net/)
 
-备用站：[axutongxue.cn](https://www.axutongxue.net/) 
-
-国内站：[axutongxue.gitee.io](https://axutongxue.gitee.io)
+备用站：[axutongxue.cn](https://www.axutongxue.cn/) 
