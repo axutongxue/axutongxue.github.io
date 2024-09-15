@@ -1,22 +1,16 @@
 var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="btnClose" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
-  {
-    title: "【莆田珂珂得物鞋厂】",
-    content: "【得物】货莆田鞋厂nike倒钩￥85//空军￥65专柜1.1鞋厂全网货源！请点击！",
-    link: "https://sourl.cn/czHN7i \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/165327_-Z5t1e4QSBCZbN6_1723514540/0",
-  },
+  {
+    title: "阿虚倾情推荐丨AI代写副业",
+    content: "上至50岁阿姨下至17岁高中生，依靠AI，零基础也能做！眼界决定赚钱上限，无数学员已实现正反馈，点击查看案例",
+    link: "https://mp.weixin.qq.com/s/ITfsNPaG6jzk_4tewUwniA \"target=\"_self\"",
+    img: "https://p1.music.126.net/JnI0_7BKEaP2AHXNXb4utA==/109951169770606854.jpg",
+    },
   {
     title: "阿虚自营店铺丨运营商授权",
     content: "低至19/月 192G 流量！电信、联通、移动任选，资费官方APP可查，能打电话发短信，免费包邮！",
     link: "https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
-  },
-  {
-      title: "数码荔枝丨开学季特惠",
-      content: "MarginNote、BookxNote、Typora、UPDF、Anki批量制卡神器、Adobe CC摄影计划、EndNote等极少打折软件均有折扣！",
-      link: "https://lizhi.shop/site/discount/id/202409?cid=ds7afku3 \"target=\"_self\"",
-      img: "https://wework.qpic.cn/wwpic3az/717034_t1YUrUcsTsajh2h_1725601257/0",
   },
   {
     title: "豆包 MarsCode",
