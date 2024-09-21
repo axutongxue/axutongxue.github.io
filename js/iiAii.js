@@ -1,11 +1,5 @@
 var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="btnClose" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
-  {
-    title: "阿虚倾情推荐丨AI代写副业",
-    content: "上至50岁阿姨下至17岁高中生，依靠AI，零基础也能做！眼界决定赚钱上限，无数学员已实现正反馈，点击查看案例",
-    link: "https://mp.weixin.qq.com/s/ITfsNPaG6jzk_4tewUwniA \"target=\"_self\"",
-    img: "https://p1.music.126.net/JnI0_7BKEaP2AHXNXb4utA==/109951169770606854.jpg",
-    },
   {
     title: "阿虚自营店铺丨运营商授权",
     content: "低至19/月 192G 流量！电信、联通、移动任选，资费官方APP可查，能打电话发短信，免费包邮！",
@@ -13,10 +7,10 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
   {
-    title: "豆包 MarsCode",
-    content: "抖音旗下的免费AI编程插件，提供智能补全、智能预测、智能问答等能力，支持超过 100 种编程语言，大大节省开发时间！",
-    link: "https://marscode.cn/?utm_source=axutongxue.com&utm_medium=xycpa&utm_campaign= \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/600855_1TyhIR25RbqC90L_1725602260/0",
+    title: "文章又被限流了😭",
+    content: "大家帮忙「点击查看」，一键跳转微信打开，涨涨最近文章的阅读量吧！谢谢大家",
+    link: "https://work.weixin.qq.com/kfid/kfcd40df0818c5c9d78 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/856955_DehJMiBQQT6cAfC_1726927988/0",
 },
 ];
 
