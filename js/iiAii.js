@@ -11,7 +11,13 @@ var infoList = [
     content: "大家帮忙「点击查看」，一键跳转微信打开，涨涨最近文章的阅读量吧！谢谢大家",
     link: "https://work.weixin.qq.com/kfid/kfcd40df0818c5c9d78 \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/856955_DehJMiBQQT6cAfC_1726927988/0",
-},
+  },
+  {
+    title: "115网盘国庆限时特惠！",
+    content: "原价500/年，现在仅需150/年！几乎所有磁力都能秒离线，不和谐资源你懂的，已稳定１５年！十分推荐上车",
+    link: "https://115.com/u/7VGRNH/ \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/639865_wX5v03oXS8aDUL3_1727231261/0",
+  },
 ];
 
 function setCookie() {
@@ -23,7 +29,7 @@ function setCookie() {
   document.cookie =
     "axutognxue=" + RandomNumBoth(10000, 100000) + "; expires=" + date.toGMTString();
   document.cookie =
-    "testexp=" + expires + "; expires=" + date.toGMTString();
+    "timeexp=" + expires + "; expires=" + date.toGMTString();
   // 过了这个时间就没用过期时间
   setTimeout(() => {
     checkCookie();
@@ -63,7 +69,7 @@ function checkCookie() {
       };
     }
     else {
-      let timeOut = getCookie("testexp") ?? 1000;
+      let timeOut = getCookie("timeexp") ?? 1000;
       if (timeOut >= 1000) {
         timeOut = timeOut - new Date().getTime();
         if (timeOut < 0) {
