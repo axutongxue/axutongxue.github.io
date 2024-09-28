@@ -7,10 +7,10 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
   {
-    title: "文章又被限流了😭",
-    content: "大家帮忙「点击查看」，一键跳转微信打开，涨涨最近文章的阅读量吧！谢谢大家",
-    link: "https://work.weixin.qq.com/kfid/kfcd40df0818c5c9d78 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/856955_DehJMiBQQT6cAfC_1726927988/0",
+      title: "阿虚倾情推荐丨AI代写副业",
+      content: "上至50岁阿姨下至17岁高中生，依靠AI，零基础也能做！眼界决定赚钱上限，无数学员已实现正反馈，点击查看案例",
+      link: "https://mp.weixin.qq.com/s/ITfsNPaG6jzk_4tewUwniA \"target=\"_self\"",
+      img: "https://p1.music.126.net/JnI0_7BKEaP2AHXNXb4utA==/109951169770606854.jpg",
   },
   {
     title: "115网盘国庆限时特惠！",
