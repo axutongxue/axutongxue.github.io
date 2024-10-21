@@ -13,10 +13,10 @@ var infoList = [
       img: "http://cbu01.alicdn.com/i2/2793632751/O1CN01eWeKqf1WC0ZmfpiHt_!!2793632751-2-cbucrm.png",
   },
   {
-    title: "115网盘国庆限时特惠！",
-    content: "原价500/年，现在仅需150/年！几乎所有磁力都能秒离线，不和谐资源你懂的，已稳定１５年！十分推荐上车",
-    link: "https://115.com/u/7VGRNH/ \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/639865_wX5v03oXS8aDUL3_1727231261/0",
+    title: "字节出品丨爆款面试神器！",
+    content: "AI陪练，涵盖上百道大厂算法真题，云端IDE可在线使用，支持自定义题目，本地编程插件还支持AI代码补全、预测等等！",
+    link: "https://marscode.cn/?utm_source=axutongxue.com&utm_medium=xycpa&utm_campaign= \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/600855_1TyhIR25RbqC90L_1725602260/0",
   },
 ];
 
