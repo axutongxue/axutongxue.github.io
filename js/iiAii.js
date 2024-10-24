@@ -7,10 +7,10 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
   {
-      title: "饿了么APP搜索：阿虚同学",
-      content: "访问公众号粉丝专属隐藏页面，大额外卖红包等你来拿！可和其他外卖红包叠加使用！！！",
-      link: "https://mp.weixin.qq.com/s/ZARDTFAmy2mM7ExgcXOl-w \"target=\"_self\"",
-      img: "http://cbu01.alicdn.com/i2/2793632751/O1CN01eWeKqf1WC0ZmfpiHt_!!2793632751-2-cbucrm.png",
+      title: "网易丨AI产品经理孵化营",
+      content: "非常适合想要进入AI赛道，缺乏职业发展规划的大学生🙋‍♂️，薪资相较传统产品经理更可观，报名即送２节免费课和免费AI资料！",
+      link: "http://ytiao.cn/BeAguc \"target=\"_self\"",
+      img: "http://cbu01.alicdn.com/i4/2793632751/O1CN01coXazi1WC0Zrjou0V_!!2793632751-2-cbucrm.png",
   },
   {
     title: "字节出品丨爆款面试神器！",
