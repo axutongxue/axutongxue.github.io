@@ -7,16 +7,16 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
   {
+     title: "【阿虚推荐】莆田潮牌鞋服",
+     content: "主营耐克、阿迪、匡威、新百伦、万斯、彪马、斐乐等各大品牌鞋子、服饰；还有名牌手表、耳机、包包、音响等！全网最高性价比",
+     link: "https://xie.yixuev.com?axutongxuehttps://xie.yixuev.com?axutongxue \"target=\"_self\"",
+     img: "https://help-ol.bj.bcebos.com/MTgzLjIyMC45NS4xNzEsIDE4My4yMjAuOTUuMTcxff73cbf6ae00b25929d5fbcbc7e8b411.jpg",
+   },
+  {
       title: "网易丨AI产品经理孵化营",
       content: "非常适合想要进入AI赛道，缺乏职业发展规划的大学生🙋‍♂️，薪资相较传统产品经理更可观，报名即送２节免费课和免费AI资料！",
       link: "http://ytiao.cn/BeAguc \"target=\"_self\"",
       img: "http://cbu01.alicdn.com/i4/2793632751/O1CN01coXazi1WC0Zrjou0V_!!2793632751-2-cbucrm.png",
-  },
-  {
-    title: "字节出品丨爆款面试神器！",
-    content: "AI陪练，涵盖上百道大厂算法真题，云端IDE可在线使用，支持自定义题目，本地编程插件还支持AI代码补全、预测等等！",
-    link: "https://marscode.cn/?utm_source=axutongxue.com&utm_medium=xycpa&utm_campaign= \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/600855_1TyhIR25RbqC90L_1725602260/0",
   },
 ];
 
