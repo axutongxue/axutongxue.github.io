@@ -47,9 +47,9 @@ li ul {
 	font-size: 17px;
 }
 .fa-windows {
-	padding-left:4px;
-	text-indent:0;
-	color:#007bda
+    color: #007bda;
+    margin-right: 3px;
+    margin-left: 2px;
 }
 .fa-laptop {
 	padding-left:4px;
@@ -66,7 +66,7 @@ li ul {
 	color:#7cb342
 }
 .fa-apple {
-	padding-left:4px;
+	margin: 0 2px 0 -8px;
 	text-indent:0;
 	color:grey
 }
@@ -235,6 +235,11 @@ li ul {
 	padding:0 3px 0 3px;
 	color: #FFC83D;
 }
+.icon{
+	width:24px;
+	margin-right:2px;
+	vertical-align:middle;
+}
 
 @keyframes blink {
     0%, 100% {
@@ -247,4 +252,82 @@ li ul {
 
   .blink {
     animation: blink 3s linear infinite;
+  }
+
+  .android {
+	text-indent: inherit;
+	padding-right: 4px;
+  }
+  #win{
+	height: 18px;
+	vertical-align: middle;
+	padding-left: 2px;
+  }
+  #mac{
+	height: 18px;
+	vertical-align: middle;
+	padding-left: 2px;
+  }
+  #linux {
+	height: 18px;
+	vertical-align: middle;
+	padding-left: 2px;
+  }
+  #android{
+	height: 18px;
+	vertical-align: middle;
+	padding-left: 2px;
+  }
+  #ios{
+    height: 18px;
+    vertical-align: middle;
+    margin-left: -11px;
+    margin-right: 3px;
+  }
+  #extend{
+    height: 24px;
+    vertical-align: middle;
+    margin-left: -14px;
+  }
+  #web{
+	height: 18px;
+	vertical-align: middle;
+	padding-left: 2px;
+  }
+  #applet{
+	height: 18px;
+	vertical-align: middle;
+	margin: 0 2px 0 -10px;
+  }
+  .two {
+    height: 18px;
+    vertical-align: middle;
+    margin-left: -11px;
+    margin-right: 3px;
+  }
+  .three{
+	height: 18px;
+    vertical-align: middle;
+    margin-left: -11px;
+    margin-right: 3px;
+  }
+  .four{
+	height: 18px;
+	vertical-align: middle;
+    margin: 0 3px 0 -11px;
+  }
+  .five{
+	height: 18px;
+    vertical-align: middle;
+    margin: 0 3px 0 -11px;
+  }
+  .six{
+	height: 18px;
+    vertical-align: middle;
+    margin: 0 3px 0 -11px;
+  }
+  .eight{
+	height: 18px;
+    vertical-align: middle;
+    margin: 0 3px 0 -11px;
   }
