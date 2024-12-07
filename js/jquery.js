@@ -216,3 +216,31 @@ function checkCookie() {
   return num;
 }
 checkCookie();
+
+document.addEventListener('DOMContentLoaded', function() {
+  function siteTime() {
+    setTimeout(siteTime, 1000); // 直接传递函数引用
+    var seconds = 1000;
+    var minutes = seconds * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth(); // 月份从0开始
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var t1 = Date.UTC(2018, 1, 18, 12, 0, 0); // 月份从0开始计数，所以这里是1（代表二月）
+    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+    var diff = t2 - t1;
+    var diffYears = Math.floor(diff / years);
+    var diffDays = Math.floor((diff % years) / days);
+    var diffHours = Math.floor((diff % days) / hours);
+    var diffMinutes = Math.floor((diff % hours) / minutes);
+    var diffSeconds = Math.floor((diff % minutes) / seconds);
+    document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+  }
+  siteTime();
+});
