@@ -129,13 +129,19 @@ var infoList = [
      title: "【阿虚推荐】莆田潮牌鞋服",
      content: "主营耐克、阿迪、匡威、新百伦、万斯、彪马、斐乐等各大品牌鞋子、服饰；还有名牌手表、耳机、包包、音响等！全网最高性价比",
      link: "https://xie.yixuev.com?axutongxuehttps://xie.yixuev.com?axutongxue \"target=\"_self\"",
-     img: "https://help-ol.bj.bcebos.com/MTgzLjIyMC45NS4xNzEsIDE4My4yMjAuOTUuMTcxff73cbf6ae00b25929d5fbcbc7e8b411.jpg",
+     img: "http://cbu01.alicdn.com/i4/2793632751/O1CN01ppIdWi1WC0ao7HroU_!!2793632751-0-cbucrm.jpg",
    },
   {
-      title: "网易丨AI产品经理孵化营",
-      content: "非常适合想要进入AI赛道，缺乏职业发展规划的大学生🙋‍♂️，薪资相较传统产品经理更可观，报名即送２节免费课和免费AI资料！",
+      title: "一站式AI视频创作平台",
+      content: "无需拍摄，无需真人出镜，一键生成视频，1200+免费3D数字人可供选择！",
       link: "http://ytiao.cn/BeAguc \"target=\"_self\"",
-      img: "http://cbu01.alicdn.com/i4/2793632751/O1CN01coXazi1WC0Zrjou0V_!!2793632751-2-cbucrm.png",
+      img: "http://cbu01.alicdn.com/i1/2793632751/O1CN01Q7ycJh1WC0auxqHEl_!!2793632751-0-cbucrm.jpg",
+  },
+  {
+      title: "聊着天就把数据分析做了！",
+      content: "AI商汤小浣熊，让小白都能干Excel数据分析，还支持图表绘制，完全免费，强的离谱！",
+      link: "https://raccoon.sensetime.com/login?utm_source=bljuly35 \"target=\"_self\"",
+      img: "http://cbu01.alicdn.com/i4/2793632751/O1CN01fFPSd31WC0atAnI55_!!2793632751-0-cbucrm.jpg",
   },
 ];
 
