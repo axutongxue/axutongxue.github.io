@@ -132,15 +132,15 @@ var infoList = [
      img: "http://cbu01.alicdn.com/i4/2793632751/O1CN01ppIdWi1WC0ao7HroU_!!2793632751-0-cbucrm.jpg",
    },
   {
-      title: "一站式AI视频创作平台",
-      content: "无需拍摄，无需真人出镜，一键生成视频，1200+免费3D数字人可供选择！",
-      link: "http://ytiao.cn/BeAguc \"target=\"_self\"",
-      img: "http://cbu01.alicdn.com/i1/2793632751/O1CN01Q7ycJh1WC0auxqHEl_!!2793632751-0-cbucrm.jpg",
+      title: "买1得4！会员打包仅需75元！",
+      content: "❶迅雷白金年卡＋❷蜻蜓FM年卡，❸网易云年卡／芒果年卡2选1，❹微博会员年卡／快看漫画年卡2选1，一共仅需７５元！",
+      link: "http://axu.xpsup.cn/product/1915.html \"target=\"_self\"",
+      img: "http://cbu01.alicdn.com/i1/2793632751/O1CN01a1x7DS1WC0arBVdDp_!!2793632751-0-cbucrm.jpg",
   },
   {
       title: "聊着天就把数据分析做了！",
       content: "AI商汤小浣熊，让小白都能干Excel数据分析，还支持图表绘制，完全免费，强的离谱！",
-      link: "https://raccoon.sensetime.com/login?utm_source=bljuly35 \"target=\"_self\"",
+      link: "https://www.xiaohuanxiong.com/officev2?utm_source=bljuly35 \"target=\"_self\"",
       img: "http://cbu01.alicdn.com/i4/2793632751/O1CN01fFPSd31WC0atAnI55_!!2793632751-0-cbucrm.jpg",
   },
 ];
