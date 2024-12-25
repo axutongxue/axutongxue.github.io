@@ -155,10 +155,6 @@ document.write("<div id='" + id + "'>" +
             "<a href='https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF'>【阿虚的流量卡店铺】低至19/月192G，电信移动联通任选，可打电话发短信，免费发货！</a>" +
         "</li>" +
         "<li>" +
-            "<img class='icon' src='http://cbu01.alicdn.com/i3/2793632751/O1CN01vEZA811WC0aWANIkO_!!2793632751-2-cbucrm.png'>" +
-            "<a href='https://ibiling.cn/paper?from=axpaper'>【AI一键写论文】毕业论文、千字大纲免费生成，几万字专业初稿，答辩PPT一键生成🔥</a>" +
-        "</li>" +
-        "<li>" +
             "<img class='icon' src='http://cbu01.alicdn.com/i3/2793632751/O1CN01eUCiiW1WC0aFwPK3Z_!!2793632751-2-cbucrm.png'>" +
             "<a href='https://flowus.cn/share/f35316bd-0af5-490a-a755-ff3538e868f3?code=CZ3ECT'>【名刊汇】超万本最新知名外刊、杂志资源，不限量下载！！</a>" +
         "</li>" +
