@@ -211,10 +211,10 @@ var infoList = [
      img: "http://cbu01.alicdn.com/i4/2793632751/O1CN01ppIdWi1WC0ao7HroU_!!2793632751-0-cbucrm.jpg",
    },
   {
-      title: "买1得4！会员打包仅需75元！",
-      content: "❶迅雷白金年卡＋❷蜻蜓FM年卡，❸网易云年卡／芒果年卡2选1，❹微博会员年卡／快看漫画年卡2选1，一共仅需７５元！",
-      link: "http://axu.xpsup.cn/product/1915.html \"target=\"_self\"",
-      img: "http://cbu01.alicdn.com/i1/2793632751/O1CN01a1x7DS1WC0arBVdDp_!!2793632751-0-cbucrm.jpg",
+      title: "美团神会员年卡仅需￥13",
+      content: "每个月发放6张5元可膨胀神券，共12个月，总计360元（仅限美团app神券商家使用）",
+      link: "http://axu.xpsup.cn/product/1642.html \"target=\"_self\"",
+      img: "http://cbu01.alicdn.com/i3/2793632751/O1CN01uaDCd81WC0bLtpnOM_!!2793632751-2-cbucrm.png",
   },
   {
       title: "聊着天就把数据分析做了！",
