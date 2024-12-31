@@ -160,7 +160,7 @@ document.write("<div id='" + id + "'>" +
         "</li>" +
         "<li>" +
             "<img class='icon' src='https://wework.qpic.cn/wwpic3az/600855_1TyhIR25RbqC90L_1725602260/0'>" +
-            "<a href='https://marscode.cn/?utm_source=axutongxue.com&utm_medium=xycpa&utm_campaign='>【字节出品】爆款面试神器！免费编程插件，AI陪练，涵盖上百道大厂算法真题</a>" +
+            "<a href='https://www.marscode.cn/?utm_source=advertising&utm_medium=axutongxue.com_ug_cpa&utm_term=hw_marscode_axutongxue&utm_content=home'>【字节出品】爆款面试神器！免费编程插件，AI陪练，涵盖上百道大厂算法真题</a>" +
         "</li>" +
         "<li>" +
             "<img class='icon' src='http://cbu01.alicdn.com/i2/2793632751/O1CN01eWeKqf1WC0ZmfpiHt_!!2793632751-2-cbucrm.png'>" +
