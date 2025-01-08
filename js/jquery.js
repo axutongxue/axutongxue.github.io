@@ -152,7 +152,7 @@ document.write("<div id='" + id + "'>" +
     "<ul class='" + roll + "'style='margin-block:0px; padding-inline-start:33px;'>" +
         "<li>" +
             "<img class='icon' src='https://wework.qpic.cn/wwpic3az/846587_PMCu545RQwifXal_1712199121'>" +
-            "<a href='https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF'>【阿虚的流量卡店铺】低至19/月192G，电信移动联通任选，可打电话发短信，免费发货！</a>" +
+            "<a href='https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF'>【阿虚的流量卡店铺】低至19/月135G，电信移动联通任选，可打电话发短信，免费发货！</a>" +
         "</li>" +
         "<li>" +
             "<img class='icon' src='http://cbu01.alicdn.com/i3/2793632751/O1CN01eUCiiW1WC0aFwPK3Z_!!2793632751-2-cbucrm.png'>" +
@@ -178,20 +178,20 @@ $(function() {
 				a(c)
 			}, 2000)
 		})
-		.trigger("mouseleave");
+		。trigger("mouseleave");
 
 	function a(e) {
 		var f = e.find("ul");
 		var d = f.find("li:first")
-			.height();
+			。height();
 		f.animate({
 			marginTop: -d + "px"
 		}, 500, function() {
 			f.css({
 					marginTop: 0
 				})
-				.find("li:first")
-				.appendTo(f)
+				。find("li:first")
+				。appendTo(f)
 		})
 	}
 });
@@ -200,7 +200,7 @@ var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100v
 var infoList = [
   {
     title: "阿虚自营店铺丨运营商授权",
-    content: "低至19/月 192G 流量！电信、联通、移动任选，资费官方APP可查，能打电话发短信，免费包邮！",
+    content: "低至19/月 135G 流量！电信、联通、移动任选，资费官方APP可查，能打电话发短信，免费包邮！",
     link: "https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
@@ -211,7 +211,7 @@ var infoList = [
      img: "http://cbu01.alicdn.com/i4/2793632751/O1CN01ppIdWi1WC0ao7HroU_!!2793632751-0-cbucrm.jpg",
    },
   {
-      title: "美团神会员年卡仅需￥13",
+      title: "美团神会员年卡仅需￥17",
       content: "每个月发放6张5元可膨胀神券，共12个月，总计360元（仅限美团app神券商家使用）",
       link: "http://axu.xpsup.cn/product/1642.html \"target=\"_self\"",
       img: "http://cbu01.alicdn.com/i3/2793632751/O1CN01uaDCd81WC0bLtpnOM_!!2793632751-2-cbucrm.png",
