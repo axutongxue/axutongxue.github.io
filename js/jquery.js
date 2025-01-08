@@ -178,20 +178,20 @@ $(function() {
 				a(c)
 			}, 2000)
 		})
-		。trigger("mouseleave");
+		.trigger("mouseleave");
 
 	function a(e) {
 		var f = e.find("ul");
 		var d = f.find("li:first")
-			。height();
+			.height();
 		f.animate({
 			marginTop: -d + "px"
 		}, 500, function() {
 			f.css({
 					marginTop: 0
 				})
-				。find("li:first")
-				。appendTo(f)
+				.find("li:first")
+				.appendTo(f)
 		})
 	}
 });
