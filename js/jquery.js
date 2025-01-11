@@ -205,10 +205,10 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
   {
-     title: "【阿虚推荐】莆田潮牌鞋服",
-     content: "主营耐克、阿迪、匡威、新百伦、万斯、彪马、斐乐等各大品牌鞋子、服饰；还有名牌手表、耳机、包包、音响等！全网最高性价比",
-     link: "https://xie.yixuev.com?axutongxuehttps://xie.yixuev.com?axutongxue \"target=\"_self\"",
-     img: "http://cbu01.alicdn.com/i4/2793632751/O1CN01ppIdWi1WC0ao7HroU_!!2793632751-0-cbucrm.jpg",
+     title: "京东·年货节京享红包免费领！",
+     content: "1.8－1.23 点击链接均可随机获得京东红包，红包最高面额高达9999元！每日至少3次机会",
+     link: "https://u.jd.com/QDEoACR \"target=\"_self\"",
+     img: "http://cbu01.alicdn.com/i2/2793632751/O1CN01Wr8KZ71WC0bZEhmSd_!!2793632751-0-cbucrm.jpg",
    },
   {
       title: "美团神会员年卡仅需￥17",
