@@ -217,10 +217,10 @@ var infoList = [
       img: "http://cbu01.alicdn.com/i3/2793632751/O1CN01uaDCd81WC0bLtpnOM_!!2793632751-2-cbucrm.png",
   },
   {
-      title: "聊着天就把数据分析做了！",
-      content: "AI商汤小浣熊，让小白都能干Excel数据分析，还支持图表绘制，完全免费，强的离谱！",
-      link: "https://www.xiaohuanxiong.com/officev2?utm_source=bljuly35 \"target=\"_self\"",
-      img: "http://cbu01.alicdn.com/i4/2793632751/O1CN01fFPSd31WC0atAnI55_!!2793632751-0-cbucrm.jpg",
+      title: "支付宝·视频红包免费领！",
+      content: "每日预约、签到、刷视频都有红包可领，平均每天1块钱，无需线下消费，充10元话费就可用掉！",
+      link: "https://ur.alipay.com/_2B1kTkgCfz6ts9TFmtZBtC \"target=\"_self\"",
+      img: "http://cbu01.alicdn.com/i1/2793632751/O1CN011jYxg61WC0bhFPG9O_!!2793632751-2-cbucrm.png",
   },
 ];
 
