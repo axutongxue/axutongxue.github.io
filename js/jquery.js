@@ -205,7 +205,7 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
   {
-     title: "京东·年货节京享红包免费领！",
+     title: "京东·年货节红包免费领！🧧",
      content: "1.8－1.23 点击链接均可随机获得京东红包，红包最高面额高达9999元！每日至少3次机会",
      link: "https://u.jd.com/QDEoACR \"target=\"_self\"",
      img: "http://cbu01.alicdn.com/i2/2793632751/O1CN01Wr8KZ71WC0bZEhmSd_!!2793632751-0-cbucrm.jpg",
@@ -217,10 +217,10 @@ var infoList = [
       img: "http://cbu01.alicdn.com/i3/2793632751/O1CN01uaDCd81WC0bLtpnOM_!!2793632751-2-cbucrm.png",
   },
   {
-      title: "支付宝·视频红包免费领！",
+      title: "支付宝·视频红包免费领！🧧",
       content: "每日预约、签到、刷视频都有红包可领，平均每天1块钱，无需线下消费，充10元话费就可用掉！",
       link: "https://ur.alipay.com/_2B1kTkgCfz6ts9TFmtZBtC \"target=\"_self\"",
-      img: "http://cbu01.alicdn.com/i1/2793632751/O1CN011jYxg61WC0bhFPG9O_!!2793632751-2-cbucrm.png",
+      img: "http://cbu01.alicdn.com/i2/2793632751/O1CN01EM9tKA1WC0bfdyTDa_!!2793632751-2-cbucrm.png",
   },
 ];
 
