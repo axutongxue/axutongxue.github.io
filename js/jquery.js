@@ -204,12 +204,12 @@ var infoList = [
     link: "https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
-  {
-     title: "京东·年货节红包免费领！🧧",
-     content: "1.8－1.23 点击链接均可随机获得京东红包，红包最高面额高达9999元！每日至少3次机会",
-     link: "https://u.jd.com/QDEoACR \"target=\"_self\"",
-     img: "http://cbu01.alicdn.com/i2/2793632751/O1CN01Wr8KZ71WC0bZEhmSd_!!2793632751-0-cbucrm.jpg",
-   },
+  {
+      title: "美团神会员年卡仅需￥17",
+      content: "每个月发放6张5元可膨胀神券，共12个月，总计360元（仅限美团App神券商家使用）",
+      link: "http://axu.xpsup.cn/product/1642.html \"target=\"_self\"",
+      img: "http://cbu01.alicdn.com/i3/2793632751/O1CN01uaDCd81WC0bLtpnOM_!!2793632751-2-cbucrm.png",
+  },
   {
       title: "免费Claude 3.5 Sonnet",
       content: "抖音、字节跳动新推出的Al Coding 编程工具，可无限量免费使用Claude 3.5，有需要的粉丝不要错过！",
@@ -219,7 +219,7 @@ var infoList = [
   {
       title: "支付宝·视频红包免费领！🧧",
       content: "每日预约、签到、刷视频都有红包可领，平均每天1块钱，无需线下消费，充10元话费就可用掉！",
-      link: "https://ur.alipay.com/_2B1kTkgCfz6ts9TFmtZBtC \"target=\"_self\"",
+      link: "https://ur.alipay.com/_3CBHQxjBCyWICuQZnqbA2o \"target=\"_self\"",
       img: "http://cbu01.alicdn.com/i2/2793632751/O1CN01EM9tKA1WC0bfdyTDa_!!2793632751-2-cbucrm.png",
   },
 ];
