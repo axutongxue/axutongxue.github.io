@@ -219,7 +219,7 @@ var infoList = [
   {
       title: "支付宝·视频红包免费领！🧧",
       content: "每日预约、签到、刷视频都有红包可领，无需线下消费，充10元话费就可用掉！轻松实现7、8折充话费",
-      link: "https://ur.alipay.com/_6jzSWi9CH3WlLwZ5Ze3eUh \"target=\"_self\"",
+      link: "https://ur.alipay.com/_6TzIDOhFPqEyvwDRiIDBaD \"target=\"_self\"",
       img: "http://cbu01.alicdn.com/i2/2793632751/O1CN01YwHk7V1WC0bhw9y2l_!!2793632751-1-cbucrm.gif",
   },
 ];
