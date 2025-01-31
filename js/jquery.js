@@ -216,12 +216,12 @@ var infoList = [
       link: "https://www.trae.ai/?utm_medium=axu_trae \"target=\"_self\"",
       img: "http://cbu01.alicdn.com/i3/2793632751/O1CN01gwGyJM1WC0bjAmUhe_!!2793632751-2-cbucrm.png",
   },
-  {
-      title: "支付宝·视频红包免费领！🧧",
-      content: "每日预约、签到、刷视频都有红包可领，无需线下消费，充10元话费就可用掉！轻松实现7、8折充话费",
-      link: "https://ur.alipay.com/_6TzIDOhFPqEyvwDRiIDBaD \"target=\"_self\"",
-      img: "http://cbu01.alicdn.com/i2/2793632751/O1CN01YwHk7V1WC0bhw9y2l_!!2793632751-1-cbucrm.gif",
-  },
+    {
+          title: "聊着天就把数据分析做了！",
+          content: "AI商汤小浣熊，让小白都能干Excel数据分析，还支持图表绘制，完全免费，强的离谱！",
+          link: "https://www.xiaohuanxiong.com/officev2?utm_source=bljuly35 \"target=\"_self\"",
+          img: "http://cbu01.alicdn.com/i4/2793632751/O1CN01fFPSd31WC0atAnI55_!!2793632751-0-cbucrm.jpg",
+      },
 ];
 
 function setCookie() {
