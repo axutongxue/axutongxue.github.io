@@ -196,7 +196,7 @@ $(function() {
 	}
 });
 
-var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="btnClose" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
+var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="buttonClose" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
   {
     title: "阿虚自营店铺丨运营商授权",
@@ -205,17 +205,17 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
   {
-      title: "美团神会员年卡仅需￥17",
-      content: "每个月发放6张5元可膨胀神券，共12个月，总计360元（仅限美团App神券商家使用）",
-      link: "http://axu.xpsup.cn/product/1642.html \"target=\"_self\"",
-      img: "http://cbu01.alicdn.com/i3/2793632751/O1CN01uaDCd81WC0bLtpnOM_!!2793632751-2-cbucrm.png",
+      title: "能陪你玩原神的悬浮AI桌宠",
+      content: "任务提醒、宝箱导航、体力识别、深渊指南等等，我愿称为最强原神辅助！（也支持王者、LOL等）",
+      link: "https://www.doudou.fun/?channel=web_aitool16 \"target=\"_self\"",
+      img: "http://cbu01.alicdn.com/i1/2793632751/O1CN01R6lUWF1WC0bjwTy8l_!!2793632751-0-cbucrm.jpg",
   },
-  {
-      title: "免费Claude 3.5 Sonnet",
-      content: "抖音、字节跳动新推出的Al Coding 编程工具，可无限量免费使用Claude 3.5，有需要的粉丝不要错过！",
-      link: "https://www.trae.ai/?utm_medium=axu_trae \"target=\"_self\"",
-      img: "http://cbu01.alicdn.com/i3/2793632751/O1CN01gwGyJM1WC0bjAmUhe_!!2793632751-2-cbucrm.png",
-  },
+{
+      title: "饿了么APP搜索：阿虚同学",
+      content: "访问公众号粉丝专属隐藏页面，大额外卖红包等你来拿！可和其他外卖红包叠加使用！！！",
+      link: "https://mp.weixin.qq.com/s/ZARDTFAmy2mM7ExgcXOl-w \"target=\"_self\"",
+      img: "http://cbu01.alicdn.com/i2/2793632751/O1CN01eWeKqf1WC0ZmfpiHt_!!2793632751-2-cbucrm.png",
+    },
     {
           title: "聊着天就把数据分析做了！",
           content: "AI商汤小浣熊，让小白都能干Excel数据分析，还支持图表绘制，完全免费，强的离谱！",
@@ -231,9 +231,9 @@ function setCookie() {
   let expires = date.getTime() + expireTime;
   date.setTime(expires);
   document.cookie =
-    "axutognxue=" + RandomNumBoth(10000, 100000) + "; expires=" + date.toGMTString();
+    "qiuqiul" + RandomNumBoth(10000, 100000) + "; expires=" + date.toGMTString();
   document.cookie =
-    "timeexp=" + expires + "; expires=" + date.toGMTString();
+    "exptime=" + expires + "; expires=" + date.toGMTString();
   // 过了这个时间就没用过期时间
   setTimeout(() => {
     checkCookie();
@@ -249,31 +249,31 @@ function getCookie(cookie_name) {
 }
 function checkCookie() {
   setTimeout(function () {
-    if (!getCookie("axutognxue")) {
+    if (!getCookie("axuuuu")) {
       setCookie();
-      let btnClose = document.querySelector("#btnClose");
-      if (btnClose) {
+      let buttonClose = document.querySelector("#buttonClose");
+      if (buttonClose) {
         return;
       }
-      let axutognxue = infoList[RandomNumBoth(0, infoList.length - 1)];
+      let axuuuu = infoList[RandomNumBoth(0, infoList.length - 1)];
       let boxId = RandomNumBoth(10000, 100000);
-      let newCode = code.replace("{{title}}", axutognxue.title);
-      newCode = newCode.replace("{{content}}", axutognxue.content);
-      newCode = newCode.replace("{{path}}", axutognxue.link);
-      newCode = newCode.replace("{{img}}", axutognxue.img);
+      let newCode = code.replace("{{title}}", axuuuu.title);
+      newCode = newCode.replace("{{content}}", axuuuu.content);
+      newCode = newCode.replace("{{path}}", axuuuu.link);
+      newCode = newCode.replace("{{img}}", axuuuu.img);
       newCode = newCode.replace("{{boxId}}", boxId);
 
       let div = document.createElement("div");
       div.innerHTML = newCode;
       document.body.appendChild(div);
-      btnClose = document.querySelector("#btnClose");
+      buttonClose = document.querySelector("#buttonClose");
 
-      btnClose.onclick = function () {
+      buttonClose.onclick = function () {
         document.getElementById(boxId).remove();
       };
     }
     else {
-      let timeOut = getCookie("timeexp") ?? 1000;
+      let timeOut = getCookie("exptime") ?? 1000;
       if (timeOut >= 1000) {
         timeOut = timeOut - new Date().getTime();
         if (timeOut < 0) {
