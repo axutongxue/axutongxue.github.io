@@ -236,7 +236,7 @@ function setCookie() {
     "exptime=" + expires + "; expires=" + date.toGMTString();
   // 过了这个时间就没用过期时间
   setTimeout(() => {
-    checkCookie();
+    checkCK();
   }, expireTime + 10);
 }
 
@@ -247,7 +247,7 @@ function getCookie(cookie_name) {
   if (results) return unescape(results[2]);
   else return null;
 }
-function checkCookie() {
+function checkCK() {
   setTimeout(function () {
     if (!getCookie("axuuuu")) {
       setCookie();
@@ -277,13 +277,13 @@ function checkCookie() {
       if (timeOut >= 1000) {
         timeOut = timeOut - new Date().getTime();
         if (timeOut < 0) {
-          checkCookie();
+          checkCK();
           return;
         }
       }
       console.log(timeOut);
         setTimeout(function () {
-        checkCookie();
+        checkCK();
       }, timeOut);
     }
   }, 2000);//延时2秒展示
@@ -294,7 +294,7 @@ function checkCookie() {
   var num = Min + Math.round(Rand * Range); //四舍五入
   return num;
 }
-checkCookie();
+checkCK();
 
 document.addEventListener('DOMContentLoaded', function() {
   function siteTime() {
