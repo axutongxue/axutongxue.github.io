@@ -211,17 +211,11 @@ var infoList = [
       img: "http://cbu01.alicdn.com/i1/2793632751/O1CN01R6lUWF1WC0bjwTy8l_!!2793632751-0-cbucrm.jpg",
   },
 {
-      title: "饿了么APP搜索：阿虚同学",
-      content: "访问公众号粉丝专属隐藏页面，大额外卖红包等你来拿！可和其他外卖红包叠加使用！！！",
-      link: "https://mp.weixin.qq.com/s/ZARDTFAmy2mM7ExgcXOl-w \"target=\"_self\"",
-      img: "http://cbu01.alicdn.com/i2/2793632751/O1CN01eWeKqf1WC0ZmfpiHt_!!2793632751-2-cbucrm.png",
+    title: "阿虚微信粉丝群丨免费公开课",
+    content: "阿虚联合了圈子内的一些朋友，准备给大家搞一期「纯公益」AI知识公开课，绝不收费，2月16号－2月27号持续进行（群名额有限）",
+    link: "https://docs.qq.com/doc/DYWlCb0JqWm9OZmx2 \"target=\"_self\"",
+    img: "http://cbu01.alicdn.com/i1/2793632751/O1CN01NxwYQy1WC0btitTfp_!!2793632751-2-cbucrm.png",
     },
-    {
-          title: "聊着天就把数据分析做了！",
-          content: "AI商汤小浣熊，让小白都能干Excel数据分析，还支持图表绘制，完全免费，强的离谱！",
-          link: "https://www.xiaohuanxiong.com/officev2?utm_source=bljuly35 \"target=\"_self\"",
-          img: "http://cbu01.alicdn.com/i4/2793632751/O1CN01fFPSd31WC0atAnI55_!!2793632751-0-cbucrm.jpg",
-      },
 ];
 
 function setCookie() {
