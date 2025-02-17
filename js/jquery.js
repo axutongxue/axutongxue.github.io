@@ -198,18 +198,6 @@ $(function() {
 
 var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="buttonClose" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
-  {
-    title: "阿虚自营店铺丨运营商授权",
-    content: "低至19/月 135G 流量！电信、联通、移动任选，资费官方APP可查，能打电话发短信，免费包邮！",
-    link: "https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
-  },
-  {
-      title: "能陪你玩原神的悬浮AI桌宠",
-      content: "任务提醒、宝箱导航、体力识别、深渊指南等等，我愿称为最强原神辅助！（也支持王者、LOL等）",
-      link: "https://www.doudou.fun/?channel=web_aitool16 \"target=\"_self\"",
-      img: "http://cbu01.alicdn.com/i1/2793632751/O1CN01R6lUWF1WC0bjwTy8l_!!2793632751-0-cbucrm.jpg",
-  },
 {
     title: "阿虚微信粉丝群丨免费公开课",
     content: "阿虚联合了圈子内的一些朋友，准备给大家搞一期「纯公益」AI知识公开课，绝不收费，2月16号－2月27号持续进行（群名额有限）",
@@ -220,7 +208,7 @@ var infoList = [
 
 function setCookie() {
   var date = new Date();
-  var Hour = 5; //设置每小时过期时间
+  var Hour = 4; //设置每小时过期时间
   let expireTime = Hour * 3600 * 1000;
   let expires = date.getTime() + expireTime;
   date.setTime(expires);
