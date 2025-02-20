@@ -147,8 +147,8 @@ function randomString(c) {
 }
 var id = randomString(5);
 var roll = randomString(6);
-document.write("<style>#" + id + "{height:58px;overflow:hidden;width:322px;border:dashed 0.5px #07c160;margin: 4px auto 4px auto;}." + roll + " li{font-size:12px;text-indent:-30px;padding: 2px 0 2px 0;line-height:1;}.icon{width:24px;margin-right:2;vertical-align:middle}</style>");
-document.write("<aside id='" + id + "'>" +
+document.write("<style>#" + id + "{display: block;height:58px;overflow:hidden;width:322px;border:dashed 0.5px #07c160;margin: 4px auto 4px auto;}." + roll + " li{font-size:12px;text-indent:-30px;padding: 2px 0 2px 0;line-height:1;}.icon{width:24px;margin-right:2;vertical-align:middle}</style>");
+document.write("<dvv id='" + id + "'>" +
     "<ul class='" + roll + "'style='margin-block:0px; padding-inline-start:33px;'>" +
         "<li>" +
             "<img class='icon' src='https://wework.qpic.cn/wwpic3az/846587_PMCu545RQwifXal_1712199121'>" +
@@ -167,7 +167,7 @@ document.write("<aside id='" + id + "'>" +
             "<a href='https://mp.weixin.qq.com/s/ZARDTFAmy2mM7ExgcXOl-w'>饿了么APP搜索「阿虚同学」隐藏外卖红包等你来拿！可和其他红包叠加使用！</a>" +
         "</li>" +
     "</ul>" +
-"</aside>");
+"</dvv>");
 $(function() {
 	var c = $("#" + id);
 	var b;
