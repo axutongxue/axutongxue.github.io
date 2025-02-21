@@ -204,6 +204,12 @@ var infoList = [
     link: "https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
+  {
+    title: "时隔一年，再次开放！特别硬核的赛博神车群",
+    content: "有些时候商家会有销量上的要求，会给某一类型的商品给予大额补贴，神车群收集了这些发生现场...",
+    link: "https://mp.weixin.qq.com/s/Q_usAFgYr6PmSIKPMJ244A \"target=\"_self\"",
+    img: "http://cbu01.alicdn.com/i4/2793632751/O1CN01c3yQTh1WC0bzAceLH_!!2793632751-2-cbucrm.png",
+  },
 {
     title: "阿虚粉丝群丨免费私密公开课",
     content: "阿虚联合圈子内的一些朋友，搞了一期「纯公益」AI知识公开课，直播实操，2月16号－27号持续进行（群名额有限）",
