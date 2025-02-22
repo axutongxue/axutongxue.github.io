@@ -211,10 +211,10 @@ var infoList = [
     img: "http://cbu01.alicdn.com/i4/2793632751/O1CN01c3yQTh1WC0bzAceLH_!!2793632751-2-cbucrm.png",
   },
 {
-    title: "阿虚粉丝群丨免费私密公开课",
-    content: "阿虚联合圈子内的一些朋友，搞了一期「纯公益」AI知识公开课，直播实操，2月16号－27号持续进行（群名额有限）",
-    link: "https://docs.qq.com/doc/DYWlCb0JqWm9OZmx2 \"target=\"_self\"",
-    img: "http://cbu01.alicdn.com/i4/2793632751/O1CN01mkKOcO1WC0btvVLO0_!!2793632751-2-cbucrm.png",
+    title: "清华大学DeepSeek指导手册",
+    content: "拼多多销量百万！阿虚这里免费送，并且还是全网最全1-5册！将文章发送到微信上，查看置顶留言免费领取👇",
+    link: "https://mp.weixin.qq.com/s/DXL4sYA5nfGTjdKhoSoCiQ \"target=\"_self\"",
+    img: "http://cbu01.alicdn.com/i1/2793632751/O1CN015IOOym1WC0c2UbrH3_!!2793632751-3-cbucrm.bmp",
     },
 ];
 
