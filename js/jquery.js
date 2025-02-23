@@ -205,10 +205,10 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
   {
-    title: "时隔一年，再次开放！特别硬核的赛博神车群",
-    content: "有些时候商家会有销量上的要求，会给某一类型的商品给予大额补贴，神车群收集了这些发生现场...",
-    link: "https://mp.weixin.qq.com/s/Q_usAFgYr6PmSIKPMJ244A \"target=\"_self\"",
-    img: "http://cbu01.alicdn.com/i4/2793632751/O1CN01c3yQTh1WC0bzAceLH_!!2793632751-2-cbucrm.png",
+    title: "软件导航（必备软件）",
+    content: "汇集全网各类实用的软件，无广告、无会员、下载不限速",
+    link: "https://fxjd.lanzoue.com/s/navigation \"target=\"_self\"",
+    img: "http://cbu01.alicdn.com/i2/2793632751/O1CN01rFhpdj1WC0c3qOihW_!!2793632751-0-cbucrm.jpg",
   },
 {
     title: "清华大学DeepSeek指导手册",
