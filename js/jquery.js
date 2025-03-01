@@ -211,10 +211,10 @@ var infoList = [
     img: "http://cbu01.alicdn.com/i2/2793632751/O1CN01rFhpdj1WC0c3qOihW_!!2793632751-0-cbucrm.jpg",
   },
 {
-    title: "清华大学DeepSeek指导手册",
-    content: "拼多多销量百万！阿虚这里免费送，并且还是全网最全1-5册！将文章发送到微信上，查看置顶留言免费领取👇",
-    link: "https://mp.weixin.qq.com/s/DXL4sYA5nfGTjdKhoSoCiQ \"target=\"_self\"",
-    img: "http://cbu01.alicdn.com/i1/2793632751/O1CN015IOOym1WC0c2UbrH3_!!2793632751-3-cbucrm.bmp",
+    title: "欢迎大家添加「阿虚」微信",
+    content: "为解决日益下跌的文章触达率，每次发文后我会微信通知大家，再也不怕错过阿虚更新！也欢迎大家来围观阿虚朋友圈～",
+    link: "https://wework.qpic.cn/wwpic3az/710529_MG4WVS7xRY6tonS_1740804068/0 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/710529_MG4WVS7xRY6tonS_1740804068/0",
     },
 ];
 
