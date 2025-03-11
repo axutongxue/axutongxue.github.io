@@ -152,15 +152,15 @@ document.write("<dvv id='" + id + "'>" +
     "<ul class='" + roll + "'style='margin-block:0px; padding-inline-start:33px;'>" +
         "<li>" +
             "<img class='icon' src='https://wework.qpic.cn/wwpic3az/846587_PMCu545RQwifXal_1712199121'>" +
-            "<a href='https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF'>【阿虚的流量卡店铺】低至19/月135G，电信移动联通任选，可打电话发短信，免费发货！</a>" +
+            "<a href='https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF'>【阿虚的流量卡店铺】低至19/月188G，电信移动联通任选，可打电话发短信，免费发货！</a>" +
+        "</li>" +
+        "<li>" +
+        "<img class='icon' src='http://cbu01.alicdn.com/i3/2793632751/O1CN01hiniXD1WC0cJSKesD_!!2793632751-2-cbucrm.png'>" +
+        "<a href='https://applemusic.qsios.cn/yun/#/bgm/wx22'>点击免费领取2个月Apple Music会员，5月13日截止！</a>" +
         "</li>" +
         "<li>" +
             "<img class='icon' src='http://cbu01.alicdn.com/i3/2793632751/O1CN01eUCiiW1WC0aFwPK3Z_!!2793632751-2-cbucrm.png'>" +
             "<a href='https://flowus.cn/share/f35316bd-0af5-490a-a755-ff3538e868f3?code=CZ3ECT'>【名刊汇】超万本最新知名外刊、杂志资源，不限量下载！！</a>" +
-        "</li>" +
-        "<li>" +
-            "<img class='icon' src='https://wework.qpic.cn/wwpic3az/600855_1TyhIR25RbqC90L_1725602260/0'>" +
-            "<a href='https://www.marscode.cn/?utm_source=advertising&utm_medium=axutongxue.com_ug_cpa&utm_term=hw_marscode_axutongxue&utm_content=home'>【字节出品】爆款面试神器！免费编程插件，AI陪练，涵盖上百道大厂算法真题</a>" +
         "</li>" +
         "<li>" +
             "<img class='icon' src='http://cbu01.alicdn.com/i2/2793632751/O1CN01eWeKqf1WC0ZmfpiHt_!!2793632751-2-cbucrm.png'>" +
@@ -200,7 +200,7 @@ var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100v
 var infoList = [
   {
     title: "阿虚自营店铺丨运营商授权",
-    content: "低至19/月 135G 流量！电信、联通、移动任选，资费官方APP可查，能打电话发短信，免费包邮！",
+    content: "低至19/月 188G 流量！电信、联通、移动任选，资费官方APP可查，能打电话发短信，免费包邮！",
     link: "https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
@@ -211,10 +211,10 @@ var infoList = [
     img: "http://cbu01.alicdn.com/i2/2793632751/O1CN01rFhpdj1WC0c3qOihW_!!2793632751-0-cbucrm.jpg",
   },
 {
-    title: "欢迎大家添加「阿虚」微信",
-    content: "为解决日益下跌的文章触达率，每次发文后我会微信通知大家，再也不怕错过阿虚更新！也欢迎大家来围观阿虚朋友圈～",
-    link: "https://wework.qpic.cn/wwpic3az/710529_MG4WVS7xRY6tonS_1740804068/0 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/710529_MG4WVS7xRY6tonS_1740804068/0",
+    title: "免费领取Apple Music会员",
+    content: "阿虚精选福利：免费领取２个月Apple Music会员！没有合约，随时可取消，5月13日截止🎁",
+    link: "https://applemusic.qsios.cn/yun/#/bgm/wx22 \"target=\"_self\"",
+    img: "http://cbu01.alicdn.com/i3/2793632751/O1CN01hiniXD1WC0cJSKesD_!!2793632751-2-cbucrm.png",
     },
 ];
 
