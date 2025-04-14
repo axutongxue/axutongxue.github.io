@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>阿虚同学的储物间</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="color-scheme" content="light dark">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.5.1/jquery.min.js"></script>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		#topyd{
+			width: 100%;
+			margin:0 auto;
+			position: fixed;
+			top: 0;
+		}
+		#topyd img{
+			max-width: 100%;
+		}
+
+		#centeryd{
+			width: 320px;
+			margin:180px auto 0;
+		}
+
+		#centeryd img{
+			max-width: 320px;
+		}
+
+		#bottomyd{
+			width: 320px;
+			margin:30px auto 0;
+		}
+
+		#bottomyd p{
+			text-align: center;
+			font-size: 18px;
+			color: #409eff;
+			font-weight: bold;
+		}
+		.custom-popup {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+			font-size: 17px;
+			font-weight: bold;
+    	}
+
+	</style>
+</head>
+<body><script>
+with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","category=&userid=&aplus&yunid=&&trid=ac11000117323696972624499ea939&asid=AQAAAAAh3UFnTJucPQAAAAAtHY+gseoLzg==",id="tb-beacon-aplus",src=(location>"https"?"//g":"//g")+".alicdn.com/alilog/mlog/aplus_v2.js")
+</script>
+
+	<!-- 顶部引导 -->
+	<div id="topyd"></div>
+
+	<!-- 中部引导 -->
+	<div id="centeryd">
+		<img src="https://wework.qpic.cn/wwpic3az/111757_anAIli9JTMeCe0g_1725797180/0">
+	</div>
+
+	<!-- 底部引导 -->
+	<div id="bottomyd">
+		<p>本站不支持在微信访问</p>
+		<p>请按上方操作在微信外打开</p>
+		</br>
+		<p style="font-size: 12px;font-weight: 300;">若仍无法访问，请点击打开地址发布页</p>
+		<p id="link" style="font-size: 12px;font-weight: 300;">axutongxue.ysepan.com</p>
+	</div>
+</body>
+
+<script>
+    const linkElement = document.getElementById('link');
+    linkElement.addEventListener('click', function () {
+      const url = 'http://axutongxue.ysepan.com';
+      navigator.clipboard.writeText(url).then(() => {
+        const popup = document.createElement('div');
+        popup.classList.add('custom-popup');
+        popup.textContent = '发布页链接已复制！请自行粘贴到浏览器访问';
+        document.body.appendChild(popup);
+        setTimeout(() => {
+          document.body.removeChild(popup);
+        }, 3000);
+      });
+    });
+  </script>
+
+<!-- 判断浏览器 -->
+<script>
+	var ua = navigator.userAgent.toLowerCase();
+    var isWeixin = ua.indexOf('micromessenger') != -1;
+    var isAndroid = ua.indexOf('android') != -1;
+    var isIos = (ua.indexOf('iphone') != -1) || (ua.indexOf('ipad') != -1);
+
+    // 判断是不是在微信客户端打开
+	if(isWeixin) {  
+	    // 判断是在Android的微信客户端还是Ios的微信客户端
+	    if (isAndroid) {
+	    	// 是在Android的微信客户端
+	    	$("#topyd").html("<img src='https://wework.qpic.cn/wwpic3az/557833_vvXKEf1nSwyHGUe_1725772991/0'/>");
+	    	$("#centeryd").html("<img src='https://wework.qpic.cn/wwpic3az/111757_anAIli9JTMeCe0g_1725797180/0'/>");
+	    }else if (isIos) {
+	    	// 是在Ios的微信客户端
+	    	$("#topyd").html("<img src='https://wework.qpic.cn/wwpic3az/554983_ka_ugWKDR-eTk_V_1725772991/0'/>");
+	    	$("#centeryd").html("<img src='https://wework.qpic.cn/wwpic3az/355627_Z190r72DTti_Y2K_1725798172/0'/>");
+	    }else{
+	    	// 未知设备系统，默认使用安卓的引导方式
+	    	$("#topyd").html("<img src='https://wework.qpic.cn/wwpic3az/557833_vvXKEf1nSwyHGUe_1725772991/0'/>");
+	    	$("#centeryd").html("<img src='https://wework.qpic.cn/wwpic3az/111757_anAIli9JTMeCe0g_1725797180/0'/>");
+	    }
+	} else {  
+	    // 不是微信客户端，直接可以访问链接
+	    location.href="https://axutongxue.com/";
+	}
+</script>
+</html>
