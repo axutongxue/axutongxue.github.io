@@ -61,9 +61,7 @@
 
 	</style>
 </head>
-<body><script>
-with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","category=&userid=&aplus&yunid=&&trid=ac11000117323696972624499ea939&asid=AQAAAAAh3UFnTJucPQAAAAAtHY+gseoLzg==",id="tb-beacon-aplus",src=(location>"https"?"//g":"//g")+".alicdn.com/alilog/mlog/aplus_v2.js")
-</script>
+<body>
 
 	<!-- 顶部引导 -->
 	<div id="topyd"></div>
@@ -79,25 +77,50 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
 		<p>请按上方操作在微信外打开</p>
 		</br>
 		<p style="font-size: 12px;font-weight: 300;">若仍无法访问，请点击打开地址发布页</p>
-		<p id="link" style="font-size: 12px;font-weight: 300;">axutongxue.ysepan.com</p>
+		<p id="link" style="font-size: 12px;font-weight: 300;">axutongxue.cccpan.com</p>
 	</div>
 </body>
 
 <script>
     const linkElement = document.getElementById('link');
     linkElement.addEventListener('click', function () {
-      const url = 'http://axutongxue.ysepan.com';
-      navigator.clipboard.writeText(url).then(() => {
+      const url = 'http://axutongxue.cccpan.com/';
+    
+      // 创建临时输入框
+      const tempInput = document.createElement('textarea');
+      tempInput.value = url;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+
+      try {
+        // 尝试使用现代剪贴板 API
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(url).then(() => showPopup());
+        } 
+        // 回退到传统方法
+        else if (document.execCommand('copy')) {
+          showPopup();
+        } else {
+          throw new Error('剪贴板操作不被支持');
+        }
+      } catch (err) {
+        alert("自动复制失败，请手动选择链接并复制");
+      } finally {
+        // 清理临时元素
+        document.body.removeChild(tempInput);
+      }
+
+      function showPopup() {
         const popup = document.createElement('div');
         popup.classList.add('custom-popup');
-        popup.textContent = '发布页链接已复制！请自行粘贴到浏览器访问';
+        popup.textContent = '发布页链接已复制！建议自行粘贴到微信以外浏览器访问';
         document.body.appendChild(popup);
         setTimeout(() => {
           document.body.removeChild(popup);
         }, 3000);
-      });
+      }
     });
-  </script>
+</script>
 
 <!-- 判断浏览器 -->
 <script>

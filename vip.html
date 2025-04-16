@@ -75,9 +75,7 @@
 		}
 	</style>
 </head>
-<body><script>
-with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","category=&userid=&aplus&yunid=&&trid=ac11000117323689890645783e8d5a&asid=AQAAAABd2kFn1DkKEwAAAAByiHxG8R3pxw==",id="tb-beacon-aplus",src=(location>"https"?"//g":"//g")+".alicdn.com/alilog/mlog/aplus_v2.js")
-</script>
+<body>
 
 	<!-- 顶部引导 -->
 	<div id="topyd"></div>
@@ -103,18 +101,43 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
 </body>
 
 <script>
-    const linkElement = document.getElementById('link');pc-warning
+    const linkElement = document.getElementById('link');
     linkElement.addEventListener('click', function () {
-      const url = 'http://axu.xpsup.cn/index.html';
-      navigator.clipboard.writeText(url).then(() => {
+      const url = 'http://axu.xpsup.cn/';
+    
+      // 创建临时输入框
+      const tempInput = document.createElement('textarea');
+      tempInput.value = url;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+
+      try {
+        // 尝试使用现代剪贴板 API
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(url).then(() => showPopup());
+        } 
+        // 回退到传统方法
+        else if (document.execCommand('copy')) {
+          showPopup();
+        } else {
+          throw new Error('剪贴板操作不被支持');
+        }
+      } catch (err) {
+        alert("自动复制失败，请手动选择链接并复制");
+      } finally {
+        // 清理临时元素
+        document.body.removeChild(tempInput);
+      }
+
+      function showPopup() {
         const popup = document.createElement('div');
         popup.classList.add('custom-popup');
-        popup.textContent = '商城链接已复制！请自行粘贴到浏览器访问';
+        popup.textContent = '商城链接已复制！请自行粘贴到微信以外浏览器访问';
         document.body.appendChild(popup);
         setTimeout(() => {
           document.body.removeChild(popup);
         }, 3000);
-      });
+      }
     });
 </script>
 
@@ -149,7 +172,7 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
             }
         } else {
             // 不是微信客户端，直接可以访问链接
-            location.href = "http://axu.xpsup.cn/index.html";
+            location.href = "http://axu.xpsup.cn/";
         }
     }
 </script>
