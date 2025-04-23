@@ -205,10 +205,10 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
   {
-    title: "软件导航（必备软件）",
-    content: "汇集全网各类实用的软件，无广告、无会员、下载不限速",
-    link: "https://fxjd.lanzoue.com/s/navigation \"target=\"_self\"",
-    img: "http://cbu01.alicdn.com/i2/2793632751/O1CN01rFhpdj1WC0c3qOihW_!!2793632751-0-cbucrm.jpg",
+    title: "外卖红包福利！",
+    content: "饿了么APP搜索「阿虚同学」隐藏外卖红包等你来拿！可和其他红包叠加使用！",
+    link: "https://mp.weixin.qq.com/s/ZARDTFAmy2mM7ExgcXOl-w \"target=\"_self\"",
+    img: "http://cbu01.alicdn.com/i2/2793632751/O1CN01eWeKqf1WC0ZmfpiHt_!!2793632751-2-cbucrm.png",
   },
 {
     title: "免费领取Apple Music会员",
