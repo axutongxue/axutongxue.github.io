@@ -106,12 +106,12 @@ function setModeCookie(c, d) {
 }
 function adddarkcss() {
     var a = $("head");
-    a.append('<link rel="stylesheet" href="https://axu.nos-eastchina1.126.net/dark-mode.css">')
+    a.append('<link rel="stylesheet" href="../css/dark-mode.css">')
 }
 function removedarkcss() {
     var b = document.getElementsByTagName("link");
     for (var a = b.length; a >= 0; a--) {
-        if (b[a] && b[a].getAttribute("href") != null && b[a].getAttribute("href").indexOf("https://axu.nos-eastchina1.126.net/dark-mode.css") != -1) {
+        if (b[a] && b[a].getAttribute("href") != null && b[a].getAttribute("href").indexOf("../css/dark-mode.css") != -1) {
             b[a].parentNode.removeChild(b[a])
         }
     }
@@ -208,13 +208,13 @@ var infoList = [
     title: "外卖红包福利！",
     content: "饿了么APP搜索「阿虚同学」隐藏外卖红包等你来拿！可和其他红包叠加使用！",
     link: "https://mp.weixin.qq.com/s/ZARDTFAmy2mM7ExgcXOl-w \"target=\"_self\"",
-    img: "http://cbu01.alicdn.com/i2/2793632751/O1CN01eWeKqf1WC0ZmfpiHt_!!2793632751-2-cbucrm.png",
+    img: "https://cbu01.alicdn.com/i2/2793632751/O1CN01eWeKqf1WC0ZmfpiHt_!!2793632751-2-cbucrm.png",
   },
 {
     title: "免费领取Apple Music会员",
     content: "阿虚精选福利：免费领取２个月Apple Music会员！没有合约，随时可取消，5月13日截止🎁",
     link: "https://applemusic.qsios.cn/yun/#/bgm/wx22 \"target=\"_self\"",
-    img: "http://cbu01.alicdn.com/i3/2793632751/O1CN01hiniXD1WC0cJSKesD_!!2793632751-2-cbucrm.png",
+    img: "https://cbu01.alicdn.com/i3/2793632751/O1CN01hiniXD1WC0cJSKesD_!!2793632751-2-cbucrm.png",
     },
 ];
 
