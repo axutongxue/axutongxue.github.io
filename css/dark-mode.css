@@ -1,0 +1,76 @@
+@charset "UTF-8";
+#bgCanvas{
+	background-color: #2E3234 !important;
+}
+
+#footer{
+	color: #fff !important;
+}
+a{
+	color: #fff !important;
+}
+.menu{
+	border-left: 1px solid white !important;
+}
+#bottomSearch{
+	background-color: unset !important;
+    opacity: 1  !important;
+}
+
+#split{
+	color: #fff !important;
+}
+
+.forkit .tag {
+color: #000;
+background: WHITESMOKE;
+}
+
+.result{
+	background: dodgerblue !important
+}
+
+.darkmode-toggle--white {
+	border:none;
+	background: none;
+}
+.fa-file-text-o{
+    color:powderblue !important
+}
+.fa-weixin {
+    color: #FFF;
+}
+.fa-linux {
+	color:darkgray;
+}
+.fa-windows {
+	color:steelblue !important;
+}
+.bei{
+	filter: invert(1); 
+}
+.forkit .tag {
+	color: #000 !important;
+    background: WHITESMOKE !important;
+}
+.dark {
+	opacity:1;
+}
+.light {
+	opacity:0;
+}
+/* 公告栏反色 */
+.myRewards-main{color:#FFF !important; background-color:#000 !important; border:1px solid #242424 !important;}
+.myR-h,.myR-bot{background-color:#181818 !important;}
+.myRewardsbox{background-color:#1A1D1D !important;}
+.myRewards-list ul.not-full{border-top:1px solid #202020 !important;}
+.myRewards-list a{border-bottom:1px solid #333333 !important;}
+.myRewards-list .myR-on a,
+.myRewards-list .myR-on a:hover{ background-color:#2E3234 !important;}
+.myRewards-detail{background-color:#2E3234 !important;}
+.myRewards-notice{border:1px solid #333 !important; background-color: #232627 !important;}
+.myRewards-code-tit{background-color: #181818 !important; }
+.myRewards-code{border:1px solid #2E3234 !important;background-color: #2E3234 !important;}
+.myRewards .sider-text{ background-color: #EFEFEF !important; color: #000 !important;}
+.myRewards .sider-close{color: #888888 !important;}
+.myRewards-text p{background-color:#2E3234 !important;color:chartreuse !important;}
