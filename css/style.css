@@ -131,12 +131,23 @@ li ul {
 	color:cornflowerblue
 }
 .fa-internet-explorer {
-	padding:0 2px 0 3px;
+	padding:0 3px 0 3px;
 	color:cornflowerblue
 }
-.bei {
+.bei {	
 	margin: 0 0 -7px 4px;
 }
+
+.free {
+	height: 20px;
+	margin: 0 2px -5px -12px;
+}
+
+.pay {
+	height: 23px;
+	margin: 0 0 -6px -12px;
+}
+
 .result {
 	background:#ff0
 }
