@@ -106,12 +106,12 @@ function setModeCookie(c, d) {
 }
 function adddarkcss() {
     var a = $("head");
-    a.append('<link rel="stylesheet" href="https://axu.nos-eastchina1.126.net/dark-mode.css">')
+    a.append('<link rel="stylesheet" href="../css/dark-mode.css">')
 }
 function removedarkcss() {
     var b = document.getElementsByTagName("link");
     for (var a = b.length; a >= 0; a--) {
-        if (b[a] && b[a].getAttribute("href") != null && b[a].getAttribute("href").indexOf("https://axu.nos-eastchina1.126.net/dark-mode.css") != -1) {
+        if (b[a] && b[a].getAttribute("href") != null && b[a].getAttribute("href").indexOf("../css/dark-mode.css") != -1) {
             b[a].parentNode.removeChild(b[a])
         }
     }
@@ -152,15 +152,11 @@ document.write("<dvv id='" + id + "'>" +
     "<ul class='" + roll + "'style='margin-block:0px; padding-inline-start:33px;'>" +
         "<li>" +
             "<img class='icon' src='https://wework.qpic.cn/wwpic3az/846587_PMCu545RQwifXal_1712199121'>" +
-            "<a href='https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF'>【阿虚的流量卡店铺】低至19/月135G，电信移动联通任选，可打电话发短信，免费发货！</a>" +
+            "<a href='https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF'>【阿虚的流量卡店铺】低至19/月188G，电信移动联通任选，可打电话发短信，免费发货！</a>" +
         "</li>" +
         "<li>" +
             "<img class='icon' src='http://cbu01.alicdn.com/i3/2793632751/O1CN01eUCiiW1WC0aFwPK3Z_!!2793632751-2-cbucrm.png'>" +
             "<a href='https://flowus.cn/share/f35316bd-0af5-490a-a755-ff3538e868f3?code=CZ3ECT'>【名刊汇】超万本最新知名外刊、杂志资源，不限量下载！！</a>" +
-        "</li>" +
-        "<li>" +
-            "<img class='icon' src='https://wework.qpic.cn/wwpic3az/600855_1TyhIR25RbqC90L_1725602260/0'>" +
-            "<a href='https://www.marscode.cn/?utm_source=advertising&utm_medium=axutongxue.com_ug_cpa&utm_term=hw_marscode_axutongxue&utm_content=home'>【字节出品】爆款面试神器！免费编程插件，AI陪练，涵盖上百道大厂算法真题</a>" +
         "</li>" +
         "<li>" +
             "<img class='icon' src='http://cbu01.alicdn.com/i2/2793632751/O1CN01eWeKqf1WC0ZmfpiHt_!!2793632751-2-cbucrm.png'>" +
@@ -200,21 +196,21 @@ var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100v
 var infoList = [
   {
     title: "阿虚自营店铺丨运营商授权",
-    content: "低至19/月 135G 流量！电信、联通、移动任选，资费官方APP可查，能打电话发短信，免费包邮！",
+    content: "低至19/月 188G 流量！电信、联通、移动任选，资费官方APP可查，能打电话发短信，免费包邮！",
     link: "https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
   {
-    title: "时隔一年，再次开放！特别硬核的赛博神车群",
-    content: "有些时候商家会有销量上的要求，会给某一类型的商品给予大额补贴，神车群收集了这些发生现场...",
-    link: "https://mp.weixin.qq.com/s/Q_usAFgYr6PmSIKPMJ244A \"target=\"_self\"",
-    img: "http://cbu01.alicdn.com/i4/2793632751/O1CN01c3yQTh1WC0bzAceLH_!!2793632751-2-cbucrm.png",
+    title: "外卖红包福利！",
+    content: "饿了么APP搜索「阿虚同学」隐藏外卖红包等你来拿！可和其他红包叠加使用！",
+    link: "https://mp.weixin.qq.com/s/ZARDTFAmy2mM7ExgcXOl-w \"target=\"_self\"",
+    img: "https://cbu01.alicdn.com/i2/2793632751/O1CN01eWeKqf1WC0ZmfpiHt_!!2793632751-2-cbucrm.png",
   },
 {
-    title: "荐：性价比最高的AI学习渠道",
-    content: "AI淘汰的不是岗位，而是特定工作模式。DeepSeek引爆的AI平权时代，如果你不想成为被淘汰的人，学习如何运用AI非常重要👇",
-    link: "https://mp.weixin.qq.com/s/DXL4sYA5nfGTjdKhoSoCiQ \"target=\"_self\"",
-    img: "http://cbu01.alicdn.com/i1/2793632751/O1CN015IOOym1WC0c2UbrH3_!!2793632751-3-cbucrm.bmp",
+    title: "维普论文查重丨特惠版！",
+    content: "毕业季特惠，维普官方大学生版论文查重3元/千字，查重狗对接维普官网，却仅需2.5/千字，差不多直接８折！",
+    link: "http://axtx.xy666666.a.gocheck.com/ \"target=\"_self\"",
+    img: "http://cbu01.alicdn.com/i2/2793632751/O1CN01pN03PS1WC0dAmUFKL_!!2793632751-0-cbucrm.jpg",
     },
 ];
 
