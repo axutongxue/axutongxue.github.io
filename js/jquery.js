@@ -155,10 +155,6 @@ document.write("<dvv id='" + id + "'>" +
             "<a href='https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF'>【阿虚的流量卡店铺】低至19/月188G，电信移动联通任选，可打电话发短信，免费发货！</a>" +
         "</li>" +
         "<li>" +
-        "<img class='icon' src='http://cbu01.alicdn.com/i3/2793632751/O1CN01hiniXD1WC0cJSKesD_!!2793632751-2-cbucrm.png'>" +
-        "<a href='https://applemusic.qsios.cn/yun/#/bgm/wx22'>点击免费领取2个月Apple Music会员，5月13日截止！</a>" +
-        "</li>" +
-        "<li>" +
             "<img class='icon' src='http://cbu01.alicdn.com/i3/2793632751/O1CN01eUCiiW1WC0aFwPK3Z_!!2793632751-2-cbucrm.png'>" +
             "<a href='https://flowus.cn/share/f35316bd-0af5-490a-a755-ff3538e868f3?code=CZ3ECT'>【名刊汇】超万本最新知名外刊、杂志资源，不限量下载！！</a>" +
         "</li>" +
@@ -211,10 +207,10 @@ var infoList = [
     img: "https://cbu01.alicdn.com/i2/2793632751/O1CN01eWeKqf1WC0ZmfpiHt_!!2793632751-2-cbucrm.png",
   },
 {
-    title: "免费领取Apple Music会员",
-    content: "阿虚精选福利：免费领取２个月Apple Music会员！没有合约，随时可取消，5月13日截止🎁",
-    link: "https://applemusic.qsios.cn/yun/#/bgm/wx22 \"target=\"_self\"",
-    img: "https://cbu01.alicdn.com/i3/2793632751/O1CN01hiniXD1WC0cJSKesD_!!2793632751-2-cbucrm.png",
+    title: "维普论文查重丨特惠版！",
+    content: "毕业季特惠，维普官方大学生版论文查重3元/千字，查重狗对接维普官网，却仅需2.5/千字，差不多直接８折！",
+    link: "http://axtx.xy666666.a.gocheck.com/ \"target=\"_self\"",
+    img: "http://cbu01.alicdn.com/i2/2793632751/O1CN01pN03PS1WC0dAmUFKL_!!2793632751-0-cbucrm.jpg",
     },
 ];
 
