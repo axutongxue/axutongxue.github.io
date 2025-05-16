@@ -239,18 +239,18 @@ function getCookie(cookie_name) {
 }
 function checkCK() {
   setTimeout(function () {
-    if (!getCookie("axuuuu")) {
+    if (!getCookie("xuxuxu")) {
       setCookie();
       let buttonClose = document.querySelector("#buttonClose");
       if (buttonClose) {
         return;
       }
-      let axuuuu = infoList[RandomNumBoth(0, infoList.length - 1)];
+      let xuxuxu = infoList[RandomNumBoth(0, infoList.length - 1)];
       let boxId = RandomNumBoth(10000, 100000);
-      let newCode = code.replace("{{title}}", axuuuu.title);
-      newCode = newCode.replace("{{content}}", axuuuu.content);
-      newCode = newCode.replace("{{path}}", axuuuu.link);
-      newCode = newCode.replace("{{img}}", axuuuu.img);
+      let newCode = code.replace("{{title}}", xuxuxu.title);
+      newCode = newCode.replace("{{content}}", xuxuxu.content);
+      newCode = newCode.replace("{{path}}", xuxuxu.link);
+      newCode = newCode.replace("{{img}}", xuxuxu.img);
       newCode = newCode.replace("{{boxId}}", boxId);
 
       let div = document.createElement("div");
