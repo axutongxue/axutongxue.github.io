@@ -214,7 +214,7 @@ var infoList = [
     },
 ];
 
-function setCookie1() {
+function setC00kie() {
   var date = new Date();
   var Hour = 4; //设置每小时过期时间
   let expireTime = Hour * 3600 * 1000;
@@ -226,21 +226,21 @@ function setCookie1() {
     "exptime=" + expires + "; expires=" + date.toGMTString();
   // 过了这个时间就没用过期时间
   setTimeout(() => {
-    checkCK1();
+    checkC00kie();
   }, expireTime + 10);
 }
 
-function getCookie1(cookie_name) {
+function getC00kie(cookie_name) {
   var results = document.cookie.match(
     "(^|;) ?" + cookie_name + "=([^;]*)(;|$)"
   );
   if (results) return unescape(results[2]);
   else return null;
 }
-function checkCK1() {
+function checkC00kie() {
   setTimeout(function () {
-    if (!getCookie1("xuxuxu")) {
-      setCookie1();
+    if (!getC00kie("xuxuxu")) {
+      setC00kie();
       let buttonClose = document.querySelector("#buttonClose");
       if (buttonClose) {
         return;
@@ -263,17 +263,17 @@ function checkCK1() {
       };
     }
     else {
-      let timeOut = getCookie1("exptime") ?? 1000;
+      let timeOut = getC00kie("exptime") ?? 1000;
       if (timeOut >= 1000) {
         timeOut = timeOut - new Date().getTime();
         if (timeOut < 0) {
-          checkCK1();
+          checkC00kie();
           return;
         }
       }
       console.log(timeOut);
         setTimeout(function () {
-        checkCK1();
+        checkC00kie();
       }, timeOut);
     }
   }, 2000);//延时2秒展示
@@ -284,7 +284,7 @@ function checkCK1() {
   var num = Min + Math.round(Rand * Range); //四舍五入
   return num;
 }
-checkCK1();
+checkC00kie();
 
 document.addEventListener('DOMContentLoaded', function() {
   function siteTime() {
