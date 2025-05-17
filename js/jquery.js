@@ -148,7 +148,7 @@ function randomString(c) {
 var id = randomString(5);
 var roll = randomString(6);
 document.write("<style>#" + id + "{display: block;height:58px;overflow:hidden;width:322px;border:dashed 0.5px #07c160;margin: 4px auto 4px auto;}." + roll + " li{font-size:12px;text-indent:-30px;padding: 2px 0 2px 0;line-height:1;}.icon{width:24px;margin-right:2;vertical-align:middle}</style>");
-document.write("<dvv id='" + id + "'>" +
+document.write("<section><div id='" + id + "'>" +
     "<ul class='" + roll + "'style='margin-block:0px; padding-inline-start:33px;'>" +
         "<li>" +
             "<img class='icon' src='https://wework.qpic.cn/wwpic3az/846587_PMCu545RQwifXal_1712199121'>" +
@@ -163,7 +163,7 @@ document.write("<dvv id='" + id + "'>" +
             "<a href='https://mp.weixin.qq.com/s/ZARDTFAmy2mM7ExgcXOl-w'>饿了么APP搜索「阿虚同学」隐藏外卖红包等你来拿！可和其他红包叠加使用！</a>" +
         "</li>" +
     "</ul>" +
-"</dvv>");
+"</div></section>");
 $(function() {
 	var c = $("#" + id);
 	var b;
@@ -226,31 +226,31 @@ function setCookie() {
     "exptime=" + expires + "; expires=" + date.toGMTString();
   // 过了这个时间就没用过期时间
   setTimeout(() => {
-    checkCK();
+    validateAuth();
   }, expireTime + 10);
 }
 
-function getCookie(cookie_name) {
+function fetchCookie(cookie_name) {
   var results = document.cookie.match(
     "(^|;) ?" + cookie_name + "=([^;]*)(;|$)"
   );
   if (results) return unescape(results[2]);
   else return null;
 }
-function checkCK() {
+function validateAuth() {
   setTimeout(function () {
-    if (!getCookie("xuxuxu")) {
+    if (!fetchCookie("axu")) {
       setCookie();
       let buttonClose = document.querySelector("#buttonClose");
       if (buttonClose) {
         return;
       }
-      let xuxuxu = infoList[RandomNumBoth(0, infoList.length - 1)];
+      let axu = infoList[RandomNumBoth(0, infoList.length - 1)];
       let boxId = RandomNumBoth(10000, 100000);
-      let newCode = code.replace("{{title}}", xuxuxu.title);
-      newCode = newCode.replace("{{content}}", xuxuxu.content);
-      newCode = newCode.replace("{{path}}", xuxuxu.link);
-      newCode = newCode.replace("{{img}}", xuxuxu.img);
+      let newCode = code.replace("{{title}}", axu.title);
+      newCode = newCode.replace("{{content}}", axu.content);
+      newCode = newCode.replace("{{path}}", axu.link);
+      newCode = newCode.replace("{{img}}", axu.img);
       newCode = newCode.replace("{{boxId}}", boxId);
 
       let div = document.createElement("div");
@@ -267,13 +267,13 @@ function checkCK() {
       if (timeOut >= 1000) {
         timeOut = timeOut - new Date().getTime();
         if (timeOut < 0) {
-          checkCK();
+          validateAuth();
           return;
         }
       }
       console.log(timeOut);
         setTimeout(function () {
-        checkCK();
+        validateAuth();
       }, timeOut);
     }
   }, 2000);//延时2秒展示
@@ -284,7 +284,7 @@ function checkCK() {
   var num = Min + Math.round(Rand * Range); //四舍五入
   return num;
 }
-checkCK();
+validateAuth();
 
 document.addEventListener('DOMContentLoaded', function() {
   function siteTime() {
