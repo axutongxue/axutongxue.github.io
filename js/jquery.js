@@ -214,43 +214,43 @@ var infoList = [
     },
 ];
 
-function setCookie() {
+function setCookie1() {
   var date = new Date();
   var Hour = 4; //设置每小时过期时间
   let expireTime = Hour * 3600 * 1000;
   let expires = date.getTime() + expireTime;
   date.setTime(expires);
   document.cookie =
-    "qiuqiul" + RandomNumBoth(10000, 100000) + "; expires=" + date.toGMTString();
+    "value" + RandomNumBoth(10000, 100000) + "; expires=" + date.toGMTString();
   document.cookie =
     "exptime=" + expires + "; expires=" + date.toGMTString();
   // 过了这个时间就没用过期时间
   setTimeout(() => {
-    validateAuth();
+    checkCK1();
   }, expireTime + 10);
 }
 
-function fetchCookie(cookie_name) {
+function getCookie1(cookie_name) {
   var results = document.cookie.match(
     "(^|;) ?" + cookie_name + "=([^;]*)(;|$)"
   );
   if (results) return unescape(results[2]);
   else return null;
 }
-function validateAuth() {
+function checkCK1() {
   setTimeout(function () {
-    if (!fetchCookie("axu")) {
-      setCookie();
+    if (!getCookie1("xuxuxu")) {
+      setCookie1();
       let buttonClose = document.querySelector("#buttonClose");
       if (buttonClose) {
         return;
       }
-      let axu = infoList[RandomNumBoth(0, infoList.length - 1)];
+      let xuxuxu = infoList[RandomNumBoth(0, infoList.length - 1)];
       let boxId = RandomNumBoth(10000, 100000);
-      let newCode = code.replace("{{title}}", axu.title);
-      newCode = newCode.replace("{{content}}", axu.content);
-      newCode = newCode.replace("{{path}}", axu.link);
-      newCode = newCode.replace("{{img}}", axu.img);
+      let newCode = code.replace("{{title}}", xuxuxu.title);
+      newCode = newCode.replace("{{content}}", xuxuxu.content);
+      newCode = newCode.replace("{{path}}", xuxuxu.link);
+      newCode = newCode.replace("{{img}}", xuxuxu.img);
       newCode = newCode.replace("{{boxId}}", boxId);
 
       let div = document.createElement("div");
@@ -263,17 +263,17 @@ function validateAuth() {
       };
     }
     else {
-      let timeOut = getCookie("exptime") ?? 1000;
+      let timeOut = getCookie1("exptime") ?? 1000;
       if (timeOut >= 1000) {
         timeOut = timeOut - new Date().getTime();
         if (timeOut < 0) {
-          validateAuth();
+          checkCK1();
           return;
         }
       }
       console.log(timeOut);
         setTimeout(function () {
-        validateAuth();
+        checkCK1();
       }, timeOut);
     }
   }, 2000);//延时2秒展示
@@ -284,7 +284,7 @@ function validateAuth() {
   var num = Min + Math.round(Rand * Range); //四舍五入
   return num;
 }
-validateAuth();
+checkCK1();
 
 document.addEventListener('DOMContentLoaded', function() {
   function siteTime() {
