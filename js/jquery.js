@@ -155,13 +155,17 @@ document.write("<section><div id='" + id + "'>" +
             "<a href='https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF'>【阿虚的流量卡店铺】低至19/月188G，电信移动联通任选，可打电话发短信，免费发货！</a>" +
         "</li>" +
         "<li>" +
-            "<img class='icon' src='http://cbu01.alicdn.com/i3/2793632751/O1CN01eUCiiW1WC0aFwPK3Z_!!2793632751-2-cbucrm.png'>" +
-            "<a href='https://flowus.cn/share/f35316bd-0af5-490a-a755-ff3538e868f3?code=CZ3ECT'>【名刊汇】超万本最新知名外刊、杂志资源，不限量下载！！</a>" +
+            "<img class='icon' src='https://pp.myapp.com/ma_icon/0/icon_12181027_1747129236/256'>" +
+            "<a href='https://p.pinduoduo.com/O1metQXV'>拼多多618最简单无套路：跨店满减每满200减30＋188元大促限定红包</a>" +
         "</li>" +
         "<li>" +
-            "<img class='icon' src='http://cbu01.alicdn.com/i2/2793632751/O1CN01eWeKqf1WC0ZmfpiHt_!!2793632751-2-cbucrm.png'>" +
-            "<a href='https://mp.weixin.qq.com/s/ZARDTFAmy2mM7ExgcXOl-w'>饿了么APP搜索「阿虚同学」隐藏外卖红包等你来拿！可和其他红包叠加使用！</a>" +
+            "<img class='icon' src='https://pp.myapp.com/ma_icon/0/icon_5080_1746775621/256'>" +
+            "<a href='https://m.tb.cn/h.6HcEEFy'>淘宝618红包雨第一波：每天可抽奖１次，期间累计发放6个25888元大额红包</a>" +
         "</li>" +
+        "<li>" +
+        "<img class='icon' src='https://pp.myapp.com/ma_icon/0/icon_7193_1747217648/256'>" +
+        "<a href='https://u.jd.com/rGebofS'>京东618红包雨：每日可抽奖 3 次，红包面额最高25618元</a>" +
+    "</li>" +
     "</ul>" +
 "</div></section>");
 $(function() {
@@ -201,16 +205,22 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
   {
-    title: "外卖红包福利！",
-    content: "饿了么APP搜索「阿虚同学」隐藏外卖红包等你来拿！可和其他红包叠加使用！",
-    link: "https://mp.weixin.qq.com/s/ZARDTFAmy2mM7ExgcXOl-w \"target=\"_self\"",
-    img: "https://cbu01.alicdn.com/i2/2793632751/O1CN01eWeKqf1WC0ZmfpiHt_!!2793632751-2-cbucrm.png",
+    title: "拼多多618大促主会场🧧",
+    content: "最简单无套路 ⇨ 跨店满减每满200减30＋188元大促限定红包＋三单挑战冲刺3折！",
+    link: "https://p.pinduoduo.com/O1metQXV \"target=\"_self\"",
+    img: "https://pp.myapp.com/ma_icon/0/icon_12181027_1747129236/256",
   },
 {
-    title: "维普论文查重丨特惠版！",
-    content: "毕业季特惠，维普官方大学生版论文查重3元/千字，查重狗对接维普官网，却仅需2.5/千字，差不多直接８折！",
-    link: "http://axtx.xy666666.a.gocheck.com/ \"target=\"_self\"",
-    img: "http://cbu01.alicdn.com/i2/2793632751/O1CN01pN03PS1WC0dAmUFKL_!!2793632751-0-cbucrm.jpg",
+    title: "淘宝618超级红包会场🧧",
+    content: "5月16日－5月26日第一波红包雨来袭 ⇨ 每天可抽奖1次，期间累计发放6个25888元大额红包",
+    link: "https://m.tb.cn/h.6HcEEFy \"target=\"_self\"",
+    img: "https://pp.myapp.com/ma_icon/0/icon_5080_1746775621/256",
+    },
+{
+    title: "京东618红包主会场🧧",
+    content: "和往年一样，无套路拼运气，每日可抽奖 3 次！红包面额最高25618元",
+    link: "https://u.jd.com/rGebofS \"target=\"_self\"",
+    img: "https://pp.myapp.com/ma_icon/0/icon_7193_1747217648/256",
     },
 ];
 
