@@ -152,7 +152,7 @@ document.write("<section><div id='" + id + "'>" +
     "<ul class='" + roll + "'style='margin-block:0px; padding-inline-start:33px;'>" +
         "<li>" +
             "<img class='icon' src='https://wework.qpic.cn/wwpic3az/846587_PMCu545RQwifXal_1712199121'>" +
-            "<a href='https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF'>【阿虚的流量卡店铺】低至19/月188G，电信移动联通任选，可打电话发短信，免费发货！</a>" +
+            "<a href='https://api.simhaoka.com/h5/index?uc=kTNQ3GWi6a'>【阿虚的流量卡店铺】低至19/月188G，电信移动联通任选，可打电话发短信，免费发货！</a>" +
         "</li>" +
         "<li>" +
             "<img class='icon' src='https://pp.myapp.com/ma_icon/0/icon_12181027_1747129236/256'>" +
@@ -201,7 +201,7 @@ var infoList = [
   {
     title: "阿虚自营店铺丨运营商授权",
     content: "低至19/月 188G 流量！电信、联通、移动任选，资费官方APP可查，能打电话发短信，免费包邮！",
-    link: "https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF \"target=\"_self\"",
+    link: "https://api.simhaoka.com/h5/index?uc=kTNQ3GWi6a \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
   {
