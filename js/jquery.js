@@ -156,7 +156,7 @@ document.write("<section><div id='" + id + "'>" +
         "</li>" +
         "<li>" +
             "<img class='icon' src='https://pp.myapp.com/ma_icon/0/icon_12181027_1747129236/256'>" +
-            "<a href='https://p.pinduoduo.com/O1metQXV'>拼多多618最简单无套路：跨店满减每满200减30＋188元大促限定红包</a>" +
+            "<a href='https://p.pinduoduo.com/1SQeSJmf'>拼多多618最简单无套路：跨店满减每满200减30＋188元大促限定红包</a>" +
         "</li>" +
         "<li>" +
             "<img class='icon' src='https://pp.myapp.com/ma_icon/0/icon_5080_1746775621/256'>" +
@@ -207,7 +207,7 @@ var infoList = [
   {
     title: "拼多多618大促主会场🧧",
     content: "最简单无套路 ⇨ 跨店满减每满200减30＋188元大促限定红包＋三单挑战冲刺3折！",
-    link: "https://p.pinduoduo.com/O1metQXV \"target=\"_self\"",
+    link: "https://p.pinduoduo.com/1SQeSJmf \"target=\"_self\"",
     img: "https://pp.myapp.com/ma_icon/0/icon_12181027_1747129236/256",
   },
 {
