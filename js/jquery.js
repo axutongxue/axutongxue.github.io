@@ -156,15 +156,15 @@ document.write("<section><div id='" + id + "'>" +
         "</li>" +
         "<li>" +
             "<img class='icon' src='https://pp.myapp.com/ma_icon/0/icon_12181027_1747129236/256'>" +
-            "<a href='https://p.pinduoduo.com/1SQeSJmf'>拼多多618最简单无套路：跨店满减每满200减30＋188元大促限定红包</a>" +
+            "<a href='https://p.pinduoduo.com/O1metQXV'>拼多多618最便宜：阿虚选了数码、家电、鞋服、母婴、美妆多类产品做过对比，拼多多价格一次都没输！</a>" +
         "</li>" +
         "<li>" +
-            "<img class='icon' src='https://pp.myapp.com/ma_icon/0/icon_5080_1746775621/256'>" +
-            "<a href='https://m.tb.cn/h.6HcEEFy'>淘宝618红包雨第一波：每天可抽奖１次，期间累计发放6个25888元大额红包</a>" +
+            "<img class='icon' src='https://pp.myapp.com/ma_icon/0/icon_12181027_1747129236/256'>" +
+            "<a href='https://p.pinduoduo.com/dMSeqe5I'>拼多多618大促消费券一定要领！竞享4.3折！</a>" +
         "</li>" +
         "<li>" +
         "<img class='icon' src='https://pp.myapp.com/ma_icon/0/icon_7193_1747217648/256'>" +
-        "<a href='https://u.jd.com/rGebofS'>京东618红包雨：每日可抽奖 3 次，红包面额最高25618元</a>" +
+        "<a href='https://u.jd.com/rGebofS'>遇到在拼多多没有国补，建议上京东，国补品类最全！</a>" +
     "</li>" +
     "</ul>" +
 "</div></section>");
@@ -198,30 +198,30 @@ $(function() {
 
 var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="buttonClose" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
-  {
+{
     title: "阿虚自营店铺丨运营商授权",
     content: "低至19/月 188G 流量！电信、联通、移动任选，资费官方APP可查，能打电话发短信，免费包邮！",
     link: "https://api.simhaoka.com/h5/index?uc=kTNQ3GWi6a \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
-  },
-  {
-    title: "拼多多618大促主会场🧧",
-    content: "最简单无套路 ⇨ 跨店满减每满200减30＋188元大促限定红包＋三单挑战冲刺3折！",
-    link: "https://p.pinduoduo.com/1SQeSJmf \"target=\"_self\"",
-    img: "https://pp.myapp.com/ma_icon/0/icon_12181027_1747129236/256",
-  },
+},
 {
-    title: "淘宝618超级红包会场🧧",
-    content: "5月16日－5月26日第一波红包雨来袭 ⇨ 每天可抽奖1次，期间累计发放6个25888元大额红包",
-    link: "https://m.tb.cn/h.6HcEEFy \"target=\"_self\"",
-    img: "https://pp.myapp.com/ma_icon/0/icon_5080_1746775621/256",
-    },
+    title: "拼多多618提前优惠🧧",
+    content: "阿虚选了数码、家电、鞋服、母婴、美妆多类产品做过对比，拼多多价格一次都没输！购买单品，同比下来最便宜！",
+    link: "https://p.pinduoduo.com/O1metQXV \"target=\"_self\"",
+    img: "https://cbu01.alicdn.com/img/ibank/O1CN01g6V8CH1xbeRAy5LKn_!!6000000006462-0-cib.jpg",
+},
+{
+    title: "拼多多618大促消费券🧧",
+    content: "阿虚选了数码、家电、鞋服、母婴、美妆多类产品做过对比，拼多多价格一次都没输！消费券一定要领！",
+    link: "https://p.pinduoduo.com/dMSeqe5I \"target=\"_self\"",
+    img: "https://cbu01.alicdn.com/img/ibank/O1CN012tycUu1hEGMMiHHCa_!!6000000004245-0-cib.jpg",
+},
 {
     title: "京东618红包主会场🧧",
     content: "和往年一样，无套路拼运气，每日可抽奖 3 次！红包面额最高25618元",
     link: "https://u.jd.com/rGebofS \"target=\"_self\"",
     img: "https://pp.myapp.com/ma_icon/0/icon_7193_1747217648/256",
-    },
+},
 ];
 
 function setC00kie() {
