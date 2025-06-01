@@ -211,16 +211,16 @@ var infoList = [
     img: "https://cbu01.alicdn.com/img/ibank/O1CN01g6V8CH1xbeRAy5LKn_!!6000000006462-0-cib.jpg",
 },
 {
-    title: "拼多多618大促消费券🧧",
-    content: "阿虚选了数码、家电、鞋服、母婴、美妆多类产品做过对比，拼多多价格一次都没输！消费券一定要领！",
-    link: "https://p.pinduoduo.com/dMSeqe5I \"target=\"_self\"",
-    img: "https://cbu01.alicdn.com/img/ibank/O1CN012tycUu1hEGMMiHHCa_!!6000000004245-0-cib.jpg",
+    title: "数码荔枝丨正版软件618大促",
+    content: "Bandizip、PixPin、UPDF、思源笔记、Typora、AdGuard、Groupy、Fences、BookxNote等 185 款软件都有优惠！",
+    link: "https://lizhi.shop/site/search_list/category_id/64?cid=ds7afku3 \"target=\"_self\"",
+    img: "https://cbu01.alicdn.com/img/ibank/O1CN01vmqy2X1U0RP0wh2uv_!!6000000002455-0-cib.jpg",
 },
 {
-    title: "京东618红包主会场🧧",
-    content: "和往年一样，无套路拼运气，每日可抽奖 3 次！红包面额最高25618元",
-    link: "https://u.jd.com/rGebofS \"target=\"_self\"",
-    img: "https://pp.myapp.com/ma_icon/0/icon_7193_1747217648/256",
+    title: "软购商城丨正版软件618大促",
+    content: "Quicker、天若OCR、Snipaste、Seer、MindMaster、EdrawMax、iSlide、优效日历等大量软件都有优惠，低至1折",
+    link: "https://apsgo.com/activity/618sales?id=725 \"target=\"_self\"",
+    img: "https://cbu01.alicdn.com/img/ibank/O1CN01wShJ0y1l5nVCD1huu_!!6000000004768-0-cib.jpg",
 },
 ];
 
