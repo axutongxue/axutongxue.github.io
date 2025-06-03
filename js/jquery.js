@@ -155,15 +155,15 @@ document.write("<section><div id='" + id + "'>" +
             "<a href='https://api.simhaoka.com/h5/index?uc=kTNQ3GWi6a'>【阿虚的流量卡店铺】低至19/月188G，电信移动联通任选，可打电话发短信，免费发货！</a>" +
         "</li>" +
         "<li>" +
-            "<img class='icon' src='https://pp.myapp.com/ma_icon/0/icon_12181027_1747129236/256'>" +
-            "<a href='https://p.pinduoduo.com/O1metQXV'>拼多多618最便宜：阿虚选了数码、家电、鞋服、母婴、美妆多类产品做过对比，拼多多价格一次都没输！</a>" +
+            "<img class='icon' src='https://cbu01.alicdn.com/img/ibank/O1CN01xxE59H1MF58bY42na_!!6000000001404-0-cib.jpg'>" +
+            "<a href='https://u.jd.com/3Dn8nEn'>国补品类最全！啥都补！还有百亿补贴＋每日红包（可膨胀）＋PLUS会员补贴＋全品类跨店满299-50！</a>" +
         "</li>" +
         "<li>" +
             "<img class='icon' src='https://pp.myapp.com/ma_icon/0/icon_12181027_1747129236/256'>" +
             "<a href='https://p.pinduoduo.com/dMSeqe5I'>拼多多618大促消费券一定要领！竞享4.3折！</a>" +
         "</li>" +
         "<li>" +
-        "<img class='icon' src='https://pp.myapp.com/ma_icon/0/icon_7193_1747217648/256'>" +
+        "<img class='icon' src='https://cbu01.alicdn.com/img/ibank/O1CN01xxE59H1MF58bY42na_!!6000000001404-0-cib.jpg'>" +
         "<a href='https://u.jd.com/rGebofS'>遇到在拼多多没有国补，建议上京东，国补品类最全！</a>" +
     "</li>" +
     "</ul>" +
@@ -205,10 +205,10 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
 },
 {
-    title: "拼多多618提前优惠🧧",
-    content: "阿虚选了数码、家电、鞋服、母婴、美妆多类产品做过对比，拼多多价格一次都没输！购买单品，同比下来最便宜！",
-    link: "https://p.pinduoduo.com/O1metQXV \"target=\"_self\"",
-    img: "https://cbu01.alicdn.com/img/ibank/O1CN01g6V8CH1xbeRAy5LKn_!!6000000006462-0-cib.jpg",
+    title: "京东6.4全天红包概率提升！",
+    content: "国补品类最全！啥都补！并且是「国补×百亿补贴」双补贴！还能叠加每日红包＋PLUS会员专享补贴，再加上全品类跨店满299-50！",
+    link: "https://u.jd.com/3Dn8nEn \"target=\"_self\"",
+    img: "https://cbu01.alicdn.com/img/ibank/O1CN01JRP36g1eeQ8Kqdsr0_!!6000000003896-0-cib.jpg",
 },
 {
     title: "数码荔枝丨正版软件618大促",
@@ -224,7 +224,7 @@ var infoList = [
 },
 ];
 
-function setC00kie() {
+function setCoookie() {
   var date = new Date();
   var Hour = 4; //设置每小时过期时间
   let expireTime = Hour * 3600 * 1000;
@@ -236,7 +236,7 @@ function setC00kie() {
     "exptime=" + expires + "; expires=" + date.toGMTString();
   // 过了这个时间就没用过期时间
   setTimeout(() => {
-    checkC00kie();
+    checkCoookie();
   }, expireTime + 10);
 }
 
@@ -247,10 +247,10 @@ function getC00kie(cookie_name) {
   if (results) return unescape(results[2]);
   else return null;
 }
-function checkC00kie() {
+function checkCoookie() {
   setTimeout(function () {
     if (!getC00kie("xuxuxu")) {
-      setC00kie();
+      setCoookie();
       let buttonClose = document.querySelector("#buttonClose");
       if (buttonClose) {
         return;
@@ -277,13 +277,13 @@ function checkC00kie() {
       if (timeOut >= 1000) {
         timeOut = timeOut - new Date().getTime();
         if (timeOut < 0) {
-          checkC00kie();
+          checkCoookie();
           return;
         }
       }
       console.log(timeOut);
         setTimeout(function () {
-        checkC00kie();
+        checkCoookie();
       }, timeOut);
     }
   }, 2000);//延时2秒展示
@@ -294,7 +294,7 @@ function checkC00kie() {
   var num = Min + Math.round(Rand * Range); //四舍五入
   return num;
 }
-checkC00kie();
+checkCoookie();
 
 document.addEventListener('DOMContentLoaded', function() {
   function siteTime() {
