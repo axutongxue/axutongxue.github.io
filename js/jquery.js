@@ -152,20 +152,16 @@ document.write("<section><div id='" + id + "'>" +
     "<ul class='" + roll + "'style='margin-block:0px; padding-inline-start:33px;'>" +
         "<li>" +
             "<img class='icon' src='https://wework.qpic.cn/wwpic3az/846587_PMCu545RQwifXal_1712199121'>" +
-            "<a href='https://api.simhaoka.com/h5/index?uc=kTNQ3GWi6a'>【阿虚的流量卡店铺】低至19/月188G，电信移动联通任选，可打电话发短信，免费发货！</a>" +
+            "<a href='https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF'>【阿虚的流量卡店铺】低至19/月188G，电信移动联通任选，可打电话发短信，免费发货！</a>" +
         "</li>" +
         "<li>" +
-            "<img class='icon' src='https://cbu01.alicdn.com/img/ibank/O1CN01xxE59H1MF58bY42na_!!6000000001404-0-cib.jpg'>" +
-            "<a href='https://u.jd.com/3Dn8nEn'>国补品类最全！啥都补！还有百亿补贴＋每日红包（可膨胀）＋PLUS会员补贴＋全品类跨店满299-50！</a>" +
+            "<img class='icon' src='http://cbu01.alicdn.com/i3/2793632751/O1CN01eUCiiW1WC0aFwPK3Z_!!2793632751-2-cbucrm.png'>" +
+            "<a href='https://flowus.cn/share/f35316bd-0af5-490a-a755-ff3538e868f3?code=CZ3ECT'>【名刊汇】超万本最新知名外刊、杂志资源，不限量下载！！</a>" +
         "</li>" +
         "<li>" +
-            "<img class='icon' src='https://pp.myapp.com/ma_icon/0/icon_12181027_1747129236/256'>" +
-            "<a href='https://p.pinduoduo.com/dMSeqe5I'>拼多多618大促消费券一定要领！竞享4.3折！</a>" +
+            "<img class='icon' src='http://cbu01.alicdn.com/i2/2793632751/O1CN01eWeKqf1WC0ZmfpiHt_!!2793632751-2-cbucrm.png'>" +
+            "<a href='https://mp.weixin.qq.com/s/ZARDTFAmy2mM7ExgcXOl-w'>饿了么APP搜索「阿虚同学」隐藏外卖红包等你来拿！可和其他红包叠加使用！</a>" +
         "</li>" +
-        "<li>" +
-        "<img class='icon' src='https://cbu01.alicdn.com/img/ibank/O1CN01xxE59H1MF58bY42na_!!6000000001404-0-cib.jpg'>" +
-        "<a href='https://u.jd.com/rGebofS'>遇到在拼多多没有国补，建议上京东，国补品类最全！</a>" +
-    "</li>" +
     "</ul>" +
 "</div></section>");
 $(function() {
@@ -198,33 +194,33 @@ $(function() {
 
 var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="buttonClose" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
-{
+  {
     title: "阿虚自营店铺丨运营商授权",
     content: "低至19/月 188G 流量！电信、联通、移动任选，资费官方APP可查，能打电话发短信，免费包邮！",
-    link: "https://api.simhaoka.com/h5/index?uc=kTNQ3GWi6a \"target=\"_self\"",
+    link: "https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
-},
+  },
+  {
+    title: "饿了么外卖红包！",
+    content: "饿了么APP搜索「阿虚同学」隐藏外卖红包等你来拿！可和其他红包叠加使用！",
+    link: "https://mp.weixin.qq.com/s/ZARDTFAmy2mM7ExgcXOl-w \"target=\"_self\"",
+    img: "https://cbu01.alicdn.com/i2/2793632751/O1CN01eWeKqf1WC0ZmfpiHt_!!2793632751-2-cbucrm.png",
+  },
+  {
+    title: "淘宝闪购外卖红包！",
+    content: "淘宝闪购搜索「4279」最高领取：满15-15红包，天天可领！",
+    link: "https://wework.qpic.cn/wwpic3az/327389_I3tIQkfvRWex-wK_1749185999/0 \"target=\"_self\"",
+    img: "https://cbu01.alicdn.com/img/ibank/O1CN01ANHfi61fAwG9MZrU3_!!6000000003967-0-cib.jpg",
+  },
 {
-    title: "京东6.4全天红包概率提升！",
-    content: "国补品类最全！啥都补！并且是「国补×百亿补贴」双补贴！还能叠加每日红包＋PLUS会员专享补贴，再加上全品类跨店满299-50！",
-    link: "https://u.jd.com/3Dn8nEn \"target=\"_self\"",
-    img: "https://cbu01.alicdn.com/img/ibank/O1CN01JRP36g1eeQ8Kqdsr0_!!6000000003896-0-cib.jpg",
-},
-{
-    title: "数码荔枝丨正版软件618大促",
-    content: "Bandizip、PixPin、UPDF、思源笔记、Typora、AdGuard、Groupy、Fences、BookxNote等 185 款软件都有优惠！",
-    link: "https://lizhi.shop/site/search_list/category_id/64?cid=ds7afku3 \"target=\"_self\"",
-    img: "https://cbu01.alicdn.com/img/ibank/O1CN01vmqy2X1U0RP0wh2uv_!!6000000002455-0-cib.jpg",
-},
-{
-    title: "软购商城丨正版软件618大促",
-    content: "Quicker、天若OCR、Snipaste、Seer、MindMaster、EdrawMax、iSlide、优效日历等大量软件都有优惠，低至1折",
-    link: "https://apsgo.com/activity/618sales?id=725 \"target=\"_self\"",
-    img: "https://cbu01.alicdn.com/img/ibank/O1CN01wShJ0y1l5nVCD1huu_!!6000000004768-0-cib.jpg",
-},
+    title: "京东外卖红包！",
+    content: "京东外卖百亿餐补券，天天可领：满11-10！满8-7！满6-5！",
+    link: "https://u.jd.com/36zA1RZ \"target=\"_self\"",
+    img: "https://cbu01.alicdn.com/img/ibank/O1CN01pIPVQa1kTKEqZV5JA_!!6000000004684-0-cib.jpg",
+    },
 ];
 
-function setCoookie() {
+function setC00kie() {
   var date = new Date();
   var Hour = 4; //设置每小时过期时间
   let expireTime = Hour * 3600 * 1000;
@@ -236,7 +232,7 @@ function setCoookie() {
     "exptime=" + expires + "; expires=" + date.toGMTString();
   // 过了这个时间就没用过期时间
   setTimeout(() => {
-    checkCoookie();
+    checkC00kie();
   }, expireTime + 10);
 }
 
@@ -247,10 +243,10 @@ function getC00kie(cookie_name) {
   if (results) return unescape(results[2]);
   else return null;
 }
-function checkCoookie() {
+function checkC00kie() {
   setTimeout(function () {
     if (!getC00kie("xuxuxu")) {
-      setCoookie();
+      setC00kie();
       let buttonClose = document.querySelector("#buttonClose");
       if (buttonClose) {
         return;
@@ -277,13 +273,13 @@ function checkCoookie() {
       if (timeOut >= 1000) {
         timeOut = timeOut - new Date().getTime();
         if (timeOut < 0) {
-          checkCoookie();
+          checkC00kie();
           return;
         }
       }
       console.log(timeOut);
         setTimeout(function () {
-        checkCoookie();
+        checkC00kie();
       }, timeOut);
     }
   }, 2000);//延时2秒展示
@@ -294,7 +290,7 @@ function checkCoookie() {
   var num = Min + Math.round(Rand * Range); //四舍五入
   return num;
 }
-checkCoookie();
+checkC00kie();
 
 document.addEventListener('DOMContentLoaded', function() {
   function siteTime() {
