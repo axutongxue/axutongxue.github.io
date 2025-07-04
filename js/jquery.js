@@ -155,12 +155,12 @@ document.write("<section><div id='" + id + "'>" +
             "<a href='https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF'>【阿虚的流量卡店铺】低至19/月188G，电信移动联通任选，可打电话发短信，免费发货！</a>" +
         "</li>" +
         "<li>" +
+        "<img class='icon' src='https://wework.qpic.cn/wwpic3az/611743_LN0U3UP5RBKEKzU_1751618088/0'>" +
+        "<a href='http://icloud.qsios.com/yun/#/ilink/wx36'>【限时活动】免费领取3个月iCloud会员（50GB）🔥</a>" +
+       "</li>" +
+        "<li>" +
             "<img class='icon' src='https://cbu01.alicdn.com/img/ibank/O1CN018K6G1h1OPHC3rXHy3_!!6000000001697-0-cib.jpg'>" +
             "<a href='https://bwsf.cc/?aff=c90aa36ab0397e94'>【博闻书坊】中港台日韩欧美，无水印PDF电子杂志＋独家精译中文版资源</a>" +
-        "</li>" +
-        "<li>" +
-            "<img class='icon' src='http://cbu01.alicdn.com/i2/2793632751/O1CN01eWeKqf1WC0ZmfpiHt_!!2793632751-2-cbucrm.png'>" +
-            "<a href='https://mp.weixin.qq.com/s/ZARDTFAmy2mM7ExgcXOl-w'>饿了么APP搜索「阿虚同学」隐藏外卖红包等你来拿！可和其他红包叠加使用！</a>" +
         "</li>" +
     "</ul>" +
 "</div></section>");
@@ -201,23 +201,17 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
   },
   {
-    title: "饿了么外卖红包！",
-    content: "饿了么APP搜索「阿虚同学」隐藏外卖红包等你来拿！可和其他红包叠加使用！",
-    link: "https://mp.weixin.qq.com/s/ZARDTFAmy2mM7ExgcXOl-w \"target=\"_self\"",
-    img: "https://cbu01.alicdn.com/i2/2793632751/O1CN01eWeKqf1WC0ZmfpiHt_!!2793632751-2-cbucrm.png",
+    title: "阿虚公众号菜单栏，享特惠！",
+    content: "滴滴、花小猪、同程、T3打车券天天领！美团、饿了么、京东、淘宝外卖券天天可领！电影票低至８折！全网热门会员低至３折！",
+    link: "https://wework.qpic.cn/wwpic3az/734894_9g9TGlykQi-0745_1751616046/0 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/984300_IvxPd18nRHOVM-6_1751617723/0",
   },
   {
-    title: "淘宝闪购外卖红包！",
-    content: "淘宝闪购搜索「4279」最高领取：满15-15红包，天天可领！",
-    link: "https://wework.qpic.cn/wwpic3az/327389_I3tIQkfvRWex-wK_1749185999/0 \"target=\"_self\"",
-    img: "https://cbu01.alicdn.com/img/ibank/O1CN01ANHfi61fAwG9MZrU3_!!6000000003967-0-cib.jpg",
+    title: "限时免费领取 iCloud 会员！",
+    content: "苹果官方活动，点击链接即可免费领取３个月iCloud会员 50 GB 🔥（后续可自行到设置中，取消订阅自动续费）",
+    link: "http://icloud.qsios.com/yun/#/ilink/wx36 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/611743_LN0U3UP5RBKEKzU_1751618088/0",
   },
-{
-    title: "京东外卖红包！",
-    content: "京东外卖百亿餐补券，天天可领：满11-10！满8-7！满6-5！",
-    link: "https://u.jd.com/36zA1RZ \"target=\"_self\"",
-    img: "https://cbu01.alicdn.com/img/ibank/O1CN01pIPVQa1kTKEqZV5JA_!!6000000004684-0-cib.jpg",
-    },
 ];
 
 function setCO0kie() {
