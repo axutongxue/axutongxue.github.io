@@ -155,8 +155,8 @@ document.write("<section><div id='" + id + "'>" +
             "<a href='https://axu.simhaoka.com/phone/index?id=B956B2050EAA74084CC3FE6EF37C57CF'>【阿虚的流量卡店铺】低至19/月188G，电信移动联通任选，可打电话发短信，免费发货！</a>" +
         "</li>" +
         "<li>" +
-            "<img class='icon' src='http://cbu01.alicdn.com/i3/2793632751/O1CN01eUCiiW1WC0aFwPK3Z_!!2793632751-2-cbucrm.png'>" +
-            "<a href='https://flowus.cn/share/f35316bd-0af5-490a-a755-ff3538e868f3?code=CZ3ECT'>【名刊汇】超万本最新知名外刊、杂志资源，不限量下载！！</a>" +
+            "<img class='icon' src='https://cbu01.alicdn.com/img/ibank/O1CN018K6G1h1OPHC3rXHy3_!!6000000001697-0-cib.jpg'>" +
+            "<a href='https://bwsf.cc/?aff=c90aa36ab0397e94'>【博闻书坊】中港台日韩欧美，无水印PDF电子杂志＋独家精译中文版资源</a>" +
         "</li>" +
         "<li>" +
             "<img class='icon' src='http://cbu01.alicdn.com/i2/2793632751/O1CN01eWeKqf1WC0ZmfpiHt_!!2793632751-2-cbucrm.png'>" +
