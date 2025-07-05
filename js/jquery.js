@@ -202,7 +202,7 @@ var infoList = [
   },
   {
     title: "阿虚公众号菜单栏，享特惠！",
-    content: "滴滴、花小猪、同程、T3打车券天天领！美团、饿了么、京东、淘宝外卖券天天可领！电影票低至８折！全网热门会员低至３折！",
+    content: "🚕滴滴、花小猪、同程打车券天天领！🍔美团、饿了么、京东、淘宝外卖券天天可领！📽️电影票低至８折！👑全网热门会员低至３折！",
     link: "https://wework.qpic.cn/wwpic3az/340998_du_hB0AjQtGmtR__1751622063/0 \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/984300_IvxPd18nRHOVM-6_1751617723/0",
   },
