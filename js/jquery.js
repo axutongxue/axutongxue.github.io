@@ -196,9 +196,9 @@ var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100v
 var infoList = [
   {
     title: "重要通知！！！",
-    content: "如果你遇到弹窗［您是人类还是电脑程序］请直接关闭！提示未验证，会无法访问网站是假的！直接关闭弹窗就行",
+    content: "如果你遇到弹窗［您是人类还是电脑程序］请直接关闭！提示未验证会无法访问网站是假的！直接关闭弹窗就行",
     link: "https://cbu01.alicdn.com/img/ibank/O1CN01WE9eCu20rd73yvDCA_!!6000000006903-0-cib.jpg \"target=\"_self\"",
-    img: "https://cbu01.alicdn.com/img/ibank/O1CN01WZwG311F9rJv4oGhz_!!6000000000445-0-cib.jpg",
+    img: "https://wework.qpic.cn/wwpic3az/450759_Cu52uRv0QEKUZfF_1751790963/0",
   },
 ];
 
