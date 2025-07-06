@@ -192,99 +192,99 @@ $(function() {
 	}
 });
 
-var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="buttonClose" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
-var infoList = [
-  {
-    title: "阿虚自营店铺丨运营商授权",
-    content: "低至19/月 188G 流量！电信、联通、移动任选，资费官方APP可查，能打电话发短信，免费包邮！",
-    link: "https://api.simhaoka.com/h5/index?uc=kTNQ3GWi6a&gt=0 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
-  },
-  {
-    title: "阿虚公众号菜单栏，享特惠！",
-    content: "🚕滴滴、花小猪、同程打车券天天领！🍔美团、饿了么、京东、淘宝外卖券天天可领！📽️电影票低至８折！👑全网热门会员低至３折！",
-    link: "https://wework.qpic.cn/wwpic3az/340998_du_hB0AjQtGmtR__1751622063/0 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/984300_IvxPd18nRHOVM-6_1751617723/0",
-  },
-  {
-    title: "限时免费领取 iCloud 会员！",
-    content: "苹果官方活动，点击链接即可免费领取３个月iCloud会员 50 GB 🔥（后续可自行到设置中，取消订阅自动续费）",
-    link: "http://icloud.qsios.com/yun/#/ilink/wx36 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/611743_LN0U3UP5RBKEKzU_1751618088/0",
-  },
-];
+// var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="buttonClose" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
+// var infoList = [
+//   {
+//     title: "阿虚自营店铺丨运营商授权",
+//     content: "低至19/月 188G 流量！电信、联通、移动任选，资费官方APP可查，能打电话发短信，免费包邮！",
+//     link: "https://api.simhaoka.com/h5/index?uc=kTNQ3GWi6a&gt=0 \"target=\"_self\"",
+//     img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786/0",
+//   },
+//   {
+//     title: "阿虚公众号菜单栏，享特惠！",
+//     content: "🚕滴滴、花小猪、同程打车券天天领！🍔美团、饿了么、京东、淘宝外卖券天天可领！📽️电影票低至８折！👑全网热门会员低至３折！",
+//     link: "https://wework.qpic.cn/wwpic3az/340998_du_hB0AjQtGmtR__1751622063/0 \"target=\"_self\"",
+//     img: "https://wework.qpic.cn/wwpic3az/984300_IvxPd18nRHOVM-6_1751617723/0",
+//   },
+//   {
+//     title: "限时免费领取 iCloud 会员！",
+//     content: "苹果官方活动，点击链接即可免费领取３个月iCloud会员 50 GB 🔥（后续可自行到设置中，取消订阅自动续费）",
+//     link: "http://icloud.qsios.com/yun/#/ilink/wx36 \"target=\"_self\"",
+//     img: "https://wework.qpic.cn/wwpic3az/611743_LN0U3UP5RBKEKzU_1751618088/0",
+//   },
+// ];
 
-function setCO0kie() {
-  var date = new Date();
-  var Hour = 4; //设置每小时过期时间
-  let expireTime = Hour * 3600 * 1000;
-  let expires = date.getTime() + expireTime;
-  date.setTime(expires);
-  document.cookie =
-    "value" + RandomNumBoth(10000, 100000) + "; expires=" + date.toGMTString();
-  document.cookie =
-    "exptime=" + expires + "; expires=" + date.toGMTString();
-  // 过了这个时间就没用过期时间
-  setTimeout(() => {
-    checkC0okie();
-  }, expireTime + 10);
-}
+// function setCO0kie() {
+//   var date = new Date();
+//   var Hour = 4; //设置每小时过期时间
+//   let expireTime = Hour * 3600 * 1000;
+//   let expires = date.getTime() + expireTime;
+//   date.setTime(expires);
+//   document.cookie =
+//     "value" + RandomNumBoth(10000, 100000) + "; expires=" + date.toGMTString();
+//   document.cookie =
+//     "exptime=" + expires + "; expires=" + date.toGMTString();
+//   // 过了这个时间就没用过期时间
+//   setTimeout(() => {
+//     checkC0okie();
+//   }, expireTime + 10);
+// }
 
-function getC0okie(cookie_name) {
-  var results = document.cookie.match(
-    "(^|;) ?" + cookie_name + "=([^;]*)(;|$)"
-  );
-  if (results) return unescape(results[2]);
-  else return null;
-}
-function checkC0okie() {
-  setTimeout(function () {
-    if (!getC0okie("xuxuxu")) {
-      setCO0kie();
-      let buttonClose = document.querySelector("#buttonClose");
-      if (buttonClose) {
-        return;
-      }
-      let xuxuxu = infoList[RandomNumBoth(0, infoList.length - 1)];
-      let boxId = RandomNumBoth(10000, 100000);
-      let newCode = code.replace("{{title}}", xuxuxu.title);
-      newCode = newCode.replace("{{content}}", xuxuxu.content);
-      newCode = newCode.replace("{{path}}", xuxuxu.link);
-      newCode = newCode.replace("{{img}}", xuxuxu.img);
-      newCode = newCode.replace("{{boxId}}", boxId);
+// function getC0okie(cookie_name) {
+//   var results = document.cookie.match(
+//     "(^|;) ?" + cookie_name + "=([^;]*)(;|$)"
+//   );
+//   if (results) return unescape(results[2]);
+//   else return null;
+// }
+// function checkC0okie() {
+//   setTimeout(function () {
+//     if (!getC0okie("xuxuxu")) {
+//       setCO0kie();
+//       let buttonClose = document.querySelector("#buttonClose");
+//       if (buttonClose) {
+//         return;
+//       }
+//       let xuxuxu = infoList[RandomNumBoth(0, infoList.length - 1)];
+//       let boxId = RandomNumBoth(10000, 100000);
+//       let newCode = code.replace("{{title}}", xuxuxu.title);
+//       newCode = newCode.replace("{{content}}", xuxuxu.content);
+//       newCode = newCode.replace("{{path}}", xuxuxu.link);
+//       newCode = newCode.replace("{{img}}", xuxuxu.img);
+//       newCode = newCode.replace("{{boxId}}", boxId);
 
-      let div = document.createElement("div");
-      div.innerHTML = newCode;
-      document.body.appendChild(div);
-      buttonClose = document.querySelector("#buttonClose");
+//       let div = document.createElement("div");
+//       div.innerHTML = newCode;
+//       document.body.appendChild(div);
+//       buttonClose = document.querySelector("#buttonClose");
 
-      buttonClose.onclick = function () {
-        document.getElementById(boxId).remove();
-      };
-    }
-    else {
-      let timeOut = getC0okie("exptime") ?? 1000;
-      if (timeOut >= 1000) {
-        timeOut = timeOut - new Date().getTime();
-        if (timeOut < 0) {
-          checkC0okie();
-          return;
-        }
-      }
-      console.log(timeOut);
-        setTimeout(function () {
-        checkC0okie();
-      }, timeOut);
-    }
-  }, 2000);//延时2秒展示
-}
-  function RandomNumBoth(Min, Max) {
-  var Range = Max - Min;
-  var Rand = Math.random();
-  var num = Min + Math.round(Rand * Range); //四舍五入
-  return num;
-}
-checkC0okie();
+//       buttonClose.onclick = function () {
+//         document.getElementById(boxId).remove();
+//       };
+//     }
+//     else {
+//       let timeOut = getC0okie("exptime") ?? 1000;
+//       if (timeOut >= 1000) {
+//         timeOut = timeOut - new Date().getTime();
+//         if (timeOut < 0) {
+//           checkC0okie();
+//           return;
+//         }
+//       }
+//       console.log(timeOut);
+//         setTimeout(function () {
+//         checkC0okie();
+//       }, timeOut);
+//     }
+//   }, 2000);//延时2秒展示
+// }
+//   function RandomNumBoth(Min, Max) {
+//   var Range = Max - Min;
+//   var Rand = Math.random();
+//   var num = Min + Math.round(Rand * Range); //四舍五入
+//   return num;
+// }
+// checkC0okie();
 
 document.addEventListener('DOMContentLoaded', function() {
   function siteTime() {
