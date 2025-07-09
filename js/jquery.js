@@ -152,7 +152,7 @@ document.write("<section><div id='" + id + "'>" +
     "<ul class='" + roll + "'style='margin-block:0px; padding-inline-start:33px;'>" +
         "<li>" +
             "<img class='icon' src='https://wework.qpic.cn/wwpic3az/846587_PMCu545RQwifXal_1712199121'>" +
-            "<a href='https://api.simhaoka.com/h5/index?uc=kTNQ3GWi6a&gt=0'>【阿虚的流量卡店铺】低至19/月188G，电信移动联通任选，可打电话发短信，免费发货！</a>" +
+            "<a href='https://api.simhaoka.com/h5/index?uc=kTNQ3GWi6a&gt=0'>【阿虚自营流量卡】低至19/月192G，电信移动联通广电任选，可打电话发短信，免费发货！</a>" +
         "</li>" +
         "<li>" +
         "<img class='icon' src='https://wework.qpic.cn/wwpic3az/611743_LN0U3UP5RBKEKzU_1751618088/0'>" +
@@ -195,16 +195,40 @@ $(function() {
 var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="buttonClose" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
   {
-    title: "重要通知！！！",
-    content: "如果你遇到弹窗［您是人类还是电脑程序］请直接关闭！提示未验证会无法访问网站是假的！直接关闭弹窗就行",
-    link: "https://cbu01.alicdn.com/img/ibank/O1CN01WE9eCu20rd73yvDCA_!!6000000006903-0-cib.jpg \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/450759_Cu52uRv0QEKUZfF_1751790963/0",
+    title: "阿虚自营丨正规流量卡",
+    content: "低至19/月 192G 流量！电信、联通、移动、广电任选，资费官方APP可查，能打电话发短信，免费发货！",
+    link: "https://api.simhaoka.com/h5/index?uc=kTNQ3GWi6a&gt=0 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/809505_IM7dj_IjRTOVqft_1712198786",
+  },
+  {
+    title: "打车太贵了！这样能省一点",
+    content: "在阿虚公众号菜单栏，每天都可以领取🚕滴滴、花小猪、同程、T3打车券，单单享8、9折，部分平台最高立减10元！",
+    link: "https://wework.qpic.cn/wwpic3az/340998_du_hB0AjQtGmtR__1751622063/0 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/903841_Y3DEvZFuQcGjTLz_1752051865",
+  },
+  {
+    title: "外卖大战卷疯了！",
+    content: "在阿虚公众号菜单栏，每天都可以领取🍔美团、饿了么、京东、淘宝外卖券！别人免单券都抢疯了，你还在等什么？",
+    link: "https://wework.qpic.cn/wwpic3az/340998_du_hB0AjQtGmtR__1751622063 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/975844_UlZgxs2DRHWV9nE_1752051774",
+  },
+  {
+    title: "📽️电影票低至８折！",
+    content: "阿虚严选认证，放心下单（此链接也被我放在了公众号菜单栏），每张电影票基本上可以稳定省 5 元！",
+    link: "https://m.qianzhu8.com/cinema/main/movie?platformId=10123&subPlatformId=515380071 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/223450_lbeVVjwkT9qQww8_1752050346",
+  },
+  {
+    title: "限时免费领取 iCloud 会员！",
+    content: "苹果官方活动，点击链接即可免费领取３个月iCloud会员 50 GB 🔥（后续可自行到设置中，取消订阅自动续费）",
+    link: "http://icloud.qsios.com/yun/#/ilink/wx36 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/611743_LN0U3UP5RBKEKzU_1751618088",
   },
 ];
 
-function setCO0kie() {
+function setCookiiiie() {
   var date = new Date();
-  var Hour = 4; //设置每小时过期时间
+  var Hour = 3; //设置每小时过期时间
   let expireTime = Hour * 3600 * 1000;
   let expires = date.getTime() + expireTime;
   date.setTime(expires);
@@ -214,31 +238,31 @@ function setCO0kie() {
     "exptime=" + expires + "; expires=" + date.toGMTString();
   // 过了这个时间就没用过期时间
   setTimeout(() => {
-    checkC0okie();
+    checkCookiiiie();
   }, expireTime + 10);
 }
 
-function getC0okie(cookie_name) {
+function getCookiiiie(cookie_name) {
   var results = document.cookie.match(
     "(^|;) ?" + cookie_name + "=([^;]*)(;|$)"
   );
   if (results) return unescape(results[2]);
   else return null;
 }
-function checkC0okie() {
+function checkCookiiiie() {
   setTimeout(function () {
-    if (!getC0okie("xuxuxu")) {
-      setCO0kie();
+    if (!getCookiiiie("money")) {
+      setCookiiiie();
       let buttonClose = document.querySelector("#buttonClose");
       if (buttonClose) {
         return;
       }
-      let xuxuxu = infoList[RandomNumBoth(0, infoList.length - 1)];
+      let money = infoList[RandomNumBoth(0, infoList.length - 1)];
       let boxId = RandomNumBoth(10000, 100000);
-      let newCode = code.replace("{{title}}", xuxuxu.title);
-      newCode = newCode.replace("{{content}}", xuxuxu.content);
-      newCode = newCode.replace("{{path}}", xuxuxu.link);
-      newCode = newCode.replace("{{img}}", xuxuxu.img);
+      let newCode = code.replace("{{title}}", money.title);
+      newCode = newCode.replace("{{content}}", money.content);
+      newCode = newCode.replace("{{path}}", money.link);
+      newCode = newCode.replace("{{img}}", money.img);
       newCode = newCode.replace("{{boxId}}", boxId);
 
       let div = document.createElement("div");
@@ -251,17 +275,17 @@ function checkC0okie() {
       };
     }
     else {
-      let timeOut = getC0okie("exptime") ?? 1000;
+      let timeOut = getCookiiiie("exptime") ?? 1000;
       if (timeOut >= 1000) {
         timeOut = timeOut - new Date().getTime();
         if (timeOut < 0) {
-          checkC0okie();
+          checkCookiiiie();
           return;
         }
       }
       console.log(timeOut);
         setTimeout(function () {
-        checkC0okie();
+        checkCookiiiie();
       }, timeOut);
     }
   }, 2000);//延时2秒展示
@@ -272,7 +296,7 @@ function checkC0okie() {
   var num = Min + Math.round(Rand * Range); //四舍五入
   return num;
 }
-checkC0okie();
+checkCookiiiie();
 
 document.addEventListener('DOMContentLoaded', function() {
   function siteTime() {
