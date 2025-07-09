@@ -40,6 +40,9 @@ background: WHITESMOKE;
 .fa-weixin {
     color: #FFF;
 }
+.fa-tree {
+    color: #FFF;
+}
 .fa-linux {
 	color:darkgray;
 }
@@ -59,6 +62,7 @@ background: WHITESMOKE;
 .light {
 	opacity:0;
 }
+
 /* 公告栏反色 */
 .myRewards-main{color:#FFF !important; background-color:#000 !important; border:1px solid #242424 !important;}
 .myR-h,.myR-bot{background-color:#181818 !important;}
