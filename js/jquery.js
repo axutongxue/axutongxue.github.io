@@ -202,8 +202,8 @@ var infoList = [
   },
   {
     title: "打车太贵了！这样能省一点",
-    content: "在阿虚公众号菜单栏，每天都可以领取🚕滴滴、花小猪、同程、T3打车券，单单享8、9折，部分平台最高立减10元！",
-    link: "https://wework.qpic.cn/wwpic3az/340998_du_hB0AjQtGmtR__1751622063/0 \"target=\"_self\"",
+    content: "在阿虚公众号菜单栏，每天都可以领取🚕滴滴、花小猪、同程、T3打车券，单单享8－9折，部分平台最高立减10元！",
+    link: "https://wework.qpic.cn/wwpic3az/340998_du_hB0AjQtGmtR__1751622063 \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/903841_Y3DEvZFuQcGjTLz_1752051865",
   },
   {
@@ -213,7 +213,7 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/975844_UlZgxs2DRHWV9nE_1752051774",
   },
   {
-    title: "📽️电影票低至８折！",
+    title: "📽️８５折电影票！",
     content: "阿虚严选认证，放心下单（此链接也被我放在了公众号菜单栏），每张电影票基本上可以稳定省 5 元！",
     link: "https://m.qianzhu8.com/cinema/main/movie?platformId=10123&subPlatformId=515380071 \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/223450_lbeVVjwkT9qQww8_1752050346",
@@ -228,7 +228,7 @@ var infoList = [
 
 function setCookiiiie() {
   var date = new Date();
-  var Hour = 3; //设置每小时过期时间
+  var Hour = 0.05; //设置每小时过期时间
   let expireTime = Hour * 3600 * 1000;
   let expires = date.getTime() + expireTime;
   date.setTime(expires);
