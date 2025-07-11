@@ -195,10 +195,34 @@ $(function() {
 var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="buttonClose" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
   {
-    title: "美团神券包BUG价！最后2天",
-    content: "仅需 9.9 元就能买到价值 600 元的神券包！每月 10 张无门槛 5 元优惠券，连续发 12 个月！最后 2 天限量发放，每日 0 点刷新库存！",
-    link: "https://mp.weixin.qq.com/s/3RacHORECJTZ_kdgFX00NQ \"target=\"_self\"",
-    img: "https://cbu01.alicdn.com/img/ibank/O1CN017LMH9M1JTKcmRMYW0_!!6000000001029-0-cib.jpg",
+    title: "阿虚独家搜索秘技！",
+    content: "超2000人已上车学习！全自动脚本解放双手，一键横扫 15 个 AI 搜索站！效率爆炸（Mac端已更新）",
+    link: "https://mp.weixin.qq.com/s/XAH8K9wRIHrnzxpqCvCJbQ \"target=\"_self\"",
+    img: "https://cbu01.alicdn.com/img/ibank/O1CN01TphFei1XUcMDRld3J_!!6000000002927-0-cib.jpg",
+  },
+  {
+    title: "打车太贵了！这样能省一点",
+    content: "在阿虚公众号菜单栏，每天都可以领取🚕滴滴、花小猪、同程、T3打车券，单单享8－9折，部分平台最高立减10元！",
+    link: "https://wework.qpic.cn/wwpic3az/340998_du_hB0AjQtGmtR__1751622063 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/903841_Y3DEvZFuQcGjTLz_1752051865",
+  },
+  {
+    title: "外卖大战卷疯了！",
+    content: "在阿虚公众号菜单栏，每天都可以领取🍔美团、饿了么、京东、淘宝外卖券！别人免单券都抢疯了，你还在等什么？",
+    link: "https://wework.qpic.cn/wwpic3az/340998_du_hB0AjQtGmtR__1751622063 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/975844_UlZgxs2DRHWV9nE_1752051774",
+  },
+  {
+    title: "📽️８５折电影票！",
+    content: "阿虚严选认证，放心下单（此链接也被我放在了公众号菜单栏），全国电影院线极速出票，稳定 8 折左右！",
+    link: "https://m.qianzhu8.com/cinema/main/movie?platformId=10123&subPlatformId=515380071 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/223450_lbeVVjwkT9qQww8_1752050346",
+  },
+  {
+    title: "限时免费领取 iCloud 会员！",
+    content: "苹果官方活动，点击链接即可免费领取３个月iCloud会员 50 GB 🔥（后续可自行到设置中，取消订阅自动续费）",
+    link: "http://icloud.qsios.com/yun/#/ilink/wx36 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/611743_LN0U3UP5RBKEKzU_1751618088",
   },
 ];
 
