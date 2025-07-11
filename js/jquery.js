@@ -197,7 +197,7 @@ var infoList = [
   {
     title: "美团神券包BUG价！最后2天",
     content: "仅需 9.9 元就能买到价值 600 元的神券包！每月 10 张无门槛 5 元优惠券，连续发 12 个月！最后 2 天限量发放，每日 0 点刷新库存！",
-    link: "https://mp.weixin.qq.com/s?__biz=MzkxNTUwODgzNA==&tempkey=MTMzMF9hSXBQZk0rRzRiRUsvUWk2TmlNTVM4bmxTMVhOQ1haVno1Q3puRnJ5VHI3V2swWHBvZUw4SUFKWU5rZGRBTW5QSGloaFpza0o0enFULUlhRWdzdk0xZHZCTTExY05yUHY0Z3pXZ1M0STg0QzJ2SW9iZXZSME5YOS1TM2s5SWNUSU0xOEhMeDlFT2RSVXNTeWxKdlJ4YUhGcVFzRUtqZnFOWlI5TEFBfn4%3D \"target=\"_self\"",
+    link: "https://mp.weixin.qq.com/s/3RacHORECJTZ_kdgFX00NQ \"target=\"_self\"",
     img: "https://cbu01.alicdn.com/img/ibank/O1CN017LMH9M1JTKcmRMYW0_!!6000000001029-0-cib.jpg",
   },
 ];
