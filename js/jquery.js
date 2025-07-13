@@ -195,10 +195,16 @@ $(function() {
 var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="buttonClose" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
   {
-    title: "美团神券包BUG价！最后1天",
-    content: "价值 600 元的神券包仅需 9.9 元！每月 10 张无门槛 5 元优惠券，理发洁牙等线下低消场景也能用，连续发12个月！最后 1 天限量发放",
-    link: "https://mp.weixin.qq.com/s/3RacHORECJTZ_kdgFX00NQ \"target=\"_self\"",
-    img: "https://cbu01.alicdn.com/img/ibank/O1CN017LMH9M1JTKcmRMYW0_!!6000000001029-0-cib.jpg",
+    title: "阿虚独家搜索秘技！",
+    content: "超2000人已上车学习！全自动脚本解放双手，一键横扫 15 个 AI 搜索站！效率爆炸（Mac端已更新）",
+    link: "https://mp.weixin.qq.com/s/XAH8K9wRIHrnzxpqCvCJbQ \"target=\"_self\"",
+    img: "https://cbu01.alicdn.com/img/ibank/O1CN01TphFei1XUcMDRld3J_!!6000000002927-0-cib.jpg",
+  },
+  {
+    title: "限时免费领取 iCloud 会员！",
+    content: "苹果官方活动，点击链接即可免费领取３个月iCloud会员 50 GB 🔥（后续可自行到设置中，取消订阅自动续费）",
+    link: "http://icloud.qsios.com/yun/#/ilink/wx36 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/611743_LN0U3UP5RBKEKzU_1751618088",
   },
 ];
 
