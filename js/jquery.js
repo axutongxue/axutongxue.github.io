@@ -196,7 +196,7 @@ var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100v
 var infoList = [
   {
     title: "美团神券包BUG价！最后1天",
-    content: "价值 600 元的神券包仅需 9.9 元！每月 10 张无门槛 5 元优惠券，连续发12个月！最后 1 天限量发放，13号 0 点刷新库存！值得熬夜蹲一下！",
+    content: "价值 600 元的神券包仅需 9.9 元！每月 10 张无门槛 5 元优惠券，理发洁牙等线下低消场景也能用，连续发12个月！最后 1 天限量发放",
     link: "https://mp.weixin.qq.com/s/3RacHORECJTZ_kdgFX00NQ \"target=\"_self\"",
     img: "https://cbu01.alicdn.com/img/ibank/O1CN017LMH9M1JTKcmRMYW0_!!6000000001029-0-cib.jpg",
   },
