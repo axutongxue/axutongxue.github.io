@@ -167,7 +167,7 @@ var infoList = [
 
 function setCookiiiie() {
   var date = new Date();
-  var Hour = 0.1; //设置每小时过期时间
+  var Hour = 1; //设置每小时过期时间
   let expireTime = Hour * 3600 * 1000;
   let expires = date.getTime() + expireTime;
   date.setTime(expires);
@@ -270,10 +270,9 @@ class Swiper {
   constructor(selector, options = {}) {
       this.el = typeof selector === 'string' ? document.querySelector(selector) : selector;
       this.params = Object.assign({
-          // 默认参数
           slidesPerView: 1,
           spaceBetween: 0,
-          speed: 300,
+          speed: 300,// 切换下一张过程时间
           loop: false,
           autoplay: false,
           pagination: null,
@@ -487,7 +486,7 @@ var swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   centeredSlides: true,
   autoplay: {
-    delay: 3600,
+    delay: 4800,
     disableOnInteraction: false,
   },
   pagination: {
