@@ -137,61 +137,6 @@ function changemode() {
 
 $(document).ready(function() {$("a").click(function() {$(this).next(".menu").toggle();$('.fa-info-circle').removeClass('touched');})})
 
-function randomString(c) {
-	var d = "abcdefghijklmnopqrstuvwxyz";
-	var a = "";
-	for (var b = c; b > 0; --b) {
-		a += d[Math.floor(Math.random() * d.length)]
-	}
-	return a
-}
-var id = randomString(5);
-var roll = randomString(6);
-document.write("<style>#" + id + "{display: block;height:58px;overflow:hidden;width:322px;border:dashed 0.5px #07c160;margin: 4px auto 4px auto;}." + roll + " li{font-size:12px;text-indent:-30px;padding: 2px 0 2px 0;line-height:1;}.icon{width:24px;margin-right:2;vertical-align:middle}</style>");
-document.write("<section><div id='" + id + "'>" +
-    "<ul class='" + roll + "'style='margin-block:0px; padding-inline-start:33px;'>" +
-        "<li>" +
-            "<img class='icon' src='https://wework.qpic.cn/wwpic3az/846587_PMCu545RQwifXal_1712199121'>" +
-            "<a href='https://api.simhaoka.com/h5/index?uc=kTNQ3GWi6a&gt=0'>【阿虚自营流量卡】低至19/月192G，电信移动联通广电任选，可打电话发短信，免费发货！</a>" +
-        "</li>" +
-        "<li>" +
-        "<img class='icon' src='https://wework.qpic.cn/wwpic3az/611743_LN0U3UP5RBKEKzU_1751618088/0'>" +
-        "<a href='http://icloud.qsios.com/yun/#/ilink/wx36'>【限时活动】免费领取3个月iCloud会员（50GB）🔥</a>" +
-       "</li>" +
-        "<li>" +
-            "<img class='icon' src='https://cbu01.alicdn.com/img/ibank/O1CN018K6G1h1OPHC3rXHy3_!!6000000001697-0-cib.jpg'>" +
-            "<a href='https://bwsf.cc/?aff=c90aa36ab0397e94'>【博闻书坊】中港台日韩欧美，无水印PDF电子杂志＋独家精译中文版资源</a>" +
-        "</li>" +
-    "</ul>" +
-"</div></section>");
-$(function() {
-	var c = $("#" + id);
-	var b;
-	c.hover(function() {
-			clearInterval(b)
-		}, function() {
-			b = setInterval(function() {
-				a(c)
-			}, 2000)
-		})
-		.trigger("mouseleave");
-
-	function a(e) {
-		var f = e.find("ul");
-		var d = f.find("li:first")
-			.height();
-		f.animate({
-			marginTop: -d + "px"
-		}, 500, function() {
-			f.css({
-					marginTop: 0
-				})
-				.find("li:first")
-				.appendTo(f)
-		})
-	}
-});
-
 var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="buttonClose" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
   {
@@ -201,16 +146,28 @@ var infoList = [
     img: "https://cbu01.alicdn.com/img/ibank/O1CN01TphFei1XUcMDRld3J_!!6000000002927-0-cib.jpg",
   },
   {
-    title: "限时免费领取 iCloud 会员！",
-    content: "苹果官方活动，点击链接即可免费领取３个月iCloud会员 50 GB 🔥（后续可自行到设置中，取消订阅自动续费）",
-    link: "http://icloud.qsios.com/yun/#/ilink/wx36 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/611743_LN0U3UP5RBKEKzU_1751618088",
+    title: "打车太贵了！这样能省一点",
+    content: "在阿虚公众号菜单栏，每天都可以领取🚕滴滴、花小猪、同程、T3打车券，单单享8－9折，部分平台最高立减10元！",
+    link: "https://wework.qpic.cn/wwpic3az/340998_du_hB0AjQtGmtR__1751622063 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/903841_Y3DEvZFuQcGjTLz_1752051865",
+  },
+  {
+    title: "外卖大战卷疯了！",
+    content: "在阿虚公众号菜单栏，每天都可以领取🍔美团、饿了么、京东、淘宝外卖券！别人免单券都抢疯了，你还在等什么？",
+    link: "https://wework.qpic.cn/wwpic3az/340998_du_hB0AjQtGmtR__1751622063 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/975844_UlZgxs2DRHWV9nE_1752051774",
+  },
+  {
+    title: "📽️８５折电影票！",
+    content: "阿虚严选认证，放心下单（此链接也被我放在了公众号菜单栏），全国电影院线极速出票，稳定 8 折左右！",
+    link: "https://m.qianzhu8.com/cinema/main/movie?platformId=10123&subPlatformId=515380071 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/223450_lbeVVjwkT9qQww8_1752050346",
   },
 ];
 
 function setCookiiiie() {
   var date = new Date();
-  var Hour = 0.05; //设置每小时过期时间
+  var Hour = 0.1; //设置每小时过期时间
   let expireTime = Hour * 3600 * 1000;
   let expires = date.getTime() + expireTime;
   date.setTime(expires);
@@ -306,4 +263,239 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
   }
   siteTime();
+});
+
+// 核心Swiper类 - 简化版
+class Swiper {
+  constructor(selector, options = {}) {
+      this.el = typeof selector === 'string' ? document.querySelector(selector) : selector;
+      this.params = Object.assign({
+          // 默认参数
+          slidesPerView: 1,
+          spaceBetween: 0,
+          speed: 300,
+          loop: false,
+          autoplay: false,
+          pagination: null,
+          navigation: null,
+          centeredSlides: false
+      }, options);
+      
+      this.activeIndex = 0;
+      this.slides = [];
+      this.animating = false;
+      this.interacted = false; // 添加这个变量初始化
+      this.autoplayTimer = null; // 添加这个变量初始化
+      this.init();
+  }
+  
+  init() {
+      if (!this.el) return;
+      
+      this.wrapperEl = this.el.querySelector('.swiper-wrapper');
+      this.slides = [...this.el.querySelectorAll('.swiper-slide')];
+      
+      this.initPagination();
+      this.initNavigation();
+      this.initAutoplay();
+      
+      this.updateSlides();
+      this.slideTo(0, 0);
+  }
+  
+  initPagination() {
+      if (!this.params.pagination) return;
+      
+      const paginationEl = this.el.querySelector(this.params.pagination.el);
+      if (!paginationEl) return;
+      
+      // 创建分页点
+      const bullets = this.slides.map((_, index) => 
+          `<span class="swiper-pagination-bullet${index === 0 ? ' swiper-pagination-bullet-active' : ''}" data-index="${index}"></span>`
+      ).join('');
+      
+      paginationEl.innerHTML = bullets;
+      
+      // 添加点击事件
+      if (this.params.pagination.clickable) {
+          paginationEl.addEventListener('click', (e) => {
+              if (e.target.classList.contains('swiper-pagination-bullet')) {
+                  const index = parseInt(e.target.dataset.index);
+                  this.slideTo(index);
+              }
+          });
+      }
+  }
+  
+  initNavigation() {
+      if (!this.params.navigation) return;
+      
+      const nextEl = this.el.querySelector(this.params.navigation.nextEl);
+      const prevEl = this.el.querySelector(this.params.navigation.prevEl);
+      
+      if (nextEl) {
+          nextEl.addEventListener('click', () => this.slideNext());
+      }
+      
+      if (prevEl) {
+          prevEl.addEventListener('click', () => this.slidePrev());
+      }
+  }
+  
+  initAutoplay() {
+    if (!this.params.autoplay) return;
+    
+    this.startAutoplay();
+    
+    // 鼠标悬停暂停
+    this.el.addEventListener('mouseenter', () => {
+        this.stopAutoplay();
+    });
+    
+    this.el.addEventListener('mouseleave', () => {
+        this.startAutoplay();
+    });
+}
+
+startAutoplay() {
+    if (!this.params.autoplay) return;
+    
+    // 清除现有定时器
+    this.stopAutoplay();
+    
+    this.autoplayTimer = setInterval(() => {
+        this.slideNext();
+    }, this.params.autoplay.delay || 3000);
+}
+
+stopAutoplay() {
+    if (this.autoplayTimer) {
+        clearInterval(this.autoplayTimer);
+        this.autoplayTimer = null;
+    }
+}
+  
+  slideTo(index, speed = this.params.speed) {
+      if (this.animating) return;
+      
+      const slideCount = this.slides.length;
+      if (index < 0 || index >= slideCount) return;
+      
+      this.animating = true;
+      this.activeIndex = index;
+      
+      const translateX = -index * 100;
+      this.wrapperEl.style.transition = speed > 0 ? `transform ${speed}ms` : 'none';
+      this.wrapperEl.style.transform = `translate3d(${translateX}%, 0, 0)`;
+      
+      this.updatePagination();
+      
+      if (speed > 0) {
+          setTimeout(() => {
+              this.animating = false;
+          }, speed);
+      } else {
+          this.animating = false;
+      }
+  }
+  
+  slideNext() {
+      let nextIndex = this.activeIndex + 1;
+      
+      if (this.params.loop && nextIndex >= this.slides.length) {
+          nextIndex = 0;
+      } else if (nextIndex >= this.slides.length) {
+          return;
+      }
+      
+      this.slideTo(nextIndex);
+  }
+  
+  slidePrev() {
+      let prevIndex = this.activeIndex - 1;
+      
+      if (this.params.loop && prevIndex < 0) {
+          prevIndex = this.slides.length - 1;
+      } else if (prevIndex < 0) {
+          return;
+      }
+      
+      this.slideTo(prevIndex);
+  }
+  
+  updateSlides() {
+      this.slides.forEach((slide, index) => {
+          slide.style.width = '100%';
+          slide.style.flexShrink = '0';
+      });
+      
+      this.wrapperEl.style.display = 'flex';
+      this.wrapperEl.style.width = `100%`;
+  }
+  
+  updatePagination() {
+      const bullets = this.el.querySelectorAll('.swiper-pagination-bullet');
+      bullets.forEach((bullet, index) => {
+          bullet.classList.toggle('swiper-pagination-bullet-active', index === this.activeIndex);
+      });
+  }
+  
+  destroy() {
+      if (this.autoplayTimer) {
+          clearInterval(this.autoplayTimer);
+      }
+  }
+}
+
+// Banner广告
+const newContainer = document.createElement('div');
+newContainer.innerHTML = `
+<div class="swiper mySwiper" style="width: 330px; height: auto; margin: 0px auto; position: relative; overflow: hidden; z-index: 1; padding-bottom: 30px; ">
+    <div class="swiper-wrapper" style="position: relative; width: 100%; height: 100%; z-index: 1; display: flex; transition-property: transform; box-sizing: content-box;">
+        <div class="swiper-slide" style="background: transparent; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 100%; height: 100%; position: relative;">
+            <a href="https://mp.weixin.qq.com/s/3n44gissr4Jzx3E_EaO4Xw">
+                <img src="https://wework.qpic.cn/wwpic3az/922761_ZEb6oWnqS9GNah6_1752497280/0" style="display: block; width: 100%; height: 100%; object-fit: cover;">
+            </a>
+        </div>
+        <div class="swiper-slide" style="background: transparent; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 100%; height: 100%; position: relative;">
+            <a href="http://icloud.qsios.com/yun/#/ilink/wx36">
+                <img src="https://wework.qpic.cn/wwpic3az/865502_KMdz1JNZSqqQtQq_1752497523/0" style="display: block; width: 100%; height: 100%; object-fit: cover;">
+            </a>
+        </div>
+        <div class="swiper-slide" style="background: transparent; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 100%; height: 100%; position: relative;">
+            <a href="https://axu.simhaoka.com/phone/template1?gid=478849&id=B956B2050EAA74084CC3FE6EF37C57CF">
+                <img src="https://wework.qpic.cn/wwpic3az/569457_P2nUc2NNQbKcGnU_1752499709/0" style="display: block; width: 100%; height: 100%; object-fit: cover;">
+            </a>
+        </div>
+        <div class="swiper-slide" style="background: transparent; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 100%; height: 100%; position: relative;">
+            <a href="https://wework.qpic.cn/wwpic3az/300953_tq-vDll_TyWO_c__1752501522/0">
+                <img src="https://wework.qpic.cn/wwpic3az/638838_B8HWf12HSFy0fxY_1752501434/0" style="display: block; width: 100%; height: 100%; object-fit: cover;">
+            </a>
+        </div>
+    </div>
+    <div class="swiper-button-next" style="position: absolute; top: 40%; transform: translateY(-50%); z-index: 10; cursor: pointer; width: 24px; height: 24px; display: flex; justify-content: center; align-items: center; background: white; color: black; border-radius: 50%; opacity: 0; transition: opacity 0.3s ease; right: 10px;"></div>
+    <div class="swiper-button-prev" style="position: absolute; top: 40%; transform: translateY(-50%); z-index: 10; cursor: pointer; width: 24px; height: 24px; display: flex; justify-content: center; align-items: center; background: white; color: black; border-radius: 50%; opacity: 0; transition: opacity 0.3s ease; left: 10px;"></div>
+    <div class="swiper-pagination" style="position: absolute; bottom: 10px; left: 0; width: 100%; text-align: center; z-index: 10; display: flex; justify-content: center; align-items: center;"></div>
+</div>
+`;
+
+// 插入到body中
+document.body.appendChild(newContainer);
+
+var swiper = new Swiper(".mySwiper", {
+  loop: true,
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 3600,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+     clickable: true,
+    },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
