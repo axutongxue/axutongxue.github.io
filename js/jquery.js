@@ -265,236 +265,161 @@ document.addEventListener('DOMContentLoaded', function() {
   siteTime();
 });
 
-// 核心Swiper类 - 简化版
+
 class Swiper {
-  constructor(selector, options = {}) {
+    constructor(selector, options = {}) {
       this.el = typeof selector === 'string' ? document.querySelector(selector) : selector;
       this.params = Object.assign({
-          slidesPerView: 1,
-          spaceBetween: 0,
-          speed: 300,// 切换下一张过程时间
-          loop: false,
-          autoplay: false,
-          pagination: null,
-          navigation: null,
-          centeredSlides: false
+        slidesPerView: 1,
+        spaceBetween: 0,
+        speed: 300,
+        loop: false,
+        autoplay: false,
+        pagination: null,
+        navigation: null,
+        centeredSlides: false
       }, options);
-      
-      this.activeIndex = 0;
-      this.slides = [];
-      this.animating = false;
-      this.interacted = false; // 添加这个变量初始化
-      this.autoplayTimer = null; // 添加这个变量初始化
-      this.init();
-  }
   
-  init() {
-      if (!this.el) return;
-      
-      this.wrapperEl = this.el.querySelector('.swiper-wrapper');
+      this.activeIndex = 0;
       this.slides = [...this.el.querySelectorAll('.swiper-slide')];
-      
+      this.animating = false;
+      this.interacted = false;
+      this.autoplayTimer = null;
+      this.init();
+    }
+  
+    init() {
+      this.wrapperEl = this.el.querySelector('.swiper-wrapper');
       this.initPagination();
       this.initNavigation();
       this.initAutoplay();
-      
+      this.initTouch();
       this.updateSlides();
       this.slideTo(0, 0);
-  }
-  
-  initPagination() {
-      if (!this.params.pagination) return;
-      
-      const paginationEl = this.el.querySelector(this.params.pagination.el);
-      if (!paginationEl) return;
-      
-      // 创建分页点
-      const bullets = this.slides.map((_, index) => 
-          `<span class="swiper-pagination-bullet${index === 0 ? ' swiper-pagination-bullet-active' : ''}" data-index="${index}"></span>`
-      ).join('');
-      
-      paginationEl.innerHTML = bullets;
-      
-      // 添加点击事件
-      if (this.params.pagination.clickable) {
-          paginationEl.addEventListener('click', (e) => {
-              if (e.target.classList.contains('swiper-pagination-bullet')) {
-                  const index = parseInt(e.target.dataset.index);
-                  this.slideTo(index);
-              }
-          });
-      }
-  }
-  
-  initNavigation() {
-      if (!this.params.navigation) return;
-      
-      const nextEl = this.el.querySelector(this.params.navigation.nextEl);
-      const prevEl = this.el.querySelector(this.params.navigation.prevEl);
-      
-      if (nextEl) {
-          nextEl.addEventListener('click', () => this.slideNext());
-      }
-      
-      if (prevEl) {
-          prevEl.addEventListener('click', () => this.slidePrev());
-      }
-  }
-  
-  initAutoplay() {
-    if (!this.params.autoplay) return;
-    
-    this.startAutoplay();
-    
-    // 鼠标悬停暂停
-    this.el.addEventListener('mouseenter', () => {
-        this.stopAutoplay();
-    });
-    
-    this.el.addEventListener('mouseleave', () => {
-        this.startAutoplay();
-    });
-}
-
-startAutoplay() {
-    if (!this.params.autoplay) return;
-    
-    // 清除现有定时器
-    this.stopAutoplay();
-    
-    this.autoplayTimer = setInterval(() => {
-        this.slideNext();
-    }, this.params.autoplay.delay || 3000);
-}
-
-stopAutoplay() {
-    if (this.autoplayTimer) {
-        clearInterval(this.autoplayTimer);
-        this.autoplayTimer = null;
     }
-}
   
-  slideTo(index, speed = this.params.speed) {
+    /* ---- 自动播放：到最后一张后回到第一张 ---- */
+    startAutoplay() {
+      if (!this.params.autoplay) return;
+      this.stopAutoplay();
+      this.autoplayTimer = setInterval(() => {
+        if (this.activeIndex === this.slides.length - 1) {
+          this.slideTo(0);               // 回绕到第一张
+        } else {
+          this.slideNext();              // 正常下一张
+        }
+      }, this.params.autoplay.delay || 3000);
+    }
+    stopAutoplay() { clearInterval(this.autoplayTimer); }
+  
+    slideNext() {
+      const next = this.activeIndex + 1;
+      if (next >= this.slides.length) return false;
+      this.slideTo(next);
+      return true;
+    }
+    slidePrev() {
+      const prev = this.activeIndex - 1;
+      if (prev < 0) return false;
+      this.slideTo(prev);
+      return true;
+    }
+    initTouch() {
+      let startX = 0;
+      this.el.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
+      this.el.addEventListener('touchend', e => {
+        const diffX = e.changedTouches[0].clientX - startX;
+        if (Math.abs(diffX) < 50) return;
+        (diffX < 0 ? this.slideNext() : this.slidePrev());
+      }, { passive: true });
+    }
+    slideTo(index, speed = this.params.speed) {
       if (this.animating) return;
-      
-      const slideCount = this.slides.length;
-      if (index < 0 || index >= slideCount) return;
-      
       this.animating = true;
       this.activeIndex = index;
-      
-      const translateX = -index * 100;
-      this.wrapperEl.style.transition = speed > 0 ? `transform ${speed}ms` : 'none';
-      this.wrapperEl.style.transform = `translate3d(${translateX}%, 0, 0)`;
-      
+      this.wrapperEl.style.transition = speed ? `transform ${speed}ms` : 'none';
+      this.wrapperEl.style.transform = `translate3d(${-index * 100}%, 0, 0)`;
       this.updatePagination();
-      
-      if (speed > 0) {
-          setTimeout(() => {
-              this.animating = false;
-          }, speed);
-      } else {
-          this.animating = false;
-      }
-  }
-  
-  slideNext() {
-      let nextIndex = this.activeIndex + 1;
-      
-      if (this.params.loop && nextIndex >= this.slides.length) {
-          nextIndex = 0;
-      } else if (nextIndex >= this.slides.length) {
-          return;
-      }
-      
-      this.slideTo(nextIndex);
-  }
-  
-  slidePrev() {
-      let prevIndex = this.activeIndex - 1;
-      
-      if (this.params.loop && prevIndex < 0) {
-          prevIndex = this.slides.length - 1;
-      } else if (prevIndex < 0) {
-          return;
-      }
-      
-      this.slideTo(prevIndex);
-  }
-  
-  updateSlides() {
-      this.slides.forEach((slide, index) => {
-          slide.style.width = '100%';
-          slide.style.flexShrink = '0';
+      this.updateNavButtons();
+      setTimeout(() => (this.animating = false), speed);
+    }
+    updateNavButtons() {
+      const prevBtn = this.el.querySelector(this.params.navigation?.prevEl);
+      const nextBtn = this.el.querySelector(this.params.navigation?.nextEl);
+      if (!prevBtn || !nextBtn) return;
+      prevBtn.style.display = this.activeIndex === 0 ? 'none' : 'flex';
+      nextBtn.style.display = this.activeIndex === this.slides.length - 1 ? 'none' : 'flex';
+    }
+    initPagination() {
+      if (!this.params.pagination) return;
+      const el = this.el.querySelector(this.params.pagination.el);
+      el.innerHTML = this.slides.map((_, i) =>
+        `<span class="swiper-pagination-bullet${i === 0 ? ' swiper-pagination-bullet-active' : ''}" data-index="${i}"></span>`
+      ).join('');
+      el.addEventListener('click', e => {
+        if (e.target.classList.contains('swiper-pagination-bullet'))
+          this.slideTo(parseInt(e.target.dataset.index));
       });
-      
-      this.wrapperEl.style.display = 'flex';
-      this.wrapperEl.style.width = `100%`;
-  }
-  
-  updatePagination() {
+    }
+    updatePagination() {
       const bullets = this.el.querySelectorAll('.swiper-pagination-bullet');
-      bullets.forEach((bullet, index) => {
-          bullet.classList.toggle('swiper-pagination-bullet-active', index === this.activeIndex);
-      });
+      bullets.forEach((b, i) => b.classList.toggle('swiper-pagination-bullet-active', i === this.activeIndex));
+    }
+    initAutoplay() {
+      if (!this.params.autoplay) return;
+      this.startAutoplay();
+      ['mouseenter', 'mouseleave'].forEach(evt =>
+        this.el.addEventListener(evt, evt === 'mouseenter' ? () => this.stopAutoplay() : () => this.startAutoplay())
+      );
+    }
+    initNavigation() {
+      this.updateNavButtons();
+      const prev = this.el.querySelector(this.params.navigation?.prevEl);
+      const next = this.el.querySelector(this.params.navigation?.nextEl);
+      prev?.addEventListener('click', () => this.slidePrev());
+      next?.addEventListener('click', () => this.slideNext());
+    }
+    updateSlides() {
+      this.slides.forEach(s => s.style.cssText = 'width:100%;flex-shrink:0');
+      this.wrapperEl.style.cssText = 'display:flex;width:100%';
+    }
   }
   
-  destroy() {
-      if (this.autoplayTimer) {
-          clearInterval(this.autoplayTimer);
-      }
-  }
-}
-
-// Banner广告
+  /* ================= 动态插入 banner ================= */
 const newContainer = document.createElement('div');
 newContainer.innerHTML = `
-<div class="swiper mySwiper" style="width: 330px; height: auto; margin: 0px auto; position: relative; overflow: hidden; z-index: 1; padding-bottom: 30px; ">
-    <div class="swiper-wrapper" style="position: relative; width: 100%; height: 100%; z-index: 1; display: flex; transition-property: transform; box-sizing: content-box;">
-        <div class="swiper-slide" style="background: transparent; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 100%; height: 100%; position: relative;">
-            <a href="https://mp.weixin.qq.com/s/3n44gissr4Jzx3E_EaO4Xw">
-                <img src="https://wework.qpic.cn/wwpic3az/922761_ZEb6oWnqS9GNah6_1752497280/0" style="display: block; width: 100%; height: 100%; object-fit: cover;">
-            </a>
-        </div>
-        <div class="swiper-slide" style="background: transparent; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 100%; height: 100%; position: relative;">
-            <a href="http://icloud.qsios.com/yun/#/ilink/wx36">
-                <img src="https://wework.qpic.cn/wwpic3az/865502_KMdz1JNZSqqQtQq_1752497523/0" style="display: block; width: 100%; height: 100%; object-fit: cover;">
-            </a>
-        </div>
-        <div class="swiper-slide" style="background: transparent; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 100%; height: 100%; position: relative;">
-            <a href="https://axu.simhaoka.com/phone/template1?gid=478849&id=B956B2050EAA74084CC3FE6EF37C57CF">
-                <img src="https://wework.qpic.cn/wwpic3az/569457_P2nUc2NNQbKcGnU_1752499709/0" style="display: block; width: 100%; height: 100%; object-fit: cover;">
-            </a>
-        </div>
-        <div class="swiper-slide" style="background: transparent; display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 100%; height: 100%; position: relative;">
-            <a href="https://wework.qpic.cn/wwpic3az/300953_tq-vDll_TyWO_c__1752501522/0">
-                <img src="https://wework.qpic.cn/wwpic3az/638838_B8HWf12HSFy0fxY_1752501434/0" style="display: block; width: 100%; height: 100%; object-fit: cover;">
-            </a>
-        </div>
+<div class="swiper mySwiper" style="width:330px;margin:0 auto;position:relative;overflow:hidden;z-index:1;padding-bottom:30px;">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+    <a href="https://mp.weixin.qq.com/s/3n44gissr4Jzx3E_EaO4Xw">
+    <img src="https://wework.qpic.cn/wwpic3az/922761_ZEb6oWnqS9GNah6_1752497280/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
-    <div class="swiper-button-next" style="position: absolute; top: 40%; transform: translateY(-50%); z-index: 10; cursor: pointer; width: 24px; height: 24px; display: flex; justify-content: center; align-items: center; background: white; color: black; border-radius: 50%; opacity: 0; transition: opacity 0.3s ease; right: 10px;"></div>
-    <div class="swiper-button-prev" style="position: absolute; top: 40%; transform: translateY(-50%); z-index: 10; cursor: pointer; width: 24px; height: 24px; display: flex; justify-content: center; align-items: center; background: white; color: black; border-radius: 50%; opacity: 0; transition: opacity 0.3s ease; left: 10px;"></div>
-    <div class="swiper-pagination" style="position: absolute; bottom: 10px; left: 0; width: 100%; text-align: center; z-index: 10; display: flex; justify-content: center; align-items: center;"></div>
-</div>
-`;
-
-// 插入到body中
+    <div class="swiper-slide">
+    <a href="https://axu.simhaoka.com/phone/template1?gid=478849&id=B956B2050EAA74084CC3FE6EF37C57CF">
+    <img src="https://wework.qpic.cn/wwpic3az/621074_bu2iFul1TxOt-dc_1752577509/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    </div>
+    <div class="swiper-slide">
+    <a href="http://icloud.qsios.com/yun/#/ilink/wx36">
+    <img src="https://wework.qpic.cn/wwpic3az/865502_KMdz1JNZSqqQtQq_1752497523/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    </div>
+    <div class="swiper-slide">
+    <a href="https://wework.qpic.cn/wwpic3az/300953_tq-vDll_TyWO_c__1752501522/0">
+    <img src="https://wework.qpic.cn/wwpic3az/638838_B8HWf12HSFy0fxY_1752501434/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    </div>
+  </div>
+  <div class="swiper-button-next" style="position:absolute;top:40%;right:10px;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;opacity:0;transition:opacity .3s">&gt;</div>
+  <div class="swiper-button-prev" style="position:absolute;top:40%;left:10px;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;opacity:0;transition:opacity .3s">&lt;</div>
+  <div class="swiper-pagination" style="position:absolute;bottom:10px;left:0;width:100%;text-align:center;z-index:10;display:flex;justify-content:center;gap:4px"></div>
+</div>`;
 document.body.appendChild(newContainer);
 
-var swiper = new Swiper(".mySwiper", {
-  loop: true,
+/* ================= 初始化 ================= */
+const swiper = new Swiper('.mySwiper', {
+  loop: false, 
   spaceBetween: 30,
   centeredSlides: true,
-  autoplay: {
-    delay: 4800,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-     clickable: true,
-    },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+  autoplay: { delay: 3600, disableOnInteraction: false },
+  pagination: { el: '.swiper-pagination', clickable: true },
+  navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
 });
+
