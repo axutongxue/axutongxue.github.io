@@ -143,19 +143,19 @@ var infoList = [
     title: "阿虚独家搜索秘技！",
     content: "超2000人已上车学习！全自动脚本解放双手，一键横扫 15 个 AI 搜索站！效率爆炸（Mac端已更新）",
     link: "https://mp.weixin.qq.com/s/XAH8K9wRIHrnzxpqCvCJbQ \"target=\"_self\"",
-    img: "https://cbu01.alicdn.com/img/ibank/O1CN01TphFei1XUcMDRld3J_!!6000000002927-0-cib.jpg",
+    img: "https://wework.qpic.cn/wwpic3az/193581_WSqyVdiQRj2h3bV_1752676013/0",
   },
   {
-    title: "打车太贵了！这样能省一点",
-    content: "在阿虚公众号菜单栏，每天都可以领取🚕滴滴、花小猪、同程、T3打车券，单单享8－9折，部分平台最高立减10元！",
-    link: "https://wework.qpic.cn/wwpic3az/340998_du_hB0AjQtGmtR__1751622063 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/903841_Y3DEvZFuQcGjTLz_1752051865",
+    title: "阿虚的微信小游戏推荐！",
+    content: "末日生存，超爽射击打僵尸！肉鸽塔防，无敌割草体验（我自己也在玩，经常上头玩一两小时😂微信小游戏无需下载，点击即玩）",
+    link: "https://mp.weixin.qq.com/s/EDwrKQRMY9xT0J9Nua05QQ \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/56442_dH1whxi9S-a2_km_1752675598/0",
   },
   {
-    title: "外卖大战卷疯了！",
-    content: "在阿虚公众号菜单栏，每天都可以领取🍔美团、饿了么、京东、淘宝外卖券！别人免单券都抢疯了，你还在等什么？",
-    link: "https://wework.qpic.cn/wwpic3az/340998_du_hB0AjQtGmtR__1751622063 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/975844_UlZgxs2DRHWV9nE_1752051774",
+    title: "阿虚的微信小游戏推荐！",
+    content: "纯正暗黑地牢风爽游！随机地图＋超多流派＋传奇装备，碎片时间大杀器🤩（微信小游戏无需下载，点击即玩）",
+    link: "https://mp.weixin.qq.com/s/Pd7afai6A1G-9RgsY6C9jA \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/345371_YYw4YSR1QzOiF-X_1752675633/0",
   },
 ];
 
@@ -394,9 +394,13 @@ newContainer.innerHTML = `
     </div>
     <div class="swiper-slide">
     <a href="https://mp.weixin.qq.com/s/EDwrKQRMY9xT0J9Nua05QQ">
-    <img src="https://wework.qpic.cn/wwpic3az/413633_9FZZXClzT5Wwnv-_1752633086/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <img src="https://wework.qpic.cn/wwpic3az/332335_m8SD-QciSxmfI3q_1752675068/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
-        <div class="swiper-slide">
+    <div class="swiper-slide">
+    <a href="https://mp.weixin.qq.com/s/Pd7afai6A1G-9RgsY6C9jA">
+    <img src="https://wework.qpic.cn/wwpic3az/563483_W9DUNdYuRwSuRQC_1752674097/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    </div>
+    <div class="swiper-slide">
     <a href="http://icloud.qsios.com/yun/#/ilink/wx36">
     <img src="https://wework.qpic.cn/wwpic3az/865502_KMdz1JNZSqqQtQq_1752497523/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
