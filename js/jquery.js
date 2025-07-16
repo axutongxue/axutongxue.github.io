@@ -157,12 +157,6 @@ var infoList = [
     link: "https://wework.qpic.cn/wwpic3az/340998_du_hB0AjQtGmtR__1751622063 \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/975844_UlZgxs2DRHWV9nE_1752051774",
   },
-  {
-    title: "📽️８５折电影票！",
-    content: "阿虚严选认证，放心下单（此链接也被我放在了公众号菜单栏），全国电影院线极速出票，稳定 8 折左右！",
-    link: "https://m.qianzhu8.com/cinema/main/movie?platformId=10123&subPlatformId=515380071 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/223450_lbeVVjwkT9qQww8_1752050346",
-  },
 ];
 
 function setCookiiiie() {
@@ -399,12 +393,12 @@ newContainer.innerHTML = `
     <img src="https://wework.qpic.cn/wwpic3az/621074_bu2iFul1TxOt-dc_1752577509/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
     <div class="swiper-slide">
+    <a href="https://mp.weixin.qq.com/s/EDwrKQRMY9xT0J9Nua05QQ">
+    <img src="https://wework.qpic.cn/wwpic3az/413633_9FZZXClzT5Wwnv-_1752633086/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    </div>
+        <div class="swiper-slide">
     <a href="http://icloud.qsios.com/yun/#/ilink/wx36">
     <img src="https://wework.qpic.cn/wwpic3az/865502_KMdz1JNZSqqQtQq_1752497523/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
-    </div>
-    <div class="swiper-slide">
-    <a href="https://wework.qpic.cn/wwpic3az/300953_tq-vDll_TyWO_c__1752501522/0">
-    <img src="https://wework.qpic.cn/wwpic3az/638838_B8HWf12HSFy0fxY_1752501434/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
   </div>
   <div class="swiper-button-next" style="position:absolute;top:40%;right:10px;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;opacity:0;transition:opacity .3s">&gt;</div>
@@ -418,7 +412,7 @@ const swiper = new Swiper('.mySwiper', {
   loop: false, 
   spaceBetween: 30,
   centeredSlides: true,
-  autoplay: { delay: 3600, disableOnInteraction: false },
+  autoplay: { delay: 4800, disableOnInteraction: false },
   pagination: { el: '.swiper-pagination', clickable: true },
   navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
 });
