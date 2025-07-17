@@ -398,7 +398,7 @@ newContainer.innerHTML = `
     </div>
     <div class="swiper-slide">
     <a href="https://mp.weixin.qq.com/s/Pd7afai6A1G-9RgsY6C9jA">
-    <img src="https://wework.qpic.cn/wwpic3az/563483_W9DUNdYuRwSuRQC_1752674097/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <img src="https://wework.qpic.cn/wwpic3az/265792_KTBSmHliTzqcAlP_1752724727/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
     <div class="swiper-slide">
     <a href="http://icloud.qsios.com/yun/#/ilink/wx36">
@@ -416,7 +416,7 @@ const swiper = new Swiper('.mySwiper', {
   loop: false, 
   spaceBetween: 30,
   centeredSlides: true,
-  autoplay: { delay: 4800, disableOnInteraction: false },
+  autoplay: { delay: 3600, disableOnInteraction: false },
   pagination: { el: '.swiper-pagination', clickable: true },
   navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
 });
