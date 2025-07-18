@@ -388,18 +388,17 @@ newContainer.innerHTML = `
     <a href="https://mp.weixin.qq.com/s/3n44gissr4Jzx3E_EaO4Xw">
     <img src="https://wework.qpic.cn/wwpic3az/922761_ZEb6oWnqS9GNah6_1752497280/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
-    <div class="swiper-slide">
-    <a href="https://axu.simhaoka.com/phone/template1?gid=478849&id=B956B2050EAA74084CC3FE6EF37C57CF">
-    <img src="https://wework.qpic.cn/wwpic3az/621074_bu2iFul1TxOt-dc_1752577509/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
-    </div>
+
     <div class="swiper-slide">
     <a href="https://mp.weixin.qq.com/s/EDwrKQRMY9xT0J9Nua05QQ">
     <img src="https://wework.qpic.cn/wwpic3az/332335_m8SD-QciSxmfI3q_1752675068/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
+
     <div class="swiper-slide">
     <a href="https://mp.weixin.qq.com/s/Pd7afai6A1G-9RgsY6C9jA">
     <img src="https://wework.qpic.cn/wwpic3az/265792_KTBSmHliTzqcAlP_1752724727/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
+
     <div class="swiper-slide">
     <a href="http://icloud.qsios.com/yun/#/ilink/wx36">
     <img src="https://wework.qpic.cn/wwpic3az/865502_KMdz1JNZSqqQtQq_1752497523/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
