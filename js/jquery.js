@@ -385,6 +385,16 @@ newContainer.innerHTML = `
 <div class="swiper mySwiper" style="width:330px;margin:0 auto;position:relative;overflow:hidden;z-index:1;padding-bottom:30px;">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
+    <a href="https://axu.simhaoka.com/phone/template1?gid=478851&id=B956B2050EAA74084CC3FE6EF37C57CF">
+    <img src="https://wework.qpic.cn/wwpic3az/621074_bu2iFul1TxOt-dc_1752577509/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    </div>  
+
+    <div class="swiper-slide">
+    <a href="http://icloud.qsios.com/yun/#/ilink/wx36">
+    <img src="https://wework.qpic.cn/wwpic3az/865502_KMdz1JNZSqqQtQq_1752497523/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    </div>
+
+    <div class="swiper-slide">
     <a href="https://mp.weixin.qq.com/s/3n44gissr4Jzx3E_EaO4Xw">
     <img src="https://wework.qpic.cn/wwpic3az/922761_ZEb6oWnqS9GNah6_1752497280/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
@@ -399,10 +409,6 @@ newContainer.innerHTML = `
     <img src="https://wework.qpic.cn/wwpic3az/265792_KTBSmHliTzqcAlP_1752724727/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
-    <div class="swiper-slide">
-    <a href="http://icloud.qsios.com/yun/#/ilink/wx36">
-    <img src="https://wework.qpic.cn/wwpic3az/865502_KMdz1JNZSqqQtQq_1752497523/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
-    </div>
   </div>
   <div class="swiper-button-next" style="position:absolute;top:40%;right:10px;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;opacity:0;transition:opacity .3s">&gt;</div>
   <div class="swiper-button-prev" style="position:absolute;top:40%;left:10px;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;opacity:0;transition:opacity .3s">&lt;</div>
