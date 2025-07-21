@@ -385,8 +385,8 @@ newContainer.innerHTML = `
 <div class="swiper mySwiper" style="width:330px;margin:0 auto;position:relative;overflow:hidden;z-index:1;padding-bottom:30px;">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-    <a href="https://axu.simhaoka.com/phone/template1?gid=478851&id=B956B2050EAA74084CC3FE6EF37C57CF">
-    <img src="https://wework.qpic.cn/wwpic3az/621074_bu2iFul1TxOt-dc_1752577509/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <a href="https://mp.weixin.qq.com/s/XAH8K9wRIHrnzxpqCvCJbQ">
+    <img src="https://wework.qpic.cn/wwpic3az/737911_BAxfYuSPQuaUTnO_1753102780/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>  
 
     <div class="swiper-slide">
