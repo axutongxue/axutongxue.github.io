@@ -140,22 +140,16 @@ $(document).ready(function() {$("a").click(function() {$(this).next(".menu").tog
 var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="buttonClose" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
   {
-    title: "阿虚独家搜索秘技大公开！",
-    content: "超2000人已上车学习！全自动脚本解放双手，一键横扫 15 个 AI 搜索站！效率爆炸（Mac端已更新）",
+    title: "阿虚独家丨搜索技术大公开！",
+    content: "全自动脚本解放双手，一键横扫 15 个 AI 搜索站！效率爆炸（Mac端已更新），即将更新网盘资源、电子书等等搜索脚本",
     link: "https://mp.weixin.qq.com/s/XAH8K9wRIHrnzxpqCvCJbQ \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/193581_WSqyVdiQRj2h3bV_1752676013/0",
+    img: "https://wework.qpic.cn/wwpic3az/624371_UOMnbOBXSXi8d3Q_1753669739/0",
   },
   {
-    title: "阿虚的微信小游戏推荐！",
-    content: "末日生存，超爽射击打僵尸！肉鸽塔防，无敌割草体验（阿虚自己也在玩，经常玩上头😂微信小游戏无需下载，点击即玩）",
-    link: "https://mp.weixin.qq.com/s/EDwrKQRMY9xT0J9Nua05QQ \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/56442_dH1whxi9S-a2_km_1752675598/0",
-  },
-  {
-    title: "阿虚的微信小游戏推荐！",
-    content: "纯正暗黑地牢风爽游！随机地图＋超多流派＋传奇装备，碎片时间大杀器🤩（微信小游戏无需下载，点击即玩）",
-    link: "https://mp.weixin.qq.com/s/Pd7afai6A1G-9RgsY6C9jA \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/345371_YYw4YSR1QzOiF-X_1752675633/0",
+    title: "储物间免费影视APP有更新",
+    content: "1－10栏安卓影视APP、1－11栏 iOS 影视 App 均有更新，可免费看电影／奈飞／韩剧／综艺／短剧／体育直播等等",
+    link: "https://wework.qpic.cn/wwpic3az/279187_wey1BTzCSp-TbDc_1753669256/0 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/29258_lhJToPU_QA2JZxF_1753669231/0",
   },
 ];
 
@@ -391,8 +385,8 @@ newContainer.innerHTML = `
     </div>
 
     <div class="swiper-slide">
-    <a href="https://mp.weixin.qq.com/s/XAH8K9wRIHrnzxpqCvCJbQ">
-    <img src="https://wework.qpic.cn/wwpic3az/737911_BAxfYuSPQuaUTnO_1753102780/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <a href="https://wework.qpic.cn/wwpic3az/715483_E_svk-GqT9aEK5s_1753669175/0">
+    <img src="https://wework.qpic.cn/wwpic3az/99711_8F_C1lL-So6caSI_1753669079/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>  
 
     <div class="swiper-slide">
@@ -406,7 +400,7 @@ newContainer.innerHTML = `
     </div>
 
     <div class="swiper-slide">
-    <a href="https://mp.weixin.qq.com/s/Pd7afai6A1G-9RgsY6C9jA">
+    <a href="http://g.vwisdom.cn/g/r3mlLXRj">
     <img src="https://wework.qpic.cn/wwpic3az/265792_KTBSmHliTzqcAlP_1752724727/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
