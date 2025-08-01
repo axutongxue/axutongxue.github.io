@@ -146,10 +146,10 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/624371_UOMnbOBXSXi8d3Q_1753669739/0",
   },
   {
-    title: "储物间免费影视APP有更新",
-    content: "1－10栏安卓影视APP、1－11栏 iOS 影视 App 均有更新，可免费看电影／奈飞／韩剧／综艺／短剧／体育直播等等",
-    link: "https://wework.qpic.cn/wwpic3az/279187_wey1BTzCSp-TbDc_1753669256/0 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/29258_lhJToPU_QA2JZxF_1753669231/0",
+    title: "双会员神卡重新上架！",
+    content: "放宽了年龄限制，18－28岁均可办理！四年２９元１５０G+300分,每月可从爱优腾、网易、QQ音乐等里面选２个会员免费领取！",
+    link: "https://api.simhaoka.com/h5/gdetail?uc=kTNQ3GWi6a&gi=1386 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/915159_A_ZdpIJ4S0qbMw-_1754044128/0",
   },
 ];
 
@@ -385,13 +385,13 @@ newContainer.innerHTML = `
     </div>
 
     <div class="swiper-slide">
-    <a href="https://wework.qpic.cn/wwpic3az/715483_E_svk-GqT9aEK5s_1753669175/0">
-    <img src="https://wework.qpic.cn/wwpic3az/99711_8F_C1lL-So6caSI_1753669079/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
-    </div>  
+    <a href="https://api.simhaoka.com/h5/gdetail?uc=kTNQ3GWi6a&gi=1386">
+    <img src="https://wework.qpic.cn/wwpic3az/720138_GjA-CprxREO7EdO_1754043982/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    </div>
 
     <div class="swiper-slide">
-    <a href="http://icloud.qsios.com/yun/#/ilink/wx36">
-    <img src="https://wework.qpic.cn/wwpic3az/865502_KMdz1JNZSqqQtQq_1752497523/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <a href="https://wework.qpic.cn/wwpic3az/715483_E_svk-GqT9aEK5s_1753669175/0">
+    <img src="https://wework.qpic.cn/wwpic3az/99711_8F_C1lL-So6caSI_1753669079/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
