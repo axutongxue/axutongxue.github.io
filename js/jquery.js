@@ -140,16 +140,16 @@ $(document).ready(function() {$("a").click(function() {$(this).next(".menu").tog
 var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="buttonClose" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
   {
-    title: "阿虚独家丨搜索技术大公开！",
+    title: "阿虚原创丨聚合搜索技术！",
     content: "全自动脚本解放双手，一键横扫 15 个 AI 搜索站！效率爆炸（Mac端已更新），即将更新网盘资源、电子书等等搜索脚本",
     link: "https://mp.weixin.qq.com/s/XAH8K9wRIHrnzxpqCvCJbQ \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/624371_UOMnbOBXSXi8d3Q_1753669739/0",
   },
   {
-    title: "双会员神卡重新上架！",
-    content: "放宽了年龄限制，18－28岁均可办理！四年２９元１５０G+300分,每月可从爱优腾、网易、QQ音乐等里面选２个会员免费领取！",
-    link: "https://api.simhaoka.com/h5/gdetail?uc=kTNQ3GWi6a&gi=1386 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/915159_A_ZdpIJ4S0qbMw-_1754044128/0",
+    title: "阿虚原创丨飞书文档离线下载",
+    content: "可以实现将仅有阅读权限、无法复制的飞书文档，保留原格式完美下载保存为 HTML 文件，永久离线保存！（附送保存为PDF、MD教程）",
+    link: "https://mp.weixin.qq.com/s/2dAc0fQTYi8zFtWaD-OVrg \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/797739_fu6cW5ZKQxmbGd__1754365111/0",
   },
 ];
 
@@ -385,8 +385,13 @@ newContainer.innerHTML = `
     </div>
 
     <div class="swiper-slide">
-    <a href="https://api.simhaoka.com/h5/gdetail?uc=kTNQ3GWi6a&gi=1386">
-    <img src="https://wework.qpic.cn/wwpic3az/720138_GjA-CprxREO7EdO_1754043982/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <a href="https://mp.weixin.qq.com/s/2dAc0fQTYi8zFtWaD-OVrg">
+    <img src="https://wework.qpic.cn/wwpic3az/543832_vsQ-dzcaTbSeyE6_1754364805/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    </div>
+
+    <div class="swiper-slide">
+    <a href="https://mp.weixin.qq.com/s/9MiHmgVLio0Vl3RT1IMnHw">
+    <img src="https://wework.qpic.cn/wwpic3az/556072_f73IQ5UvQISYMb-_1754364805/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
@@ -394,15 +399,7 @@ newContainer.innerHTML = `
     <img src="https://wework.qpic.cn/wwpic3az/99711_8F_C1lL-So6caSI_1753669079/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
-    <div class="swiper-slide">
-    <a href="https://mp.weixin.qq.com/s/EDwrKQRMY9xT0J9Nua05QQ">
-    <img src="https://wework.qpic.cn/wwpic3az/332335_m8SD-QciSxmfI3q_1752675068/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
-    </div>
 
-    <div class="swiper-slide">
-    <a href="http://g.vwisdom.cn/g/r3mlLXRj">
-    <img src="https://wework.qpic.cn/wwpic3az/265792_KTBSmHliTzqcAlP_1752724727/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
-    </div>
 
   </div>
   <div class="swiper-button-next" style="position:absolute;top:40%;right:10px;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;opacity:0;transition:opacity .3s">&gt;</div>
