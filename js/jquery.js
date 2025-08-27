@@ -153,7 +153,7 @@ var infoList = [
   },
   {
     title: "最新外卖漏洞，请低调使用！",
-    content: "满20减20元都是基本操作！一波神操作，一顿外卖都不用超过10元！学生党、上班族、打工人别错过",
+    content: "满20减20元都是基本操作！一波神操作下来，一顿外卖都不用超过10元！学生党、上班族、打工人别错过",
     link: "https://wework.qpic.cn/wwpic3az/919331_YvZl_dZATZusjXg_1756197587/0 \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/676597_SMbhDWvfT--pNoz_1756197907/0",
   },
@@ -391,6 +391,11 @@ newContainer.innerHTML = `
     </div>
 
     <div class="swiper-slide">
+    <a href="https://simhaoka.com/phone/template1?gid=478877&id=B956B2050EAA74084CC3FE6EF37C57CF">
+    <img src="https://wework.qpic.cn/wwpic3az/147746_RHM6AI2-SySi_96_1756259949/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    </div>
+
+    <div class="swiper-slide">
     <a href="https://wework.qpic.cn/wwpic3az/940788_5u4KuP8PQTeKwT2_1756199278/0">
     <img src="https://wework.qpic.cn/wwpic3az/53729_YRXiuaoQSo-gZ7I_1756199960/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
@@ -400,10 +405,6 @@ newContainer.innerHTML = `
     <img src="https://wework.qpic.cn/wwpic3az/543832_vsQ-dzcaTbSeyE6_1754364805/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
-    <div class="swiper-slide">
-    <a href="https://mp.weixin.qq.com/s/EDwrKQRMY9xT0J9Nua05QQ">
-    <img src="https://wework.qpic.cn/wwpic3az/332335_m8SD-QciSxmfI3q_1752675068/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
-    </div>
 
   </div>
   <div class="swiper-button-next" style="position:absolute;top:40%;right:10px;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;opacity:0;transition:opacity .3s">&gt;</div>
