@@ -391,8 +391,8 @@ newContainer.innerHTML = `
     </div>
 
     <div class="swiper-slide">
-    <a href="https://simhaoka.com/phone/template1?gid=478877&id=B956B2050EAA74084CC3FE6EF37C57CF">
-    <img src="https://wework.qpic.cn/wwpic3az/147746_RHM6AI2-SySi_96_1756259949/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <a href="https://www.geilijiasu.com/">
+    <img src="https://wework.qpic.cn/wwpic3az/857345_1ykEqT5LSp-f4Z2_1756384312/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
