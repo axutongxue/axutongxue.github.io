@@ -391,13 +391,13 @@ newContainer.innerHTML = `
     </div>
 
     <div class="swiper-slide">
-    <a href="https://www.geilijiasu.com/">
-    <img src="https://wework.qpic.cn/wwpic3az/857345_1ykEqT5LSp-f4Z2_1756384312/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <a href="https://1.simhaoka.com/phone/template1?gid=478878&id=B956B2050EAA74084CC3FE6EF37C57CF">
+    <img src="https://wework.qpic.cn/wwpic3az/826217_4cqSf3VPRZGllgZ_1756437021/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
-    <a href="https://wework.qpic.cn/wwpic3az/940788_5u4KuP8PQTeKwT2_1756199278/0">
-    <img src="https://wework.qpic.cn/wwpic3az/53729_YRXiuaoQSo-gZ7I_1756199960/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <a href="https://www.geilijiasu.com/">
+    <img src="https://wework.qpic.cn/wwpic3az/857345_1ykEqT5LSp-f4Z2_1756384312/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
