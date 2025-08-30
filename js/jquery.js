@@ -391,8 +391,8 @@ newContainer.innerHTML = `
     </div>
 
     <div class="swiper-slide">
-    <a href="https://1.simhaoka.com/phone/template1?gid=478878&id=B956B2050EAA74084CC3FE6EF37C57CF">
-    <img src="https://wework.qpic.cn/wwpic3az/826217_4cqSf3VPRZGllgZ_1756437021/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <a href="https://1.simhaoka.com/phone/template1?gid=478879&id=B956B2050EAA74084CC3FE6EF37C57CF">
+    <img src="https://wework.qpic.cn/wwpic3az/856545_UOfbRTVMTZyOa_c_1756559470/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
