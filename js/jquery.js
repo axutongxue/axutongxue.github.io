@@ -159,7 +159,7 @@ var infoList = [
   },
 ];
 
-function setCookiiiie() {
+function setCoookiie() {
   var date = new Date();
   var Hour = 1; //设置每小时过期时间
   let expireTime = Hour * 3600 * 1000;
@@ -171,21 +171,21 @@ function setCookiiiie() {
     "exptime=" + expires + "; expires=" + date.toGMTString();
   // 过了这个时间就没用过期时间
   setTimeout(() => {
-    checkCookiiiie();
+    checkCoookiie();
   }, expireTime + 10);
 }
 
-function getCookiiiie(cookie_name) {
+function getCoookiie(cookie_name) {
   var results = document.cookie.match(
     "(^|;) ?" + cookie_name + "=([^;]*)(;|$)"
   );
   if (results) return unescape(results[2]);
   else return null;
 }
-function checkCookiiiie() {
+function checkCoookiie() {
   setTimeout(function () {
-    if (!getCookiiiie("money")) {
-      setCookiiiie();
+    if (!getCoookiie("money")) {
+      setCoookiie();
       let buttonClose = document.querySelector("#buttonClose");
       if (buttonClose) {
         return;
@@ -208,17 +208,17 @@ function checkCookiiiie() {
       };
     }
     else {
-      let timeOut = getCookiiiie("exptime") ?? 1000;
+      let timeOut = getCoookiie("exptime") ?? 1000;
       if (timeOut >= 1000) {
         timeOut = timeOut - new Date().getTime();
         if (timeOut < 0) {
-          checkCookiiiie();
+          checkCoookiie();
           return;
         }
       }
       console.log(timeOut);
         setTimeout(function () {
-        checkCookiiiie();
+        checkCoookiie();
       }, timeOut);
     }
   }, 2000);//延时2秒展示
@@ -229,7 +229,7 @@ function checkCookiiiie() {
   var num = Min + Math.round(Rand * Range); //四舍五入
   return num;
 }
-checkCookiiiie();
+checkCoookiie();
 
 document.addEventListener('DOMContentLoaded', function() {
   function siteTime() {
@@ -397,7 +397,7 @@ newContainer.innerHTML = `
 
     <div class="swiper-slide">
     <a href="https://t.bfr2.top/k1i6QQH">
-    <img src="https://wework.qpic.cn/wwpic3az/688768_ZHvv3nGcQjq4abq_1756906819/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <img src="https://wework.qpic.cn/wwpic3az/133872_BrdbSYp8QoaTO0Q_1756909192/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
