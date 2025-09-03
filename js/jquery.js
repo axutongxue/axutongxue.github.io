@@ -146,10 +146,10 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/172980_0PeLPpJNSg6MgBl_1756196748/0",
   },
   {
-    title: "企查查、天眼查已破解！",
-    content: "阿虚带你撕开企业信息查询的信息差，价值上千的付费内容，这里免费可查！！！",
-    link: "https://mp.weixin.qq.com/s/7sXkw5obGGaLq8drUNChGg \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/825811_r2ZWSE9uRBO9Y4f_1756196961/0",
+    title: "这是一个广告链接！",
+    content: "点一下再关掉，如果没有被拦截，阿虚就有些许收入。相当于无成本赞助支持阿虚，感谢大家！！🙏（请勿相信任何广告内容！）",
+    link: "https://otieu.com/4/5294730 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/102404_XOEQUwVJSvif0z7_1756908603/0",
   },
   {
     title: "最新外卖漏洞，请低调使用！",
@@ -391,18 +391,18 @@ newContainer.innerHTML = `
     </div>
 
     <div class="swiper-slide">
-    <a href="https://1.simhaoka.com/phone/template1?gid=478881&id=B956B2050EAA74084CC3FE6EF37C57CF">
-    <img src="https://wework.qpic.cn/wwpic3az/856545_UOfbRTVMTZyOa_c_1756559470/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <a href="https://nf.video/6xgpbq/?gid=104&skuId=736">
+    <img src="https://wework.qpic.cn/wwpic3az/427281_SRQU4px3Q9eDL2H_1756905936/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
-    <a href="https://www.geilijiasu.com/">
-    <img src="https://wework.qpic.cn/wwpic3az/857345_1ykEqT5LSp-f4Z2_1756384312/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <a href="https://t.bfr2.top/k1i6QQH">
+    <img src="https://wework.qpic.cn/wwpic3az/688768_ZHvv3nGcQjq4abq_1756906819/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
-    <a href="https://mp.weixin.qq.com/s/2dAc0fQTYi8zFtWaD-OVrg">
-    <img src="https://wework.qpic.cn/wwpic3az/543832_vsQ-dzcaTbSeyE6_1754364805/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <a href="https://otieu.com/4/5294730">
+    <img src="https://wework.qpic.cn/wwpic3az/573576_CwEM-h3lRU249bK_1756907817/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
 
