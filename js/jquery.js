@@ -146,10 +146,10 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/172980_0PeLPpJNSg6MgBl_1756196748/0",
   },
   {
-    title: "这是一个广告链接！",
-    content: "点一下再关掉，如果没有被拦截，阿虚就有些许收入。相当于无成本赞助支持阿虚，感谢大家！！🙏（请勿相信任何广告内容！）",
-    link: "https://otieu.com/4/5294730 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/102404_XOEQUwVJSvif0z7_1756908603/0",
+    title: "免费Nano Banana中文站！",
+    content: "国内免翻可用的Nano Banana免费站点，一句话P图、电商改图轻松实现！",
+    link: "https://www.jiaotuai.cn/?ref=axu \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/212601_FdA6PJasQAGqef-_1757328789/0",
   },
   {
     title: "最新外卖漏洞，请低调使用！",
@@ -391,20 +391,14 @@ newContainer.innerHTML = `
     </div>
 
     <div class="swiper-slide">
-    <a href="https://nf.video/6xgpbq/?gid=104&skuId=736">
-    <img src="https://wework.qpic.cn/wwpic3az/427281_SRQU4px3Q9eDL2H_1756905936/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <a href="https://www.jiaotuai.cn/?ref=axu">
+    <img src="https://wework.qpic.cn/wwpic3az/563269_AVywp2ShTI23IjG_1757328229/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
     <a href="https://t.bfr2.top/k1i6QQH">
     <img src="https://wework.qpic.cn/wwpic3az/133872_BrdbSYp8QoaTO0Q_1756909192/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
-
-    <div class="swiper-slide">
-    <a href="https://otieu.com/4/5294730">
-    <img src="https://wework.qpic.cn/wwpic3az/573576_CwEM-h3lRU249bK_1756907817/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
-    </div>
-
 
   </div>
   <div class="swiper-button-next" style="position:absolute;top:40%;right:10px;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;opacity:0;transition:opacity .3s">&gt;</div>
