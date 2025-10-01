@@ -140,10 +140,10 @@ $(document).ready(function() {$("a").click(function() {$(this).next(".menu").tog
 var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="buttonClose" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
   {
-    title: "网盘资源聚合搜索脚本",
-    content: "全自动脚本解放双手，一键横扫 30 个网盘搜索引擎！效率爆炸。脚本已更新在图７，已更新在图７，已更新在图７……",
-    link: "https://mp.weixin.qq.com/s/XAH8K9wRIHrnzxpqCvCJbQ \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/172980_0PeLPpJNSg6MgBl_1756196748/0",
+    title: "神级流量卡！仅发四川",
+    content: "4年优惠，39/月550G流量＋300分钟通话，每月还可以再选２个热门会员免费领取（包含爱优腾、QQ音乐、网易云等会员）",
+    link: "https://api.simhaoka.com/h5/gdetail?uc=kTNQ3GWi6a&gi=1616 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/359601_KFzQVJNOSYmTBhd_1759310581/0",
   },
   {
     title: "免费Nano Banana中文站！",
@@ -393,6 +393,11 @@ newContainer.innerHTML = `
     <div class="swiper-slide">
     <a href="https://www.jiaotuai.cn/?ref=axu">
     <img src="https://wework.qpic.cn/wwpic3az/563269_AVywp2ShTI23IjG_1757328229/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    </div>
+
+    <div class="swiper-slide">
+    <a href="https://api.simhaoka.com/h5/gdetail?uc=kTNQ3GWi6a&gi=1616">
+    <img src="https://wework.qpic.cn/wwpic3az/808495_BngKfggYSzW9vfn_1759310485/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
