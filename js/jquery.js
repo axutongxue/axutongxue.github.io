@@ -146,10 +146,10 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/359601_KFzQVJNOSYmTBhd_1759310581/0",
   },
   {
-    title: "免费Nano Banana中文站！",
-    content: "国内免翻可用的Nano Banana免费站点，一句话P图、电商改图轻松实现！",
-    link: "https://www.jiaotuai.cn/?ref=axu \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/212601_FdA6PJasQAGqef-_1757328789/0",
+    title: "阿虚独家搜索秘技大公开！",
+    content: "超2000人已上车学习！全自动脚本解放双手，一键横扫 15 个 AI 搜索站！效率爆炸（Mac端已更新）",
+    link: "https://mp.weixin.qq.com/s/XAH8K9wRIHrnzxpqCvCJbQ \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/193581_WSqyVdiQRj2h3bV_1752676013/0",
   },
   {
     title: "最新外卖漏洞，请低调使用！",
@@ -388,11 +388,6 @@ newContainer.innerHTML = `
     <div class="swiper-slide">
     <a href="https://mp.weixin.qq.com/s/3n44gissr4Jzx3E_EaO4Xw">
     <img src="https://wework.qpic.cn/wwpic3az/922761_ZEb6oWnqS9GNah6_1752497280/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
-    </div>
-
-    <div class="swiper-slide">
-    <a href="https://www.jiaotuai.cn/?ref=axu">
-    <img src="https://wework.qpic.cn/wwpic3az/563269_AVywp2ShTI23IjG_1757328229/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
