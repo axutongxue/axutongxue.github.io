@@ -142,7 +142,7 @@ var infoList = [
   {
     title: "神级流量卡！仅发四川",
     content: "4年优惠，39/月550G流量＋300分钟通话，每月还可以再选２个热门会员免费领取（包含爱优腾、QQ音乐、网易云等会员）",
-    link: "https://api.simhaoka.com/h5/gdetail?uc=kTNQ3GWi6a&gi=1616 \"target=\"_self\"",
+    link: "https://api.simhaoka.com/h5/gdetail?uc=kTNQ3GWi6a&gi=1628 \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/359601_KFzQVJNOSYmTBhd_1759310581/0",
   },
   {
@@ -391,12 +391,12 @@ newContainer.innerHTML = `
     </div>
 
     <div class="swiper-slide">
-    <a href="https://api.simhaoka.com/h5/gdetail?uc=kTNQ3GWi6a&gi=1616">
+    <a href="https://api.simhaoka.com/h5/gdetail?uc=kTNQ3GWi6a&gi=1628">
     <img src="https://wework.qpic.cn/wwpic3az/808495_BngKfggYSzW9vfn_1759310485/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
-    <a href="https://t.bfr2.top/k1i6QQH">
+    <a href="https://t.bfr2.top/p18Pi94">
     <img src="https://wework.qpic.cn/wwpic3az/133872_BrdbSYp8QoaTO0Q_1756909192/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
