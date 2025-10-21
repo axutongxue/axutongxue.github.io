@@ -140,10 +140,10 @@ $(document).ready(function() {$("a").click(function() {$(this).next(".menu").tog
 var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="buttonClose" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
   {
-    title: "神级流量卡！仅发四川",
-    content: "4年优惠，39/月550G流量＋300分钟通话，每月还可以再选２个热门会员免费领取（包含爱优腾、QQ音乐、网易云等会员）",
-    link: "https://api.simhaoka.com/h5/gdetail?uc=kTNQ3GWi6a&gi=1628 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/359601_KFzQVJNOSYmTBhd_1759310581/0",
+    title: "电信大流量卡回来啦！",
+    content: "29/月185G流量，至少两年优惠，20－60岁均可办理，全国可发货（少部分地区以实际审核为准）",
+    link: "https://api.simhaoka.com/h5/gdetail?uc=kTNQ3GWi6a&gi=1640 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/837055_EMqBpj-DTTOrKmo_1761020487/0",
   },
   {
     title: "阿虚独家搜索秘技大公开！",
@@ -388,6 +388,16 @@ newContainer.innerHTML = `
     <div class="swiper-slide">
     <a href="https://mp.weixin.qq.com/s/3n44gissr4Jzx3E_EaO4Xw">
     <img src="https://wework.qpic.cn/wwpic3az/922761_ZEb6oWnqS9GNah6_1752497280/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    </div>
+
+    <div class="swiper-slide">
+    <a href="https://api.simhaoka.com/h5/gdetail?uc=kTNQ3GWi6a&gi=1646">
+    <img src="https://wework.qpic.cn/wwpic3az/589146_7M7XNf62TeGgMbX_1761020424/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    </div>
+
+    <div class="swiper-slide">
+    <a href="https://api.simhaoka.com/h5/gdetail?uc=kTNQ3GWi6a&gi=1640">
+    <img src="https://wework.qpic.cn/wwpic3az/575891_QsRbhwmERHCBRDB_1761020424/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
