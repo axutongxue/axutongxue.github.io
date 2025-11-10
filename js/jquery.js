@@ -137,7 +137,7 @@ function changemode() {
 
 $(document).ready(function() {$("a").click(function() {$(this).next(".menu").toggle();$('.fa-info-circle').removeClass('touched');})})
 
-var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="buttonClose" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
+var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="button_Close" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
   {
     title: "数码荔枝双 11 软件大促！",
@@ -159,7 +159,7 @@ var infoList = [
   },
 ];
 
-function setCookie0() {
+function set_Cookie() {
   var date = new Date();
   var Hour = 1; //设置每小时过期时间
   let expireTime = Hour * 3600 * 1000;
@@ -168,26 +168,26 @@ function setCookie0() {
   document.cookie =
     "value" + RandomNumBoth(10000, 100000) + "; expires=" + date.toGMTString();
   document.cookie =
-    "exptime=" + expires + "; expires=" + date.toGMTString();
+    "exp-time=" + expires + "; expires=" + date.toGMTString();
   // 过了这个时间就没用过期时间
   setTimeout(() => {
-    checkCookie0();
+    check_Cookie0();
   }, expireTime + 10);
 }
 
-function getCookie0(cookie_name) {
+function get_Cookie(cookie_name) {
   var results = document.cookie.match(
     "(^|;) ?" + cookie_name + "=([^;]*)(;|$)"
   );
   if (results) return unescape(results[2]);
   else return null;
 }
-function checkCookie0() {
+function check_Cookie0() {
   setTimeout(function () {
-    if (!getCookie0("money")) {
-      setCookie0();
-      let buttonClose = document.querySelector("#buttonClose");
-      if (buttonClose) {
+    if (!get_Cookie("money")) {
+      set_Cookie();
+      let button_Close = document.querySelector("#button_Close");
+      if (button_Close) {
         return;
       }
       let money = infoList[RandomNumBoth(0, infoList.length - 1)];
@@ -201,24 +201,24 @@ function checkCookie0() {
       let div = document.createElement("div");
       div.innerHTML = newCode;
       document.body.appendChild(div);
-      buttonClose = document.querySelector("#buttonClose");
+      button_Close = document.querySelector("#button_Close");
 
-      buttonClose.onclick = function () {
+      button_Close.onclick = function () {
         document.getElementById(boxId).remove();
       };
     }
     else {
-      let timeOut = getCookie0("exptime") ?? 1000;
+      let timeOut = get_Cookie("exp-time") ?? 1000;
       if (timeOut >= 1000) {
         timeOut = timeOut - new Date().getTime();
         if (timeOut < 0) {
-          checkCookie0();
+          check_Cookie0();
           return;
         }
       }
       console.log(timeOut);
         setTimeout(function () {
-        checkCookie0();
+        check_Cookie0();
       }, timeOut);
     }
   }, 2000);//延时2秒展示
@@ -229,7 +229,7 @@ function checkCookie0() {
   var num = Min + Math.round(Rand * Range); //四舍五入
   return num;
 }
-checkCookie0();
+check_Cookie0();
 
 document.addEventListener('DOMContentLoaded', function() {
   function siteTime() {
