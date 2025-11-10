@@ -140,10 +140,10 @@ $(document).ready(function() {$("a").click(function() {$(this).next(".menu").tog
 var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="buttonClose" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
   {
-    title: "阿虚的微信小游戏推荐！",
-    content: "末日生存，超爽射击打僵尸！肉鸽塔防，无敌割草体验（阿虚自己也在玩，经常玩上头😂微信小游戏无需下载，点击即玩）",
-    link: "https://mp.weixin.qq.com/s/EDwrKQRMY9xT0J9Nua05QQ \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/56442_dH1whxi9S-a2_km_1752675598/0",
+    title: "数码荔枝双 11 软件大促！",
+    content: "Adguard、Office拼车、BookxNote、UPDF、白描、Typora等 100+ 正版工具 5 折起~",
+    link: "https://lizhi.shop/site/search_list/category_id/64?order_by=1&cid=ds7afku3 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/653755_r6V7FTP5QlyBLit_1762769924/0",
   },
   {
     title: "阿虚独家搜索秘技大公开！",
