@@ -140,22 +140,16 @@ $(document).ready(function() {$("a").click(function() {$(this).next(".menu").tog
 var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="button_Close" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
   {
-    title: "数码荔枝双 11 软件大促！",
-    content: "Adguard、Office拼车、BookxNote、UPDF、白描、Typora等 100+ 正版工具 5 折起~",
-    link: "https://lizhi.shop/site/search_list/category_id/64?order_by=1&cid=ds7afku3 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/653755_r6V7FTP5QlyBLit_1762769924/0",
+    title: "最全免费思维导图推荐！",
+    content: "辛苦写的文章又完全没人看，希望大家可以点下「推荐」按钮，跳转微信打开，帮忙涨涨文章阅读量🙏",
+    link: "https://mp.weixin.qq.com/s/8qEZBh0N4eGu4xqZhqBvEA \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/764568_vRbSUemOSeaai88_1763607767/0",
   },
   {
-    title: "阿虚独家搜索秘技大公开！",
-    content: "超2000人已上车学习！全自动脚本解放双手，一键横扫 15 个 AI 搜索站！效率爆炸（Mac端已更新）",
-    link: "https://mp.weixin.qq.com/s/XAH8K9wRIHrnzxpqCvCJbQ \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/193581_WSqyVdiQRj2h3bV_1752676013/0",
-  },
-  {
-    title: "最新外卖漏洞，请低调使用！",
-    content: "满20减20元都是基本操作！一波神操作下来，一顿外卖都不用超过10元！学生党、上班族、打工人别错过",
-    link: "https://wework.qpic.cn/wwpic3az/919331_YvZl_dZATZusjXg_1756197587/0 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/676597_SMbhDWvfT--pNoz_1756197907/0",
+    title: "免费投屏全平台、全攻略！",
+    content: "辛苦写的文章又完全没人看，希望大家可以点下「推荐」按钮，跳转微信打开，帮忙涨涨文章阅读量🙏",
+    link: "https://mp.weixin.qq.com/s/TMrw2c73o9xj-mDQdI-0-Q \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/455942_iWhzStbPQ-6wJY4_1763607958/0",
   },
 ];
 
