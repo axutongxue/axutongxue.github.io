@@ -146,10 +146,10 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/764568_vRbSUemOSeaai88_1763607767/0",
   },
   {
-    title: "免费投屏全平台、全攻略！",
+    title: "国产 Claude 4 平替！！!",
     content: "辛苦写的文章又完全没人看，希望大家可以点下「推荐」按钮，跳转微信打开，帮忙涨涨文章阅读量🙏",
-    link: "https://mp.weixin.qq.com/s/TMrw2c73o9xj-mDQdI-0-Q \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/455942_iWhzStbPQ-6wJY4_1763607958/0",
+    link: "https://mp.weixin.qq.com/s/oUYm3S5AXzFFo5crf5bt-g \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/702695_WMzFSK7TRHCMHhJ_1763705045/0",
   },
 ];
 
