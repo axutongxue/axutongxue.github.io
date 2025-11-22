@@ -145,12 +145,6 @@ var infoList = [
     link: "https://mp.weixin.qq.com/s/8qEZBh0N4eGu4xqZhqBvEA \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/764568_vRbSUemOSeaai88_1763607767/0",
   },
-  {
-    title: "国产 Claude 4 平替！！!",
-    content: "辛苦写的文章又完全没人看，希望大家可以点下「推荐」按钮，跳转微信打开，帮忙涨涨文章阅读量🙏",
-    link: "https://mp.weixin.qq.com/s/oUYm3S5AXzFFo5crf5bt-g \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/702695_WMzFSK7TRHCMHhJ_1763705045/0",
-  },
 ];
 
 function set1Co1okie() {
@@ -385,13 +379,18 @@ newContainer.innerHTML = `
     </div>
 
     <div class="swiper-slide">
-    <a href="https://api.simhaoka.com/h5/gdetail?uc=kTNQ3GWi6a&gi=1586">
-    <img src="https://wework.qpic.cn/wwpic3az/425035_kiHKX0aJRQaElI3_1761723298/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <a href="https://api.simhaoka.com/h5/gdetail?uc=kTNQ3GWi6a&gi=1764">
+    <img src="https://wework.qpic.cn/wwpic3az/416015_1vHVJz4KQkm6TQm_1763779412/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
-    <a href="https://1.simhaoka.com/phone/template1?gid=478628&id=B956B2050EAA74084CC3FE6EF37C57CF">
-    <img src="https://wework.qpic.cn/wwpic3az/452123_Jz-nH5IcRAyMfFL_1761723298/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <a href="https://api.simhaoka.com/h5/gdetail?uc=kTNQ3GWi6a&gi=1788">
+    <img src="https://wework.qpic.cn/wwpic3az/534484_lko-i5FrT0--kwL_1763779298/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    </div>
+
+    <div class="swiper-slide">
+    <a href="https://api.simhaoka.com/h5/gdetail?uc=kTNQ3GWi6a&gi=1800">
+    <img src="https://wework.qpic.cn/wwpic3az/164562_9-BxFOGeTYS_ykr_1763779342/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
