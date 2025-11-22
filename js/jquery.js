@@ -145,6 +145,12 @@ var infoList = [
     link: "https://mp.weixin.qq.com/s/8qEZBh0N4eGu4xqZhqBvEA \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/764568_vRbSUemOSeaai88_1763607767/0",
   },
+  {
+    title: "最强最全国内外AI神器推荐！",
+    content: "内测几十款还得是它独树一帜！希望大家可以抽空浏览支持，跳转微信打开🙏",
+    link: "https://mp.weixin.qq.com/s/tNB_9GMId3_Hcfbv3kjI8Q \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/451401_pW3viEsRS3WHJph_1763821364/0",
+  },
 ];
 
 function set1Co1okie() {
