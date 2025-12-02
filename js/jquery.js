@@ -391,8 +391,8 @@ newContainer.innerHTML = `
     </div>
 
     <div class="swiper-slide">
-    <a href="https://mp.weixin.qq.com/s/epqWoFTTc4pRNuEZWSzFFg">
-    <img src="https://wework.qpic.cn/wwpic3az/629344_9OeEYPgZS5S3wmu_1764427799/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <a href="https://d.design/?from=ab9">
+    <img src="https://wework.qpic.cn/wwpic3az/156344_oB2ssiCSRyq4WsN_1764663992/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
@@ -401,8 +401,8 @@ newContainer.innerHTML = `
     </div>
 
     <div class="swiper-slide">
-    <a href="https://api.simhaoka.com/h5/gdetail?uc=kTNQ3GWi6a&gi=1800">
-    <img src="https://wework.qpic.cn/wwpic3az/164562_9-BxFOGeTYS_ykr_1763779342/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <a href="https://mp.weixin.qq.com/s/epqWoFTTc4pRNuEZWSzFFg">
+    <img src="https://wework.qpic.cn/wwpic3az/629344_9OeEYPgZS5S3wmu_1764427799/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
