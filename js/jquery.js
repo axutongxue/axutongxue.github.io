@@ -391,6 +391,11 @@ newContainer.innerHTML = `
     </div>
 
     <div class="swiper-slide">
+    <a href="https://bmh.163.com/la/tuanzhangrtb/">
+    <img src="https://wework.qpic.cn/wwpic3az/833763_7dtleWQjS82aNnl_1764944403/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    </div>
+
+    <div class="swiper-slide">
     <a href="https://d.design/?from=ab9">
     <img src="https://wework.qpic.cn/wwpic3az/156344_oB2ssiCSRyq4WsN_1764663992/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
@@ -403,11 +408,6 @@ newContainer.innerHTML = `
     <div class="swiper-slide">
     <a href="https://mp.weixin.qq.com/s/epqWoFTTc4pRNuEZWSzFFg">
     <img src="https://wework.qpic.cn/wwpic3az/629344_9OeEYPgZS5S3wmu_1764427799/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
-    </div>
-
-    <div class="swiper-slide">
-    <a href="https://t.bfr2.top/p18Pi94">
-    <img src="https://wework.qpic.cn/wwpic3az/133872_BrdbSYp8QoaTO0Q_1756909192/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
   </div>
