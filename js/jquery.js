@@ -153,7 +153,7 @@ var infoList = [
   },
   {
     title: "最强最全国内外AI神器推荐！",
-    content: "内测几十款还得是它独树一帜！希望大家可以抽空浏览支持，跳转微信打开🙏",
+    content: "Gemini3.0、GPT5、Claude4.5、Nano Banana、Sora2、Suno等无限制使用！【强烈推荐】🔥👍",
     link: "https://mp.weixin.qq.com/s/tNB_9GMId3_Hcfbv3kjI8Q \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/451401_pW3viEsRS3WHJph_1763821364/0",
   },
