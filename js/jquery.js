@@ -140,22 +140,16 @@ $(document).ready(function() {$("a").click(function() {$(this).next(".menu").tog
 var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="button_Close" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
   {
-    title: "近期阿虚最喜欢的AI工具！",
-    content: "爱派AiPy，真正可以一句话替你编写「本地能直接运行」的自动化程序！！不再局限于编写网页，编好的程序直接双击运行",
-    link: "https://www.aipyaipy.com/?referral=BJAXE0C \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/733849_VjDiUxMERmuqpaN_1764426274/0",
+    title: "一个足以替代PS的神器！",
+    content: "辛苦写的文章又完全没人看，希望大家可以点下「推荐」按钮，跳转微信打开，帮忙涨涨文章阅读量🙏",
+    link: "https://mp.weixin.qq.com/s/WUY9vX4EeJ4Zv9kuqynwIg \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/52159__NsbmcfbR6-szuU_1766501048/0",
   },
   {
-    title: "LiblibAI一站式生图、生视频",
-    content: "国内最大AI模型库，每日200免费算力！海螺、可灵、Banana Nano多模型聚合（Vidu Q2限时免费），刚刚喜获蚂蚁集团9亿元投资！",
-    link: "https://liblibai.paluai.com/axutongxue \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/972100_3Gwgv6TZTIeYHUb_1764427039/0",
-  },
-  {
-    title: "最强最全国内外AI神器推荐！",
-    content: "Gemini3.0、GPT5、Claude4.5、Nano Banana、Sora2、Suno等无限制使用！【强烈推荐】🔥👍",
-    link: "https://mp.weixin.qq.com/s/tNB_9GMId3_Hcfbv3kjI8Q \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/451401_pW3viEsRS3WHJph_1763821364/0",
+    title: "快来免费薅这个AI会员额度！",
+    content: "辛苦写的文章又完全没人看，希望大家可以点下「推荐」按钮，跳转微信打开，帮忙涨涨文章阅读量🙏",
+    link: "https://mp.weixin.qq.com/s/-ilQwAGwu4cPBXbtPoDsIg \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/939360_gfu2j2pZR5OMooV_1766500892/0",
   },
 ];
 
