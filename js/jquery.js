@@ -146,14 +146,14 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/52159__NsbmcfbR6-szuU_1766501048/0",
   },
   {
-    title: "快来免费薅这个AI会员额度！",
+    title: "仅需提交视频分享链接，轻松视频转文字！完全免费",
     content: "辛苦写的文章又完全没人看，希望大家可以点下「推荐」按钮，跳转微信打开，帮忙涨涨文章阅读量🙏",
-    link: "https://mp.weixin.qq.com/s/-ilQwAGwu4cPBXbtPoDsIg \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/939360_gfu2j2pZR5OMooV_1766500892/0",
+    link: "https://mp.weixin.qq.com/s/kCVSzrAQJtJ8ausadfrx1A \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/129265_M_vqAamUSeegsMk_1766986276/0",
   },
 ];
 
-function set1Co1okie() {
+function set2Co2okie() {
   var date = new Date();
   var Hour = 1; //设置每小时过期时间
   let expireTime = Hour * 3600 * 1000;
@@ -165,21 +165,21 @@ function set1Co1okie() {
     "exp-time=" + expires + "; expires=" + date.toGMTString();
   // 过了这个时间就没用过期时间
   setTimeout(() => {
-    check1Co1okie();
+    check2Co2okie();
   }, expireTime + 10);
 }
 
-function get1Co1okie(cookie_name) {
+function get2Co2okie(cookie_name) {
   var results = document.cookie.match(
     "(^|;) ?" + cookie_name + "=([^;]*)(;|$)"
   );
   if (results) return unescape(results[2]);
   else return null;
 }
-function check1Co1okie() {
+function check2Co2okie() {
   setTimeout(function () {
-    if (!get1Co1okie("money")) {
-      set1Co1okie();
+    if (!get2Co2okie("money")) {
+      set2Co2okie();
       let button_Close = document.querySelector("#button_Close");
       if (button_Close) {
         return;
@@ -202,17 +202,17 @@ function check1Co1okie() {
       };
     }
     else {
-      let timeOut = get1Co1okie("exp-time") ?? 1000;
+      let timeOut = get2Co2okie("exp-time") ?? 1000;
       if (timeOut >= 1000) {
         timeOut = timeOut - new Date().getTime();
         if (timeOut < 0) {
-          check1Co1okie();
+          check2Co2okie();
           return;
         }
       }
       console.log(timeOut);
         setTimeout(function () {
-        check1Co1okie();
+        check2Co2okie();
       }, timeOut);
     }
   }, 2000);//延时2秒展示
@@ -223,7 +223,7 @@ function check1Co1okie() {
   var num = Min + Math.round(Rand * Range); //四舍五入
   return num;
 }
-check1Co1okie();
+check2Co2okie();
 
 document.addEventListener('DOMContentLoaded', function() {
   function siteTime() {
