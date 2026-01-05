@@ -140,16 +140,16 @@ $(document).ready(function() {$("a").click(function() {$(this).next(".menu").tog
 var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="button_Close" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
   {
-    title: "一个足以替代PS的神器！",
+    title: "一个足以替代 Photoshop 的神器！",
     content: "辛苦写的文章又完全没人看，希望大家可以点下「推荐」按钮，跳转微信打开，帮忙涨涨文章阅读量🙏",
     link: "https://mp.weixin.qq.com/s/WUY9vX4EeJ4Zv9kuqynwIg \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/52159__NsbmcfbR6-szuU_1766501048/0",
+    img: "https://wework.qpic.cn/wwpic3az/571636_fxXKfBGKSJWkDfO_1767609377/0",
   },
   {
-    title: "仅需提交视频分享链接，轻松视频转文字！完全免费",
+    title: "教你在PPT插入网页！你 AI 写的网页终于有用了",
     content: "辛苦写的文章又完全没人看，希望大家可以点下「推荐」按钮，跳转微信打开，帮忙涨涨文章阅读量🙏",
-    link: "https://mp.weixin.qq.com/s/kCVSzrAQJtJ8ausadfrx1A \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/129265_M_vqAamUSeegsMk_1766986276/0",
+    link: "https://mp.weixin.qq.com/s/cJ8exi4NOSoXdvIfZc3WOQ \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/858000_Uw9TjH_cTnyuFa3_1767609213/0",
   },
 ];
 
