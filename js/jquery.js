@@ -390,8 +390,8 @@ newContainer.innerHTML = `
     </div>
 
     <div class="swiper-slide">
-    <a href="https://d.design/?from=ab9">
-    <img src="https://wework.qpic.cn/wwpic3az/156344_oB2ssiCSRyq4WsN_1764663992/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <a href="https://yuanbao.paluai.com/axutongxue">
+    <img src="https://wework.qpic.cn/wwpic3az/485287_59XxnVHiSIu4jwG_1767670160/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
