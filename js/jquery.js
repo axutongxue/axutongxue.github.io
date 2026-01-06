@@ -376,7 +376,7 @@ class Swiper {
   /* ================= 动态插入 banner ================= */
 const newContainer = document.createElement('div');
 newContainer.innerHTML = `
-<div class="swiper mySwiper" style="width:330px;margin:0 auto;position:relative;overflow:hidden;z-index:1;padding-bottom:30px;">
+<div class="swiper mySSwiper" style="width:330px;margin:0 auto;position:relative;overflow:hidden;z-index:1;padding-bottom:30px;">
   <div class="swiper-wrapper">
 
     <div class="swiper-slide">
@@ -412,7 +412,7 @@ newContainer.innerHTML = `
 document.body.appendChild(newContainer);
 
 /* ================= 初始化 ================= */
-const swiper = new Swiper('.mySwiper', {
+const swiper = new Swiper('.mySSwiper', {
   loop: false, 
   spaceBetween: 30,
   centeredSlides: true,
