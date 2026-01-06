@@ -386,7 +386,7 @@ newContainer.innerHTML = `
 
     <div class="swiper-slide">
     <a href="https://www.aipyaipy.com/?axutongxue_com">
-    <img src="https://wework.qpic.cn/wwpic3az/144099_CIXbUjDcTg2fNuD_1767689671/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <img src="https://wework.qpic.cn/wwpic3az/417751_EMD3zvaLTxO5PHP_1767691647/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
