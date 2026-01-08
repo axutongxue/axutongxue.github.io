@@ -384,6 +384,11 @@ newContainer.innerHTML = `
     </div>
 
     <div class="swiper-slide">
+    <a href="https://mp.weixin.qq.com/s/UooWBFyChn6GoMmjriVskA">
+    <img src="https://wework.qpic.cn/wwpic3az/779310_nHRmGLl0T46kuv7_1767842788/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    </div>
+
+    <div class="swiper-slide">
     <a href="https://yuanbao.paluai.com/axutongxue">
     <img src="https://wework.qpic.cn/wwpic3az/485287_59XxnVHiSIu4jwG_1767670160/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
@@ -391,11 +396,6 @@ newContainer.innerHTML = `
     <div class="swiper-slide">
     <a href="https://bmh.163.com/la/tuanzhangrtb/">
     <img src="https://wework.qpic.cn/wwpic3az/833763_7dtleWQjS82aNnl_1764944403/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
-    </div>
-
-    <div class="swiper-slide">
-    <a href="https://liblibai.paluai.com/axutongxue">
-    <img src="https://wework.qpic.cn/wwpic3az/990759_FHi_NpTHQvCfvHL_1764428351/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
