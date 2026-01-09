@@ -149,7 +149,7 @@ var infoList = [
     title: "GPT镜像原生官网，国内直连",
     content: "世界顶级AI四合一镜像站点，原生官网使用，国内直连。免费、官网一致、稳定（GPT、Claude、Gemni、Grok）",
     link: "https://oai.oooai.cc \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/953871_pnff6IdmQ6CIA65_1767945364/0",
+    img: "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0",
   },
 ];
 
