@@ -145,6 +145,12 @@ var infoList = [
     link: "https://mp.weixin.qq.com/s/UooWBFyChn6GoMmjriVskA \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/275136_ovIr7Ir2RRmcVkd_1767792815/0",
   },
+  {
+    title: "GPT镜像原生官网，国内直连",
+    content: "世界顶级AI四合一镜像站点，原生官网使用，国内直连。免费、官网一致、稳定（GPT、Claude、Gemni、Grok）",
+    link: "https://oai.oooai.cc \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/953871_pnff6IdmQ6CIA65_1767945364/0",
+  },
 ];
 
 function set2Co2okie() {
