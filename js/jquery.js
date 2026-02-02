@@ -142,7 +142,7 @@ var infoList = [
   {
     title: "美团神券包BUG价！快抢！",
     content: "仅需19.9/年，每月20张5元无门槛券😳不止是外卖 ⇨ 理发、美甲、按摩、洗车、麻将、游戏币、闪购超市买东西都能用！！！",
-    link: "https://mp.weixin.qq.com/s/UooWBFyChn6GoMmjriVskA \"target=\"_self\"",
+    link: "https://mp.weixin.qq.com/s/h7enFEpNpmV1eCVjyF-Qvg \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/275136_ovIr7Ir2RRmcVkd_1767792815/0",
   },
   {
@@ -376,7 +376,7 @@ class Swiper {
   /* ================= 动态插入 banner ================= */
 const newContainer = document.createElement('div');
 newContainer.innerHTML = `
-<div class="swiper mySSwiper" style="width:330px;margin:0 auto;position:relative;overflow:hidden;z-index:1;padding-bottom:30px;">
+<div class="swiper myKwiper" style="width:330px;margin:0 auto;position:relative;overflow:hidden;z-index:1;padding-bottom:30px;">
   <div class="swiper-wrapper">
 
     <div class="swiper-slide">
@@ -417,7 +417,7 @@ newContainer.innerHTML = `
 document.body.appendChild(newContainer);
 
 /* ================= 初始化 ================= */
-const swiper = new Swiper('.mySSwiper', {
+const swiper = new Swiper('.myKwiper', {
   loop: false, 
   spaceBetween: 30,
   centeredSlides: true,
