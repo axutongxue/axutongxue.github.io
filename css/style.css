@@ -351,8 +351,8 @@ li ul {
   }
 
         /* 悬停效果 */
-        .mySSwiper:hover .swiper-button-next,
-        .mySSwiper:hover .swiper-button-prev {
+        .myKwiper:hover .swiper-button-next,
+        .myKwiper:hover .swiper-button-prev {
             opacity: 0.85 !important;
         }
 		/* 分页器 (小圆点)  */
@@ -384,3 +384,4 @@ li ul {
 		height: 10px;
 		border-radius: 50%;
 		}
+
