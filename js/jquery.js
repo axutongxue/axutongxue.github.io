@@ -140,10 +140,10 @@ $(document).ready(function() {$("a").click(function() {$(this).next(".menu").tog
 var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="button_Close" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
   {
-    title: "新链接！美团神券包BUG价！",
-    content: "仅需19.9/年，每月20张5元无门槛券😳不止是外卖 ⇨ 理发、美甲、按摩、洗车、麻将、游戏币、闪购超市买东西都能用！！！",
-    link: "https://mp.weixin.qq.com/s/UooWBFyChn6GoMmjriVskA \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/275136_ovIr7Ir2RRmcVkd_1767792815/0",
+    title: "讯飞MaaS超值Coding Plan",
+    content: "一站解锁GLM-5、MiniMax-M2.5、Kimi-K2.5、DeepSeek-V3.2、GLM-4.7-Flash五大顶流开源模型。按月畅享，首购最低仅需3.9元！！！",
+    link: "https://maas.xfyun.cn/modelSquare?ch=maas-lm-4R2x \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/964641_JNyKz7X1SmWrpWZ_1773140600/0",
   },
   {
     title: "GPT镜像原生官网，国内直连",
