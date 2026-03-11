@@ -141,7 +141,7 @@ var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100v
 var infoList = [
   {
     title: "讯飞MaaS超值Coding Plan",
-    content: "一站解锁GLM-5、MiniMax-M2.5、Kimi-K2.5、DeepSeek-V3.2、GLM-4.7-Flash五大顶流开源模型。按月畅享，首购最低仅需3.9元！！！",
+    content: "一站解锁GLM-5、MiniMax-M2.5、Kimi-K2.5、DeepSeek-V3.2、GLM-4.7-Flash五大顶流开源模型。按月畅享，首购最低仅需3.9元！",
     link: "https://maas.xfyun.cn/modelSquare?ch=maas-lm-4R2x \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/964641_JNyKz7X1SmWrpWZ_1773140600/0",
   },
