@@ -140,15 +140,15 @@ $(document).ready(function() {$("a").click(function() {$(this).next(".menu").tog
 var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="button_Close" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
   {
-    title: "讯飞MaaS超值Coding Plan",
-    content: "一站解锁GLM-5、MiniMax-M2.5、Kimi-K2.5、DeepSeek-V3.2、GLM-4.7-Flash五大顶流开源模型。按月畅享，首购最低仅需3.9元！",
-    link: "https://maas.xfyun.cn/modelSquare?ch=maas-lm-4R2x \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/964641_JNyKz7X1SmWrpWZ_1773140600/0",
+    title: "求大家帮忙涨涨阅读量😭",
+    content: "用心写的文章又被狠狠限流了，希望大家可以动动小手：点击查看 ➔ 点击推荐 ➔ 跳转微信打开，微信内打开文章阅读量才会增加🙏",
+    link: "https://mp.weixin.qq.com/s/tZfF7F8mF_vWYsBTBIZ2BQ \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/31208_0SPTVQPtRJiyV_6_1773936292/0",
   },
   {
     title: "GPT镜像原生官网，国内直连",
     content: "世界顶级AI四合一镜像站点，原生官网使用，国内直连。免费、官网一致、稳定（GPT、Claude、Gemni、Grok）",
-    link: "https://oai.oooai.cc/list/#/register?inviter=0EASGS \"target=\"_self\"",
+    link: "https://oai.oooai.cc \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0",
   },
 ];
@@ -376,7 +376,7 @@ class Swiper {
   /* ================= 动态插入 banner ================= */
 const newContainer = document.createElement('div');
 newContainer.innerHTML = `
-<div class="swiper myKwiper" style="width:330px;margin:0 auto;position:relative;overflow:hidden;z-index:1;padding-bottom:30px;">
+<div class="swiper mySSwiper" style="width:330px;margin:0 auto;position:relative;overflow:hidden;z-index:1;padding-bottom:30px;">
   <div class="swiper-wrapper">
 
     <div class="swiper-slide">
@@ -417,7 +417,7 @@ newContainer.innerHTML = `
 document.body.appendChild(newContainer);
 
 /* ================= 初始化 ================= */
-const swiper = new Swiper('.myKwiper', {
+const swiper = new Swiper('.mySSwiper', {
   loop: false, 
   spaceBetween: 30,
   centeredSlides: true,
