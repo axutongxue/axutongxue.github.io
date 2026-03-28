@@ -140,10 +140,10 @@ $(document).ready(function() {$("a").click(function() {$(this).next(".menu").tog
 var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="button_Close" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
   {
-    title: "求大家帮忙涨涨阅读量😭",
-    content: "用心写的文章又被狠狠限流了，希望大家可以动动小手：点击查看 ➔ 点击推荐 ➔ 跳转微信打开，微信内打开文章阅读量才会增加🙏",
-    link: "https://mp.weixin.qq.com/s/tZfF7F8mF_vWYsBTBIZ2BQ \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/31208_0SPTVQPtRJiyV_6_1773936292/0",
+    title: "支付宝刷200元隐藏券，保姆级教程！阿虚实测有效",
+    content: "这篇又被限流了😭，希望大家可以帮忙点击分享 ➔ 跳转微信打开，增加、增加文章阅读量🙏",
+    link: "https://mp.weixin.qq.com/s/nCMQqIGohYwBISqjQ1eO9Q?token=635058334&lang=zh_CN \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/426397_fOucNN9gQ7qgkzL_1774709618/0",
   },
   {
     title: "GPT镜像原生官网，国内直连",
