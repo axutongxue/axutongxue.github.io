@@ -400,7 +400,7 @@ newContainer.innerHTML = `
     </div>
 
     <div class="swiper-slide">
-    <a href="https://bmh.163.com/la/tuanzhangrtb/">
+    <a href="https://bmh.163.com/la/mj51950_mjcs_cpc1_dev/">
     <img src="https://wework.qpic.cn/wwpic3az/833763_7dtleWQjS82aNnl_1764944403/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
