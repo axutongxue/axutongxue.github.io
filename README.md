@@ -1,7 +1,7 @@
 # axutongxue.github.io
 阿虚同学的储物间
 
-主　站：[axutongxue.ocg](https://axutongxue.org/) 
+主　站：[axutongxue.org](https://axutongxue.org/) 
 
 备用站：[axutongxue.cn](https://www.axutongxue.cn/) 
 
