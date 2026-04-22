@@ -5,9 +5,9 @@
 
 备用站：[axutongxue.org](https://axutongxue.org/)
 
-备用站：[axutongxue.cn](https://www.axutongxue.cn/) 
+备用站：[axutongxue.cn](https://axutongxue.cn/) 
 
-备用站：[axutongxue.top](https://www.axutongxue.top/) 
+备用站：[axutongxue.top](https://axutongxue.top/) 
 
 备用站：[axutongxue.vip](https://axutongxue.vip/)
 
