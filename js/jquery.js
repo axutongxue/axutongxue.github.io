@@ -140,10 +140,10 @@ $(document).ready(function() {$("a").click(function() {$(this).next(".menu").tog
 var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="button_Close" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
   {
-    title: "联通神卡！送会员，全国可办",
-    content: "虽然仅发浙江，但支持填任意浙江小区地址，发货后联系快递员帮忙签收并转寄到自己实际地址，等于全国可办理！（转寄邮费自理）",
-    link: "https://ka.huojukj.com/g/121?u=666666 \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/211085_J0TYNQx_TQS4rwh_1774792612/0",
+    title: "公众号被封禁至4.29号",
+    content: "可能是遭同行恶意举报，公众号多篇文章被判违规导致封号3天。建议各位点击链接「加阿虚微信」防止失联！",
+    link: "https://wework.qpic.cn/wwpic3az/89707_-wQomrXWRB-dOfQ_1777203194/0 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/520144_oK2sbxGnSOGm9TZ_1777203139/0",
   },
   {
     title: "GPT镜像原生官网，国内直连",
@@ -381,17 +381,12 @@ newContainer.innerHTML = `
 
     <div class="swiper-slide">
     <a href="https://mp.weixin.qq.com/s/3n44gissr4Jzx3E_EaO4Xw">
-    <img src="https://wework.qpic.cn/wwpic3az/922761_ZEb6oWnqS9GNah6_1752497280/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <img src="https://wework.qpic.cn/wwpic3az/871568_aHG0XszYREqETfG_1777203453/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
     <a href="https://www.aipyaipy.com/?axutongxue_com">
     <img src="https://wework.qpic.cn/wwpic3az/417751_EMD3zvaLTxO5PHP_1767691647/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
-    </div>
-
-    <div class="swiper-slide">
-    <a href="https://ka.huojukj.com/g/121?u=666666">
-    <img src="https://wework.qpic.cn/wwpic3az/545355_FhBaJvKzRbeB976_1774795079/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
