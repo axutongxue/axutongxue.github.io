@@ -140,10 +140,16 @@ $(document).ready(function() {$("a").click(function() {$(this).next(".menu").tog
 var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="button_Close" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
   {
-    title: "阿虚新业务丨PDF去水印",
-    content: "现在提供人工代去 PDF 水印服务，各种水印都能去！扫描件看情况。先发文件，能去再收费！有需要可以来「闲鱼」找我🐟",
-    link: "https://m.tb.cn/h.iuuhAzZ?tk=CNMT5PYHj5N  \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/120194_JySGnwfOTiOTdNl_1777441361/0",
+    title: "阿虚最新文章！速来白嫖",
+    content: "别再到处找镜像站了！抖音母公司「字节」其实藏了个白嫖GPT 5.4、Gemini 3.1的神器，而且无需魔法就能使用！",
+    link: "https://short.wailian2.cn/l/DpPPkEr5BnLohPH \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/983615_FGFwWz-gRnSDA7h_1777530298/0",
+  },
+    {
+    title: "阿虚最新文章！AI短视频教程",
+    content: "尝试花一天复刻了爆款 AI 真人短视频，有想靠 AI 短视频起号的粉丝可以了解一下。现在的门槛真的很低",
+    link: "https://short.wailian2.cn/l/DpopLFsLbaLo3O3 \"target=\"_self\"",
+    img: "https://wework.qpic.cn/wwpic3az/654607_xr3q9mvqS8GH0N3_1777529785/0",
   },
   {
     title: "GPT镜像原生官网，国内直连",
@@ -380,8 +386,8 @@ newContainer.innerHTML = `
   <div class="swiper-wrapper">
 
     <div class="swiper-slide">
-    <a href="https://mp.weixin.qq.com/s/3n44gissr4Jzx3E_EaO4Xw">
-    <img src="https://wework.qpic.cn/wwpic3az/455338_bVHZvO1RTme6n5g_1777202242/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <a href="https://short.wailian2.cn/l/DpPPkEr5BnLohPH">
+    <img src="https://wework.qpic.cn/wwpic3az/868486_xpb7fHkrR4G9sM7_1777529596/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
@@ -402,6 +408,11 @@ newContainer.innerHTML = `
     <div class="swiper-slide">
     <a href="https://bmh.163.com/la/mj51950_mjcs_cpc1_dev/">
     <img src="https://wework.qpic.cn/wwpic3az/833763_7dtleWQjS82aNnl_1764944403/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    </div>
+
+    <div class="swiper-slide">
+    <a href="https://mp.weixin.qq.com/s/3n44gissr4Jzx3E_EaO4Xw">
+    <img src="https://wework.qpic.cn/wwpic3az/455338_bVHZvO1RTme6n5g_1777202242/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
   </div>
