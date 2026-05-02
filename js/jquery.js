@@ -151,12 +151,6 @@ var infoList = [
     link: "https://short.wailian2.cn/l/DpopLFsLbaLo3O3 \"target=\"_self\"",
     img: "https://wework.qpic.cn/wwpic3az/654607_xr3q9mvqS8GH0N3_1777529785/0",
   },
-  {
-    title: "GPT镜像原生官网，国内直连",
-    content: "世界顶级AI四合一镜像站点，原生官网使用，国内直连。免费、官网一致、稳定（GPT、Claude、Gemni、Grok）",
-    link: "https://oai.oooai.cc \"target=\"_self\"",
-    img: "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0",
-  },
 ];
 
 function set2Co2okie() {
@@ -386,8 +380,8 @@ newContainer.innerHTML = `
   <div class="swiper-wrapper">
 
     <div class="swiper-slide">
-    <a href="https://short.wailian2.cn/l/DpPPkEr5BnLohPH">
-    <img src="https://wework.qpic.cn/wwpic3az/868486_xpb7fHkrR4G9sM7_1777529596/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
+    <a href="https://mp.weixin.qq.com/s/3n44gissr4Jzx3E_EaO4Xw">
+    <img src="https://wework.qpic.cn/wwpic3az/455338_bVHZvO1RTme6n5g_1777202242/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
     <div class="swiper-slide">
@@ -408,11 +402,6 @@ newContainer.innerHTML = `
     <div class="swiper-slide">
     <a href="https://bmh.163.com/la/mj51950_mjcs_cpc1_dev/">
     <img src="https://wework.qpic.cn/wwpic3az/833763_7dtleWQjS82aNnl_1764944403/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
-    </div>
-
-    <div class="swiper-slide">
-    <a href="https://mp.weixin.qq.com/s/3n44gissr4Jzx3E_EaO4Xw">
-    <img src="https://wework.qpic.cn/wwpic3az/455338_bVHZvO1RTme6n5g_1777202242/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
     </div>
 
   </div>
