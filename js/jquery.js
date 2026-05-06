@@ -37,50 +37,42 @@
           return output;
       }
 
+      function sanitizeDecodedHtml(html) {
+          const template = document.createElement('template');
+          template.innerHTML = html;
+          template.content.querySelectorAll('script, iframe, object, embed').forEach(function (node) {
+              node.remove();
+          });
+          template.content.querySelectorAll('*').forEach(function (node) {
+              Array.prototype.slice.call(node.attributes).forEach(function (attr) {
+                  const name = attr.name.toLowerCase();
+                  const value = String(attr.value || '').trim().toLowerCase();
+                  if (name.indexOf('on') === 0 || ((name === 'href' || name === 'src') && value.indexOf('javascript:') === 0)) {
+                      node.removeAttribute(attr.name);
+                  }
+              });
+          });
+          return template.innerHTML;
+      }
+
       function displayContent(base32Data) {
           try {
-              // 将 Base32 编码的数据解码为二进制字符串
               const decodedString = base32Decode(base32Data);
-
-              // 将解码后的字符串转换为 Uint8Array
-              const bytes = new Uint8Array(decodedString.split('').map(char => char.charCodeAt(0)));
-
-              // 假设内容是 UTF-8 编码的（可以调整为你实际使用的编码）
-              const decoder = new TextDecoder('utf-8');
-              const decodedContent = decoder.decode(bytes);
-
-              // 打开一个新窗口
+              const bytes = new Uint8Array(decodedString.split('').map(function (char) {
+                  return char.charCodeAt(0);
+              }));
+              const decodedContent = new TextDecoder('utf-8').decode(bytes);
               const newWindow = window.open('', '_blank');
 
-              if (newWindow) {
-                  // 设置 body 样式
-                  const bodyStyle = `
-                      text-align: center;
-                      margin: 20px;
-                      font-size: 125%;
-                      line-height: 135%;
-                  `;
-                  newWindow.document.body.style = bodyStyle;
-
-                  // 在新窗口中创建一个 DIV 元素并插入解码后的 HTML 代码
-                  const div = newWindow.document.createElement('div');
-                  div.style.margin = '0 auto';
-                  div.style.textAlign = 'left';
-                  div.style.maxWidth = '768px';
-                  div.style.width = '100%';
-                  div.style.padding = '10px';
-                  div.style.boxSizing = 'border-box';
-                  div.style.fontSize = '100%';
-
-                  // 设置解码后的 HTML 为 DIV 的内容
-                  div.innerHTML = decodedContent;
-
-                  // 将 DIV 添加到新窗口中
-                  newWindow.document.body.appendChild(div);
-              } else {
+              if (!newWindow) {
                   console.error('无法打开新窗口');
+                  return;
               }
 
+              newWindow.document.open();
+              newWindow.document.write('<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>备用链接</title><base target="_blank"></head><body style="text-align:center;margin:20px;font-size:125%;line-height:135%;"><div id="content" style="margin:0 auto;text-align:left;max-width:768px;width:100%;padding:10px;box-sizing:border-box;font-size:100%;"></div></body></html>');
+              newWindow.document.close();
+              newWindow.document.getElementById('content').innerHTML = sanitizeDecodedHtml(decodedContent);
           } catch (error) {
               console.error(error.message);
           }
@@ -89,335 +81,379 @@
     
 
 function getModeCookie(c) {
-    var a = document.cookie.split(";");
-    for (var d = 0; d < a.length; d++) {
-        var b = a[d].split("=");
-        var e = b[0].trim();
-        if (e == c) {
-            return b[1]
+    var cookies = document.cookie ? document.cookie.split(";") : [];
+    for (var i = 0; i < cookies.length; i++) {
+        var item = cookies[i].split("=");
+        var name = item.shift().trim();
+        if (name === c) {
+            return decodeURIComponent(item.join("="));
         }
     }
+    return null;
 }
 function setModeCookie(c, d) {
-    var b = new Date();
-    var a = 10;
-    b.setTime(b.getTime() + a * 24 * 60 * 60 * 1000);
-    document.cookie = c + "=" + d + ";expires=" + b.toGMTString() + ";path=/"
+    var expires = new Date(Date.now() + 10 * 24 * 60 * 60 * 1000).toUTCString();
+    document.cookie = c + "=" + encodeURIComponent(d) + "; expires=" + expires + "; path=/; SameSite=Lax";
 }
 function adddarkcss() {
-    var a = $("head");
-    a.append('<link rel="stylesheet" href="../css/dark-mode.css">')
+    if (document.querySelector('link[href*="../css/dark-mode.css"]')) return;
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "../css/dark-mode.css";
+    document.head.appendChild(link);
 }
 function removedarkcss() {
-    var b = document.getElementsByTagName("link");
-    for (var a = b.length; a >= 0; a--) {
-        if (b[a] && b[a].getAttribute("href") != null && b[a].getAttribute("href").indexOf("../css/dark-mode.css") != -1) {
-            b[a].parentNode.removeChild(b[a])
-        }
+    var links = document.querySelectorAll('link[href*="../css/dark-mode.css"]');
+    for (var i = links.length - 1; i >= 0; i--) {
+        links[i].parentNode.removeChild(links[i]);
     }
 }
 function bedark() {
-    var a = getModeCookie("status");
-    if (a == "dark") {
-        adddarkcss()
+    if (getModeCookie("status") === "dark") {
+        adddarkcss();
     }
 }
 bedark();
 function changemode() {
-    var a = getModeCookie("status");
-    if (a == "dark") {
+    if (getModeCookie("status") === "dark") {
         removedarkcss();
-        setModeCookie("status", "light")
+        setModeCookie("status", "light");
     } else {
         adddarkcss();
-        setModeCookie("status", "dark")
+        setModeCookie("status", "dark");
     }
 }
 ;
 
-$(document).ready(function() {$("a").click(function() {$(this).next(".menu").toggle();$('.fa-info-circle').removeClass('touched');})})
+$(document).ready(function() {
+  $("a").on("click", function() {
+    $(this).next(".menu").toggle();
+    $('.fa-info-circle').removeClass('touched');
+  });
+});
 
-var code = ` <div id="{{boxId}}" style="top: 0;left: 0;width: 100vw;height: 100vh;background-color: #b2b2b269;position: absolute;z-index: 9999999;display: flex;justify-content: center;align-items: center;"><div style="width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%)0px 3px 8px;"> <div style="display: flex; align-items: center;"> <img style="display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;" src="{{img}}" alt="" /> <div style="display:flex;flex-direction:column;"> <h2 style="display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color: crimson;">{{title}}</h2> <p style="display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;">{{content}}</p> </div> </div> <div style="display: flex;justify-content: center;padding: 0 12px;"> <button id="button_Close" style="padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid#ccc;">关闭</button> <a style="margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid#ccc;" href="{{path}}">点击查看</a> </div> </div> </div>`;
 var infoList = [
   {
     title: "阿虚最新文章！速来白嫖",
     content: "别再到处找镜像站了！抖音母公司「字节」其实藏了个白嫖GPT 5.4、Gemini 3.1的神器，而且无需魔法就能使用！",
-    link: "https://short.wailian2.cn/l/DpPPkEr5BnLohPH \"target=\"_self\"",
+    link: "https://short.wailian2.cn/l/DpPPkEr5BnLohPH",
+    target: "_self",
     img: "https://wework.qpic.cn/wwpic3az/983615_FGFwWz-gRnSDA7h_1777530298/0",
   },
     {
     title: "阿虚最新文章！AI短视频教程",
     content: "尝试花一天复刻了爆款 AI 真人短视频，有想靠 AI 短视频起号的粉丝可以了解一下。现在的门槛真的很低",
-    link: "https://short.wailian2.cn/l/DpopLFsLbaLo3O3 \"target=\"_self\"",
+    link: "https://short.wailian2.cn/l/DpopLFsLbaLo3O3",
+    target: "_self",
     img: "https://wework.qpic.cn/wwpic3az/654607_xr3q9mvqS8GH0N3_1777529785/0",
   },
 ];
 
 function set2Co2okie() {
-  var date = new Date();
-  var Hour = 1; //设置每小时过期时间
-  let expireTime = Hour * 3600 * 1000;
-  let expires = date.getTime() + expireTime;
-  date.setTime(expires);
-  document.cookie =
-    "value" + RandomNumBoth(10000, 100000) + "; expires=" + date.toGMTString();
-  document.cookie =
-    "exp-time=" + expires + "; expires=" + date.toGMTString();
-  // 过了这个时间就没用过期时间
-  setTimeout(() => {
-    check2Co2okie();
-  }, expireTime + 10);
+  var hour = 1;
+  var expireTime = hour * 3600 * 1000;
+  var expires = Date.now() + expireTime;
+  var expiresText = new Date(expires).toUTCString();
+  var cookieOptions = "; expires=" + expiresText + "; path=/; SameSite=Lax";
+  document.cookie = "money=1" + cookieOptions;
+  document.cookie = "exp-time=" + expires + cookieOptions;
+  setTimeout(check2Co2okie, expireTime + 10);
 }
 
 function get2Co2okie(cookie_name) {
-  var results = document.cookie.match(
-    "(^|;) ?" + cookie_name + "=([^;]*)(;|$)"
-  );
-  if (results) return unescape(results[2]);
-  else return null;
+  var pattern = new RegExp("(?:^|; )" + cookie_name.replace(/[.$?*|{}()\[\]\\/+^]/g, "\\$&") + "=([^;]*)");
+  var results = document.cookie.match(pattern);
+  return results ? decodeURIComponent(results[1]) : null;
+}
+function createRecommendPanel(item, boxId) {
+  var overlay = document.createElement("div");
+  overlay.id = boxId;
+  overlay.style.cssText = "top:0;left:0;width:100vw;height:100vh;background-color:#b2b2b269;position:fixed;z-index:9999999;display:flex;justify-content:center;align-items:center;";
+
+  var card = document.createElement("div");
+  card.style.cssText = "width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%) 0 3px 8px;";
+
+  var body = document.createElement("div");
+  body.style.cssText = "display:flex;align-items:center;";
+
+  var img = document.createElement("img");
+  img.style.cssText = "display:flex;align-items:center;width:86px;border-radius:10px;margin:10px;";
+  img.alt = "";
+  img.loading = "lazy";
+  img.decoding = "async";
+  img.src = item.img;
+
+  var text = document.createElement("div");
+  text.style.cssText = "display:flex;flex-direction:column;";
+
+  var title = document.createElement("h2");
+  title.style.cssText = "display:flex;align-items:center;font-size:14px;margin:0 4px 6px 0;color:crimson;";
+  title.textContent = item.title;
+
+  var content = document.createElement("p");
+  content.style.cssText = "display:flex;align-items:center;font-size:12px;margin:0 4px 0 0;";
+  content.textContent = item.content;
+
+  var actions = document.createElement("div");
+  actions.style.cssText = "display:flex;justify-content:center;padding:0 12px;";
+
+  var closeButton = document.createElement("button");
+  closeButton.id = "button_Close";
+  closeButton.type = "button";
+  closeButton.style.cssText = "padding:6px 24px;background-color:#fff;width:40%;font-size:16px;border-radius:10px;border:1px solid #ccc;";
+  closeButton.textContent = "关闭";
+  closeButton.onclick = function () {
+    overlay.remove();
+  };
+
+  var link = document.createElement("a");
+  link.style.cssText = "margin-left:6px;width:100%;color:#fff;background-color:#1866FC;display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:10px;border:1px solid #ccc;";
+  link.href = item.link;
+  link.target = item.target || "_blank";
+  link.rel = link.target === "_blank" ? "noopener noreferrer" : "";
+  link.textContent = "点击查看";
+
+  text.appendChild(title);
+  text.appendChild(content);
+  body.appendChild(img);
+  body.appendChild(text);
+  actions.appendChild(closeButton);
+  actions.appendChild(link);
+  card.appendChild(body);
+  card.appendChild(actions);
+  overlay.appendChild(card);
+  return overlay;
 }
 function check2Co2okie() {
   setTimeout(function () {
+    if (!document.body || !infoList.length) return;
+
     if (!get2Co2okie("money")) {
       set2Co2okie();
-      let button_Close = document.querySelector("#button_Close");
-      if (button_Close) {
-        return;
-      }
-      let money = infoList[RandomNumBoth(0, infoList.length - 1)];
-      let boxId = RandomNumBoth(10000, 100000);
-      let newCode = code.replace("{{title}}", money.title);
-      newCode = newCode.replace("{{content}}", money.content);
-      newCode = newCode.replace("{{path}}", money.link);
-      newCode = newCode.replace("{{img}}", money.img);
-      newCode = newCode.replace("{{boxId}}", boxId);
+      if (document.querySelector("#button_Close")) return;
 
-      let div = document.createElement("div");
-      div.innerHTML = newCode;
-      document.body.appendChild(div);
-      button_Close = document.querySelector("#button_Close");
-
-      button_Close.onclick = function () {
-        document.getElementById(boxId).remove();
-      };
-    }
-    else {
-      let timeOut = get2Co2okie("exp-time") ?? 1000;
-      if (timeOut >= 1000) {
-        timeOut = timeOut - new Date().getTime();
-        if (timeOut < 0) {
-          check2Co2okie();
-          return;
-        }
+      var money = infoList[RandomNumBoth(0, infoList.length - 1)];
+      var boxId = "recommend_" + RandomNumBoth(10000, 100000);
+      document.body.appendChild(createRecommendPanel(money, boxId));
+    } else {
+      var timeOut = parseInt(get2Co2okie("exp-time"), 10) - Date.now();
+      if (!Number.isFinite(timeOut) || timeOut < 1000) {
+        timeOut = 1000;
       }
-      console.log(timeOut);
-        setTimeout(function () {
-        check2Co2okie();
-      }, timeOut);
+      setTimeout(check2Co2okie, timeOut);
     }
-  }, 2000);//延时2秒展示
+  }, 2000);
 }
-  function RandomNumBoth(Min, Max) {
+function RandomNumBoth(Min, Max) {
   var Range = Max - Min;
   var Rand = Math.random();
-  var num = Min + Math.round(Rand * Range); //四舍五入
-  return num;
+  return Min + Math.round(Rand * Range);
 }
 check2Co2okie();
 
 document.addEventListener('DOMContentLoaded', function() {
+  var siteTimeEl = document.getElementById("sitetime");
+  if (!siteTimeEl) return;
+
+  var seconds = 1000;
+  var minutes = seconds * 60;
+  var hours = minutes * 60;
+  var days = hours * 24;
+  var years = days * 365;
+  var startTime = Date.UTC(2018, 1, 18, 12, 0, 0);
+
   function siteTime() {
-    setTimeout(siteTime, 1000); // 直接传递函数引用
-    var seconds = 1000;
-    var minutes = seconds * 60;
-    var hours = minutes * 60;
-    var days = hours * 24;
-    var years = days * 365;
-    var today = new Date();
-    var todayYear = today.getFullYear();
-    var todayMonth = today.getMonth(); // 月份从0开始
-    var todayDate = today.getDate();
-    var todayHour = today.getHours();
-    var todayMinute = today.getMinutes();
-    var todaySecond = today.getSeconds();
-    var t1 = Date.UTC(2018, 1, 18, 12, 0, 0); // 月份从0开始计数，所以这里是1（代表二月）
-    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-    var diff = t2 - t1;
+    var diff = Date.now() - startTime;
     var diffYears = Math.floor(diff / years);
     var diffDays = Math.floor((diff % years) / days);
     var diffHours = Math.floor((diff % days) / hours);
     var diffMinutes = Math.floor((diff % hours) / minutes);
     var diffSeconds = Math.floor((diff % minutes) / seconds);
-    document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+    siteTimeEl.textContent = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+    setTimeout(siteTime, 1000);
   }
   siteTime();
 });
 
 
-class Swiper {
-    constructor(selector, options = {}) {
+(function () {
+  class SimpleSwiper {
+    constructor(selector, options) {
       this.el = typeof selector === 'string' ? document.querySelector(selector) : selector;
       this.params = Object.assign({
-        slidesPerView: 1,
-        spaceBetween: 0,
         speed: 300,
-        loop: false,
         autoplay: false,
         pagination: null,
-        navigation: null,
-        centeredSlides: false
-      }, options);
-  
+        navigation: null
+      }, options || {});
+      if (!this.el) return;
+
+      this.wrapperEl = this.el.querySelector('.swiper-wrapper');
+      this.slides = Array.prototype.slice.call(this.el.querySelectorAll('.swiper-slide'));
+      if (!this.wrapperEl || !this.slides.length) return;
+
       this.activeIndex = 0;
-      this.slides = [...this.el.querySelectorAll('.swiper-slide')];
       this.animating = false;
-      this.interacted = false;
       this.autoplayTimer = null;
       this.init();
     }
-  
+
     init() {
-      this.wrapperEl = this.el.querySelector('.swiper-wrapper');
+      this.updateSlides();
       this.initPagination();
       this.initNavigation();
-      this.initAutoplay();
       this.initTouch();
-      this.updateSlides();
+      this.initAutoplay();
       this.slideTo(0, 0);
     }
-  
-    /* ---- 自动播放：到最后一张后回到第一张 ---- */
+
     startAutoplay() {
-      if (!this.params.autoplay) return;
+      if (!this.params.autoplay || document.hidden) return;
       this.stopAutoplay();
       this.autoplayTimer = setInterval(() => {
-        if (this.activeIndex === this.slides.length - 1) {
-          this.slideTo(0);               // 回绕到第一张
-        } else {
-          this.slideNext();              // 正常下一张
-        }
+        this.slideTo(this.activeIndex >= this.slides.length - 1 ? 0 : this.activeIndex + 1);
       }, this.params.autoplay.delay || 3000);
     }
-    stopAutoplay() { clearInterval(this.autoplayTimer); }
-  
+
+    stopAutoplay() {
+      if (this.autoplayTimer) {
+        clearInterval(this.autoplayTimer);
+        this.autoplayTimer = null;
+      }
+    }
+
     slideNext() {
-      const next = this.activeIndex + 1;
-      if (next >= this.slides.length) return false;
-      this.slideTo(next);
+      if (this.activeIndex >= this.slides.length - 1) return false;
+      this.slideTo(this.activeIndex + 1);
       return true;
     }
+
     slidePrev() {
-      const prev = this.activeIndex - 1;
-      if (prev < 0) return false;
-      this.slideTo(prev);
+      if (this.activeIndex <= 0) return false;
+      this.slideTo(this.activeIndex - 1);
       return true;
     }
+
     initTouch() {
       let startX = 0;
-      this.el.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
+      this.el.addEventListener('touchstart', e => {
+        startX = e.touches[0].clientX;
+      }, { passive: true });
       this.el.addEventListener('touchend', e => {
         const diffX = e.changedTouches[0].clientX - startX;
-        if (Math.abs(diffX) < 50) return;
-        (diffX < 0 ? this.slideNext() : this.slidePrev());
+        if (Math.abs(diffX) >= 50) {
+          diffX < 0 ? this.slideNext() : this.slidePrev();
+        }
       }, { passive: true });
     }
-    slideTo(index, speed = this.params.speed) {
+
+    slideTo(index, speed) {
       if (this.animating) return;
+      const nextIndex = Math.max(0, Math.min(index, this.slides.length - 1));
+      const duration = speed === undefined ? this.params.speed : speed;
       this.animating = true;
-      this.activeIndex = index;
-      this.wrapperEl.style.transition = speed ? `transform ${speed}ms` : 'none';
-      this.wrapperEl.style.transform = `translate3d(${-index * 100}%, 0, 0)`;
+      this.activeIndex = nextIndex;
+      this.wrapperEl.style.transition = duration ? 'transform ' + duration + 'ms' : 'none';
+      this.wrapperEl.style.transform = 'translate3d(' + (-nextIndex * 100) + '%, 0, 0)';
       this.updatePagination();
       this.updateNavButtons();
-      setTimeout(() => (this.animating = false), speed);
+      setTimeout(() => {
+        this.animating = false;
+      }, duration);
     }
-    updateNavButtons() {
-      const prevBtn = this.el.querySelector(this.params.navigation?.prevEl);
-      const nextBtn = this.el.querySelector(this.params.navigation?.nextEl);
-      if (!prevBtn || !nextBtn) return;
-      prevBtn.style.display = this.activeIndex === 0 ? 'none' : 'flex';
-      nextBtn.style.display = this.activeIndex === this.slides.length - 1 ? 'none' : 'flex';
-    }
+
     initPagination() {
       if (!this.params.pagination) return;
       const el = this.el.querySelector(this.params.pagination.el);
-      el.innerHTML = this.slides.map((_, i) =>
-        `<span class="swiper-pagination-bullet${i === 0 ? ' swiper-pagination-bullet-active' : ''}" data-index="${i}"></span>`
-      ).join('');
+      if (!el) return;
+      el.textContent = '';
+      this.slides.forEach((_, i) => {
+        const bullet = document.createElement('span');
+        bullet.className = 'swiper-pagination-bullet' + (i === 0 ? ' swiper-pagination-bullet-active' : '');
+        bullet.dataset.index = i;
+        el.appendChild(bullet);
+      });
       el.addEventListener('click', e => {
-        if (e.target.classList.contains('swiper-pagination-bullet'))
-          this.slideTo(parseInt(e.target.dataset.index));
+        if (e.target.classList.contains('swiper-pagination-bullet')) {
+          this.slideTo(parseInt(e.target.dataset.index, 10));
+        }
       });
     }
+
     updatePagination() {
       const bullets = this.el.querySelectorAll('.swiper-pagination-bullet');
-      bullets.forEach((b, i) => b.classList.toggle('swiper-pagination-bullet-active', i === this.activeIndex));
+      bullets.forEach((bullet, i) => {
+        bullet.classList.toggle('swiper-pagination-bullet-active', i === this.activeIndex);
+      });
     }
+
     initAutoplay() {
       if (!this.params.autoplay) return;
       this.startAutoplay();
-      ['mouseenter', 'mouseleave'].forEach(evt =>
-        this.el.addEventListener(evt, evt === 'mouseenter' ? () => this.stopAutoplay() : () => this.startAutoplay())
-      );
+      this.el.addEventListener('mouseenter', () => this.stopAutoplay());
+      this.el.addEventListener('mouseleave', () => this.startAutoplay());
+      document.addEventListener('visibilitychange', () => {
+        document.hidden ? this.stopAutoplay() : this.startAutoplay();
+      });
     }
+
     initNavigation() {
+      const nav = this.params.navigation || {};
+      const prev = nav.prevEl ? this.el.querySelector(nav.prevEl) : null;
+      const next = nav.nextEl ? this.el.querySelector(nav.nextEl) : null;
+      if (prev) prev.addEventListener('click', () => this.slidePrev());
+      if (next) next.addEventListener('click', () => this.slideNext());
+      this.el.addEventListener('mouseenter', () => this.setNavOpacity('1'));
+      this.el.addEventListener('mouseleave', () => this.setNavOpacity('0'));
       this.updateNavButtons();
-      const prev = this.el.querySelector(this.params.navigation?.prevEl);
-      const next = this.el.querySelector(this.params.navigation?.nextEl);
-      prev?.addEventListener('click', () => this.slidePrev());
-      next?.addEventListener('click', () => this.slideNext());
     }
+
+    setNavOpacity(value) {
+      const nav = this.params.navigation || {};
+      [nav.prevEl, nav.nextEl].forEach(selector => {
+        const btn = selector ? this.el.querySelector(selector) : null;
+        if (btn) btn.style.opacity = value;
+      });
+    }
+
+    updateNavButtons() {
+      const nav = this.params.navigation || {};
+      const prevBtn = nav.prevEl ? this.el.querySelector(nav.prevEl) : null;
+      const nextBtn = nav.nextEl ? this.el.querySelector(nav.nextEl) : null;
+      if (prevBtn) prevBtn.style.display = this.activeIndex === 0 ? 'none' : 'flex';
+      if (nextBtn) nextBtn.style.display = this.activeIndex === this.slides.length - 1 ? 'none' : 'flex';
+    }
+
     updateSlides() {
-      this.slides.forEach(s => s.style.cssText = 'width:100%;flex-shrink:0');
-      this.wrapperEl.style.cssText = 'display:flex;width:100%';
+      this.slides.forEach(slide => {
+        slide.style.width = '100%';
+        slide.style.flexShrink = '0';
+      });
+      this.wrapperEl.style.display = 'flex';
+      this.wrapperEl.style.width = '100%';
     }
   }
-  
-  /* ================= 动态插入 banner ================= */
-const newContainer = document.createElement('div');
-newContainer.innerHTML = `
+
+  const newContainer = document.createElement('div');
+  newContainer.innerHTML = `
 <div class="swiper myKwiper" style="width:330px;margin:0 auto;position:relative;overflow:hidden;z-index:1;padding-bottom:30px;">
   <div class="swiper-wrapper">
-
-    <div class="swiper-slide">
-    <a href="https://mp.weixin.qq.com/s/3n44gissr4Jzx3E_EaO4Xw">
-    <img src="https://wework.qpic.cn/wwpic3az/455338_bVHZvO1RTme6n5g_1777202242/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
-    </div>
-
-    <div class="swiper-slide">
-    <a href="https://www.aipyaipy.com/?axutongxue_com">
-    <img src="https://wework.qpic.cn/wwpic3az/417751_EMD3zvaLTxO5PHP_1767691647/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
-    </div>
-
-    <div class="swiper-slide">
-    <a href="https://m.tb.cn/h.iuuhAzZ?tk=CNMT5PYHj5N">
-    <img src="https://wework.qpic.cn/wwpic3az/321925_8XJzHgfBQW230R-_1777448054/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
-    </div>
-
-    <div class="swiper-slide">
-    <a href="https://yuanbao.paluai.com/axutongxue">
-    <img src="https://wework.qpic.cn/wwpic3az/485287_59XxnVHiSIu4jwG_1767670160/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
-    </div>
-
-    <div class="swiper-slide">
-    <a href="https://bmh.163.com/la/mj51950_mjcs_cpc1_dev/">
-    <img src="https://wework.qpic.cn/wwpic3az/833763_7dtleWQjS82aNnl_1764944403/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a>
-    </div>
-
+    <div class="swiper-slide"><a href="https://mp.weixin.qq.com/s/3n44gissr4Jzx3E_EaO4Xw"><img loading="lazy" decoding="async" src="https://wework.qpic.cn/wwpic3az/455338_bVHZvO1RTme6n5g_1777202242/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>
+    <div class="swiper-slide"><a href="https://www.aipyaipy.com/?axutongxue_com"><img loading="lazy" decoding="async" src="https://wework.qpic.cn/wwpic3az/417751_EMD3zvaLTxO5PHP_1767691647/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>
+    <div class="swiper-slide"><a href="https://m.tb.cn/h.iuuhAzZ?tk=CNMT5PYHj5N"><img loading="lazy" decoding="async" src="https://wework.qpic.cn/wwpic3az/321925_8XJzHgfBQW230R-_1777448054/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>
+    <div class="swiper-slide"><a href="https://yuanbao.paluai.com/axutongxue"><img loading="lazy" decoding="async" src="https://wework.qpic.cn/wwpic3az/485287_59XxnVHiSIu4jwG_1767670160/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>
+    <div class="swiper-slide"><a href="https://bmh.163.com/la/mj51950_mjcs_cpc1_dev/"><img loading="lazy" decoding="async" src="https://wework.qpic.cn/wwpic3az/833763_7dtleWQjS82aNnl_1764944403/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>
   </div>
   <div class="swiper-button-next" style="position:absolute;top:40%;right:10px;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;opacity:0;transition:opacity .3s">&gt;</div>
   <div class="swiper-button-prev" style="position:absolute;top:40%;left:10px;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;opacity:0;transition:opacity .3s">&lt;</div>
   <div class="swiper-pagination" style="position:absolute;bottom:10px;left:0;width:100%;text-align:center;z-index:10;display:flex;justify-content:center;gap:4px"></div>
 </div>`;
-document.body.appendChild(newContainer);
+  document.body.appendChild(newContainer);
 
-/* ================= 初始化 ================= */
-const swiper = new Swiper('.myKwiper', {
-  loop: false, 
-  spaceBetween: 30,
-  centeredSlides: true,
-  autoplay: { delay: 3600, disableOnInteraction: false },
-  pagination: { el: '.swiper-pagination', clickable: true },
-  navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
-});
+  new SimpleSwiper('.myKwiper', {
+    autoplay: { delay: 3600, disableOnInteraction: false },
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
+  });
+})();
 
