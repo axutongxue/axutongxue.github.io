@@ -130,7 +130,7 @@ li ul {
 
 .res {
 	border-style:solid;
-	border-width:1;
+	border-width:1px;
 	margin:0 2px;
 	padding:0 2px
 }
@@ -204,7 +204,7 @@ li ul {
 	display: inline-block;
 	font-size: 12px;
 	cursor: pointer;
-	background-color: FFF;
+	background-color: #FFF;
 	border: solid 1px rgb(7, 193, 96); 
 	border-radius: 3px;
   }
@@ -384,4 +384,3 @@ li ul {
 		height: 10px;
 		border-radius: 50%;
 		}
-
