@@ -134,11 +134,11 @@ $(document).ready(function() {
 
 var infoList = [
   {
-    title: "阿虚最新文章！速来白嫖",
-    content: "别再到处找镜像站了！抖音母公司「字节」其实藏了个白嫖GPT 5.4、Gemini 3.1的神器，而且无需魔法就能使用！",
-    link: "https://short.wailian2.cn/l/DpPPkEr5BnLohPH",
+    title: "GPT镜像原生官网，国内直连",
+    content: "世界顶级AI四合一镜像站点，原生官网使用，国内直连。免费、官网一致、稳定（GPT、Claude、Gemni、Grok）",
+    link: "https://oai.oooai.cc",
     target: "_self",
-    img: "https://wework.qpic.cn/wwpic3az/983615_FGFwWz-gRnSDA7h_1777530298/0",
+    img: "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0",
   },
     {
     title: "阿虚最新文章！AI短视频教程",
