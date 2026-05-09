@@ -141,11 +141,11 @@ var infoList = [
     img: "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0",
   },
     {
-    title: "阿虚最新文章！AI短视频教程",
-    content: "尝试花一天复刻了爆款 AI 真人短视频，有想靠 AI 短视频起号的粉丝可以了解一下。现在的门槛真的很低",
-    link: "https://short.wailian2.cn/l/DpopLFsLbaLo3O3",
+    title: "顶着风险重发一遍被删的文章！",
+    content: "这篇复刻爆款 AI 真人短视频的教程之前被恶意投诉删除了，但很多粉丝想学，几经决定还是重发一遍",
+    link: "https://short.wailian2.cn/l/dPOq32fGmDlO3oH",
     target: "_self",
-    img: "https://wework.qpic.cn/wwpic3az/654607_xr3q9mvqS8GH0N3_1777529785/0",
+    img: "https://wework.qpic.cn/wwpic3az/678465__DpjqYVORR-4_Va_1778322753/0",
   },
 ];
 
