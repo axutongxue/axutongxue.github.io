@@ -132,22 +132,24 @@ $(document).ready(function() {
   });
 });
 
-var infoList = [
-  {
-    title: "GPT镜像原生官网，国内直连",
-    content: "世界顶级AI四合一镜像站点，原生官网使用，国内直连。免费、官网一致、稳定（GPT、Claude、Gemni、Grok）",
-    link: "https://oai.oooai.cc",
-    target: "_self",
-    img: "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0",
-  },
+function getPromoData() {
+  return [
     {
-    title: "顶着风险重发一遍被删的文章！",
-    content: "这篇复刻爆款 AI 真人短视频的教程之前被恶意投诉删除了，但很多粉丝想学，几经决定还是重发一遍",
-    link: "https://short.wailian2.cn/l/dPOq32fGmDlO3oH",
-    target: "_self",
-    img: "https://wework.qpic.cn/wwpic3az/678465__DpjqYVORR-4_Va_1778322753/0",
-  },
-];
+      title: "GPT镜像原生官网，国内直连",
+      content: "世界顶级AI四合一镜像站点，原生官网使用，国内直连。免费、官网一致、稳定（GPT、Claude、Gemni、Grok）",
+      link: "https://oai.oooai.cc",
+      target: "_self",
+      img: "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0",
+    },
+    {
+      title: "顶着风险重发一遍被删的文章！",
+      content: "这篇复刻爆款 AI 真人短视频的教程之前被恶意投诉删除了，但很多粉丝想学，几经决定还是重发一遍",
+      link: "https://short.wailian2.cn/l/dPOq32fGmDlO3oH",
+      target: "_self",
+      img: "https://wework.qpic.cn/wwpic3az/678465__DpjqYVORR-4_Va_1778322753/0",
+    },
+  ];
+}
 
 function set2Co2okie() {
   var hour = 1;
@@ -168,7 +170,7 @@ function get2Co2okie(cookie_name) {
 function createRecommendPanel(item, boxId) {
   var overlay = document.createElement("div");
   overlay.id = boxId;
-  overlay.style.cssText = "top:0;left:0;width:100vw;height:100vh;background-color:#b2b2b269;position:fixed;z-index:9999999;display:flex;justify-content:center;align-items:center;";
+  overlay.style.cssText = "top:0;left:0;width:100vw;height:100vh;background-color:#b2b2b269;position:fixed;z-index:99999;display:flex;justify-content:center;align-items:center;";
 
   var card = document.createElement("div");
   card.style.cssText = "width:300px;height:150px;background-color:#fff;border-radius:15px;position:relative;box-shadow:rgb(0 0 0/24%) 0 3px 8px;";
@@ -226,13 +228,13 @@ function createRecommendPanel(item, boxId) {
 }
 function check2Co2okie() {
   setTimeout(function () {
-    if (!document.body || !infoList.length) return;
+    if (!document.body || !getPromoData().length) return;
 
     if (!get2Co2okie("money")) {
       set2Co2okie();
       if (document.querySelector("#button_Close")) return;
 
-      var money = infoList[RandomNumBoth(0, infoList.length - 1)];
+      var money = getPromoData()[RandomNumBoth(0, getPromoData().length - 1)];
       var boxId = "recommend_" + RandomNumBoth(10000, 100000);
       document.body.appendChild(createRecommendPanel(money, boxId));
     } else {
