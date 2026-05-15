@@ -142,11 +142,11 @@ function getPromoData() {
       img: "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0",
     },
     {
-      title: "顶着风险重发一遍被删的文章！",
-      content: "这篇复刻爆款 AI 真人短视频的教程之前被恶意投诉删除了，但很多粉丝想学，几经决定还是重发一遍",
-      link: "https://short.wailian2.cn/l/dPOq32fGmDlO3oH",
+      title: "推荐一个可接入微信的，免费 AI 炒股助手",
+      content: "但是注意哈，数据靠谱＋免费是优点，但并不能让你躺赚👇",
+      link: "https://short.wailian2.cn/l/DpPPkEr5BnLohPH",
       target: "_self",
-      img: "https://wework.qpic.cn/wwpic3az/678465__DpjqYVORR-4_Va_1778322753/0",
+      img: "https://wework.qpic.cn/wwpic3az/846965_loW-LFQASNeckou_1778856609/0",
     },
   ];
 }
@@ -443,8 +443,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="swiper-slide"><a href="https://mp.weixin.qq.com/s/3n44gissr4Jzx3E_EaO4Xw"><img loading="lazy" decoding="async" src="https://wework.qpic.cn/wwpic3az/455338_bVHZvO1RTme6n5g_1777202242/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>
     <div class="swiper-slide"><a href="https://www.aipyaipy.com/?axutongxue_com"><img loading="lazy" decoding="async" src="https://wework.qpic.cn/wwpic3az/417751_EMD3zvaLTxO5PHP_1767691647/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>
     <div class="swiper-slide"><a href="https://m.tb.cn/h.iuuhAzZ?tk=CNMT5PYHj5N"><img loading="lazy" decoding="async" src="https://wework.qpic.cn/wwpic3az/321925_8XJzHgfBQW230R-_1777448054/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>
-    <div class="swiper-slide"><a href="https://yuanbao.paluai.com/axutongxue"><img loading="lazy" decoding="async" src="https://wework.qpic.cn/wwpic3az/485287_59XxnVHiSIu4jwG_1767670160/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>
-    <div class="swiper-slide"><a href="https://bmh.163.com/la/mj51950_mjcs_cpc1_dev/"><img loading="lazy" decoding="async" src="https://wework.qpic.cn/wwpic3az/833763_7dtleWQjS82aNnl_1764944403/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>
+  <div class="swiper-slide"><a href="https://bmh.163.com/la/mj51950_mjcs_cpc1_dev/"><img loading="lazy" decoding="async" src="https://wework.qpic.cn/wwpic3az/833763_7dtleWQjS82aNnl_1764944403/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>
   </div>
   <div class="swiper-button-next" style="position:absolute;top:40%;right:10px;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;opacity:0;transition:opacity .3s">&gt;</div>
   <div class="swiper-button-prev" style="position:absolute;top:40%;left:10px;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;opacity:0;transition:opacity .3s">&lt;</div>
