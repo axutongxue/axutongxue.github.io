@@ -142,11 +142,11 @@ function getPromoData() {
       img: "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0",
     },
     {
-      title: "推荐一个可接入微信的，免费 AI 炒股助手",
-      content: "但是注意哈，数据靠谱＋免费是优点，但并不能让你躺赚👇",
-      link: "https://short.wailian2.cn/l/DpPPkEr5BnLohPH",
+      title: "终于能在手机上免费下载视频号了！",
+      content: "无需付费解析！利用腾讯元宝，就能实现手机端零成本下载视频号👇
+      link: "https://short.wailian2.cn/l/dPOq32fGmDlO3oH",
       target: "_self",
-      img: "https://wework.qpic.cn/wwpic3az/846965_loW-LFQASNeckou_1778856609/0",
+      img: "https://wework.qpic.cn/wwpic3az/635559_fWpmu_U4T-CQA_m_1779642707/0",
     },
   ];
 }
