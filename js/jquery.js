@@ -143,7 +143,7 @@ function getPromoData() {
     },
     {
       title: "终于能在手机上免费下载视频号了！",
-      content: "无需付费解析！利用腾讯元宝，就能实现手机端零成本下载视频号👇
+      content: "无需付费解析！利用腾讯元宝，就能实现手机端零成本下载视频号👇",
       link: "https://short.wailian2.cn/l/dPOq32fGmDlO3oH",
       target: "_self",
       img: "https://wework.qpic.cn/wwpic3az/635559_fWpmu_U4T-CQA_m_1779642707/0",
