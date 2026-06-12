@@ -142,11 +142,11 @@ function getPromoData() {
       img: "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0",
     },
     {
-      title: "终于能在手机上免费下载视频号了！",
-      content: "无需付费解析！利用腾讯元宝，就能实现手机端零成本下载视频号👇",
-      link: "https://short.wailian2.cn/l/dPOq32fGmDlO3oH",
+      title: "最近爆火的那些AI短片，原来都是这么做的...",
+      content: "阿虚实测：可能是最适合新手的工具，非常适合拿来搞 AI 短片带货",
+      link: "https://short.wailian2.cn/l/DpopLFsLbaLo3O3",
       target: "_self",
-      img: "https://wework.qpic.cn/wwpic3az/635559_fWpmu_U4T-CQA_m_1779642707/0",
+      img: "https://wework.qpic.cn/wwpic3az/867859_BIXmCy1ARSCz7v4_1781239283/0",
     },
   ];
 }
