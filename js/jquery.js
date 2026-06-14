@@ -142,11 +142,11 @@ function getPromoData() {
       img: "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0",
     },
     {
-      title: "最近爆火的那些AI短片，原来都是这么做的...",
-      content: "阿虚实测：可能是最适合新手的工具，非常适合拿来搞 AI 短片带货",
-      link: "https://short.wailian2.cn/l/DpopLFsLbaLo3O3",
+      title: "能离线云下载＋不和谐动作片的115网盘终于又搞特惠了！",
+      content: "稳定不跑路！8年会员仅需￥800（或者￥498三年）空间足够的老用户也能上车！续两年会员仅需￥150",
+      link: "https://my.feishu.cn/docx/Zq9TdxFpOoZYovxnZkEc3luVnNb",
       target: "_self",
-      img: "https://wework.qpic.cn/wwpic3az/867859_BIXmCy1ARSCz7v4_1781239283/0",
+      img: "https://wework.qpic.cn/wwpic3az/895686_d3vEEvqLSvCFgDM_1781451852/0",
     },
   ];
 }
