@@ -96,14 +96,14 @@ function setModeCookie(c, d) {
     document.cookie = c + "=" + encodeURIComponent(d) + "; expires=" + expires + "; path=/; SameSite=Lax";
 }
 function adddarkcss() {
-    if (document.querySelector('link[href*="../css/dark-mode.css"]')) return;
+    if (document.querySelector('link[href*="css/dark-mode.css"]')) return;
     var link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "../css/dark-mode.css";
+    link.href = "css/dark-mode.css";
     document.head.appendChild(link);
 }
 function removedarkcss() {
-    var links = document.querySelectorAll('link[href*="../css/dark-mode.css"]');
+    var links = document.querySelectorAll('link[href*="css/dark-mode.css"]');
     for (var i = links.length - 1; i >= 0; i--) {
         links[i].parentNode.removeChild(links[i]);
     }
@@ -114,12 +114,20 @@ function bedark() {
     }
 }
 bedark();
+function themeWithTransition(apply) {
+    var root = document.documentElement;
+    root.classList.add("theme-transitioning");
+    apply();
+    setTimeout(function () {
+        root.classList.remove("theme-transitioning");
+    }, 350);
+}
 function changemode() {
     if (getModeCookie("status") === "dark") {
-        removedarkcss();
+        themeWithTransition(removedarkcss);
         setModeCookie("status", "light");
     } else {
-        adddarkcss();
+        themeWithTransition(adddarkcss);
         setModeCookie("status", "dark");
     }
 }
