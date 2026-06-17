@@ -4,6 +4,7 @@ ul li ul {
 body {
 	font-family:arial,hiragino sans gb,microsoft yahei,微軟正黑體,sans-serif;
 }
+
 a {
 	color:#000;
 	text-decoration:none;
@@ -377,10 +378,23 @@ li ul {
 		opacity: 0.4;
 		}
 
-		.swiper-pagination-bullet-active {
-		opacity: 1;
-		background: #5c5c5c;
-		width: 10px;
-		height: 10px;
-		border-radius: 50%;
-		}
+	.swiper-pagination-bullet-active {
+	opacity: 1;
+	background: #5c5c5c;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	}
+
+/* 深色模式切换过渡动画：切换时临时给 <html> 加 theme-transitioning 类，
+   350ms 后移除，期间所有元素的背景/边框/文字/图标颜色平滑过渡 */
+.theme-transitioning,
+.theme-transitioning *,
+.theme-transitioning *::before,
+.theme-transitioning *::after {
+	transition: background-color .3s ease,
+	            border-color .3s ease,
+	            color .3s ease,
+	            fill .3s ease,
+	            opacity .3s ease !important;
+}
