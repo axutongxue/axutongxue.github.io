@@ -150,11 +150,11 @@ function getPromoData() {
       img: "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0",
     },
     {
-      title: "能离线云下载＋不和谐动作片的115网盘终于又搞特惠了！",
-      content: "稳定不跑路！8年会员仅需￥800（或者￥498三年）空间足够的老用户也能上车！续两年会员仅需￥150",
-      link: "https://my.feishu.cn/docx/Zq9TdxFpOoZYovxnZkEc3luVnNb",
+      title: "白嫖美图７天会员+300积分，能用 Seedance 2.0～",
+      content: "积分可用于电商设计、AI模特试衣等，智能消除，无痕改字，智能抠图等功能更是无限用",
+      link: "https://short.wailian2.cn/l/DpPPkEr5BnLohPH",
       target: "_self",
-      img: "https://wework.qpic.cn/wwpic3az/895686_d3vEEvqLSvCFgDM_1781451852/0",
+      img: "https://wework.qpic.cn/wwpic3az/301413_r1sxmPEmRr6IOgx_1782267485/0",
     },
   ];
 }
@@ -449,9 +449,8 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="swiper myKwiper" style="width:330px;margin:0 auto;position:relative;overflow:hidden;z-index:1;padding-bottom:30px;">
   <div class="swiper-wrapper">
     <div class="swiper-slide"><a href="https://mp.weixin.qq.com/s/3n44gissr4Jzx3E_EaO4Xw"><img loading="lazy" decoding="async" src="https://wework.qpic.cn/wwpic3az/455338_bVHZvO1RTme6n5g_1777202242/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>
-    <div class="swiper-slide"><a href="https://www.aipyaipy.com/?axutongxue_com"><img loading="lazy" decoding="async" src="https://wework.qpic.cn/wwpic3az/417751_EMD3zvaLTxO5PHP_1767691647/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>
+    <div class="swiper-slide"><a href="https://short.wailian2.cn/l/DpPPkEr5BnLohPH"><img loading="lazy" decoding="async" src="https://wework.qpic.cn/wwpic3az/289211_WR3bEpvGSIaia5H_1782266821/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>
     <div class="swiper-slide"><a href="https://www.apxgame.net"><img loading="lazy" decoding="async" src="https://wework.qpic.cn/wwpic3az/995686_i2okPALcRNu1c-J_1780676619/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>
-  <div class="swiper-slide"><a href="https://bmh.163.com/la/mj51950_mjcs_cpc1_dev/"><img loading="lazy" decoding="async" src="https://wework.qpic.cn/wwpic3az/833763_7dtleWQjS82aNnl_1764944403/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>
   </div>
   <div class="swiper-button-next" style="position:absolute;top:40%;right:10px;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;opacity:0;transition:opacity .3s">&gt;</div>
   <div class="swiper-button-prev" style="position:absolute;top:40%;left:10px;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;opacity:0;transition:opacity .3s">&lt;</div>
