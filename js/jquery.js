@@ -449,7 +449,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="swiper myKwiper" style="width:330px;margin:0 auto;position:relative;overflow:hidden;z-index:1;padding-bottom:30px;">
   <div class="swiper-wrapper">
     <div class="swiper-slide"><a href="https://mp.weixin.qq.com/s/3n44gissr4Jzx3E_EaO4Xw"><img loading="lazy" decoding="async" src="https://wework.qpic.cn/wwpic3az/455338_bVHZvO1RTme6n5g_1777202242/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>
-    <div class="swiper-slide"><a href="https://short.wailian2.cn/l/DpPPkEr5BnLohPH"><img loading="lazy" decoding="async" src="https://wework.qpic.cn/wwpic3az/289211_WR3bEpvGSIaia5H_1782266821/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>
+    <div class="swiper-slide"><a href="https://oai.oooai.cc/list/#/register?inviter=0EASGS"><img loading="lazy" decoding="async" src="https://wework.qpic.cn/wwpic3az/985913_dVvSjdMVQR-QELc_1782721368/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>
     <div class="swiper-slide"><a href="https://www.apxgame.net"><img loading="lazy" decoding="async" src="https://wework.qpic.cn/wwpic3az/995686_i2okPALcRNu1c-J_1780676619/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>
   </div>
   <div class="swiper-button-next" style="position:absolute;top:40%;right:10px;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;opacity:0;transition:opacity .3s">&gt;</div>
