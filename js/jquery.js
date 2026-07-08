@@ -150,11 +150,11 @@ function getPromoData() {
       img: "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0",
     },
     {
-      title: "白嫖美图７天会员+300积分，能用 Seedance 2.0～",
-      content: "积分可用于电商设计、AI模特试衣等，智能消除，无痕改字，智能抠图等功能更是无限用",
-      link: "https://short.wailian2.cn/l/DpPPkEr5BnLohPH",
+      title: "微信重大更新！视频号收藏终于可以转入 ima AI 知识库！",
+      content: "阿虚原创工具！收藏的视频不再吃灰，秒变图文喂进知识库，可搜索、可 AI 对话！",
+      link: "https://short.wailian2.cn/l/dPOq32fGmDlO3oH",
       target: "_self",
-      img: "https://wework.qpic.cn/wwpic3az/301413_r1sxmPEmRr6IOgx_1782267485/0",
+      img: "https://wework.qpic.cn/wwpic3az/20434_AO7-YhS7Sq-7eky_1783481984/0",
     },
   ];
 }
