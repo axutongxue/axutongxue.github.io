@@ -150,11 +150,11 @@ function getPromoData() {
       img: "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0",
     },
     {
-      title: "微信重大更新！视频号收藏终于可以转入 ima AI 知识库！",
-      content: "阿虚原创工具！收藏的视频不再吃灰，秒变图文喂进知识库，可搜索、可 AI 对话！",
-      link: "https://short.wailian2.cn/l/dPOq32fGmDlO3oH",
+      title: "阿虚原创！本地视频 AI 自动生成图文笔记",
+      content: "软件永久免费，可无限次使用，吊打永久会员卖￥2988 的 AI 好记，实测阿虚的生成效果好多了😁",
+      link: "https://short.wailian2.cn/l/DpPPkEr5BnLohPH",
       target: "_self",
-      img: "https://wework.qpic.cn/wwpic3az/20434_AO7-YhS7Sq-7eky_1783481984/0",
+      img: "https://wework.qpic.cn/wwpic3az/233782_ip2n2iziQQqijcr_1783926478/0",
     },
   ];
 }
