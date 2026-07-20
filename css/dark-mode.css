@@ -17,7 +17,7 @@ a{
     opacity: 1  !important;
 }
 
-#split{
+.split{
 	color: #fff !important;
 }
 
@@ -78,3 +78,9 @@ background: WHITESMOKE;
 .myRewards .sider-text{ background-color: #EFEFEF !important; color: #000 !important;}
 .myRewards .sider-close{color: #888888 !important;}
 .myRewards-text p{background-color:#2E3234 !important;color:chartreuse !important;}
+
+/* 失效反馈按钮深色模式 */
+#feedbackBtn{background-color:#EFEFEF !important;color:#000 !important;}
+#feedbackBtn:hover{background-color:#DCDCDC !important;}
+#feedbackBtn.active{background-color:#d9534f !important;color:#fff !important;}
+#feedbackBtn.active:hover{background-color:#c9302c !important;}
