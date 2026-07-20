@@ -146,11 +146,11 @@ function getPromoData() {
       img: "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0",
     },
     {
-      title: "能离线云下载＋不和谐动作片的115网盘终于又搞特惠了！",
-      content: "稳定不跑路！8年会员仅需￥800（或者￥498三年）空间足够的老用户也能上车！续两年会员仅需￥150",
-      link: "https://my.feishu.cn/docx/Zq9TdxFpOoZYovxnZkEc3luVnNb",
+      title: "联通全国神卡来了！39元每月550G、29元每月280G！",
+      content: "每月还可以领取 1 个热门影视VIP会员，4 年优惠，仅限18－30岁办理",
+      link: "https://my.feishu.cn/docx/RLoTdr5nBoJ4PSxfPaWcIIkSnPf",
       target: "_self",
-      img: "https://wework.qpic.cn/wwpic3az/895686_d3vEEvqLSvCFgDM_1781451852/0",
+      img: "https://wework.qpic.cn/wwpic3az/849223_-uoddGeRSJ-Yq1t_1784275443/0",
     },
   ];
 }
