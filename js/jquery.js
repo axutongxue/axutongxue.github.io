@@ -146,11 +146,11 @@ function getPromoData() {
       img: "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0",
     },
     {
-      title: "联通全国神卡来了！39元每月550G、29元每月280G！",
+      title: "神了！联通全国卡！30元每月550G、20元每月280G！",
       content: "每月还可以领取 1 个热门影视VIP会员，4 年优惠，仅限18－30岁办理",
       link: "https://my.feishu.cn/docx/RLoTdr5nBoJ4PSxfPaWcIIkSnPf",
       target: "_self",
-      img: "https://wework.qpic.cn/wwpic3az/849223_-uoddGeRSJ-Yq1t_1784275443/0",
+      img: "https://wework.qpic.cn/wwpic3az/612082_v59XzesWRgCLAVX_1784715586/0",
     },
   ];
 }
