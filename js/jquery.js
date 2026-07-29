@@ -146,11 +146,11 @@ function getPromoData() {
       img: "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0",
     },
     {
-      title: "7月28截止！联通神卡：35元每月550G、25元每月280G！",
-      content: "每月还可以领取 1 个热门影视VIP会员，4 年优惠，仅限18－30岁办理",
-      link: "https://my.feishu.cn/docx/RLoTdr5nBoJ4PSxfPaWcIIkSnPf",
+      title: "2026 Adobb 和 WPS 专业版都更新了",
+      content: "具体可见储物间 6－4－1栏 和 7－2 栏",
+      link: "https://axutongxue.cccpan.com/",
       target: "_self",
-      img: "https://img30.360buyimg.com/imgzone/jfs/t20270829/491208/17/1735/108333/6a64add6F321d87e3/09363e83e886a12e.png",
+      img: "https://img30.360buyimg.com/imgzone/jfs/t20270902/456644/11/10498/30957/6a69f267Fa9124d85/093617f17fde4333.png",
     },
   ];
 }
