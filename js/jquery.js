@@ -146,11 +146,11 @@ function getPromoData() {
       img: "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0",
     },
     {
-      title: "2026 Adobb 和 WPS 专业版都更新了",
-      content: "具体可见储物间 6－4－1栏 和 7－2 栏",
-      link: "https://axutongxue.cccpan.com/",
+      title: "求求大家，帮忙「点击查看」增加点阅读量吧😭 肝了半个通宵的文章又没啥人看……",
+      content: "公众号这个推流机制下真的太难了",
+      link: "https://short.wailian2.cn/l/DpopLFsLbaLo3O3",
       target: "_self",
-      img: "https://img30.360buyimg.com/imgzone/jfs/t20270902/456644/11/10498/30957/6a69f267Fa9124d85/093617f17fde4333.png",
+      img: "https://img30.360buyimg.com/imgzone/jfs/t20270904/483956/27/12734/35115/6a6c95a9F6a29bfe9/0936150150a33bf9.png",
     },
   ];
 }
