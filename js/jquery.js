@@ -146,11 +146,11 @@ function getPromoData() {
       img: "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0",
     },
     {
-      title: "求求大家，帮忙「点击查看」增加点阅读量吧😭 肝了半个通宵的文章又没啥人看……",
-      content: "公众号这个推流机制下真的太难了",
-      link: "https://short.wailian2.cn/l/DpopLFsLbaLo3O3",
+      title: "完了！我用 Seedance 2.5 拍了一段素人 Vlog，逼真到已经分不清现实了……",
+      content: "大家点击支持下阅读量，谢谢🙏",
+      link: "https://short.wailian2.cn/l/dPOq32fGmDlO3oH",
       target: "_self",
-      img: "https://img30.360buyimg.com/imgzone/jfs/t20270904/483956/27/12734/35115/6a6c95a9F6a29bfe9/0936150150a33bf9.png",
+      img: "https://img30.360buyimg.com/imgzone/jfs/t20270916/488462/2/13209/41022/6a7c44d2Fe34d7828/09362d02d0ff47a3.jpg",
     },
   ];
 }
