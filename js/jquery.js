@@ -146,11 +146,11 @@ function getPromoData() {
       img: "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0",
     },
     {
-      title: "完了！我用 Seedance 2.5 拍了一段素人 Vlog，逼真到已经分不清现实了……",
-      content: "大家点击支持下阅读量，谢谢🙏",
-      link: "https://short.wailian2.cn/l/dPOq32fGmDlO3oH",
+      title: "还想要办大流量卡的粉丝看这里，29元/月150G长期套餐",
+      content: "偷摸搞来的渠道，办这个卡不免费，需交办卡费188元，确认需要就私聊阿虚吧，26号下架",
+      link: "https://img30.360buyimg.com/imgzone/jfs/t20270924/510941/15/853/324546/6a8662e3F01b1e2a6/09362eebfcbe0d75.webp",
       target: "_self",
-      img: "https://img30.360buyimg.com/imgzone/jfs/t20270916/488462/2/13209/41022/6a7c44d2Fe34d7828/09362d02d0ff47a3.jpg",
+      img: "https://img30.360buyimg.com/imgzone/jfs/t20270924/495710/21/15303/111154/6a866007Fba781f14/09361fc1fca122f7.webp",
     },
   ];
 }
