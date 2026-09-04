@@ -146,11 +146,11 @@ function getPromoData() {
       img: "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0",
     },
     {
-      title: "还想要办大流量卡的粉丝看这里，29元/月150G长期套餐",
-      content: "偷摸搞来的渠道，办这个卡不免费，需交办卡费188元，确认需要就私聊阿虚吧，26号下架",
-      link: "https://img30.360buyimg.com/imgzone/jfs/t20270924/510941/15/853/324546/6a8662e3F01b1e2a6/09362eebfcbe0d75.webp",
+      title: "储物间 4－4 栏快薅起来！",
+      content: "讯飞Loomy每日5000积分，可免费用Deepseek-V4-Flash正式版；商汤小浣熊每日300积分，现在能用GLM-5.3-Flash！",
+      link: "https://img30.360buyimg.com/imgzone/jfs/t20271009/512258/38/8947/44296/6a9ae1a4Fa9018f50/09362fc1c3482644.png",
       target: "_self",
-      img: "https://img30.360buyimg.com/imgzone/jfs/t20270924/495710/21/15303/111154/6a866007Fba781f14/09361fc1fca122f7.webp",
+      img: "https://img30.360buyimg.com/imgzone/jfs/t20271009/520598/25/2207/10499/6a9ae239Fdae042e5/09361f41f43ee5ab.png",
     },
   ];
 }
