@@ -65,17 +65,15 @@ function setModeCookie(c, d) {
     document.cookie = c + "=" + encodeURIComponent(d) + "; expires=" + expires + "; path=/; SameSite=Lax";
 }
 function adddarkcss() {
-    if (document.querySelector('link[href*="css/dark-mode.css"]')) return;
-    var link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = "css/dark-mode.css";
-    document.head.appendChild(link);
+    if (document.getElementById("dark-mode-css")) return;
+    var s = document.createElement("style");
+    s.id = "dark-mode-css";
+    s.textContent = "@charset \"UTF-8\";\n#bgCanvas{\n\tbackground-color: #2E3234 !important;\n}\n\n#footer{\n\tcolor: #fff !important;\n}\na{\n\tcolor: #fff !important;\n}\n.menu{\n\tborder-left: 1px solid white !important;\n}\n#bottomSearch{\n\tbackground-color: unset !important;\n    opacity: 1  !important;\n}\n\n.split{\n\tcolor: #fff !important;\n}\n\n.forkit .tag {\ncolor: #000;\nbackground: WHITESMOKE;\n}\n\n.result{\n\tbackground: dodgerblue !important\n}\n\n.darkmode-toggle--white {\n\tborder:none;\n\tbackground: none;\n}\n.fa-file-text-o{\n    color:powderblue !important\n}\n.fa-weixin {\n    color: #FFF;\n}\n.fa-tree {\n    color: #FFF;\n}\n.fa-linux {\n\tcolor:darkgray;\n}\n.fa-windows {\n\tcolor:steelblue !important;\n}\n.bei{\n\tfilter: invert(1); \n}\n.forkit .tag {\n\tcolor: #000 !important;\n    background: WHITESMOKE !important;\n}\n.dark {\n\topacity:1;\n}\n.light {\n\topacity:0;\n}\n\n/* 公告栏反色 */\n.myRewards-main{color:#FFF !important; background-color:#000 !important; border:1px solid #242424 !important;}\n.myR-h,.myR-bot{background-color:#181818 !important;}\n.myRewardsbox{background-color:#1A1D1D !important;}\n.myRewards-list ul.not-full{border-top:1px solid #202020 !important;}\n.myRewards-list a{border-bottom:1px solid #333333 !important;}\n.myRewards-list .myR-on a,\n.myRewards-list .myR-on a:hover{ background-color:#2E3234 !important;}\n.myRewards-detail{background-color:#2E3234 !important;}\n.myRewards-notice{border:1px solid #333 !important; background-color: #232627 !important;}\n.myRewards-code-tit{background-color: #181818 !important; }\n.myRewards-code{border:1px solid #2E3234 !important;background-color: #2E3234 !important;}\n.btn-myRewards .sider-text{ background-color: #EFEFEF !important; color: #000 !important;}\n.myRewards .sider-close{color: #888888 !important;}\n.myRewards-text p{background-color:#2E3234 !important;color:chartreuse !important;}\n\n/* 省钱助手 深色模式 */\n#shengBtn{background-color:#EFEFEF !important;color:#000 !important;}\n#shengBtn:hover{background-color:#DCDCDC !important;}\n\n/* 失效反馈按钮深色模式 */\n#feedbackBtn{background-color:#EFEFEF !important;color:#000 !important;}\n#feedbackBtn:hover{background-color:#DCDCDC !important;}\n#feedbackBtn.active{background-color:#d9534f !important;color:#fff !important;}\n#feedbackBtn.active:hover{background-color:#c9302c !important;}";
+    document.head.appendChild(s);
 }
 function removedarkcss() {
-    var links = document.querySelectorAll('link[href*="css/dark-mode.css"]');
-    for (var i = links.length - 1; i >= 0; i--) {
-        links[i].parentNode.removeChild(links[i]);
-    }
+    var s = document.getElementById("dark-mode-css");
+    if (s) s.parentNode.removeChild(s);
 }
 function bedark() {
     if (getModeCookie("status") === "dark") {
