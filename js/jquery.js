@@ -144,11 +144,11 @@ function getPromoData() {
       img: "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0",
     },
     {
-      title: "储物间 4－4 栏快薅起来！",
-      content: "讯飞Loomy每日5000积分，可免费用Deepseek-V4-Flash正式版；商汤小浣熊每日300积分，现在能用GLM-5.3-Flash！",
-      link: "https://img30.360buyimg.com/imgzone/jfs/t20271009/512258/38/8947/44296/6a9ae1a4Fa9018f50/09362fc1c3482644.png",
+      title: "储物间全新福利已部署上线！",
+      content: "外卖、堂食、鲜果、饮品、打车、机票、代驾、酒店、民宿、买药、电影、快递……你的每一笔消费都有机会省一点！",
+      link: "./discount/",
       target: "_self",
-      img: "https://img30.360buyimg.com/imgzone/jfs/t20271009/520598/25/2207/10499/6a9ae239Fdae042e5/09361f41f43ee5ab.png",
+      img: "https://wework.qpic.cn/wwpic3az/741232_I4mFtmneQbK4fyd_1792168886/0",
     },
   ];
 }
