@@ -400,14 +400,12 @@ li ul {
 }
 
 /* ============ 备用链接按钮：交互反馈优化 ============ */
-/* 含备用图标（img.bei）的链接：::before 外扩热区到约 40px，手机上更好按，不影响布局；
-   悬停 / 按压时仅图标缩放反馈，不着色 */
+/* 含备用图标（img.bei）的链接：::before 外扩热区到约 40px，手机上更好按，不影响布局；悬停 / 按压时仅图标缩放反馈，不着色 */
 a:has(> img.bei) {
 	position: relative;
 	display: inline-flex;
 	align-items: center;
 	padding: 2px 3px;
-	margin: 0 0 -4px 2px;
 	border-radius: 6px;
 	vertical-align: middle;
 	-webkit-tap-highlight-color: transparent;
