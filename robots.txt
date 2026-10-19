@@ -1,0 +1,66 @@
+# 阿虚同学的储物间 robots.txt
+# 传统搜索引擎
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Sogou web spider
+Allow: /
+
+User-agent: 360Spider
+Allow: /
+
+User-agent: YisouSpider
+Allow: /
+
+User-agent: PetalBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: Applebot
+Allow: /
+Crawl-delay: 10
+
+# AI 搜索与 AI 训练爬虫
+User-agent: OAI-SearchBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 5
+
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 10
+
+User-agent: ClaudeBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: Claude-SearchBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: CCBot
+Allow: /
+Crawl-delay: 20
+
+User-agent: *
+Allow: /
+Crawl-delay: 10
+
+Sitemap: https://axutongxue.com/sitemap.xml
