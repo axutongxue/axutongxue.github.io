@@ -10,9 +10,11 @@
   const NOTICE_TEXT = window.tctipNoticeText || '';   // 公告正文（在 index.html 内定义）
   const SHENG_URL = './discount/';                    // 省钱页面地址
   const FEISHU_FORM = 'https://my.feishu.cn/share/base/form/shrcnQEQph33whiOEjpqKiXMdeh';
-  const BTN_TOP = '18%';                              // 公告按钮 top；省钱/反馈在其下方 calc 排布
+  const BTN_TOP = '18%';                              // 公告按钮 top
+  const BTN_GAP = '12px';                             // 四个侧边栏按钮之间的统一间距
   const PANEL_MID = '37%';                            // 公告面板垂直中线
   const IS_TOUCH = !window.matchMedia('(hover: hover)').matches;  // 无悬停能力的设备（手机/平板）用点击交互
+  const BACK_TOP_AFTER = 400;                         // 滚动超过该距离(px)后显示右下角「回到顶部」按钮
 
   // 面板列表：第 1 项 text=公告正文；其余项 icon=左侧小图标、qrimg=右侧大二维码、href=点击二维码打开的链接
   const items = [
@@ -27,9 +29,14 @@
   /* ==================== 样式 ==================== */
   // 选择器与旧版完全一致（jquery.js 的暗色模式 CSS 依赖这些类名，勿改类名）
   const css = `
-#feedbackBtn{position:fixed;right:0;top:calc(${BTN_TOP} + 223px);z-index:9998;width:30px;min-width:30px;background:#323d45;color:#fff;border:0;padding:1em 0;font:13px/1.4 "microsoft yahei",arial,sans-serif;cursor:pointer;border-radius:12px;border-top-right-radius:0;border-bottom-right-radius:0;writing-mode:vertical-rl;letter-spacing:2px;white-space:nowrap;overflow:visible}
-#shengBtn{position:fixed;right:0;top:calc(${BTN_TOP} + 122px);z-index:9998;width:30px;min-width:30px;background:#323d45;color:#fff;border:0;padding:1em 0;font:13px/1.4 "microsoft yahei",arial,sans-serif;cursor:pointer;border-radius:12px;border-top-right-radius:0;border-bottom-right-radius:0;display:flex;justify-content:center;align-items:center;writing-mode:vertical-rl;letter-spacing:2px;white-space:nowrap;overflow:visible;text-decoration:none}
-.btn-myRewards{position:fixed!important;right:0!important;left:auto!important;top:${BTN_TOP}!important;pointer-events:auto}
+#sideStack{position:fixed;right:0;top:${BTN_TOP};z-index:9998;display:flex;flex-direction:column;align-items:flex-end;gap:${BTN_GAP}}
+#sideStack>*{flex:0 0 auto}
+#feedbackBtn{position:relative;right:auto;top:auto;z-index:9998;width:30px;min-width:30px;background:#323d45;color:#fff;border:0;padding:1em 0;font:13px/1.4 "microsoft yahei",arial,sans-serif;cursor:pointer;border-radius:12px;border-top-right-radius:0;border-bottom-right-radius:0;writing-mode:vertical-rl;letter-spacing:2px;white-space:nowrap;overflow:visible}
+#shareBtn{position:relative;right:auto;top:auto;z-index:9998;width:30px;min-width:30px;height:45px;background:#323d45;color:#fff;border:0;padding:0;display:flex;align-items:center;justify-content:center;cursor:pointer;border-radius:12px;border-top-right-radius:0;border-bottom-right-radius:0;overflow:visible}
+#shareBtn:hover{background:#454e57}
+#shareBtn svg{width:16px;height:16px;display:block;fill:currentColor;stroke:none}
+#shengBtn{position:relative;right:auto;top:auto;z-index:9998;width:30px;min-width:30px;background:#323d45;color:#fff;border:0;padding:1em 0;font:13px/1.4 "microsoft yahei",arial,sans-serif;cursor:pointer;border-radius:12px;border-top-right-radius:0;border-bottom-right-radius:0;display:flex;justify-content:center;align-items:center;writing-mode:vertical-rl;letter-spacing:2px;white-space:nowrap;overflow:visible;text-decoration:none}
+.btn-myRewards{position:relative!important;right:auto!important;left:auto!important;top:auto!important;pointer-events:auto}
 .btn-myRewards .sider-text{font:13px/1.4 "microsoft yahei",arial,sans-serif;width:30px;display:flex;justify-content:center;align-items:center;background-color:#323d45;margin:0;padding:1em 0;border-radius:12px;border-top-right-radius:0;border-bottom-right-radius:0;color:#fff;writing-mode:vertical-rl;letter-spacing:2px;white-space:nowrap}
 .myRewards{position:fixed;right:0;top:${PANEL_MID}!important;transform:translateY(-50%)!important;z-index:10000;padding-left:30px;width:0;overflow:hidden;box-sizing:content-box;transition:width .2s;pointer-events:none}
 .myRewards .btn-myRewards,.myRewards-main{pointer-events:auto}
@@ -58,11 +65,68 @@
 .myRewards-account{font-size:12px;word-break:break-all;line-height:revert;margin-top:-15px}
 .myRewards .sider-close{float:right;height:36px;line-height:36px;font-family:sans-serif;width:30px;text-align:center;color:#777;font-weight:bold;cursor:pointer}
 #feedbackBtn:hover{background:#454e57}
+#shengBtn:hover{background:#454e57}
 #feedbackBtn.active{background:#d9534f}
 #feedbackBtn.active:hover{background:#c9302c}
 body.feedback-select-mode #mainmenu a[href],body.feedback-select-mode #mainmenu a[HREF]{outline:2px dashed #d9534f!important}
 body.feedback-select-mode #mainmenu a[href]:hover,body.feedback-select-mode #mainmenu a[HREF]:hover{background:#ffe5e0!important}
-body.feedback-select-mode::after{content:"点击带链接的资源进行反馈，「点击右下角」或按「Esc键」退出选择模式";position:fixed;left:0;right:0;bottom:0;background:#d9534f;color:#fff;text-align:center;font:13px/2 "microsoft yahei",arial,sans-serif;z-index:9999}`;
+body.feedback-select-mode::after{content:"点击带链接的资源进行反馈，「点击右下角」或按「Esc键」退出选择模式";position:fixed;left:0;right:0;bottom:0;background:#d9534f;color:#fff;text-align:center;font:13px/2 "microsoft yahei",arial,sans-serif;z-index:9999}
+
+/* 回到顶部（外框配色与侧边栏三个按钮同款；内部为「上升三角 + TOP」图形） */
+#backTopBtn{position:fixed;right:0;bottom:20px;z-index:9998;width:30px;min-width:30px;height:45px;border:0;padding:0;background:#323d45;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;border-radius:12px;border-top-right-radius:0;border-bottom-right-radius:0;opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s,background-color .2s}
+#backTopBtn.show{opacity:1;visibility:visible}
+#backTopBtn svg{width:20px;height:20px;display:block;fill:currentColor}
+#backTopBtn:hover{background:#454e57}
+
+/* 分享弹窗（结构与样式参考 yinghezhinan.com） */
+#sharePopup{position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999999;display:none;align-items:center;justify-content:center;pointer-events:none}
+#sharePopup.open{display:flex}
+#sharePopup .share-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(10,10,10,.4);opacity:0;transition:opacity .3s;pointer-events:auto}
+#sharePopup.open .share-overlay{opacity:1;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+#sharePopup .share-body{position:relative;width:85%;max-width:390px;opacity:0;pointer-events:auto}
+#sharePopup.open .share-body{animation:shareOpen .3s forwards}
+@keyframes shareOpen{from{opacity:0;transform:translate3d(0,50px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+#sharePopup .share-content{position:relative;overflow:hidden;border-radius:14px;padding:120px 40px 0;background:radial-gradient(farthest-corner at 50% 20%,#f6f9f9 0%,#dae9ed 100%);box-shadow:0 10px 50px -5px rgba(6,39,67,.15)}
+#sharePopup .yinghe-circle{width:100%;height:100%;position:absolute;top:0;left:0;pointer-events:none}
+#sharePopup .yinghe-circle-inner{position:absolute;height:350px;width:350px;top:-15px;left:calc(50% - 175px);border-radius:50%;border:1px solid #fff}
+#sharePopup .yinghe-circle-inner::before,#sharePopup .yinghe-circle-inner::after{content:'';position:absolute;border-radius:50%;border:1px solid #fff}
+#sharePopup .yinghe-circle-inner::before{height:250px;width:250px;top:15%;left:calc(100% - 300px)}
+#sharePopup .yinghe-circle-inner::after{height:150px;width:150px;top:30%;left:calc(100% - 250px)}
+#sharePopup .share-icon{position:absolute;width:34px;height:34px;box-sizing:content-box;z-index:2;display:flex;align-items:center;justify-content:center}
+#sharePopup .share-icon::after{content:'';position:absolute;height:100%;width:100%;border-radius:20px;border:1px solid #fff;background:rgba(255,255,255,.7);z-index:-1;left:0}
+#sharePopup .share-icon img{height:18px}
+#sharePopup .share-icon.xhs,#sharePopup .share-icon.bili{width:auto;padding:0 10px;height:26px}
+#sharePopup .share-icon.bili img{height:12px}
+#sharePopup .share-icon.xhs img{height:11px}
+#sharePopup .share-icon.douyin img{height:16px}
+#sharePopup .share-icon.weixin img{height:20px}
+#sharePopup .share-icon.douyin{left:100px;top:13%}
+#sharePopup .share-icon.kuaishou{right:-15px;top:35%}
+#sharePopup .share-icon.bili{left:-20px;top:38%}
+#sharePopup .share-icon.weixin{left:50px;top:28%}
+#sharePopup .share-icon.qq{right:50px;top:28%}
+#sharePopup .share-icon.xhs{right:95px;top:15%}
+#sharePopup .share-icon.weibo{left:15px;top:14%}
+#sharePopup .share-icon.douban{right:15px;top:15%}
+#sharePopup .share-logo{width:100%;text-align:center;line-height:0;margin-top:-50px;z-index:3;position:relative}
+#sharePopup .share-logo img{width:150px;height:auto;display:inline-block}
+#sharePopup .share-main{position:relative;z-index:2;background:#fff;box-shadow:0 3px 10px rgba(220,228,234,.7);border-radius:14px;padding:28px 25px;margin:0}
+#sharePopup .share-success{font-weight:700;text-align:center;font-size:16px;color:green}
+#sharePopup .share-text{margin:15px 0 0;font-size:14px;line-height:1.75;color:rgba(0,0,0,.92)}
+#sharePopup .share-footer-link{margin-top:auto;padding:20px 0;text-align:center;font-size:14px;line-height:1}
+#sharePopup .share-footer-link strong{position:relative;display:inline-block;color:#283593}
+#sharePopup .share-footer-link strong::before,#sharePopup .share-footer-link strong::after{content:'';position:absolute;height:1px;width:20px;top:50%;background-color:#b7cfd5}
+#sharePopup .share-footer-link strong::before{left:-35px}
+#sharePopup .share-footer-link strong::after{right:-35px}
+#sharePopup .share-close{position:absolute;top:6px;right:6px;z-index:5;cursor:pointer;width:32px;height:32px;line-height:32px;text-align:center;border-radius:50%;background:rgba(0,0,0,.15);color:#eee;font-size:12px;-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);transition:background-color .2s,color .2s}
+#sharePopup .share-close:hover{color:#283593}
+html.dark-mode #sharePopup .share-content{background-image:radial-gradient(farthest-corner at 50% 20%,#4e4d4d 0%,#2f2f2f 100%)}
+html.dark-mode #sharePopup .share-main{background:#252525;box-shadow:0 3px 10px #323232}
+html.dark-mode #sharePopup .share-text{color:#e0e0e0}
+html.dark-mode #sharePopup .share-success{color:#01dc01}
+html.dark-mode #sharePopup .yinghe-circle-inner,html.dark-mode #sharePopup .yinghe-circle-inner::before,html.dark-mode #sharePopup .yinghe-circle-inner::after{border-color:#545454}
+html.dark-mode #sharePopup .share-icon::after{background:#d8d8d8;border-width:0}
+html.dark-mode #sharePopup .share-footer-link strong{color:#e5c977}`;
   const style = document.createElement('style');
   style.textContent = css;
   document.head.appendChild(style);
@@ -79,8 +143,10 @@ body.feedback-select-mode::after{content:"点击带链接的资源进行反馈�
   }
 
   /* ==================== 公告按钮 + 面板 ==================== */
+  // 侧边栏按钮统一容器：纵向排列、固定间距
+  const sideStack = el('div', { id: 'sideStack' });
   // 公告按钮（右侧竖排文字）
-  const btn = el('a', { className: 'btn-myRewards', title: '公告 ● 支持' });
+  const btn = el('a', { className: 'btn-myRewards', title: '公告 ● 支持' }, sideStack);
   const btnText = el('p', { className: 'sider-text' }, btn);
   btnText.textContent = '公告 ● 支持';
 
@@ -159,11 +225,11 @@ body.feedback-select-mode::after{content:"点击带链接的资源进行反馈�
   closeBtn.addEventListener('click', closePanel);
 
   /* ==================== 省钱助手按钮 ==================== */
-  const sheng = el('a', { id: 'shengBtn', href: SHENG_URL, target: '_blank', title: '每天帮你省一点' });
+  const sheng = el('a', { id: 'shengBtn', href: SHENG_URL, target: '_blank', title: '每天帮你省一点' }, sideStack);
   sheng.textContent = '省钱助手';
 
   /* ==================== 失效反馈（选择模式） ==================== */
-  const fbBtn = el('button', { id: 'feedbackBtn' });
+  const fbBtn = el('button', { id: 'feedbackBtn' }, sideStack);
   fbBtn.textContent = '失效反馈';
   let selectMode = false;
 
@@ -221,5 +287,92 @@ body.feedback-select-mode::after{content:"点击带链接的资源进行反馈�
   fbBtn.addEventListener('click', toggleSelectMode);
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && selectMode) toggleSelectMode();
+  });
+
+  /* ==================== 分享 ==================== */
+  const SHARE_ICONS = [
+    { cls: 'douyin', alt: '抖音', src: 'https://wework.qpic.cn/wwpic3az/427285_s4t50-gWQYOwC8R_1792385255/0' },
+    { cls: 'kuaishou', alt: '快手', src: 'https://wework.qpic.cn/wwpic3az/942900_5Rd-JY4mQ9W2zYh_1792385265/0' },
+    { cls: 'bili', alt: '哔哩哔哩', src: 'https://wework.qpic.cn/wwpic3az/920932_1QFy66pwQQCLRff_1792385190/0' },
+    { cls: 'weixin', alt: '微信好友', src: 'https://wework.qpic.cn/wwpic3az/429458_ztufFKz-Qc2nRiJ_1792385278/0' },
+    { cls: 'qq', alt: 'QQ好友', src: 'https://wework.qpic.cn/wwpic3az/773750_FlwP_twnQw-wEMF_1792385288/0' },
+    { cls: 'xhs', alt: '小红书', src: 'https://wework.qpic.cn/wwpic3az/465683_nnLYVJLQSUGUN44_1792385299/0' },
+    { cls: 'weibo', alt: '微博', src: 'https://wework.qpic.cn/wwpic3az/740982_oEgyxwoVSseWRoK_1792385308/0' },
+    { cls: 'douban', alt: '豆瓣', src: 'https://wework.qpic.cn/wwpic3az/174911_De2tmQr5RR-GIRT_1792385246/0' }
+  ];
+
+  const shareBtn = el('button', { id: 'shareBtn', title: '分享网站给你的好友' }, sideStack);
+  shareBtn.innerHTML = '<svg viewBox="0 0 1233 1024" aria-hidden="true"><path d="M106.73 963.912a21.561 21.561 0 0 1-7.037-0.795 49.478 49.478 0 0 1-42.101-54.584C81.763 681.57 162.108 513.958 295.449 409.214A624.886 624.886 0 0 1 656.49 283.647l29.619-1.532V120.688c0-63.947 58.5-77.962 89.65-46.812l364.162 370.404a90.218 90.218 0 0 1-2.326 141.852l-354.8 361.041a55.152 55.152 0 0 1-96.46-38.186V736.21h-36.654c-133.34 0-375.85 26.498-502.95 205.118a43.974 43.974 0 0 1-39.718 22.696z" fill="currentColor"/></svg>';
+
+  const popup = el('div', { id: 'sharePopup' });
+  const overlay = el('div', { className: 'share-overlay' }, popup);
+  const body = el('div', { className: 'share-body' }, popup);
+  const content = el('div', { className: 'share-content' }, body);
+  const circle = el('div', { className: 'yinghe-circle' }, content);
+  const circleInner = el('div', { className: 'yinghe-circle-inner' }, circle);
+  SHARE_ICONS.forEach(function (it) {
+    const icon = el('div', { className: 'share-icon ' + it.cls }, circleInner);
+    el('img', { src: it.src, alt: it.alt }, icon);
+  });
+  const logo = el('div', { className: 'share-logo' }, content);
+  el('img', { src: 'https://wework.qpic.cn/wwpic3az/555512_htAkGfRvTA-lgqE_1792379866/0', alt: '阿虚同学的储物间' }, logo);
+  const shareMain = el('div', { className: 'share-main' }, content);
+  const shareOk = el('div', { className: 'share-success' }, shareMain);
+  shareOk.textContent = '网址已复制，快去分享给朋友吧！';
+  const shareText = el('div', { className: 'share-text' }, shareMain);
+  shareText.innerHTML = '直接粘贴到微信、QQ发送即可。如果觉得网站还不错的话，也欢迎截图分享到小红书、微博、豆瓣，帮助更多人发现优质互联网资源！';
+  const footerLink = el('div', { className: 'share-footer-link' }, content);
+  const flA = el('a', { href: window.location.origin + window.location.pathname, target: '_blank', rel: 'noopener' }, footerLink);
+  const flStrong = el('strong', {}, flA);
+  flStrong.textContent = '阿虚同学的储物间';
+  const closeX = el('div', { className: 'share-close', title: '关闭' }, body);
+  closeX.textContent = '✕';
+
+  function openShare() { popup.classList.add('open'); }
+  function closeShare() { popup.classList.remove('open'); }
+
+  function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text);
+    }
+    return new Promise(function (resolve, reject) {
+      const ta = el('textarea', { style: 'position:fixed;top:-1000px;left:-1000px;opacity:0' });
+      ta.value = text;
+      ta.select();
+      try {
+        document.execCommand('copy') ? resolve() : reject(new Error('copy failed'));
+      } catch (err) {
+        reject(err);
+      } finally {
+        document.body.removeChild(ta);
+      }
+    });
+  }
+
+  shareBtn.addEventListener('click', function () {
+    const text = '阿虚同学的储物间（尽量别在微信打开）：' + window.location.href.split('#')[0];
+    copyText(text).then(openShare, function () {
+      // 复制失败（如非安全上下文）也要给出分享入口
+      openShare();
+    });
+  });
+  closeX.addEventListener('click', closeShare);
+  overlay.addEventListener('click', closeShare);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && popup.classList.contains('open')) closeShare();
+  });
+
+  /* ==================== 回到顶部 ==================== */
+  const backTop = el('button', { id: 'backTopBtn', title: '回到顶部' });
+  backTop.innerHTML = '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 2 10 15h28z"/><text x="24" y="38" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="bold">TOP</text></svg>';
+
+  function toggleBackTop() {
+    backTop.classList.toggle('show', window.scrollY > BACK_TOP_AFTER);
+  }
+  window.addEventListener('scroll', toggleBackTop, { passive: true });
+  toggleBackTop();  // 页面可能直接打开在中间位置（锚点跳转 / 刷新恢复滚动）
+
+  backTop.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 })();
