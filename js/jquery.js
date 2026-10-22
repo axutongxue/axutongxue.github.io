@@ -154,6 +154,13 @@ function getPromoData() {
       target: "_self",
       img: "https://wework.qpic.cn/wwpic3az/741232_I4mFtmneQbK4fyd_1792168886/0",
     },
+    {
+      title: "阿虚全新产品「虚空搜索」浏览器扩展正式上线！",
+      content: "可实现 AI 批量提问、对回答进一步总结、批量上传附件，还有影视、音乐、电子书等等资源一键搜索",
+      link: "https://xusearch.com/",
+      target: "_self",
+      img: "https://img30.360buyimg.com/imgzone/jfs/t20271126/547724/4/6262/131367/6ad99438F3ec97bf0/09362ee2ee95a81f.png",
+    },
   ];
 }
 

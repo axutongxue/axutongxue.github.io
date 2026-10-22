@@ -19,10 +19,10 @@
   // 面板列表：第 1 项 text=公告正文；其余项 icon=左侧小图标、qrimg=右侧大二维码、href=点击二维码打开的链接
   const items = [
     { name: '公告栏', className: 'myR-on', icon: 'https://wework.qpic.cn/wwpic3az/898351_AxcBcqZ9QFmznfb_1753452407/0', text: NOTICE_TEXT },
-    { name: '省钱助手', icon: 'https://img30.360buyimg.com/imgzone/jfs/t20270916/492555/38/14608/2388/6a7c50d1F4953950c/093604d04cb0e47b.png', qrimg: 'https://wework.qpic.cn/wwpic3az/246366_mZFjG984Th6cnsF_1792203994/0', href: './discount/', desc: '外卖、堂食、鲜果、饮品、打车、机票、代驾、酒店、民宿、买药、电影、快递……你的每一笔消费都有机会省一点！' },
-    { name: '原创脚本', icon: 'https://wework.qpic.cn/wwpic3az/755748_82BqHYxHRFeywQI_1781873640/0', qrimg: 'https://wework.qpic.cn/wwpic3az/69229_HK1N-aaKRqCghV7_1781873370/0', href: 'https://mp.weixin.qq.com/s/ds7UNPOJL9ejsRo71C3SGQ', desc: '阿虚原创自动化脚本，正在升级当中。即将上线，敬请期待！' },
+    { name: '省钱助手', icon: 'https://wework.qpic.cn/wwpic3az/70308_Z6RYjbQDTdKCe-V_1792661658/0', qrimg: 'https://wework.qpic.cn/wwpic3az/246366_mZFjG984Th6cnsF_1792203994/0', href: './discount/', desc: '外卖、堂食、鲜果、饮品、打车、机票、代驾、酒店、民宿、买药、电影、快递……你的每一笔消费都有机会省一点！' },
+    { name: '搜索扩展', icon: 'https://wework.qpic.cn/wwpic3az/809994_aYOh14yhQQeA_iG_1792661397/0', qrimg: 'https://wework.qpic.cn/wwpic3az/987091_6854zUSTTTCrdYi_1792661338/0', href: 'https://xusearch.com/', desc: '由阿虚开发的浏览器扩展「虚空搜索」，凝聚阿虚近 10 年搜索心得，提供批量 AI 提问、对回答进一步 AI 总结、批量上传附件，同时还有影视、动漫、漫画、音乐、电子书、网盘资源等一键批量搜索，一秒让你成为互联网资源大神！' },
     { name: '知识星球', icon: 'https://wework.qpic.cn/wwpic3az/324339_-uMsHKhLT1Wvsqd_1753452478/0', qrimg: 'https://wework.qpic.cn/wwpic3az/92458_7aI3hjBjT2mMZNf_1753452493/0', href: 'https://t.zsxq.com/19d2gGtRe', desc: '如果你想获取阿虚更及时、高质量的回复，欢迎加入我的付费星球，享受全年无限次提问：提问越多，收获越大！星球内还提供公众号所有付费文章＋简单脚本或工具代的开发服务！加入星球，阿虚陪你一起终身成长' },
-    { name: '特价会员', icon: 'https://wework.qpic.cn/wwpic3az/286348_17C1vK29QbeuqST_1753452519/0', qrimg: 'https://wework.qpic.cn/wwpic3az/780198_yFvvhyYKTi2-fSK_1753452531/0', href: 'http://axu.xpsup.cn/', desc: '阿虚自营特价会员充值网站：影视／音乐／读书／网盘／社交娱乐等会员都有！正规渠道官方直充，偶尔还有超低活动特价人工代充，阿虚担保，100%放心购买，已有6000+粉丝下单！🤝' },
+    { name: '特价会员', icon: 'https://wework.qpic.cn/wwpic3az/286348_17C1vK29QbeuqST_1753452519/0', qrimg: 'https://wework.qpic.cn/wwpic3az/780198_yFvvhyYKTi2-fSK_1753452531/0', href: 'http://axu.xpsup.cn/', desc: '阿虚自营特价会员充值网站：影视／音乐／读书／网盘／社交娱乐等会员都有！正规渠道官方直充，偶尔还有活动超低特价人工代充，阿虚担保请 100% 放心购买，已有 6000+ 粉丝下单享受优惠！🤝' },
     { name: '发布页', icon: 'https://wework.qpic.cn/wwpic3az/594861_XtI7KjRUR3iTmoh_1781873678/0', qrimg: 'https://wework.qpic.cn/wwpic3az/401046_8him-1W5QmmXKY1_1781711685/0', href: 'https://axutongxue.cccpan.com/', desc: '储物间主要使用以下域名后缀：com／net／cn　当然，更建议点击上图，查看并收藏地址发布页！' }
   ];
 
