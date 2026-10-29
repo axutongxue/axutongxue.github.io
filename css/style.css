@@ -118,6 +118,26 @@ li ul {
     margin-left: -13px;
 }
 
+/* 备注文案：书签里 HREF 为根地址的说明条目（生成器第 8 步）
+   内联排版，与资源条目同一层级。
+   必须用 .fa.notes 双类选择器：FontAwesome CDN 的 .fa 规则里有
+   font:...14px/1 FontAwesome + font-size:inherit，同权重且后加载会覆盖字号，
+   并把文案（中文）套成图标字体。这里显式还原正文字体与字号。
+   ::before 必须单独锁回 FontAwesome——font-family:inherit 会让伪元素继承
+   正文的 arial，图标码点被当普通字符渲染成空白方块。
+   color:black + opacity:0.7 等价于 rgba(0,0,0,.7) */
+.fa.notes{
+	color: rgba(0, 0, 0, .7);
+	font-size: 14px;
+	font-family: inherit;
+	line-height: 20px;
+	padding-left: 4px;
+}
+.fa.notes::before{
+	font-family: FontAwesome;
+	margin-right: 3px;
+}
+
 .light {
 	opacity:1
 }
@@ -399,35 +419,24 @@ li ul {
 	            opacity .3s ease !important;
 }
 
-/* ============ 备用链接按钮：交互反馈优化 ============ */
-/* 含备用图标（img.bei）的链接：::before 外扩热区到约 40px，手机上更好按，不影响布局；悬停 / 按压时仅图标缩放反馈，不着色 */
-a:has(> img.bei) {
-	position: relative;
-	display: inline-flex;
-	align-items: center;
-	padding: 2px 3px;
-	border-radius: 6px;
-	vertical-align: middle;
-	-webkit-tap-highlight-color: transparent;
-	touch-action: manipulation;
-}
-a:has(> img.bei)::before {
-	content: "";
-	position: absolute;
-	inset: -6px;
-	border-radius: 9px;
-}
-a:has(> img.bei) .bei {
-	margin: 0;
-	transition: transform .15s ease;
-}
-/* PC 悬停：图标微放大，提示"可点击" */
-@media (hover: hover) {
-	a:has(> img.bei):hover .bei {
-		transform: scale(1.15);
+/* ===== 高分屏自动放大（等效浏览器 Ctrl+滚轮缩放到 125%）=====
+   1080p/2K/4K 屏幕配系统缩放 100% 时，17px 字号偏小，而普通用户不知道
+   手动缩放。用根元素 zoom 按视口宽度整体等比放大——图标、间距、侧栏
+   一起缩放，效果与浏览器缩放完全一致（单纯改 font-size 会导致 18px
+   固定尺寸的平台图标与文字错位）。
+   视口 ≥1800px 才触发：1080p 笔记本系统缩放 125%（视口 1536）、平板、
+   手机都够不到这一宽度，维持原样。
+   max-resolution:1.2 限定系统缩放 ≤120%：系统已放大到 125%/150% 或
+   Retina（dpr=2）的用户文字已够大，不再叠加。
+   Firefox 126 起支持 zoom，更旧版本忽略本规则、维持原状。 */
+@media (min-width: 1800px) and (max-resolution: 1.2dppx) {
+	html {
+		zoom: 1.25;
 	}
 }
-/* 按下（鼠标 / 触摸通用）：图标缩小，给出"已按下"反馈 */
-a:has(> img.bei):active .bei {
-	transform: scale(.82);
+/* 4K（3840 宽）及以上再上一档：1.5 相当于把 4K 当 2560 宽的 2K 屏用 */
+@media (min-width: 3600px) and (max-resolution: 1.2dppx) {
+	html {
+		zoom: 1.5;
+	}
 }
