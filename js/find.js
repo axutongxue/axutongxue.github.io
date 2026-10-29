@@ -1,3 +1,13 @@
+/* 字号设置早应用：在菜单内容解析前读取用户保存的字号档位，以内联样式生效。
+   内联 zoom 优先级高于 css/style.css 末尾的自动缩放媒体查询；
+   显式的 1 也应用（= 强制 100%、关闭自动放大）。「恢复默认」会清除此设置。
+   档位设置面板在 js/sidebar.js。 */
+(function () {
+  try {
+    var v = parseFloat(localStorage.getItem("fontScale"));
+    if (!isNaN(v) && v >= 0.8 && v <= 2) document.documentElement.style.zoom = v;
+  } catch (e) { }
+})();
 /* ============================================================
  * 站内即时搜索（命令面板式）—— 迁移自 axutongxue.com.cn 线上版 resource-search.js
  * 适配说明（相对线上原版的改动）：

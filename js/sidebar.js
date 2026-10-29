@@ -376,3 +376,142 @@ html.dark-mode #sharePopup .share-footer-link strong{color:#e5c977}`;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 })();
+/* ============================================================
+   左上角字号设置：Aa 按钮 + 弹出面板
+   档位写入 localStorage("fontScale")，js/find.js 顶部在页面
+   解析早期读取并以内联 zoom 应用（优先于 style.css 末尾的自动
+   缩放媒体查询）；「恢复默认」清除设置回到自动。
+   深色模式规则在 jquery.js 的 adddarkcss()——勿改下方 id/类名
+   ============================================================ */
+(() => {
+  'use strict';
+
+  const KEY = 'fontScale';
+  const LEVELS = [0.9, 1, 1.1, 1.25, 1.4, 1.6];
+
+  const css = `
+#fontBtn{position:absolute;left:63px;top:18px;z-index:1000;width:18px;height:18px;box-sizing:border-box;padding:0;border:1px solid #d9dcde;border-radius:50%;background:none;color:#333;font:9px/15px "microsoft yahei",arial,sans-serif;cursor:pointer;user-select:none}
+#fontBtn:hover{background:rgba(0,0,0,.07)}
+#fontMask{position:fixed;left:0;top:0;right:0;bottom:0;z-index:10000;background:rgba(0,0,0,.25);animation:fpFade .18s ease}
+#fontPanel{position:fixed;z-index:10001;width:280px;max-width:calc(100vw - 24px);background:#fff;border:1px solid #ececec;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.18);overflow:hidden;animation:fpIn .18s ease}
+.fp-head{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-bottom:1px solid #ececec;font:14px/1 "microsoft yahei",arial,sans-serif;color:#333}
+.fp-close{color:#999;font-size:18px;line-height:1;cursor:pointer;text-decoration:none}
+.fp-close:hover{color:#333;text-decoration:none}
+.fp-row{display:flex;align-items:center;justify-content:space-between;padding:14px}
+.fp-step{width:48px;height:34px;border:1px solid #d5d9dc;border-radius:6px;background:#fff;color:#333;font:14px/1 "microsoft yahei",arial,sans-serif;cursor:pointer}
+.fp-step:hover{background:#f5f6f7}
+.fp-step:disabled{opacity:.35;cursor:default;background:#fff}
+.fp-value{min-width:72px;text-align:center;font-weight:bold;font:16px/1.2 "microsoft yahei",arial,sans-serif;color:#333}
+.fp-hint{padding:0 14px;font:12px/1.7 "microsoft yahei",arial,sans-serif;color:#999}
+.fp-foot{display:block;padding:10px 14px 12px;margin-top:12px;text-align:center;border-top:1px solid #f0f0f0;font:13px/1 "microsoft yahei",arial,sans-serif;color:#595f63;cursor:pointer;text-decoration:none}
+.fp-foot:hover{color:#333;text-decoration:none}
+.fp-foot.off{opacity:.4;pointer-events:none}
+@keyframes fpIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@keyframes fpFade{from{opacity:0}to{opacity:1}}`;
+  const styleEl = document.createElement('style');
+  styleEl.textContent = css;
+  document.head.appendChild(styleEl);
+
+  function el(tag, props, parent) {
+    const node = document.createElement(tag);
+    for (const k in props) {
+      if (k === 'style') node.style.cssText = props[k];
+      else node[k] = props[k];
+    }
+    (parent || document.body).appendChild(node);
+    return node;
+  }
+
+  function saved() {
+    try {
+      const v = parseFloat(localStorage.getItem(KEY));
+      if (!isNaN(v) && v >= 0.8 && v <= 2) return v;
+    } catch (e) { }
+    return null;
+  }
+
+  // 当前生效字号：手动设置优先；否则读自动档（style.css 媒体查询的结果）
+  function current() {
+    const s = saved();
+    if (s !== null) return s;
+    const z = parseFloat(getComputedStyle(document.documentElement).zoom);
+    return isNaN(z) ? 1 : z;
+  }
+
+  function apply(v) {
+    if (v === null) {
+      try { localStorage.removeItem(KEY); } catch (e) { }
+      document.documentElement.style.zoom = '';
+    } else {
+      try { localStorage.setItem(KEY, String(v)); } catch (e) { }
+      document.documentElement.style.zoom = v;
+    }
+    refresh();
+  }
+
+  // Aa 按钮：18px 圆钮（字号 9px=内容区 16px 同占比），与深色切换胶囊（图标 34×23，右缘 x≈52.5、视觉中线 y≈29）中心对齐，间距 8.5px
+  const fontBtn = el('button', { id: 'fontBtn', title: '字体大小' });
+  fontBtn.textContent = 'Aa';
+
+  const mask = el('div', { id: 'fontMask', style: 'display:none' });
+  const panel = el('div', { id: 'fontPanel', style: 'display:none' });
+  const head = el('div', { className: 'fp-head' }, panel);
+  el('span', {}, head).textContent = '字体大小';
+  const closeA = el('a', { className: 'fp-close', title: '关闭' }, head);
+  closeA.textContent = '×';
+  const row = el('div', { className: 'fp-row' }, panel);
+  const minus = el('button', { className: 'fp-step', title: '减小' }, row);
+  minus.textContent = 'A−';
+  const value = el('div', { className: 'fp-value' }, row);
+  const plus = el('button', { className: 'fp-step', title: '增大' }, row);
+  plus.textContent = 'A＋';
+  const hint = el('div', { className: 'fp-hint' }, panel);
+  hint.textContent = '默认按屏幕大小自动调整，手动设置优先于自动。';
+  const resetA = el('a', { className: 'fp-foot' }, panel);
+  resetA.textContent = '恢复默认';
+
+  function refresh() {
+    const s = saved();
+    const cur = current();
+    value.textContent = s === null ? '自动' : Math.round(s * 100) + '%';
+    const up = LEVELS.find(function (l) { return l > cur + 0.001; });
+    const down = LEVELS.slice().reverse().find(function (l) { return l < cur - 0.001; });
+    plus.disabled = up === undefined;
+    minus.disabled = down === undefined;
+    resetA.classList.toggle('off', s === null);
+  }
+
+  function step(dir) {
+    const cur = current();
+    const list = dir > 0 ? LEVELS : LEVELS.slice().reverse();
+    const next = list.find(function (l) {
+      return dir > 0 ? l > cur + 0.001 : l < cur - 0.001;
+    });
+    if (next !== undefined) apply(next);
+  }
+
+  let opened = false;
+  function showPanel() {
+    opened = true;
+    panel.style.display = 'block';
+    mask.style.display = 'block';
+    panel.style.top = '46px';
+    panel.style.left = Math.max(12, Math.min(63, window.innerWidth - panel.offsetWidth - 12)) + 'px';
+    refresh();
+  }
+  function hidePanel() {
+    opened = false;
+    panel.style.display = 'none';
+    mask.style.display = 'none';
+  }
+
+  fontBtn.addEventListener('click', function () { opened ? hidePanel() : showPanel(); });
+  closeA.addEventListener('click', hidePanel);
+  mask.addEventListener('click', hidePanel);
+  minus.addEventListener('click', function () { step(-1); });
+  plus.addEventListener('click', function () { step(1); });
+  resetA.addEventListener('click', function () { apply(null); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && opened) hidePanel();
+  });
+})();
