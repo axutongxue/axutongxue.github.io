@@ -407,7 +407,81 @@ html.dark-mode #sharePopup .share-footer-link strong{color:#e5c977}`;
 .fp-foot:hover{color:#333;text-decoration:none}
 .fp-foot.off{opacity:.4;pointer-events:none}
 @keyframes fpIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
-@keyframes fpFade{from{opacity:0}to{opacity:1}}`;
+@keyframes fpFade{from{opacity:0}to{opacity:1}}
+/* 手机端顶栏避让：窄屏下 #top 的搜索按钮会撞上左上 Aa 圆钮（其右缘 81px）。
+   做法：flex + 左侧 padding 让出 Aa，按钮组在内容区居中。
+   border-box 必须加，否则 padding 会撑到 #top 原宽度之外导致整行溢出。
+   右侧不再预留缎带宽度——站长确认允许「搜索公众号」被右上角缎带压住。
+   按钮必须 flex:0 0 auto + white-space:nowrap：否则宽度不足时按钮会被压缩，
+   文字连同行末的 FontAwesome 图标一起折到第二行（flex-shrink 是根因）。
+   ★ 跨断点不得跳动（站长实测反馈）：
+     1) 横向：flex 居中是在内容区居中，左右 padding 不等会让整组偏移。
+        520px 处必须右 = 左 = 88px（居中点=视口中心），越窄越收到 70px。
+        若把 padding-right 固定成小值（如 6px），520px 以下会整体右跳 41px。
+     2) 纵向：按钮变成 flex 子项后被"块级化"，高度改由 line-height 计算
+        （normal≈20px），而 521px 的行内布局用字体度量（≈17px），
+        导致按钮高度 25→28、顶部 13→15。故显式 line-height:17px 并
+        把 #top 的 margin-top 补到 13px，使两侧几何完全一致。 */
+@media (max-width: 520px) {
+  #top {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0 6px;
+    margin-top: 13px;
+    padding-left: 88px;
+    padding-right: max(70px, calc(88px - (520px - 100vw)));
+  }
+  #top .topSerach {
+    margin: 0;
+    flex: 0 0 auto;
+    white-space: nowrap;
+    line-height: 17px;
+  }
+}
+/* ≤368px：文案改短以腾出宽度。「搜索储物间」→「搜储物间」、「搜索公众号」→「搜公众号」，
+   整组宽度 210.36px → 180.36px（省 30px）。纯 CSS 实现，不改生成器与 index.html：
+   把 <a> 自身 font-size 归零隐藏原有文字节点（图标 <i> 单独恢复字号），
+   再用 ::before 提供短文案。
+   ★ 必须有 display:inline-flex + align-items:center：<a> 变成普通行内盒时，
+     font-size:0 会把裸文字节点压成「高度 0、位于基线上」的行盒，被基线推到
+     内容区底部，使按钮高度 25 → 31px（站长实测到的跳动）。改为 inline-flex 后，
+     该 0 高度行盒成为 flex 项、不再由基线驱动高度，按钮高度稳定保持 25px。
+   ★ 图标字号必须补回：font-size:0 会继承给 <i>，FontAwesome 图标会缩成一个点。
+   实测阈值：内容区宽 = vw − 158（左 88 + 右 70），
+   长文案需 210.36 ⇒ vw ≥ 369；短文案需 180.36 ⇒ vw ≥ 339。
+   因此在 369px 以上用长文案、339px 以上用短文案，都能整组落在内容区内，
+   #top 不会越界，按钮天然避开右上缎带。 */
+@media (max-width: 368px) {
+  #top .topSerach {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0;
+  }
+  #top .topSerach::before {
+    font-size: 15px;
+    font-family: inherit;
+  }
+  #top .topSerach i { font-size: 15px; }
+  #top .topSerach:nth-of-type(1)::before { content: '搜储物间'; }
+  #top .topSerach:nth-of-type(2)::before { content: '搜公众号'; }
+}
+/* ≤329px：再隐藏两个按钮右侧的 FontAwesome 图标以换取宽度。
+   纯 CSS 实现（图标 i 设 display:none），无需改生成器与 index.html。
+   实测：短文案带图标需 172.02px，隐藏图标后仅需 142px（省 30px，图标宽 12.86+17.16）。
+   阈值（内容区 = vw − 158）：带图标 ⇒ vw ≥ 331（本规则上限取 329 留 2px 余量）；
+   隐藏图标 ⇒ vw ≥ 300。故 300px 以上始终单行。
+   ★ 禁止换行（站长明确要求）：这里用 flex-wrap:nowrap，绝不拆成两行。
+   ★ 本注释位于 JS 模板字符串内，禁止出现反引号，否则会提前终止字符串。 */
+@media (max-width: 329px) {
+  #top .topSerach i { display: none; }
+}
+@media (max-width: 299px) {
+  /* 仅作极端兜底：保留 nowrap，压缩右侧留白尽量容纳，绝不换成两行 */
+  #top { justify-content: flex-start; padding-left: 84px; padding-right: 4px; }
+}`;
   const styleEl = document.createElement('style');
   styleEl.textContent = css;
   document.head.appendChild(styleEl);
