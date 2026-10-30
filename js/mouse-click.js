@@ -24,6 +24,8 @@
   var particles = [];
   var rafId = 0;
   var maxParticles = 50;
+  var lastW = 0;
+  var lastH = 0;
 
   function random(min, max) {
     if (Array.isArray(min)) return min[Math.floor(Math.random() * min.length)];
@@ -34,10 +36,21 @@
     return min + Math.random() * (max - min);
   }
 
+  // 位图尺寸必须取 canvas 的真实显示盒（getBoundingClientRect），不能用 innerWidth：
+  // 根元素 zoom 下 100vw/100vh 不会缩小（zoom 1.25 时显示盒是 innerWidth×1.25），
+  // 若位图仍按 innerWidth 设，位图会被拉伸 1.25 倍，点击坐标(clientX/Y)
+  // 与绘制坐标错位（越靠右/下偏移越大）。
+  // 尺寸没变时直接返回：改 canvas.width 会清空画布，不应在每次点击时无谓触发。
   function resize() {
     var ratio = window.devicePixelRatio || 1;
-    canvas.width = Math.floor(window.innerWidth * ratio);
-    canvas.height = Math.floor(window.innerHeight * ratio);
+    var rect = canvas.getBoundingClientRect();
+    var w = Math.floor((rect.width || window.innerWidth) * ratio);
+    var h = Math.floor((rect.height || window.innerHeight) * ratio);
+    if (w === lastW && h === lastH) return;
+    lastW = w;
+    lastH = h;
+    canvas.width = w;
+    canvas.height = h;
     context.setTransform(ratio, 0, 0, ratio, 0, 0);
   }
 
@@ -97,6 +110,11 @@
   }
 
   document.addEventListener('mousedown', function (event) {
+    // 字号面板改 zoom 不会派发 resize 事件，必须在每次按下时先校正画布尺寸，
+    // 否则 canvas 位图与显示盒比例失配，粒子落点偏移。
+    // 注意：resize() 必须放在 shouldIgnore 之前——点在链接/按钮等元素上时虽然不喷粒子，
+    // 但画布仍需保持尺寸同步。
+    resize();
     if (shouldIgnore(event.target)) return;
     for (var i = 0, count = random(15, 20); i < count; i++) {
       spawn(event.clientX, event.clientY);
@@ -114,5 +132,10 @@
   });
 
   window.addEventListener('resize', resize, { passive: true });
+  // 字号面板改 zoom、以及布局变化都不会派发 resize 事件；用 ResizeObserver 监听
+  // canvas 自身的显示盒变化，保证位图始终与显示盒同尺寸（否则点击落点会偏移）。
+  if (window.ResizeObserver) {
+    new ResizeObserver(resize).observe(canvas);
+  }
   resize();
 })();
