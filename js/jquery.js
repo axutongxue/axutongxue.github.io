@@ -155,7 +155,7 @@ function getPromoData() {
       img: "https://wework.qpic.cn/wwpic3az/741232_I4mFtmneQbK4fyd_1792168886/0",
     },
     {
-      title: "阿虚全新产品「虚空搜索」浏览器扩展正式上线！",
+      title: "阿虚最新力作「虚空搜索」浏览器扩展正式上线！",
       content: "可实现 AI 批量提问、对回答进一步总结、批量上传附件，还有影视、音乐、电子书等等资源一键搜索",
       link: "https://xusearch.com/",
       target: "_self",
@@ -453,7 +453,8 @@ document.addEventListener('DOMContentLoaded', function() {
   newContainer.innerHTML = `
 <div class="swiper myKwiper" style="width:330px;margin:0 auto;position:relative;overflow:hidden;z-index:1;padding-bottom:30px;">
   <div class="swiper-wrapper">
-    <div class="swiper-slide"><a href="https://mp.weixin.qq.com/s/3n44gissr4Jzx3E_EaO4Xw"><img loading="lazy" decoding="async" src="https://wework.qpic.cn/wwpic3az/455338_bVHZvO1RTme6n5g_1777202242/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>
+    <div class="swiper-slide"><a href="https://Xusearch.com"><img loading="lazy" decoding="async" src="https://img30.360buyimg.com/imgzone/jfs/t20271205/567510/26/2925/54461/6ae5819eFb0da6c35/09364b01727fdbbf.png" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>
+    <div class="swiper-slide"><a href="https://lizhi.shop/site/search_list/category_id/64?cid=ds7afku3"><img loading="lazy" decoding="async" src="https://img30.360buyimg.com/imgzone/jfs/t20271205/547278/16/13366/113503/6ae581a8F6a32b13c/09364b01725d5e88.png" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div> 
     <div class="swiper-slide"><a href="https://oai.oooai.cc/list/#/register?inviter=0EASGS"><img loading="lazy" decoding="async" src="https://wework.qpic.cn/wwpic3az/985913_dVvSjdMVQR-QELc_1782721368/0" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>
     </div>
   <div class="swiper-button-next" style="position:absolute;top:40%;right:10px;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;opacity:0;transition:opacity .3s">&gt;</div>
