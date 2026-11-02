@@ -167,6 +167,53 @@ li ul {
 	margin: 0 0 -7px 4px;
 }
 
+/* 备用链接：竖线分隔符 + 纯文字小字（替代 bei.svg 原图标，箭头已删）
+   选择器双写：a.bei = 新版生成器输出的空锚（不再含 img）；a:has(> img.bei) =
+   旧版 index.html 的过渡期兼容（重新生成后可删去 :has() 半边）。
+   旧版标记 + 不支持 :has() 的浏览器会退回显示原 SVG 图标（上方 .bei 规则仍生效）。
+   形态：竖线 + 小字「备用链接」，无边框无底色，与主链接形成「主/辅」层级但不抢注意力。
+   竖线用 border-left 画（1px 精确、颜色可独立调浅、不依赖字体字形在
+   各浏览器的渲染差异），比字符「|」更可控。
+   text-indent:0 必须写：li 的 text-indent:-12px 会被 inline-block 继承而左移内容。
+   深色模式规则在 js/jquery.js 的 adddarkcss() 里，改选择器时须同步。 */
+a.bei,
+a:has(> img.bei) {
+	display: inline-block;
+	margin-left: 6px;
+	padding: 0;
+	color: #8a8f92;
+	font: 11px / 18px "microsoft yahei", arial, sans-serif;
+	text-indent: 0;
+	white-space: nowrap;
+	/* 垂直居中校正：11px 小字与 17px 主文字基线重合时，墨迹中心天然低 ~1.45px
+	   （字越小墨迹中心越靠基线），整体上提 0.13em 使两者墨迹中心同线，
+	   竖线/文字随盒一起动。em 单位随字号等比缩放。 */
+	position: relative;
+	top: -0.13em;
+}
+/* 竖线分隔符（border-left）+ 文案合放在 ::before：
+   竖线比文字浅一档，作为分隔符不抢视线。 */
+a.bei::before,
+a:has(> img.bei)::before {
+	content: "备用链接";
+	margin-right: 3px;
+	padding-left: 7px;
+	border-left: 1px solid #c9cccf;
+	color: #8a8f92;
+}
+a:has(> img.bei) img.bei {
+	display: none;
+}
+/* hover：纯文字变蓝（与站点「链接悬停变蓝」语言一致），零布局抖动 */
+a.bei:hover,
+a:has(> img.bei):hover {
+	color: #6495ED;
+}
+a.bei:hover::before,
+a:has(> img.bei):hover::before {
+	color: #6495ED;
+}
+
 .free {
 	height: 20px;
 	margin: 0 2px -5px -12px;
@@ -243,11 +290,95 @@ li ul {
 	color: darkgray;
 }
 
-.fa-info-circle:hover::after{
-	content: attr(notes);
-	padding-left: 4px;
-	font-size: 15px;
-	line-height: 17px;
+/* 空心 ⓘ（纯 CSS 画圆）：FA4.7 没有现成的 info-circle-o，自带的 fa-circle-o
+   描边太粗（≈直径的 1/8），故圆圈直接用 1px 边框画——currentColor 取色，
+   深浅色自动跟随；内部 i 用 FA 的 fa-info 字形（f129），比文本 i 更像图标。
+   ⚠️ 不能依赖 FA 字形做盒子：li 的 text-indent:-12px 会被 inline-block 继承，
+   字形盒只剩 2.58px（14.58−12），墨迹与盒完全脱节；固定 px 盒 + flex 居中才可控。
+   ::after 已被 .touched 行内备注（旧缓存 JS 兜底）占用，故 i 挂在 :not(.touched) 上；
+   .touched 时元素退出圆框布局（auto 尺寸），圆圈改由 ::before 补一颗。 */
+#mainmenu i.fa-info-circle{
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 14px;
+	height: 14px;
+	box-sizing: border-box;
+	border: 1px solid currentColor;
+	border-radius: 50%;
+	text-indent: 0; /* li 的 text-indent:-12px 会继承进 flex 容器，把 i 推出圆外（实测复现） */
+	/* 垂直居中：inline-flex 没有真基线，Chrome 拿内部 i 字形盒的底边当合成基线，
+	   vertical-align 负值会随内容漂移（实测 -2px 时圆心比文字墨迹中心低 4.45px）。
+	   middle 是确定性的「盒中心 ↔ 基线+x高/2」对齐，残余 ~1px 用 top 校到
+	   CJK 墨迹中心（基线上方约 0.35em），em 单位随字号等比缩放。 */
+	vertical-align: middle;
+	top: -0.06em;
+}
+#mainmenu i.fa-info-circle::before{
+	content: none;
+}
+#mainmenu i.fa-info-circle:not(.touched)::after{
+	content: "\f129";
+	font-size: .47em;
+	line-height: 1;
+}
+#mainmenu i.fa-info-circle.touched{
+	display: inline-block;
+	width: auto;
+	height: auto;
+	border: 0;
+	border-radius: 0;
+	vertical-align: baseline;
+}
+#mainmenu i.fa-info-circle.touched::before{
+	content: "";
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	box-sizing: border-box;
+	border: 1px solid currentColor;
+	border-radius: 50%;
+	vertical-align: .5px; /* 空内联盒基线=盒底边：+0.5px 使圆心落在 CJK 墨迹中心（基线上方 6px） */
+	margin-right: 4px;
+}
+
+/* 条目里的 ⓘ（DOM 顺序：名称 → ⓘ → 备用链接）与文件夹标题里的 ⓘ（在 <a> 内部）
+   统一收紧间距：左 6px 贴近文字。条目 ⓘ 右侧不留 margin，与备用链接的
+   margin-left 6px 组成 6px 间距隔开竖线，两段对称。
+   基础规则的 20px 间距仅作未命中场景的兜底。 */
+#mainmenu li > a + i.fa-info-circle,
+#mainmenu a > i.fa-info-circle{
+	margin:0 0 0 6px;
+}
+
+/* 桌面悬停、触屏点按：备注全文都显示在 JS 浮层 #noteTip
+   （js/mouse-click.js 负责定位显隐）。不用 ::after 行内展开——会把行内文字挤开。
+   下方 .touched 规则仅作兜底：访客缓存了旧版 JS（还会加 .touched 类）时，
+   点按仍能行内展开看到备注，新 JS 不再添加该类。 */
+#noteTip{
+	display:none;
+	position:fixed;
+	z-index:9990;
+	max-width:460px;
+	box-sizing:border-box;
+	padding:8px 12px;
+	background-color:#FFF;
+	border:1px solid #e3e6e8;
+	border-radius:8px;
+	box-shadow:0 6px 24px rgba(0,0,0,.14);
+	color:#333;
+	font:13px/1.7 "microsoft yahei", arial, sans-serif;
+	text-indent:0;
+	white-space:normal;
+	word-break:break-word;
+	pointer-events:none;
+}
+/* 手机上 460px 会超出屏宽；≤520px 时根元素 zoom 不启用，100vw 是准确视口宽 */
+@media (max-width:520px){
+	#noteTip{
+		max-width:calc(100vw - 24px);
+	}
 }
 
 .fa-info-circle.touched::after{

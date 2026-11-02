@@ -1,14 +1,4 @@
 (function () {
-  document.addEventListener('touchstart', function (event) {
-    var target = event.target.closest && event.target.closest('.fa-info-circle');
-    if (!target) return;
-    document.querySelectorAll('.fa-info-circle.touched').forEach(function (item) {
-      item.classList.remove('touched');
-    });
-    target.classList.add('touched');
-    event.preventDefault();
-  }, { passive: false });
-
   var container = document.getElementById('clickCanvas');
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!container || reduceMotion) return;
@@ -138,4 +128,91 @@
     new ResizeObserver(resize).observe(canvas);
   }
   resize();
+})();
+
+/* ============================================================
+   备注条目：ⓘ 位置调整 + 悬停/点按浮窗
+   1) 旧版 index.html 的 ⓘ 排在备用链接右侧；新版生成器（13 步）已改为
+      名称 → ⓘ → 备用链接。这里对旧 DOM 做同样的移动（幂等，新 DOM 命中
+      条件不成立、跳过），保证未重新生成的页面上顺序也正确。
+   2) 桌面悬停、触屏点按都显示备注全文浮层（#noteTip，样式在 css/style.css）。
+      不用 :hover::after / .touched 行内展开——会把行内文字挤开；CSS 里保留的
+      .touched 规则仅作「访客缓存了旧 JS」时的兜底，本文件已不再添加该类。
+      定位用 getBoundingClientRect + 右下角探针取视口边界：根元素 zoom
+      生效时 window.innerWidth 与 rect 不是同一坐标系（见上方 resize 注释），
+      两者不能混用；写回 style.left/top 时把 rect 坐标除回 zoom。
+   ============================================================ */
+(function () {
+  var tip = null;
+  var probe = null;
+
+  function ensure() {
+    if (!tip) {
+      tip = document.createElement('div');
+      tip.id = 'noteTip';
+      document.body.appendChild(tip);
+    }
+    if (!probe) {
+      // 探针钉在视口右下角，其 rect 即「rect 坐标系下的视口右/下边界」
+      probe = document.createElement('div');
+      probe.style.cssText = 'position:fixed;right:0;bottom:0;width:0;height:0;visibility:hidden;pointer-events:none;';
+      document.body.appendChild(probe);
+    }
+  }
+
+  function show(icon) {
+    var text = icon.getAttribute('notes');
+    if (!text) return;
+    ensure();
+    tip.textContent = text;
+    tip.style.display = 'block';
+    var edge = probe.getBoundingClientRect();
+    var rect = icon.getBoundingClientRect();
+    var box = tip.getBoundingClientRect();
+    var x = rect.left;
+    var y = rect.bottom + 6;
+    if (x + box.width > edge.left - 12) x = edge.left - 12 - box.width;
+    if (x < 12) x = 12;
+    if (y + box.height > edge.top - 12) {
+      var above = rect.top - 6 - box.height;
+      y = above >= 12 ? above : Math.max(12, edge.top - 12 - box.height);
+    }
+    var zoom = parseFloat(getComputedStyle(document.documentElement).zoom) || 1;
+    tip.style.left = Math.round(x / zoom) + 'px';
+    tip.style.top = Math.round(y / zoom) + 'px';
+  }
+
+  function hide() {
+    if (tip) tip.style.display = 'none';
+  }
+
+  document.querySelectorAll('li > a + i.fa-info-circle').forEach(function (icon) {
+    var prev = icon.previousElementSibling;
+    if (prev && prev.querySelector && prev.querySelector('img.bei')) {
+      prev.parentNode.insertBefore(icon, prev);
+    }
+  });
+
+  document.addEventListener('mouseover', function (event) {
+    var icon = event.target.closest && event.target.closest('.fa-info-circle');
+    if (icon && icon.getAttribute('notes')) show(icon);
+    else hide();
+  });
+  document.addEventListener('mouseout', function (event) {
+    if (event.target.closest && event.target.closest('.fa-info-circle')) hide();
+  });
+  // 触屏：点按 ⓘ 与桌面悬停走同一浮窗。preventDefault 拦掉 tap 的合成 mouse 事件
+  // （避免与 mouseover 重复触发，也避免文件夹标题里的 ⓘ 点按触发文件夹折叠），
+  // 只对命中 ⓘ 的触摸拦截，其余触摸（滚动、点链接）不受影响；点别处顺手收起浮窗。
+  document.addEventListener('touchstart', function (event) {
+    var icon = event.target.closest && event.target.closest('.fa-info-circle');
+    if (icon && icon.getAttribute('notes')) {
+      show(icon);
+      event.preventDefault();
+    } else {
+      hide();
+    }
+  }, { passive: false });
+  window.addEventListener('scroll', hide, { passive: true });
+  window.addEventListener('resize', hide, { passive: true });
 })();
