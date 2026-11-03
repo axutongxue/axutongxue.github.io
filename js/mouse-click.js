@@ -242,14 +242,20 @@
   window.addEventListener('resize', hide, { passive: true });
 
   /* 移动端：滚动时右侧功能栏淡化到 40%（上滑或回顶恢复）。
-     站长反馈功能栏遮挡列表文字与备注浮窗；桌面端列表不与侧栏重叠，不做。 */
+     站长反馈功能栏遮挡列表文字与备注浮窗；桌面端列表不与侧栏重叠，不做。
+     ⚠️ 以下悬浮元素都「不在 sideStack 容器里」，须逐一纳入淡化：
+     回到顶部按钮（sidebar.js 独立创建）、右上角绸缎（index.html 静态元素）。 */
   var sbLastY = 0;
   var sideStackEl = document.getElementById('sideStack');
+  var backTopEl = document.getElementById('backTopBtn');
+  var ribbonEl = document.querySelector('.forkit');
   window.addEventListener('scroll', function () {
     if (!sideStackEl || !window.matchMedia('(max-width: 768px)').matches) return;
     var y = window.scrollY;
-    if (y > 24 && y > sbLastY) sideStackEl.classList.add('dimmed');
-    else if (y < sbLastY || y <= 24) sideStackEl.classList.remove('dimmed');
+    var dim = y > 24 && y > sbLastY;
+    sideStackEl.classList.toggle('dimmed', dim);
+    if (backTopEl) backTopEl.classList.toggle('dimmed', dim);
+    if (ribbonEl) ribbonEl.classList.toggle('dimmed', dim);
     sbLastY = y;
   }, { passive: true });
 })();

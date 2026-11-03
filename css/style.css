@@ -407,6 +407,20 @@ a.bei:hover::before {
 	#sideStack.dimmed{
 		opacity:.4;
 	}
+	/* 回到顶部按钮不在 sideStack 容器里（sidebar.js 独立创建），须单独淡化；
+	   ⚠️ 需 !important——sidebar.js 注入的 #backTopBtn.show{opacity:1} 在级联中靠后，
+	   同等特异性会胜出。 */
+	#backTopBtn.dimmed{
+		opacity:.4 !important;
+	}
+	/* 右上角绸缎（forkit）：不在 sideStack 容器里，须单独淡化。
+	   无需 !important——绸缎没有其他 opacity 规则会竞争。 */
+	.forkit{
+		transition:opacity .25s ease;
+	}
+	.forkit.dimmed{
+		opacity:.4;
+	}
 }
 
 .fa-quote-left{
