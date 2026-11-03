@@ -164,6 +164,9 @@
     var text = icon.getAttribute('notes');
     if (!text) return;
     ensure();
+    // 点击态（方案 E）：先清掉其它图标的 active，再标记当前这个
+    document.querySelectorAll('.note-icon.active').forEach(function (el) { el.classList.remove('active'); });
+    icon.classList.add('active');
     tip.textContent = text;
     tip.style.display = 'block';
     var edge = probe.getBoundingClientRect();
@@ -184,14 +187,8 @@
 
   function hide() {
     if (tip) tip.style.display = 'none';
+    document.querySelectorAll('.note-icon.active').forEach(function (el) { el.classList.remove('active'); });
   }
-
-  document.querySelectorAll('li > a + i.note-icon').forEach(function (icon) {
-    var prev = icon.previousElementSibling;
-    if (prev && prev.querySelector && prev.querySelector('img.bei')) {
-      prev.parentNode.insertBefore(icon, prev);
-    }
-  });
 
   document.addEventListener('mouseover', function (event) {
     var icon = event.target.closest && event.target.closest('.note-icon');
@@ -201,10 +198,26 @@
   document.addEventListener('mouseout', function (event) {
     if (event.target.closest && event.target.closest('.note-icon')) hide();
   });
-  // 触屏：点按 ⓘ 与桌面悬停走同一浮窗。preventDefault 拦掉 tap 的合成 mouse 事件
-  // （避免与 mouseover 重复触发，也避免文件夹标题里的 ⓘ 点按触发文件夹折叠），
-  // 只对命中 ⓘ 的触摸拦截，其余触摸（滚动、点链接）不受影响；点别处顺手收起浮窗。
+  // 触屏：点按 ⓘ 与桌面悬停走同一浮窗。
+  // ⚠️ 用 touchend 而非 touchstart：touchstart 在手指刚碰到就触发，滚动页面时
+  // 手指划过 ⓘ 也会误弹窗，且无法表达「按下—抬起」的完整点击语义。
+  // 判定「是点击而非滑动」：记录按下点，抬起时位移超过 10px 就不算点击（用户是在滚动）。
+  var touchStartX = 0, touchStartY = 0, touchMoved = false;
   document.addEventListener('touchstart', function (event) {
+    var t = event.touches[0];
+    touchStartX = t ? t.clientX : 0;
+    touchStartY = t ? t.clientY : 0;
+    touchMoved = false;
+  }, { passive: true });
+  document.addEventListener('touchmove', function (event) {
+    var t = event.touches[0];
+    if (!t) return;
+    if (Math.abs(t.clientX - touchStartX) > 10 || Math.abs(t.clientY - touchStartY) > 10) {
+      touchMoved = true;
+    }
+  }, { passive: true });
+  document.addEventListener('touchend', function (event) {
+    if (touchMoved) return;   // 是滑动手势，不当作点击
     var icon = event.target.closest && event.target.closest('.note-icon');
     if (icon && icon.getAttribute('notes')) {
       show(icon);

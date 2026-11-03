@@ -131,11 +131,31 @@ li ul {
 	font-size: 14px;
 	font-family: inherit;
 	line-height: 20px;
-	padding-left: 4px;
+	/* 说明文字的悬挂缩进（换行后每行都与首行文字左缘对齐）：
+	   li 上有 text-indent:-12px，而说明文字是纯文本 <i>，换行后第二行会退回 li 左缘。
+	   做法：图标改为绝对定位脱离文本流，文字整体靠 padding-left 缩进，
+	   这样每一行（包括首行）的排版起点完全一致，不受 text-indent 影响。
+	   ⚠️ 不要用 padding + 负 text-indent 的写法：text-indent 会同时作用于 ::before，
+	   导致图标与文字一起位移、越调越乱（实测踩过）。 */
+	display: block;
+	position: relative;
+	/* margin-left 补回 li 的 text-indent:-12px —— 块级盒不受 text-indent 影响，
+	   若不补，说明块整体会比下方条目图标左移 12px，两者不在同一竖线上。
+	   padding-left = 图标宽 19px + 与文字间距 3px，供文字避开绝对定位的图标。 */
+	margin-left: -20px;
+	padding-left: 22px;
+	text-indent: 0;
 }
 .fa.notes::before{
 	font-family: FontAwesome;
-	margin-right: 3px;
+	/* 图标从文本流中脱离，固定到说明块左缘。
+	   font-size 显式设为 17px 与下方条目图标（.fa-internet-explorer 等）一致：
+	   同为 17px 时两者的字形宽度几乎相同（实测 14.57px vs 14px），左缘对齐后视觉也齐；
+	   若沿用 14px，图标会明显比下方的条目图标小，看起来像「没对齐」。 */
+	font-size: 17px;
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 
 .light {
@@ -163,26 +183,17 @@ li ul {
 	padding:0 3px 0 3px;
 	color:cornflowerblue
 }
-.bei {	
-	margin: 0 0 -7px 4px;
-}
-
-/* 备用链接：竖线分隔符 + 纯文字小字（替代 bei.svg 原图标，箭头已删）
-   选择器双写：a.bei = 新版生成器输出的空锚（不再含 img）；a:has(> img.bei) =
-   旧版 index.html 的过渡期兼容（重新生成后可删去 :has() 半边）。
-   旧版标记 + 不支持 :has() 的浏览器会退回显示原 SVG 图标（上方 .bei 规则仍生效）。
+/* 备用链接：竖线分隔符 + 纯文字小字。
+   DOM 是生成器输出的空锚 <a class="bei" HREF="备用地址"></a> —— 里面没有子元素，
+   竖线和文案都由伪元素生成（::before 画竖线、::after 放文字）。
    形态：竖线 + 小字「备用链接」，无边框无底色，与主链接形成「主/辅」层级但不抢注意力。
-   竖线用 border-left 画（1px 精确、颜色可独立调浅、不依赖字体字形在
-   各浏览器的渲染差异），比字符「|」更可控。
-   text-indent:0 必须写：li 的 text-indent:-12px 会被 inline-block 继承而左移内容。
    深色模式规则在 js/jquery.js 的 adddarkcss() 里，改选择器时须同步。 */
-a.bei,
-a:has(> img.bei) {
+a.bei {
 	display: inline-flex;
 	align-items: center;   /* 竖线与文字同处一个 flex 容器，由布局引擎按中线对齐，
 	                          不依赖基线/行盒的取整差异 —— 这是稳定做到 0 偏差的方式 */
 	gap: 6px;
-	margin-left: 6px;
+	margin-left: 8px;
 	padding: 0 0 0 7px;    /* 左侧 7px 留给竖线 */
 	color: #8a8f92;
 	font: 11px / 1 "microsoft yahei", arial, sans-serif;
@@ -195,8 +206,7 @@ a:has(> img.bei) {
 	top: calc(-0.235em + 1.25px);
 }
 /* 竖线：flex item，高度 0.91em（≈10px，与 11px 汉字墨迹等高），由 flex 垂直居中 */
-a.bei::before,
-a:has(> img.bei)::before {
+a.bei::before {
 	/* 竖线：零宽元素 + 左侧 1px 边框。
 	   用「盒」而不是「字符」画线 —— 字符 | 在 11px 雅黑下的墨迹中心偏低约 1px，
 	   无论怎么加 vertical-align / relative 位移，都会在 0.5px 量级来回摆（实测多轮）。
@@ -216,18 +226,15 @@ a:has(> img.bei)::before {
 	top: 0.5px;
 }
 /* 文字：flex item，垂直居中由 flex 保证 */
-a.bei::after,
-a:has(> img.bei)::after {
+a.bei::after {
 	content: "备用链接";
 	margin-left: 3px;
 }
 /* hover：纯文字变蓝（与站点「链接悬停变蓝」语言一致），零布局抖动 */
-a.bei:hover,
-a:has(> img.bei):hover {
+a.bei:hover {
 	color: #6495ED;
 }
-a.bei:hover::before,
-a:has(> img.bei):hover::before {
+a.bei:hover::before {
 	color: #6495ED;
 }
 
@@ -323,15 +330,18 @@ a:has(> img.bei):hover::before {
 	/* 间距只在这里声明一次（此前分散在 .note-icon 基础规则与下方覆盖规则里，
 	   左值被覆盖成 2px、上下的 5px 8px 则从未生效过）。
 	   左 2px + 4px padding = 视觉 6px；右 5px + 4px = 9px，与备用链接的 margin-left 6px 相接。 */
-	margin: 0 0px 0 2px;
+	margin: 0 -3px 0 2px;
 	text-indent: 0;
-	/* 光学居中（optical centering）：对齐依据是「暗度加权质心」而不是外接盒中心。
-	   真实页面渲染后逐像素加权实测：ⓘ 质心比同排汉字低 1.71px
-	   （vertical-align:middle 在真实行盒里的基准与独立 canvas 绘制不同，
-	   所以理论推算的「天然对齐」不成立，必须以页面实测为准）。
-	   补偿量 = 1.71px / 18px = 0.095em，em 单位随字号缩放。 */
+	/* 对齐依据（canvas 实测两种字形的墨迹，不在同一基线上比较）：
+	   汉字 17px：墨迹中心在基线上方 6.0px、墨迹高 16px
+	   ⓘ 18px：墨迹中心在基线上方 6.5px、墨迹高 17px
+	   ⇒ 图标墨迹中心比汉字高 0.5px、且更高 1px，底部自然低 0.5px。
+	   补偿 = 0.5px / 18px ≈ 0.028em（em 随字号/zoom 等比缩放，比例恒定）。
+	   ⚠️ 此前用 vertical-align:middle + top:-0.095em，middle 的参照是「行盒 + x-height/2」，
+	   行盒高度会随 line-height 与缩放变化，不是稳定基准，导致偏移逐档放大（实测 2x 时差 11.7px）。
+	   改回 middle，但补偿量改用上面实测的比例值。 */
 	vertical-align: middle;
-	top: -0.095em;
+	top: -0.042em;
 	position: relative;
 	transition: color .15s;
 }
@@ -343,6 +353,17 @@ a:has(> img.bei):hover::before {
 }
 #mainmenu i.note-icon:hover{
 	color: #6495ED;
+}
+/* 移动端点击态（方案 E）：变蓝 + 笔画加粗。
+   为何不用 font-weight:bold —— 雅黑的 U+24D8 没有真粗体字形，bold 会走伪粗体横向拉伸、
+   圆圈变形；text-stroke 是沿字形轮廓均匀描边，形状不变、只是笔画变实。
+   描边必须加在 ::before 上（字符 ⓘ 画在那里），加在元素上是无效的。
+   .active 由 JS 在浮窗打开时添加、关闭时移除。 */
+#mainmenu i.note-icon.active{
+	color: #6495ED;
+}
+#mainmenu i.note-icon.active::before{
+	-webkit-text-stroke: .6px currentColor;
 }
 /* 触屏兜底：访客缓存了旧版 JS（仍会加 .touched 并走行内展开）时保持备注可见。
    新 JS 用浮窗，不再添加该类。 */

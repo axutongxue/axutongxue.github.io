@@ -262,7 +262,7 @@ html.dark-mode #sharePopup .share-footer-link strong{color:#e5c977}`;
     if (!a || a.tagName !== 'A') return false;
     const h = a.getAttribute('href') || a.getAttribute('HREF');
     if (!h) return false;
-    if (a.querySelector('img.bei')) return false;
+    if (a.classList.contains('bei')) return false;
     if (!(a.textContent || '').trim()) return false;
     const li = a.closest('li');
     if (li && li.querySelector(':scope > ul.menu')) return false;
