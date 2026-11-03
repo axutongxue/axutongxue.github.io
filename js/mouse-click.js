@@ -172,15 +172,27 @@
     var edge = probe.getBoundingClientRect();
     var rect = icon.getBoundingClientRect();
     var box = tip.getBoundingClientRect();
-    var x = rect.left;
-    var y = rect.bottom + 6;
-    if (x + box.width > edge.left - 12) x = edge.left - 12 - box.width;
-    if (x < 12) x = 12;
-    if (y + box.height > edge.top - 12) {
-      var above = rect.top - 6 - box.height;
-      y = above >= 12 ? above : Math.max(12, edge.top - 12 - box.height);
-    }
+    // ⚠️ rect/box/edge 都是「根 zoom 后的视觉像素」（Aa 字号面板/高分屏缩放改的是根 zoom）。
+    // 下面所有 CSS px 量（避让边距、屏幕边距、浮窗最大宽）必须 × zoom 换算成视觉像素，
+    // 否则字号放大后全部失准：100vw 渲染成 视口×zoom，浮窗会比屏幕还宽、
+    // 避让量 52px 只等效 52/zoom——zoom 2 时浮窗整条压在功能栏底下（站长实测截图）。
     var zoom = parseFloat(getComputedStyle(document.documentElement).zoom) || 1;
+    // 移动端浮窗避让：右缘给右侧功能栏（30px + 间距）留出空间，不压在它上面
+    var marginR = (window.matchMedia('(max-width: 768px)').matches ? 52 : 12) * zoom;
+    var pad = 12 * zoom;      // 屏幕四周安全边距
+    // 浮窗最大宽由 JS 按视觉像素写入——CSS 里的 calc(100vw-64px) 在根 zoom 下语义错误
+    tip.style.maxWidth = Math.round(edge.left / zoom - 64) + 'px';
+    tip.textContent = text;
+    tip.style.display = 'block';
+    box = tip.getBoundingClientRect();
+    var x = rect.left;
+    var y = rect.bottom + 6 * zoom;
+    if (x + box.width > edge.left - marginR) x = edge.left - marginR - box.width;
+    if (x < pad) x = pad;
+    if (y + box.height > edge.top - pad) {
+      var above = rect.top - 6 * zoom - box.height;
+      y = above >= pad ? above : Math.max(pad, edge.top - pad - box.height);
+    }
     tip.style.left = Math.round(x / zoom) + 'px';
     tip.style.top = Math.round(y / zoom) + 'px';
   }
@@ -228,4 +240,16 @@
   }, { passive: false });
   window.addEventListener('scroll', hide, { passive: true });
   window.addEventListener('resize', hide, { passive: true });
+
+  /* 移动端：滚动时右侧功能栏淡化到 40%（上滑或回顶恢复）。
+     站长反馈功能栏遮挡列表文字与备注浮窗；桌面端列表不与侧栏重叠，不做。 */
+  var sbLastY = 0;
+  var sideStackEl = document.getElementById('sideStack');
+  window.addEventListener('scroll', function () {
+    if (!sideStackEl || !window.matchMedia('(max-width: 768px)').matches) return;
+    var y = window.scrollY;
+    if (y > 24 && y > sbLastY) sideStackEl.classList.add('dimmed');
+    else if (y < sbLastY || y <= 24) sideStackEl.classList.remove('dimmed');
+    sbLastY = y;
+  }, { passive: true });
 })();

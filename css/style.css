@@ -265,7 +265,7 @@ a.bei:hover::before {
 	height:30px;
 	width:200px;
 	color:#fff;
-	background:#000;
+	background:#323d45;   /* 与右侧功能栏按钮同色（2026-11-04 站长要求） */
 	text-align:center;
 	font-size:12px;
 	line-height:30px;
@@ -395,10 +395,17 @@ a.bei:hover::before {
 	word-break:break-word;
 	pointer-events:none;
 }
-/* 手机上 460px 会超出屏宽；≤520px 时根元素 zoom 不启用，100vw 是准确视口宽 */
-@media (max-width:520px){
-	#noteTip{
-		max-width:calc(100vw - 24px);
+/* 浮窗最大宽由 js/mouse-click.js 的 show() 按视觉像素实时写入（内联样式）——
+   不能用 calc(100vw-64px)：根 zoom 下 100vw 渲染成 视口×zoom，浮窗会比屏幕还宽。 */
+
+/* 移动端：滚动时右侧功能栏淡化到 40%，上滑或回顶恢复（js/mouse-click.js 挂 dimmed 类），
+   备注浮窗同时由 JS 避让功能栏（show() 里 marginR 52×zoom）。桌面列表不与侧栏重叠，不启用。 */
+@media (max-width:768px){
+	#sideStack{
+		transition:opacity .25s ease;
+	}
+	#sideStack.dimmed{
+		opacity:.4;
 	}
 }
 
