@@ -178,31 +178,48 @@ li ul {
    深色模式规则在 js/jquery.js 的 adddarkcss() 里，改选择器时须同步。 */
 a.bei,
 a:has(> img.bei) {
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;   /* 竖线与文字同处一个 flex 容器，由布局引擎按中线对齐，
+	                          不依赖基线/行盒的取整差异 —— 这是稳定做到 0 偏差的方式 */
+	gap: 6px;
 	margin-left: 6px;
-	padding: 0;
+	padding: 0 0 0 7px;    /* 左侧 7px 留给竖线 */
 	color: #8a8f92;
-	font: 11px / 18px "microsoft yahei", arial, sans-serif;
+	font: 11px / 1 "microsoft yahei", arial, sans-serif;
 	text-indent: 0;
 	white-space: nowrap;
-	/* 垂直居中校正：11px 小字与 17px 主文字基线重合时，墨迹中心天然低 ~1.45px
-	   （字越小墨迹中心越靠基线），整体上提 0.13em 使两者墨迹中心同线，
-	   竖线/文字随盒一起动。em 单位随字号等比缩放。 */
+	/* 光学居中：11px 小字墨迹中心天然比 17px 主文字低，整块上提 0.235em */
 	position: relative;
-	top: -0.13em;
+	/* 像素实测迭代（2026-11-03）：竖线与文字需先各自对齐，再整体对主文字做光学居中。
+	   当前值使「竖线/文字」中心 = 主文字中心 - 0.5px，故补 0.5px 下移。 */
+	top: calc(-0.235em + 1.25px);
 }
-/* 竖线分隔符（border-left）+ 文案合放在 ::before：
-   竖线比文字浅一档，作为分隔符不抢视线。 */
+/* 竖线：flex item，高度 0.91em（≈10px，与 11px 汉字墨迹等高），由 flex 垂直居中 */
 a.bei::before,
 a:has(> img.bei)::before {
-	content: "备用链接";
-	margin-right: 3px;
-	padding-left: 7px;
+	/* 竖线：零宽元素 + 左侧 1px 边框。
+	   用「盒」而不是「字符」画线 —— 字符 | 在 11px 雅黑下的墨迹中心偏低约 1px，
+	   无论怎么加 vertical-align / relative 位移，都会在 0.5px 量级来回摆（实测多轮）。
+	   零宽盒的边框高度 = height，可与文字墨迹高度（10px）精确相等，
+	   再由外层 flex 的 align-items:center 做盒居中 —— 盒与盒对齐是确定性的。 */
+	content: "";
+	flex: none;
+	width: 0;
+	height: 10px;
+	box-sizing: border-box;
 	border-left: 1px solid #c9cccf;
-	color: #8a8f92;
+	margin-left: -7px;
+	margin-right: 1px;
+	/* 零宽盒 + 边框，盒高 10px 与文字墨迹等高；外层 flex 的 align-items:center 负责居中。
+	   像素实测：受整数像素量化影响，线中心比文字中心高 1px，补 0.5px 收窄差距。 */
+	position: relative;
+	top: 0.5px;
 }
-a:has(> img.bei) img.bei {
-	display: none;
+/* 文字：flex item，垂直居中由 flex 保证 */
+a.bei::after,
+a:has(> img.bei)::after {
+	content: "备用链接";
+	margin-left: 3px;
 }
 /* hover：纯文字变蓝（与站点「链接悬停变蓝」语言一致），零布局抖动 */
 a.bei:hover,
@@ -285,77 +302,60 @@ a:has(> img.bei):hover::before {
     outline:none;
 }
 
-.fa-info-circle{
-	margin:5px 8px 5px 20px;
+/* 备注按钮 ⓘ —— 直接用字符 U+24D8，配色沿用站点原本的 darkgray。
+   ✅ 像素级验证结论（并排渲染字符 18px vs CSS 自绘 16px 环，逐像素 ASCII 比对）：
+   Windows + system-ui 下该字符渲染为严格正圆（横 17px / 纵 17px），
+   且笔画比 CSS 2px 环更轻盈，正是要的观感。
+   （两次误判记录：① canvas measureText 取的是度量盒不是墨迹；
+     ② 拿放大 2.3 倍的截图量像素，量到的是缩放失真。）
+   实现极简：一个字符，零盒模型、零伪元素几何。
+   text-indent:0 必写：li 的 text-indent:-12px 会继承进本元素，把字形推出热区。 */
+#mainmenu i.note-icon{
 	color: darkgray;
-}
-
-/* 空心 ⓘ（纯 CSS 画圆）：FA4.7 没有现成的 info-circle-o，自带的 fa-circle-o
-   描边太粗（≈直径的 1/8），故圆圈直接用 1px 边框画——currentColor 取色，
-   深浅色自动跟随；内部 i 用 FA 的 fa-info 字形（f129），比文本 i 更像图标。
-   ⚠️ 不能依赖 FA 字形做盒子：li 的 text-indent:-12px 会被 inline-block 继承，
-   字形盒只剩 2.58px（14.58−12），墨迹与盒完全脱节；固定 px 盒 + flex 居中才可控。
-   ::after 已被 .touched 行内备注（旧缓存 JS 兜底）占用，故 i 挂在 :not(.touched) 上；
-   .touched 时元素退出圆框布局（auto 尺寸），圆圈改由 ::before 补一颗。 */
-#mainmenu i.fa-info-circle{
-	position: relative;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 14px;
-	height: 14px;
-	box-sizing: border-box;
-	border: 1px solid currentColor;
-	border-radius: 50%;
-	text-indent: 0; /* li 的 text-indent:-12px 会继承进 flex 容器，把 i 推出圆外（实测复现） */
-	/* 垂直居中：inline-flex 没有真基线，Chrome 拿内部 i 字形盒的底边当合成基线，
-	   vertical-align 负值会随内容漂移（实测 -2px 时圆心比文字墨迹中心低 4.45px）。
-	   middle 是确定性的「盒中心 ↔ 基线+x高/2」对齐，残余 ~1px 用 top 校到
-	   CJK 墨迹中心（基线上方约 0.35em），em 单位随字号等比缩放。 */
+	font-size: 18px;          /* 与参考稿 .icon-info 同号 */
+	line-height: 1;           /* 不写会继承 1.7，行盒被撑高、字形视觉偏下 */
+	/* ⚠️ font-style:normal 必须显式声明：<i> 默认被 UA 样式表设成 italic，
+	   FontAwesome 的 .fa 类原本会覆盖成 normal，但本站输出已改成 <i class="note-icon">
+	   不带 .fa，于是斜体重新生效 —— ⓘ 字符按斜体字形渲染，圆圈被拉成斜椭圆（实测）。
+	   参考稿用的是 <span>，天然正体，所以那边一直是正圆。 */
+	font-style: normal;
+	padding: 4px;             /* 热区：字符四周各补 4px 便于点按 */
+	/* 间距只在这里声明一次（此前分散在 .note-icon 基础规则与下方覆盖规则里，
+	   左值被覆盖成 2px、上下的 5px 8px 则从未生效过）。
+	   左 2px + 4px padding = 视觉 6px；右 5px + 4px = 9px，与备用链接的 margin-left 6px 相接。 */
+	margin: 0 0px 0 2px;
+	text-indent: 0;
+	/* 光学居中（optical centering）：对齐依据是「暗度加权质心」而不是外接盒中心。
+	   真实页面渲染后逐像素加权实测：ⓘ 质心比同排汉字低 1.71px
+	   （vertical-align:middle 在真实行盒里的基准与独立 canvas 绘制不同，
+	   所以理论推算的「天然对齐」不成立，必须以页面实测为准）。
+	   补偿量 = 1.71px / 18px = 0.095em，em 单位随字号缩放。 */
 	vertical-align: middle;
-	top: -0.06em;
+	top: -0.095em;
+	position: relative;
+	transition: color .15s;
 }
-#mainmenu i.fa-info-circle::before{
+#mainmenu i.note-icon::before{
+	content: "\24D8";
+}
+#mainmenu i.note-icon::after{
 	content: none;
 }
-#mainmenu i.fa-info-circle:not(.touched)::after{
-	content: "\f129";
-	font-size: .47em;
-	line-height: 1;
+#mainmenu i.note-icon:hover{
+	color: #6495ED;
 }
-#mainmenu i.fa-info-circle.touched{
-	display: inline-block;
-	width: auto;
-	height: auto;
-	border: 0;
-	border-radius: 0;
-	vertical-align: baseline;
-}
-#mainmenu i.fa-info-circle.touched::before{
-	content: "";
-	display: inline-block;
-	width: 13px;
-	height: 13px;
-	box-sizing: border-box;
-	border: 1px solid currentColor;
-	border-radius: 50%;
-	vertical-align: .5px; /* 空内联盒基线=盒底边：+0.5px 使圆心落在 CJK 墨迹中心（基线上方 6px） */
-	margin-right: 4px;
-}
-
-/* 条目里的 ⓘ（DOM 顺序：名称 → ⓘ → 备用链接）与文件夹标题里的 ⓘ（在 <a> 内部）
-   统一收紧间距：左 6px 贴近文字。条目 ⓘ 右侧不留 margin，与备用链接的
-   margin-left 6px 组成 6px 间距隔开竖线，两段对称。
-   基础规则的 20px 间距仅作未命中场景的兜底。 */
-#mainmenu li > a + i.fa-info-circle,
-#mainmenu a > i.fa-info-circle{
-	margin:0 0 0 6px;
+/* 触屏兜底：访客缓存了旧版 JS（仍会加 .touched 并走行内展开）时保持备注可见。
+   新 JS 用浮窗，不再添加该类。 */
+#mainmenu i.note-icon.touched::after{
+	content: attr(notes);
+	position: static;
+	display: inline;
+	font: 15px/17px "microsoft yahei", arial, sans-serif;
+	padding-left: 4px;
 }
 
 /* 桌面悬停、触屏点按：备注全文都显示在 JS 浮层 #noteTip
-   （js/mouse-click.js 负责定位显隐）。不用 ::after 行内展开——会把行内文字挤开。
-   下方 .touched 规则仅作兜底：访客缓存了旧版 JS（还会加 .touched 类）时，
-   点按仍能行内展开看到备注，新 JS 不再添加该类。 */
+   （js/mouse-click.js 负责定位显隐）。不用 ::after 行内展开——会把行内文字挤开。 */
 #noteTip{
 	display:none;
 	position:fixed;
@@ -379,13 +379,6 @@ a:has(> img.bei):hover::before {
 	#noteTip{
 		max-width:calc(100vw - 24px);
 	}
-}
-
-.fa-info-circle.touched::after{
-	content: attr(notes);
-	padding-left: 4px;
-	font-size: 15px;
-	line-height: 17px;
 }
 
 .fa-quote-left{

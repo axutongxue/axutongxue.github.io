@@ -186,7 +186,7 @@
     if (tip) tip.style.display = 'none';
   }
 
-  document.querySelectorAll('li > a + i.fa-info-circle').forEach(function (icon) {
+  document.querySelectorAll('li > a + i.note-icon').forEach(function (icon) {
     var prev = icon.previousElementSibling;
     if (prev && prev.querySelector && prev.querySelector('img.bei')) {
       prev.parentNode.insertBefore(icon, prev);
@@ -194,18 +194,18 @@
   });
 
   document.addEventListener('mouseover', function (event) {
-    var icon = event.target.closest && event.target.closest('.fa-info-circle');
+    var icon = event.target.closest && event.target.closest('.note-icon');
     if (icon && icon.getAttribute('notes')) show(icon);
     else hide();
   });
   document.addEventListener('mouseout', function (event) {
-    if (event.target.closest && event.target.closest('.fa-info-circle')) hide();
+    if (event.target.closest && event.target.closest('.note-icon')) hide();
   });
   // 触屏：点按 ⓘ 与桌面悬停走同一浮窗。preventDefault 拦掉 tap 的合成 mouse 事件
   // （避免与 mouseover 重复触发，也避免文件夹标题里的 ⓘ 点按触发文件夹折叠），
   // 只对命中 ⓘ 的触摸拦截，其余触摸（滚动、点链接）不受影响；点别处顺手收起浮窗。
   document.addEventListener('touchstart', function (event) {
-    var icon = event.target.closest && event.target.closest('.fa-info-circle');
+    var icon = event.target.closest && event.target.closest('.note-icon');
     if (icon && icon.getAttribute('notes')) {
       show(icon);
       event.preventDefault();
