@@ -1,6 +1,16 @@
 ul li ul {
 	display:none
 }
+/* 兜底：禁止出现横向滚动条。本站没有任何需要横向滚动的正当内容，
+   但有几处会越过视口右缘的元素——公告面板 main（240px 内容 + 2px 边框 = 242px）、
+   右上角绸缎（translate 55px）、底部轮播 swiper、100vw 背景画布；
+   在部分浏览器/缩放组合下它们会被算进横向滚动区，悬停二维码等时机就可能冒出横条。
+   ⚠️ 只能加在 html 上，不能同时加 body：两者都设会让 body 变成独立滚动容器，
+   其静态位置整体上移，导致没有显式 top 的深色模式按钮（.darkmode-toggle）漂移、
+   与 #fontBtn 错位（2026-11-09 实测：深色按钮上移 8.7px）。 */
+html {
+	overflow-x: hidden;
+}
 body {
 	font-family:arial,hiragino sans gb,microsoft yahei,微軟正黑體,sans-serif;
 }
@@ -168,6 +178,14 @@ li ul {
 .mode {
     width:34px;
 }
+/* img 默认是行内元素：竖向居中靠的是行盒，行盒底部会留出「基线下降部」的空隙
+   （Chrome/Arial 约 3px），这段空隙的深度由字体度量决定 —— Safari + 苹方/冬青黑
+   算出来的空隙更大，药丸图形因此整体上移，看起来调整字体按钮往下偏 4px（2026-11-09）。
+   改成 display:block 后容器高度 = 图形高度，几何完全由像素决定，不再受字体影响。
+   注意 .mode 是加在 <img> 自身的类名（DOM：button > div.light > img.mode）。 */
+img.mode {
+    display:block;
+}
 
 .res {
 	border-style:solid;
@@ -284,12 +302,16 @@ a.bei:hover::before {
 	background:0;
 	right:unset;
 	left:23px;
+	/* 显式 top，不要依赖「静态位置」：Safari 与 Chrome 对 top:auto 的绝对定位元素
+	   静态位置算法不同，只写 margin-top 会在 Safari 上向下偏（2026-11-09 站长反馈）。
+	   20px 使本按钮圆心 = 20 + 14/2 = 27px，与 #fontBtn（top:18 + 高 18 → 圆心 27px）精确同心。 */
+	top:20px;
 	cursor:pointer;
 	display:flex;
 	justify-content:center;
 	align-items:center;
 	z-index:2;
-	margin-top:7px
+	margin-top:0
 }
 
 .button {
