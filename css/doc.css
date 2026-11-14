@@ -1,0 +1,447 @@
+/* 站点文档页 / reply 页共用样式（2026-11-14 重做；同日文档页叠加玻璃拟态场景）
+ *
+ * 视觉口径：首页的字体与背景动效 + GitHub 文档排版
+ *   - 页面骨架：.doc-topbar（面包屑 + 返回 + 深浅色） / .doc-shell / .doc-card
+ *   - 正文排版：#content（网站文档与 reply 解密内容共用；旧 displayContent 弹窗也复用）
+ *   - 组件：.gh-btn / .gh-input / .gh-note / .rp-hit（页内搜索高亮）
+ *   - 玻璃拟态：文档页模板在 <html> 上加 .doc-glass，启用夜景 + 光斑 + 白玻璃场景
+ *     （reply 不加该类，保持 GitHub 卡片样式）
+ *
+ * 深色模式由 /js/theme.js 写 <html data-theme="dark">，与首页共用 status cookie。
+ * 文档页因整页走玻璃夜景，不再引入 theme.js / 深浅色切换。
+ */
+
+:root{
+  --doc-canvas:#f5f5f5;
+  --doc-card:#ffffff;
+  --doc-text:#24292f;
+  --doc-muted:#57606a;
+  --doc-faint:#8c959f;
+  --doc-line:#d0d7de;
+  --doc-line-soft:#d8dee4;
+  --doc-link:#0969da;
+  --doc-code-bg:rgba(175,184,193,.20);
+  --doc-pre-bg:#f6f8fa;
+  --doc-alt-bg:#f6f8fa;
+  --doc-topbar-bg:rgba(255,255,255,.88);
+  --doc-note-bg:#ddf4ff;
+  --doc-note-line:#0969da;
+  --doc-hit:#fff8c5;
+  --doc-hit-cur:#ffd33d;
+  --doc-btn-bg:#f6f8fa;
+  --doc-btn-text:#24292f;
+  --doc-btn-primary:#1f883d;
+  --doc-btn-primary-hover:#1a7f37;
+}
+
+html[data-theme="dark"]{
+  --doc-canvas:#2e3234;
+  --doc-card:#22272b;
+  --doc-text:#e6edf3;
+  --doc-muted:#9198a1;
+  --doc-faint:#7d8590;
+  --doc-line:#3d444d;
+  --doc-line-soft:#3d444d;
+  --doc-link:#58a6ff;
+  --doc-code-bg:rgba(110,118,129,.22);
+  --doc-pre-bg:#2d333b;
+  --doc-alt-bg:#2d333b;
+  --doc-topbar-bg:rgba(34,39,43,.9);
+  --doc-note-bg:rgba(56,139,253,.10);
+  --doc-note-line:#1f6feb;
+  --doc-hit:rgba(187,128,9,.45);
+  --doc-hit-cur:#bb8009;
+  --doc-btn-bg:#2d333b;
+  --doc-btn-text:#e6edf3;
+  --doc-btn-primary:#238636;
+  --doc-btn-primary-hover:#2ea043;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:transparent;
+  color:var(--doc-text);
+  font:16px/1.75 arial,"hiragino sans gb","microsoft yahei","微軟正黑體",sans-serif;
+  overflow-wrap:break-word;
+  word-break:break-word;
+}
+[hidden]{display:none !important}
+
+/* ---------------- 顶栏（GitHub 面包屑风格） ---------------- */
+.doc-topbar{
+  position:sticky;top:0;z-index:20;
+  background:var(--doc-topbar-bg);
+  border-bottom:1px solid var(--doc-line);
+  -webkit-backdrop-filter:saturate(180%) blur(8px);
+  backdrop-filter:saturate(180%) blur(8px);
+}
+.doc-topbar-inner{
+  max-width:920px;margin:0 auto;height:52px;padding:0 20px;
+  display:flex;align-items:center;gap:12px;font-size:13px;
+}
+.doc-crumbs{
+  display:flex;align-items:center;gap:8px;min-width:0;
+  font-family:ui-monospace,SFMono-Regular,Consolas,"Courier New",monospace;
+  color:var(--doc-muted);
+}
+.doc-crumbs a{color:var(--doc-link);text-decoration:none}
+.doc-crumbs a:hover{text-decoration:underline}
+.doc-crumbs .sep{color:var(--doc-faint)}
+.doc-crumbs .cur{
+  color:var(--doc-text);font-weight:600;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.doc-top-actions{margin-left:auto;display:flex;align-items:center;gap:14px;flex:none}
+.doc-top-actions a{color:var(--doc-link);text-decoration:none}
+.doc-top-actions a:hover{text-decoration:underline}
+
+/* 深色切换：首页同款胶囊图，放在顶栏右侧（不是 absolute） */
+.doc-topbar .darkmode-toggle{
+  position:relative;left:auto;top:auto;
+  width:34px;height:19px;padding:0;border:0;background:none;
+  display:block;flex:none;cursor:pointer;overflow:hidden;
+}
+.doc-topbar .darkmode-toggle .light,
+.doc-topbar .darkmode-toggle .dark{position:absolute;inset:0;width:34px;height:19px}
+.doc-topbar .darkmode-toggle .light{opacity:1}
+.doc-topbar .darkmode-toggle .dark{opacity:0}
+html[data-theme="dark"] .doc-topbar .darkmode-toggle .light{opacity:0}
+html[data-theme="dark"] .doc-topbar .darkmode-toggle .dark{opacity:1}
+.doc-topbar .darkmode-toggle img.mode{display:block;width:34px;height:auto}
+
+/* ---------------- 页面骨架 ---------------- */
+.doc-shell{
+  position:relative;z-index:1;
+  max-width:920px;margin:0 auto;padding:28px 20px 64px;
+}
+.doc-card{
+  background:var(--doc-card);
+  border:1px solid var(--doc-line);
+  border-radius:8px;
+  padding:36px 40px 40px;
+  box-shadow:0 1px 0 rgba(27,31,36,.04);
+}
+.doc-title{
+  margin:0 0 8px;padding-bottom:10px;
+  font-size:28px;line-height:1.3;font-weight:700;color:var(--doc-text);
+  border-bottom:1px solid var(--doc-line-soft);
+}
+.doc-meta{margin:0 0 24px;color:var(--doc-muted);font-size:13px}
+
+/* ---------------- 正文排版（GitHub markdown 风格） ---------------- */
+#content{font-size:16px;line-height:1.75;color:var(--doc-text)}
+#content > :first-child{margin-top:0}
+
+#content h1,#content h2,#content h3,#content h4,#content h5,#content h6{
+  margin:1.5em 0 .6em;line-height:1.3;font-weight:600;color:var(--doc-text);
+}
+#content h1{font-size:24px}
+#content h2{font-size:21px;padding-bottom:.3em;border-bottom:1px solid var(--doc-line-soft)}
+#content h3{font-size:18px}
+#content h4,#content h5,#content h6{font-size:16px}
+
+#content p{margin:.85em 0}
+#content a{color:var(--doc-link);text-decoration:none}
+#content a:hover{text-decoration:underline}
+#content strong{color:var(--doc-text);font-weight:600}
+
+#content ul,#content ol{margin:.8em 0;padding-left:1.7em}
+#content li{margin:.25em 0;line-height:1.7}
+#content li > ul,#content li > ol{margin:.2em 0}
+#content li::marker{color:var(--doc-muted)}
+
+#content blockquote{
+  margin:1em 0;padding:0 1em;
+  color:var(--doc-muted);
+  border-left:.25em solid var(--doc-line);
+}
+#content blockquote > :first-child{margin-top:0}
+#content blockquote > :last-child{margin-bottom:0}
+
+#content code{
+  font:85%/1.5 ui-monospace,SFMono-Regular,Consolas,"Courier New",monospace;
+  background:var(--doc-code-bg);
+  padding:.2em .4em;border-radius:6px;
+}
+#content pre{
+  margin:1em 0;padding:16px;
+  background:var(--doc-pre-bg);
+  border-radius:6px;overflow:auto;
+  font:13px/1.55 ui-monospace,SFMono-Regular,Consolas,"Courier New",monospace;
+}
+#content pre code{background:transparent;padding:0;font-size:inherit}
+
+#content img{max-width:100%;height:auto;border-radius:6px}
+#content hr{margin:1.8em 0;border:0;border-top:2px solid var(--doc-line-soft)}
+
+#content table{width:100%;margin:1em 0;border-collapse:collapse;font-size:14px;display:block;overflow:auto}
+#content th,#content td{border:1px solid var(--doc-line);padding:6px 13px;text-align:left}
+#content th{background:var(--doc-alt-bg);font-weight:600}
+#content tr:nth-child(even) td{background:var(--doc-alt-bg)}
+
+/* ---------------- GitHub 风格组件（跟随 .doc-glass 昼/夜 token；reply 页使用） ---------------- */
+.gh-input{
+  width:100%;padding:7px 12px;font:14px/20px inherit;color:var(--g-text);
+  background:var(--g-field);border:1px solid var(--g-line);border-radius:6px;outline:none;
+}
+.gh-input::placeholder{color:var(--g-faint)}
+.gh-input:focus{border-color:var(--g-link);box-shadow:0 0 0 3px rgba(9,105,218,.15)}
+.doc-glass[data-theme="dark"] .gh-input:focus{box-shadow:0 0 0 3px rgba(88,166,255,.18)}
+
+.gh-btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:6px 14px;font:600 14px/20px inherit;color:var(--g-text);
+  background:var(--g-field);border:1px solid var(--g-line);border-radius:6px;
+  cursor:pointer;white-space:nowrap;
+}
+.gh-btn:hover{background:var(--g-chip-hover)}
+.gh-btn-primary{background:var(--g-btn-primary);border-color:rgba(31,35,40,.15);color:#fff}
+.gh-btn-primary:hover{background:var(--g-btn-primary-hover)}
+
+.gh-note{
+  margin:16px 0;padding:10px 16px;
+  background:var(--g-note-bg);
+  border-left:4px solid var(--g-note-line);
+  border-radius:6px;
+  color:var(--g-text);
+  font-size:14px;line-height:1.75;
+}
+.gh-note a{color:var(--g-link);text-decoration:none}
+.gh-note a:hover{text-decoration:underline}
+
+/* 页内搜索高亮 */
+.rp-hit{background:var(--doc-hit);color:inherit;border-radius:2px;padding:0 1px}
+.rp-hit.cur{background:var(--doc-hit-cur);outline:1px solid rgba(0,0,0,.18)}
+
+/* ---------------- 旧版 displayContent 弹窗（保留兼容，不再使用） ---------------- */
+#docBar{
+  position:sticky;top:0;z-index:10;
+  display:flex;align-items:center;gap:10px;
+  padding:10px 16px;
+  background:var(--doc-card);
+  border-bottom:1px solid var(--doc-line);
+  font-size:13px;
+}
+#docBar button{
+  font:inherit;color:var(--doc-text);cursor:pointer;
+  border:1px solid var(--doc-line);border-radius:6px;
+  background:var(--doc-btn-bg);padding:5px 12px;
+}
+#docBar button:hover{background:var(--doc-line-soft)}
+#docBar a{margin-left:auto;color:var(--doc-link);text-decoration:none}
+#docBar a:hover{text-decoration:underline}
+#docBar ~ #content{max-width:760px;margin:0 auto;padding:24px 20px 64px}
+
+/* ---------------- 玻璃拟态场景（.doc-glass，昼/夜双主题，仅文档页） ----------------
+   规则参考 luckymaomi.github.io/ui/styles/glassmorphism：
+   玻璃无色（昼：白 ~52% 在浅色场景上；夜：白 8% 在深墨夜景上）+ blur 40-60 + saturate 180%；
+   方向性阴影（顶边受光/底边背光/外层深度）；2.5% 噪点；昼用站点绿 #07C160 做光斑点缀、
+   夜沿用香槟金做唯一强调。昼夜由 theme.js 写 <html data-theme="dark"> 切换。 */
+/* 昼/夜双主题：默认昼（浅色场景 + 白玻璃），data-theme="dark" 切夜航。
+   两个主题共用同一套玻璃结构（blur 60 + saturate 180 + 方向性阴影），只换场景与透明度。 */
+.doc-glass{
+  --g-scene:
+    radial-gradient(640px circle at 85% 10%, rgba(124,156,196,.20), transparent 60%),
+    radial-gradient(560px circle at 10% 90%, rgba(7,193,96,.10), transparent 60%),
+    radial-gradient(420px circle at 30% 40%, rgba(228,184,99,.10), transparent 55%),
+    linear-gradient(165deg, #f2f6fb 0%, #eef1f6 55%, #e7ecf3 100%);
+  --g-topbar:rgba(255,255,255,.55);
+  --g-topbar-border:rgba(255,255,255,.65);
+  --g-topbar-line:rgba(255,255,255,.70);
+  --g-card:rgba(255,255,255,.30);
+  --g-card-border:rgba(255,255,255,.65);
+  --g-card-border-hover:rgba(255,255,255,.92);
+  --g-card-shadow:0 16px 40px rgba(31,45,61,.14), inset 0 1px 0 rgba(255,255,255,.85), inset 0 -1px 0 rgba(31,45,61,.05);
+  --g-card-shadow-hover:0 24px 64px rgba(31,45,61,.20), inset 0 1px 0 rgba(255,255,255,.95), inset 0 -1px 0 rgba(31,45,61,.05);
+  --g-glow:linear-gradient(to bottom, rgba(255,255,255,.30), transparent 50%);
+  --g-text:#24292f;
+  --g-strong:#111;
+  --g-muted:#57606a;
+  --g-faint:#8c959f;
+  --g-link:#0969da;
+  --g-link-hover:#0551ae;
+  --g-line:rgba(31,45,61,.14);
+  --g-line-soft:rgba(31,45,61,.10);
+  --g-code-bg:rgba(255,255,255,.32);
+  --g-code-border:rgba(255,255,255,.70);
+  --g-inline-code:rgba(31,45,61,.08);
+  --g-chip:rgba(255,255,255,.45);
+  --g-chip-border:rgba(255,255,255,.75);
+  --g-chip-hover:rgba(255,255,255,.82);
+  --g-ok:#0a7d40;
+  --g-copy-bg:rgba(255,255,255,.92);
+  --g-copy-border:rgba(31,45,61,.22);
+  --g-field:rgba(255,255,255,.60);
+  --g-btn-primary:#1f883d;
+  --g-btn-primary-hover:#1a7f37;
+  --g-note-bg:rgba(9,105,218,.08);
+  --g-note-line:#0969da;
+  --g-img-bg:rgba(31,45,61,.05);
+}
+.doc-glass[data-theme="dark"]{
+  --g-scene:
+    radial-gradient(640px circle at 85% 10%, rgba(124,156,196,.25), transparent 60%),
+    radial-gradient(560px circle at 10% 90%, rgba(51,81,122,.30), transparent 60%),
+    radial-gradient(420px circle at 30% 40%, rgba(228,184,99,.08), transparent 55%),
+    linear-gradient(165deg, #060A13 0%, #0B1322 55%, #16233A 100%);
+  --g-topbar:rgba(255,255,255,.06);
+  --g-topbar-border:rgba(255,255,255,.10);
+  --g-topbar-line:rgba(255,255,255,.08);
+  --g-card:rgba(255,255,255,.05);
+  --g-card-border:rgba(255,255,255,.15);
+  --g-card-border-hover:rgba(255,255,255,.30);
+  --g-card-shadow:0 16px 40px rgba(3,7,18,.5), inset 0 1px 0 rgba(255,255,255,.22), inset 0 -1px 0 rgba(2,6,16,.35);
+  --g-card-shadow-hover:0 24px 64px rgba(3,7,18,.6), inset 0 1px 0 rgba(255,255,255,.32), inset 0 -1px 0 rgba(2,6,16,.35);
+  --g-glow:linear-gradient(to bottom, rgba(255,255,255,.08), transparent 50%);
+  --g-text:#e6edf3;
+  --g-strong:#fff;
+  --g-muted:rgba(255,255,255,.5);
+  --g-faint:rgba(255,255,255,.5);
+  --g-link:#7C9CC4;
+  --g-link-hover:#fff;
+  --g-line:rgba(255,255,255,.14);
+  --g-line-soft:rgba(255,255,255,.15);
+  --g-code-bg:rgba(255,255,255,.05);
+  --g-code-border:rgba(255,255,255,.14);
+  --g-inline-code:rgba(255,255,255,.10);
+  --g-chip:rgba(255,255,255,.08);
+  --g-chip-border:rgba(255,255,255,.20);
+  --g-chip-hover:rgba(255,255,255,.18);
+  --g-ok:#F3DCA8;
+  --g-copy-bg:rgba(40,46,53,.92);
+  --g-copy-border:rgba(255,255,255,.30);
+  --g-field:rgba(255,255,255,.08);
+  --g-btn-primary:#238636;
+  --g-btn-primary-hover:#2ea043;
+  --g-note-bg:rgba(56,139,253,.10);
+  --g-note-line:#1f6feb;
+  --g-img-bg:rgba(255,255,255,.05);
+}
+
+.doc-glass body{
+  background:var(--g-scene);
+  background-attachment:fixed;
+  color:var(--g-text);
+}
+/* 2.5% 胶片噪点，消除塑料感 */
+.doc-glass body::after{
+  content:"";position:fixed;inset:0;z-index:99;pointer-events:none;opacity:.025;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+/* 绸带画布改为透明：首页动效在场景上继续跑，玻璃模糊它 */
+.doc-glass #bgCanvas{background:transparent !important}
+
+.doc-glass .doc-topbar{
+  background:var(--g-topbar);
+  border-bottom:1px solid var(--g-topbar-border);
+  box-shadow:0 1px 0 var(--g-topbar-line);
+}
+.doc-glass .doc-crumbs{color:var(--g-muted)}
+.doc-glass .doc-crumbs a{color:var(--g-link)}
+.doc-glass .doc-crumbs a:hover{color:var(--g-link-hover);text-decoration:none}
+.doc-glass .doc-crumbs .cur{color:var(--g-strong)}
+.doc-glass .doc-top-actions a{color:var(--g-link)}
+.doc-glass .doc-top-actions a:hover{color:var(--g-link-hover);text-decoration:none}
+
+.doc-glass .doc-card{
+  position:relative;overflow:hidden;
+  background:var(--g-card);
+  -webkit-backdrop-filter:blur(28px) saturate(200%);
+  backdrop-filter:blur(28px) saturate(200%);
+  border:1px solid var(--g-card-border);
+  border-radius:24px;
+  box-shadow:var(--g-card-shadow);
+  transition:border-color .5s cubic-bezier(.16,1,.3,1), box-shadow .5s cubic-bezier(.16,1,.3,1);
+}
+.doc-glass .doc-card:hover{
+  border-color:var(--g-card-border-hover);
+  box-shadow:var(--g-card-shadow-hover);
+}
+/* 顶边受光的内发光 */
+.doc-glass .doc-card::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:var(--g-glow);
+}
+.doc-glass .doc-card > *{position:relative;z-index:1}
+
+.doc-glass .doc-title{color:var(--g-strong);border-bottom-color:var(--g-line)}
+.doc-glass .doc-meta{color:var(--g-muted)}
+.doc-glass .doc-meta b{color:var(--g-ok)}
+
+.doc-glass #content{color:var(--g-text)}
+.doc-glass #content h1,.doc-glass #content h2,
+.doc-glass #content h3,.doc-glass #content h4,.doc-glass #content h5,.doc-glass #content h6{color:var(--g-strong)}
+.doc-glass #content h2{border-bottom-color:var(--g-line)}
+.doc-glass #content a{color:var(--g-link)}
+.doc-glass #content a:hover{color:var(--g-link-hover);text-decoration:underline}
+.doc-glass #content strong{color:var(--g-strong)}
+.doc-glass #content li::marker{color:var(--g-faint)}
+.doc-glass #content blockquote{color:var(--g-muted);border-left-color:var(--g-line)}
+.doc-glass #content code{background:var(--g-inline-code);color:var(--g-text)}
+.doc-glass #content pre{
+  background:var(--g-code-bg);
+  border:1px solid var(--g-code-border);
+  -webkit-backdrop-filter:blur(24px) saturate(200%);
+  backdrop-filter:blur(24px) saturate(200%);
+}
+.doc-glass #content pre code{background:transparent;color:inherit}
+.doc-glass #content hr{border-top-color:var(--g-line-soft)}
+.doc-glass #content th,.doc-glass #content td{border-color:var(--g-line)}
+.doc-glass #content th{background:var(--g-inline-code)}
+.doc-glass #content tr:nth-child(even) td{background:var(--g-inline-code)}
+.doc-glass #content img{background:var(--g-img-bg)}
+
+/* 代码块一键复制 */
+.doc-code{position:relative}
+.doc-code .code-copy{
+  position:absolute;top:10px;right:10px;z-index:2;
+  display:inline-flex;align-items:center;gap:6px;
+  padding:5px 12px;font:600 12.5px/18px inherit;color:var(--g-text);
+  background:var(--g-copy-bg);
+  border:1px solid var(--g-copy-border);border-radius:8px;
+  cursor:pointer;
+  transition:transform .25s cubic-bezier(.16,1,.3,1), box-shadow .25s cubic-bezier(.16,1,.3,1),
+             color .25s, border-color .25s, background-color .25s;
+}
+.doc-code .code-copy svg{width:14px;height:14px;flex:none}
+.doc-code .code-copy:hover{transform:translateY(-1px);box-shadow:0 5px 14px rgba(15,23,32,.24)}
+.doc-code .code-copy:active{transform:scale(.96)}
+.doc-code .code-copy.ok{color:var(--g-ok);border-color:var(--g-ok)}
+
+/* ---------------- 响应式 / 打印 ---------------- */
+@media (max-width:700px){
+  .doc-topbar-inner{height:48px;padding:0 14px;gap:8px}
+  .doc-shell{padding:18px 12px 48px}
+  .doc-card{padding:22px 18px 26px}
+  .doc-title{font-size:23px}
+  #content h1{font-size:21px}
+  #content h2{font-size:19px}
+  #content h3{font-size:17px}
+  #content{font-size:15px}
+  .doc-top-actions a{font-size:12px}
+  #docBar ~ #content{padding:16px 12px 48px}
+}
+
+@media print{
+  .doc-topbar,#docBar{display:none}
+  body,.doc-glass body{background:#fff !important;color:#000 !important}
+  body::after{display:none !important}
+  .doc-shell{max-width:none;padding:0}
+  .doc-card,.doc-glass .doc-card{
+    background:#fff !important;border:0;box-shadow:none !important;
+    -webkit-backdrop-filter:none !important;backdrop-filter:none !important;
+  }
+  .doc-card::before{display:none !important}
+  .doc-title,.doc-glass .doc-title{color:#000 !important;border-bottom-color:#ddd !important}
+  .doc-meta,.doc-glass .doc-meta{color:#555 !important}
+  #content,.doc-glass #content,
+  .doc-glass #content h1,.doc-glass #content h2,.doc-glass #content h3,
+  .doc-glass #content h4,.doc-glass #content h5,.doc-glass #content h6,
+  .doc-glass #content strong{color:#000 !important;border-bottom-color:#ddd !important}
+  .doc-glass #content a{color:#06c !important;border-bottom:0}
+  .doc-glass #content pre{background:#f6f8fa !important;border:1px solid #ddd !important}
+  .doc-glass #content code{background:#f6f8fa !important;color:#000 !important}
+  .code-copy{display:none !important}
+}

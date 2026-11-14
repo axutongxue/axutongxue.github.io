@@ -7,7 +7,8 @@
   'use strict';
 
   /* ==================== 配置区（唯一数据源） ==================== */
-  const NOTICE_TEXT = window.tctipNoticeText || '';   // 公告正文（在 index.html 内定义）
+  // 公告正文 2026-11-14 起不再烧进 index.html：运行时 fetch('notice.json') 异步加载
+  // （构建时由 data/announcements.json 生成），加载完成前后布局一致，只是内容先空后有。
   const SHENG_URL = './discount/';                    // 省钱页面地址
   const FEISHU_FORM = 'https://my.feishu.cn/share/base/form/shrcnQEQph33whiOEjpqKiXMdeh';
   const BTN_TOP = '18%';                              // 公告按钮 top
@@ -16,9 +17,10 @@
   const IS_TOUCH = !window.matchMedia('(hover: hover)').matches;  // 无悬停能力的设备（手机/平板）用点击交互
   const BACK_TOP_AFTER = 400;                         // 滚动超过该距离(px)后显示右下角「回到顶部」按钮
 
-  // 面板列表：第 1 项 text=公告正文；其余项 icon=左侧小图标、qrimg=右侧大二维码、href=点击二维码打开的链接
+  // 面板列表：第 1 项 text=公告正文（异步填充）；其余项 icon=左侧小图标、qrimg=右侧大二维码、href=点击二维码打开的链接
+  const noticeItem = { name: '公告栏', className: 'myR-on', icon: 'https://wework.qpic.cn/wwpic3az/898351_AxcBcqZ9QFmznfb_1753452407/0', text: '' };
   const items = [
-    { name: '公告栏', className: 'myR-on', icon: 'https://wework.qpic.cn/wwpic3az/898351_AxcBcqZ9QFmznfb_1753452407/0', text: NOTICE_TEXT },
+    noticeItem,
     { name: '省钱助手', icon: 'https://wework.qpic.cn/wwpic3az/70308_Z6RYjbQDTdKCe-V_1792661658/0', qrimg: 'https://wework.qpic.cn/wwpic3az/246366_mZFjG984Th6cnsF_1792203994/0', href: './discount/', desc: '外卖、堂食、鲜果、饮品、打车、机票、代驾、酒店、民宿、买药、电影、快递……你的每一笔消费都有机会省一点！' },
     { name: '搜索扩展', icon: 'https://wework.qpic.cn/wwpic3az/809994_aYOh14yhQQeA_iG_1792661397/0', qrimg: 'https://wework.qpic.cn/wwpic3az/987091_6854zUSTTTCrdYi_1792661338/0', href: 'https://xusearch.com/', desc: '由阿虚开发的浏览器扩展「虚空搜索」，凝聚阿虚近 10 年搜索心得，提供批量 AI 提问、对回答进一步 AI 总结、批量上传附件，同时还有影视、动漫、漫画、音乐、电子书、网盘资源等一键批量搜索，一秒让你成为互联网资源大神！' },
     { name: '知识星球', icon: 'https://wework.qpic.cn/wwpic3az/324339_-uMsHKhLT1Wvsqd_1753452478/0', qrimg: 'https://wework.qpic.cn/wwpic3az/92458_7aI3hjBjT2mMZNf_1753452493/0', href: 'https://t.zsxq.com/19d2gGtRe', desc: '如果你想获取阿虚更及时、高质量的回复，欢迎加入我的付费星球，享受全年无限次提问：提问越多，收获越大！星球内还提供公众号所有付费文章＋简单脚本或工具代的开发服务！加入星球，阿虚陪你一起终身成长' },
@@ -203,6 +205,21 @@ html.dark-mode #sharePopup .share-footer-link strong{color:#e5c977}`;
 
   // 初始选中第一项
   selectItem(ul.firstElementChild, items[0]);
+
+  /* 公告正文异步加载：notice.json 由构建时从 data/announcements.json 生成。
+     加载完成后若公告栏正被选中，就地刷新正文；失败给出可读提示。 */
+  fetch('notice.json?t=' + Date.now())
+    .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function (data) {
+      noticeItem.text = (data && typeof data.text === 'string' && data.text)
+        ? data.text
+        : '暂无公告更新';
+      if (currentLi === ul.firstElementChild) renderDetail(noticeItem);
+    })
+    .catch(function () {
+      noticeItem.text = '公告加载失败，请刷新重试';
+      if (currentLi === ul.firstElementChild) renderDetail(noticeItem);
+    });
 
   /* 展开 / 收起 */
   function openPanel() {

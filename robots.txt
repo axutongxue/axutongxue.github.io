@@ -1,5 +1,16 @@
-# 阿虚同学的储物间 robots.txt
-# 传统搜索引擎
+# 阿虚同学的储物间 — robots.txt
+#
+# 原则：
+#   1. 传统搜索引擎（Google / Bing / 百度 / 搜狗 / 360 / 神马）全部允许；
+#   2. AI「搜索/引用」类爬虫允许（GEO：让 AI 能读到你、引用你）；
+#   3. AI「训练」类爬虫禁止（与 Content-Signal: ai-train=no 一致）。
+#
+# ⚠️ Cloudflare 若开启了「Managed robots.txt / AI Crawl Control」，它会在本文件
+#    前面再插一段规则（Disallow: GPTBot / ClaudeBot / Baiduspider …），
+#    同一 UA 同时出现 Allow 与 Disallow 时各爬虫取舍不一致 ——
+#    必须在 Cloudflare 面板里关闭该托管规则，本文件才会真正生效。
+
+# ================= 传统搜索引擎 =================
 User-agent: Googlebot
 Allow: /
 
@@ -18,49 +29,78 @@ Allow: /
 User-agent: YisouSpider
 Allow: /
 
-User-agent: PetalBot
-Allow: /
-Crawl-delay: 10
-
 User-agent: Applebot
 Allow: /
 Crawl-delay: 10
 
-# AI 搜索与 AI 训练爬虫
+User-agent: PetalBot
+Allow: /
+Crawl-delay: 10
+
+# ================= AI 搜索与引用（GEO） =================
+# OAI-SearchBot：ChatGPT 搜索索引；ChatGPT-User：用户提问时的即时抓取
 User-agent: OAI-SearchBot
 Allow: /
-Crawl-delay: 5
 
 User-agent: ChatGPT-User
 Allow: /
-Crawl-delay: 5
 
-User-agent: GPTBot
-Allow: /
-Crawl-delay: 10
-
-User-agent: Google-Extended
-Allow: /
-Crawl-delay: 10
-
-User-agent: ClaudeBot
-Allow: /
-Crawl-delay: 10
-
-User-agent: Claude-SearchBot
-Allow: /
-Crawl-delay: 10
-
+# Perplexity
 User-agent: PerplexityBot
 Allow: /
-Crawl-delay: 10
+
+User-agent: Perplexity-User
+Allow: /
+
+# Anthropic 的搜索/即时抓取（与 anthropic-ai 训练爬虫区分开）
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# ================= 训练类爬虫（禁止） =================
+# 注意：Google-Extended 同时控制 Gemini 的训练与 grounding。
+# 若希望 Gemini 能引用本站内容，把下面这条改为 Allow: /
+User-agent: GPTBot
+Disallow: /
 
 User-agent: CCBot
-Allow: /
-Crawl-delay: 20
+Disallow: /
 
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: MistralAI-Training
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+# ================= 兜底 =================
 User-agent: *
+Content-Signal: search=yes, ai-train=no, use=reference
 Allow: /
-Crawl-delay: 10
 
 Sitemap: https://axutongxue.com/sitemap.xml

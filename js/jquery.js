@@ -39,7 +39,7 @@
               }
 
               newWindow.document.open();
-              newWindow.document.write('<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>备用链接</title><base target="_blank"></head><body style="text-align:center;margin:20px;font-size:125%;line-height:135%;"><div id="content" style="margin:0 auto;text-align:left;max-width:768px;width:100%;padding:10px;box-sizing:border-box;font-size:100%;"></div></body></html>');
+              newWindow.document.write('<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>备用链接</title><base href="' + ((location.origin && location.origin !== 'null') ? location.origin + '/' : location.href.replace(/[^\/]*$/, '')) + '" target="_blank"><link rel="stylesheet" href="css/doc.css"></head><body><div id="docBar"><button type="button" onclick="window.close()">← 返回</button><a href="./" target="_self">储物间首页</a></div><div id="content"></div></body></html>');
               newWindow.document.close();
               newWindow.document.getElementById('content').innerHTML = sanitizeDecodedHtml(decodedContent);
           } catch (error) {

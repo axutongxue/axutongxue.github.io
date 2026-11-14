@@ -222,5 +222,7 @@
   };
 
   window.Ribbons = Ribbons;
-  new Ribbons();
+  // 允许页面在加载本脚本前用 window.RIBBONS_OPTIONS 覆盖默认参数
+  // （文档页玻璃更透，需要更明显的绸带；首页不传参，保持原效果）
+  new Ribbons(window.RIBBONS_OPTIONS);
 })(window, document);

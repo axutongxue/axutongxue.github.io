@@ -1,10 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes">
+<title>页面不存在 - 阿虚同学的储物间</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512x512.png">
+<!-- 站点主样式：字体、链接色、深色切换按钮都与首页一致 -->
+<link rel="stylesheet" href="/css/style.css">
+<style>
+  html,body{min-height:100%}
+  body{margin:0;background:transparent}
+
+  .nf-wrap{position:relative;z-index:1;min-height:100vh;box-sizing:border-box;
+    display:flex;align-items:center;justify-content:center;padding:48px 18px}
+  .nf{max-width:600px;text-align:center}
+  .nf .code{font-size:64px;font-weight:700;line-height:1;letter-spacing:2px;color:rgba(0,0,0,.13)}
+  .nf h1{font-size:26px;line-height:1.4;margin:16px 0 10px;color:#000}
+  .nf p{margin:.45em 0;font-size:15px;line-height:1.8;color:#5a6066}
+  .nf .path{margin:16px 0 20px;padding:8px 12px;border-radius:4px;background:rgba(255,255,255,.72);
+    border:1px solid rgba(0,0,0,.12);font:13px/1.6 ui-monospace,Consolas,monospace;color:#444;word-break:break-all}
+  .nf .nf-search{display:flex;gap:8px;justify-content:center;align-items:center;margin:22px auto 0;max-width:440px}
+  .nf-search input{flex:1;min-width:0;padding:7px 12px;font-size:15px;border:1px solid #000;
+    border-radius:4px;background:rgba(255,255,255,.82);color:#000;outline:none}
+  .nf-search input:focus{border-color:#6495ed}
+  .nf-search button{flex:none;padding:7px 18px;font-size:15px;border:1px solid #000;border-radius:4px;
+    background:rgba(255,255,255,.82);color:#000;cursor:pointer;font-family:inherit}
+  .nf-search button:hover{color:#6495ed;border-color:#6495ed;background:rgba(255,255,255,.92)}
+  .nf .nf-actions{margin-top:14px}
+  .nf .btn{display:inline-block;padding:6px 18px;font-size:15px;border:1px solid #000;
+    border-radius:4px;color:#000;background:rgba(255,255,255,.78)}
+  .nf .btn:hover{color:#6495ed;border-color:#6495ed}
+
+  /* 深色模式：与首页 adddarkcss() 的 #bgCanvas 背景色一致 */
+  html[data-theme="dark"] #bgCanvas{background-color:#2E3234 !important}
+  html[data-theme="dark"] .light{opacity:0}
+  html[data-theme="dark"] .dark{opacity:1}
+  html[data-theme="dark"] .nf .code{color:rgba(255,255,255,.16)}
+  html[data-theme="dark"] .nf h1{color:#fff}
+  html[data-theme="dark"] .nf p{color:#c7cdd1}
+  html[data-theme="dark"] .nf .path{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.16);color:#e6e8ea}
+  html[data-theme="dark"] .nf .btn{color:#fff;border-color:#fff;background:rgba(0,0,0,.2)}
+  html[data-theme="dark"] .nf .btn:hover{color:#9ecbff;border-color:#9ecbff}
+  html[data-theme="dark"] .nf-search input,
+  html[data-theme="dark"] .nf-search button{color:#fff;border-color:#fff;background:rgba(0,0,0,.22)}
+  html[data-theme="dark"] .nf-search input::placeholder{color:#9aa3a8}
+  html[data-theme="dark"] .nf-search input:focus,
+  html[data-theme="dark"] .nf-search button:hover{color:#9ecbff;border-color:#9ecbff}
+
+  @media (max-width:600px){
+    .nf .code{font-size:48px}
+    .nf h1{font-size:21px}
+    .nf p{font-size:14px}
+  }
+</style>
 <script>
-{
-    var purl=function(r){function e(t){if(o[t])return o[t].exports;var a=o[t]={exports:{},id:t,loaded:!1};return r[t].call(a.exports,a,a.exports,e),a.loaded=!0,a.exports}var o={};return e.m=r,e.c=o,e.p="",e(0)}([function(r,e){"use strict";var o=/(([\w\.\-\+]+:)\/{2}(([\w\d\.]+):([\w\d\.]+))?@?(([a-zA-Z0-9\.\-_]+)(?::(\d{1,5}))?))?(\/(?:[a-zA-Z0-9\.\-\/\+\%\_]+)?)(?:\?([a-zA-Z0-9=%\-_\.\*&;]+))?(?:#([a-zA-Z0-9\-=,&%;\/\\"'\?]+)?)?/;r.exports=function(r){var e=o.exec(r),t=1;return e?{origin:e[t++],protocol:e[t++],userinfo:e[t++],username:e[t++],password:e[t++],host:e[t++],hostname:e[t++],port:e[t++],pathname:e[t++],search:e[t++],hash:e[t++]}:{}}}]);
-}
+  /* 深色状态跟首页共用同一个 cookie，避免打开 404 时先闪一下浅色 */
+  try {
+    var m = document.cookie.match(/(?:^|;\s*)status=([^;]+)/);
+    if (m && decodeURIComponent(m[1]) === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  } catch (e) {}
 </script>
+</head>
+<body>
+<button onclick="changemode();" class="darkmode-toggle--white darkmode-toggle">
+  <div class="light"><img src="/img/light.svg" class="mode"></div>
+  <div class="dark"><img src="/img/dark.svg" class="mode"></div>
+</button>
+
+<main class="nf-wrap">
+  <div class="nf">
+    <div class="code">404</div>
+    <h1>这个页面不存在或已经下线</h1>
+    <p>你访问的资源文档可能已被删除或迁移。</p>
+    <p class="path" id="nfPath"></p>
+
+    <form class="nf-search" id="nfSearch" role="search">
+      <input type="search" id="nfQ" placeholder="在储物间搜索其他资源…" autocomplete="off">
+      <button type="submit">搜索储物间</button>
+    </form>
+    <p class="nf-actions"><a class="btn" href="/">返回储物间首页</a></p>
+  </div>
+</main>
+
+<script src="/js/ribbons.js"></script>
 <script>
-{
-    window.location.href="http://axutongxue.cccpan.com";
-}
+(function () {
+  function setModeCookie(v) {
+    var d = new Date();
+    d.setTime(d.getTime() + 365 * 24 * 60 * 60 * 1000);
+    document.cookie = 'status=' + encodeURIComponent(v) + '; expires=' + d.toUTCString() + '; path=/; SameSite=Lax';
+  }
+  window.changemode = function () {
+    var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', dark ? 'light' : 'dark');
+    setModeCookie(dark ? 'light' : 'dark');
+  };
+
+  var p = document.getElementById('nfPath');
+  if (location.pathname && location.pathname !== '/404.html') {
+    p.textContent = location.pathname;
+  } else {
+    p.style.display = 'none';
+  }
+
+  // 站内搜索走 find.js 支持的 ?q= 直达（不自动跳转，保留 404 语义）
+  document.getElementById('nfSearch').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var q = document.getElementById('nfQ').value.trim();
+    location.href = q ? ('/?q=' + encodeURIComponent(q)) : '/';
+  });
+})();
 </script>
+</body>
+</html>
