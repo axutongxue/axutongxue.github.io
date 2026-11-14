@@ -346,7 +346,7 @@ html[data-theme="dark"] .doc-topbar .darkmode-toggle .dark{opacity:1}
 .doc-glass .doc-top-actions a:hover{color:var(--g-link-hover);text-decoration:none}
 
 .doc-glass .doc-card{
-  position:relative;overflow:hidden;
+  position:relative;
   background:var(--g-card);
   -webkit-backdrop-filter:blur(28px) saturate(200%);
   backdrop-filter:blur(28px) saturate(200%);
