@@ -255,6 +255,16 @@ a.bei:hover {
 a.bei:hover::before {
 	color: #6495ED;
 }
+/* 多条备用链接（生成器第 12 步 N≥2 时在 bei 锚上写 data-bk）：文字加「▾」暗示点开会弹
+   菜单，菜单展开期间保持蓝色。单备用条目不带 data-bk，仍是纯 HREF 直跳，样式不变。
+   菜单本体是 JS 浮层 #beiMenu（见下方）；深色规则同步在 js/jquery.js adddarkcss()。 */
+a.bei[data-bk]::after {
+	content: "备用链接▾";
+}
+a.bei[data-bk].active,
+a.bei[data-bk].active::before {
+	color: #6495ED;
+}
 
 .free {
 	height: 20px;
@@ -419,6 +429,45 @@ a.bei:hover::before {
 }
 /* 浮窗最大宽由 js/mouse-click.js 的 show() 按视觉像素实时写入（内联样式）——
    不能用 calc(100vw-64px)：根 zoom 下 100vw 渲染成 视口×zoom，浮窗会比屏幕还宽。 */
+
+/* 多备用链接菜单：点击「备用链接▾」（a.bei[data-bk]）弹出的浮层，
+   js/mouse-click.js 负责定位显隐（与 #noteTip 同一套 rect+探针+zoom 方案）。
+   条目文案是各备用地址的域名，整条可点（title 是完整 URL）；可交互，不能像
+   #noteTip 那样 pointer-events:none。深色规则在 js/jquery.js 的 adddarkcss()，改选择器时须同步。 */
+#beiMenu{
+	display:none;
+	position:fixed;
+	z-index:9990;
+	box-sizing:border-box;
+	padding:6px 0;
+	background-color:#FFF;
+	border:1px solid #e3e6e8;
+	border-radius:8px;
+	box-shadow:0 6px 24px rgba(0,0,0,.14);
+	color:#333;
+	font:13px/1.7 "microsoft yahei", arial, sans-serif;
+	text-indent:0;
+	white-space:normal;
+	word-break:break-word;
+}
+#beiMenu .bm-head{
+	padding:2px 14px 5px;
+	color:#8a8f92;
+	font-size:11px;
+	border-bottom:1px solid #eef0f2;
+	margin-bottom:3px;
+}
+#beiMenu a{
+	display:block;
+	padding:4px 14px;
+	color:#333;
+	text-decoration:none;
+	overflow-wrap:anywhere;
+}
+#beiMenu a:hover{
+	color:#6495ED;
+	background-color:#F5F7FA;
+}
 
 /* 移动端：滚动时右侧功能栏淡化到 40%，上滑或回顶恢复（js/mouse-click.js 挂 dimmed 类），
    备注浮窗同时由 JS 避让功能栏（show() 里 marginR 52×zoom）。桌面列表不与侧栏重叠，不启用。 */

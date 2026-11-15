@@ -259,3 +259,118 @@
     sbLastY = y;
   }, { passive: true });
 })();
+
+/* ============================================================
+   多备用链接菜单：点击 <a class="bei" data-bk='["u1","u2",…]'> 弹出全部备用链接。
+   data-bk 由生成器第 12 步写入，只有多条备用（N≥2）的条目才有；
+   单备用仍是普通 HREF 直跳，行为与旧版完全一致。
+   定位复用 #noteTip 同一套方案：getBoundingClientRect + 右下角探针取视口边界
+   + 根 zoom 换算（见上方 noteTip 注释，两者坐标系不能混用）。
+   样式在 css/style.css #beiMenu；深色规则在 js/jquery.js adddarkcss()。
+   ============================================================ */
+(function () {
+  var menu = null;
+  var probe = null;
+  var cur = null;   // 当前展开菜单的 bei 锚
+
+  function hostOf(u) {
+    try { return new URL(u).hostname || u; } catch (e) { return u; }
+  }
+
+  function ensure() {
+    if (!menu) {
+      menu = document.createElement('div');
+      menu.id = 'beiMenu';
+      document.body.appendChild(menu);
+    }
+    if (!probe) {
+      // 探针钉在视口右下角，其 rect 即「rect 坐标系下的视口右/下边界」（同 noteTip）
+      probe = document.createElement('div');
+      probe.style.cssText = 'position:fixed;right:0;bottom:0;width:0;height:0;visibility:hidden;pointer-events:none;';
+      document.body.appendChild(probe);
+    }
+  }
+
+  function build(urls) {
+    menu.innerHTML = '';
+    var head = document.createElement('div');
+    head.className = 'bm-head';
+    head.textContent = '备用链接 ×' + urls.length;
+    menu.appendChild(head);
+    urls.forEach(function (u) {
+      var a = document.createElement('a');
+      a.href = u;
+      a.textContent = hostOf(u);
+      a.title = u;
+      menu.appendChild(a);
+    });
+  }
+
+  function show(anchor) {
+    var urls;
+    try { urls = JSON.parse(anchor.getAttribute('data-bk')); } catch (e) { return; }
+    if (!urls || !urls.length) return;
+    ensure();
+    if (cur) cur.classList.remove('active');
+    cur = anchor;
+    anchor.classList.add('active');
+    build(urls);
+    var edge = probe.getBoundingClientRect();
+    var rect = anchor.getBoundingClientRect();
+    // ⚠️ rect/box/edge 都是「根 zoom 后的视觉像素」，CSS px 量必须 × zoom（同 noteTip）
+    var zoom = parseFloat(getComputedStyle(document.documentElement).zoom) || 1;
+    var pad = 12 * zoom;      // 屏幕四周安全边距
+    var marginR = (window.matchMedia('(max-width: 768px)').matches ? 52 : 12) * zoom;
+    // 最大宽由 JS 按视觉像素写入（CSS 的 calc(100vw-…) 在根 zoom 下语义错误）
+    menu.style.maxWidth = Math.round(edge.left / zoom - 64) + 'px';
+    menu.style.display = 'block';
+    var box = menu.getBoundingClientRect();
+    var x = rect.left;
+    var y = rect.bottom + 6 * zoom;
+    if (x + box.width > edge.left - marginR) x = edge.left - marginR - box.width;
+    if (x < pad) x = pad;
+    if (y + box.height > edge.top - pad) {
+      var above = rect.top - 6 * zoom - box.height;
+      y = above >= pad ? above : Math.max(pad, edge.top - pad - box.height);
+    }
+    menu.style.left = Math.round(x / zoom) + 'px';
+    menu.style.top = Math.round(y / zoom) + 'px';
+  }
+
+  function hide() {
+    if (menu) menu.style.display = 'none';
+    if (cur) { cur.classList.remove('active'); cur = null; }
+  }
+
+  document.addEventListener('click', function (event) {
+    var anchor = event.target.closest && event.target.closest('a.bei[data-bk]');
+    if (anchor) {
+      if (anchor === cur) { hide(); return; }   // 再点同一个：收起
+      show(anchor);
+      event.preventDefault();
+      return;
+    }
+    // 点菜单里的条目：收起并放行导航；点菜单头部等空白处：保持；点其它地方：收起
+    if (event.target.closest && event.target.closest('#beiMenu a')) { hide(); return; }
+    if (!event.target.closest || !event.target.closest('#beiMenu')) hide();
+  });
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') hide();
+  });
+  window.addEventListener('scroll', hide, { passive: true });
+  window.addEventListener('resize', hide, { passive: true });
+
+  // 多备用锚的 title：jquery.js 给所有 bei 统一设了「备用链接」，这里覆盖为条数
+  function markTitles() {
+    document.querySelectorAll('a.bei[data-bk]').forEach(function (a) {
+      var n = 0;
+      try { n = JSON.parse(a.getAttribute('data-bk')).length; } catch (e) { n = 0; }
+      a.title = n ? '备用链接 ×' + n : '备用链接';
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', markTitles);
+  } else {
+    markTitles();
+  }
+})();
