@@ -142,26 +142,26 @@ function getPromoData() {
   /* PROMO_DATA:START 后台「推广位」自动改写此数据段（勿删标记） */
   return [
     {
-      title: "GPT镜像原生官网，国内直连",
-      content: "世界顶级AI四合一镜像站点，原生官网使用，国内直连。免费、官网一致、稳定（GPT、Claude、Gemni、Grok）",
-      link: "https://oai.oooai.cc",
-      target: "_self",
-      img: "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0",
+      "title": "GPT镜像原生官网，国内直连",
+      "content": "世界顶级AI四合一镜像站点，原生官网使用，国内直连。免费、官网一致、稳定（GPT、Claude、Gemni、Grok）",
+      "link": "https://oai.oooai.cc",
+      "target": "_self",
+      "img": "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0"
     },
     {
-      title: "储物间全新福利已部署上线！",
-      content: "外卖、堂食、鲜果、饮品、打车、机票、代驾、酒店、民宿、买药、电影、快递……你的每一笔消费都有机会省一点！",
-      link: "./discount/",
-      target: "_self",
-      img: "https://wework.qpic.cn/wwpic3az/741232_I4mFtmneQbK4fyd_1792168886/0",
+      "title": "储物间全新福利已部署上线！",
+      "content": "外卖、堂食、鲜果、饮品、打车、机票、代驾、酒店、民宿、买药、电影、快递……你的每一笔消费都有机会省一点！",
+      "link": "./discount/",
+      "target": "_self",
+      "img": "https://wework.qpic.cn/wwpic3az/741232_I4mFtmneQbK4fyd_1792168886/0"
     },
     {
-      title: "阿虚最新力作「虚空搜索」浏览器扩展正式上线！",
-      content: "可实现 AI 批量提问、对回答进一步总结、批量上传附件，还有影视、音乐、电子书等等资源一键搜索",
-      link: "https://xusearch.com/",
-      target: "_self",
-      img: "https://img30.360buyimg.com/imgzone/jfs/t20271127/545896/20/9266/31978/6adb72c2Faaab3ca2/09362d42d4b3b516.webp",
-    },
+      "title": "阿虚最新力作「虚空搜索」浏览器扩展正式上线！",
+      "content": "可实现 AI 批量提问、对回答进一步总结、批量上传附件，还有影视、音乐、电子书等等资源一键搜索",
+      "link": "https://xusearch.com/",
+      "target": "_self",
+      "img": "https://img30.360buyimg.com/imgzone/jfs/t20271127/545896/20/9266/31978/6adb72c2Faaab3ca2/09362d42d4b3b516.webp"
+    }
   ];
   /* PROMO_DATA:END */
 }
@@ -453,10 +453,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var PROMO_SLIDES = /* PROMO_SLIDES:START 后台「推广位」自动改写此数据段（勿删标记） */
     [
-      { img: "https://img30.360buyimg.com/imgzone/jfs/t20271205/567510/26/2925/54461/6ae5819eFb0da6c35/09364b01727fdbbf.png", link: "https://Xusearch.com" },
-      { img: "https://img30.360buyimg.com/imgzone/jfs/t20271205/547278/16/13366/113503/6ae581a8F6a32b13c/09364b01725d5e88.png", link: "https://lizhi.shop/site/search_list/category_id/64?cid=ds7afku3" },
-      { img: "https://wework.qpic.cn/wwpic3az/985913_dVvSjdMVQR-QELc_1782721368/0", link: "https://oai.oooai.cc/list/#/register?inviter=0EASGS" }
-    ];
+        {
+          "img": "https://img30.360buyimg.com/imgzone/jfs/t20271220/561744/21/12503/90112/6af9978fF5b775a0f/09364b01721d1637.jpg",
+          "link": "/discount/index.html"
+        },
+        {
+          "img": "https://img30.360buyimg.com/imgzone/jfs/t20271205/567510/26/2925/54461/6ae5819eFb0da6c35/09364b01727fdbbf.png",
+          "link": "https://Xusearch.com"
+        },
+        {
+          "img": "https://wework.qpic.cn/wwpic3az/985913_dVvSjdMVQR-QELc_1782721368/0",
+          "link": "https://oai.oooai.cc/list/#/register?inviter=0EASGS"
+        }
+      ]
   /* PROMO_SLIDES:END */
   function slideHtml(s) {
     return '<div class="swiper-slide"><a href="' + s.link + '"><img loading="lazy" decoding="async" src="' + s.img + '" style="display:block;width:100%;height:100%;object-fit:cover;"></a></div>';
