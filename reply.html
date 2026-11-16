@@ -44,21 +44,33 @@
   }
   html[data-theme="dark"] .reply-error{background:rgba(248,81,73,.10);border-left-color:#f85149;color:#ff9492}
 
-  /* 页内搜索吸附在顶栏下方：跳转到下方匹配时仍能点到 ↑/↓（不带底色/边框/投影） */
+  /* 页内搜索吸附在顶栏下方：跳转到下方匹配时仍能点到 ↑/↓。
+     ① 顶栏 52px + 12px 间距 = top:64px（原 53px 紧贴，滚动时视觉上粘在一起）；
+     ② 外层容器完全透明无背景无边框 —— 不要「卡片」感，只保留间距与吸附行为；
+     ③ 滚动时正文会从输入框后面穿过，所以把输入框/按钮自身做成不透明
+        （--g-copy-bg，92%），穿透问题在控件层面解决，而不是给整条搜索区垫底。 */
   .reply-search{
-    position:sticky;top:53px;z-index:5;
+    position:sticky;top:64px;z-index:5;
     max-width:520px;margin:18px 0 0;
+    background:none;border:0;padding:0;
   }
   .reply-search-row{display:flex;gap:6px;align-items:center}
-  .reply-search-row .gh-input{flex:1;min-width:0}
-  .reply-search-row .gh-btn{padding:6px 10px}
+  .reply-search-row .gh-input{flex:1;min-width:0;background:var(--g-copy-bg)}
+  .reply-search-row .gh-btn{padding:6px 10px;background:var(--g-copy-bg)}
+  /* 匹配计数（3/12）也要能看清：无背景时会与滚过的正文叠在一起。
+     用 inline-block + 自身底色，只包住文字，不铺满整行。 */
   .rp-count{margin-top:6px;min-height:18px;font-size:12px;color:var(--g-muted)}
+  .rp-count:not(:empty){
+    display:inline-block;padding:1px 6px;border-radius:4px;
+    background:var(--g-copy-bg);
+  }
 
   .reply-body{margin-top:28px}
   @media (max-width:600px){
     .reply-form{flex-wrap:wrap}
     .reply-form .gh-btn{width:100%}
-    .reply-search{top:49px}
+    /* 小屏顶栏 48px + 12px = 60px */
+    .reply-search{top:60px}
   }
 /* REPLY_STYLE:END */
 </style>
