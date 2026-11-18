@@ -111,16 +111,23 @@ $(document).ready(function() {
   $("a.bei").attr("title", "备用链接");
 });
 
-// 近期添加（7天内）的链接及其祖先文件夹标题染绿
+// 近期（10天内）新增或修改过的链接，及其祖先文件夹标题染绿
+// 判据：title 里的「添加时间」与「最后更新时间」取较新者 —— 站长手改更新时间后也应标绿。
 function highlightRecentLinks() {
   var now = Date.now();
   var tenDays = 10 * 24 * 60 * 60 * 1000;
   var links = document.querySelectorAll('#mainmenu a[title^="添加时间："]');
   for (var i = 0; i < links.length; i++) {
-    var m = links[i].getAttribute('title').match(/添加时间：(\d{4})-(\d{2})-(\d{2})/);
-    if (!m) continue;
-    var linkTime = new Date(parseInt(m[1], 10), parseInt(m[2], 10) - 1, parseInt(m[3], 10)).getTime();
-    if (now - linkTime > tenDays) continue;
+    var title = links[i].getAttribute('title') || '';
+    var newest = 0;
+    // 同一段正则跑两次：分别匹配「添加时间：」与「最后更新时间：」后面的日期
+    var re = /(?:添加时间|最后更新时间)：(\d{4})-(\d{2})-(\d{2})/g;
+    var m;
+    while ((m = re.exec(title)) !== null) {
+      var t = new Date(parseInt(m[1], 10), parseInt(m[2], 10) - 1, parseInt(m[3], 10)).getTime();
+      if (t > newest) newest = t;
+    }
+    if (!newest || now - newest > tenDays) continue;
     // 染色链接
     links[i].style.cssText += ';color:#07C160 !important;';
     // 向上遍历祖先文件夹，染色文件夹标题 <a>
