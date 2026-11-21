@@ -158,7 +158,7 @@ function getPromoData() {
     {
       "title": "储物间全新福利已部署上线！",
       "content": "外卖、堂食、鲜果、饮品、打车、机票、代驾、酒店、民宿、买药、电影、快递……你的每一笔消费都有机会省一点！",
-      "link": "./discount/",
+      "link": "./discount",
       "target": "_self",
       "img": "https://wework.qpic.cn/wwpic3az/741232_I4mFtmneQbK4fyd_1792168886/0"
     },

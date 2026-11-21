@@ -9,7 +9,9 @@
   /* ==================== 配置区（唯一数据源） ==================== */
   // 公告正文 2026-11-14 起不再烧进 index.html：运行时 fetch('notice.json') 异步加载
   // （构建时由 data/announcements.json 生成），加载完成前后布局一致，只是内容先空后有。
-  const SHENG_URL = './discount/';                    // 省钱页面地址
+  // ⚠️ 不带尾斜杠：EdgeOne 回源到 COS 时 `/discount/` 会 404（未配目录索引），`/discount` 才 200。
+  // 相对路径同时保证任何镜像域名都指向自己的 discount 页，不会跨域跳走。
+  const SHENG_URL = './discount';                     // 省钱页面地址
   const FEISHU_FORM = 'https://my.feishu.cn/share/base/form/shrcnQEQph33whiOEjpqKiXMdeh';
   const BTN_TOP = '18%';                              // 公告按钮 top
   const BTN_GAP = '12px';                             // 四个侧边栏按钮之间的统一间距
