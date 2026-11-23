@@ -156,18 +156,11 @@ function getPromoData() {
       "img": "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0"
     },
     {
-      "title": "储物间全新福利已部署上线！",
-      "content": "外卖、堂食、鲜果、饮品、打车、机票、代驾、酒店、民宿、买药、电影、快递……你的每一笔消费都有机会省一点！",
-      "link": "./discount",
+      "title": "大家帮忙点一下链接「跳转微信」涨涨新文章阅读量吧",
+      "content": "文章主要教大家怎么白薅 10 元天猫卡＋18 元咖啡免单卡👇",
+      "link": "https://ad.zamae.cn/l/dPOq32fGmDlO3oH",
       "target": "_self",
-      "img": "https://wework.qpic.cn/wwpic3az/741232_I4mFtmneQbK4fyd_1792168886/0"
-    },
-    {
-      "title": "阿虚最新力作「虚空搜索」浏览器扩展正式上线！",
-      "content": "可实现 AI 批量提问、对回答进一步总结、批量上传附件，还有影视、音乐、电子书等等资源一键搜索",
-      "link": "https://xusearch.com/",
-      "target": "_self",
-      "img": "https://img30.360buyimg.com/imgzone/jfs/t20271127/545896/20/9266/31978/6adb72c2Faaab3ca2/09362d42d4b3b516.webp"
+      "img": "https://img30.360buyimg.com/imgzone/jfs/t20271228/583203/18/13584/649233/00512c01F29af6442/0936168168697a86.gif"
     }
   ];
   /* PROMO_DATA:END */
