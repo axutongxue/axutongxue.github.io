@@ -151,7 +151,7 @@ function getPromoData() {
     {
       "title": "GPT镜像原生官网，国内直连",
       "content": "世界顶级AI四合一镜像站点，原生官网使用，国内直连。免费、官网一致、稳定（GPT、Claude、Gemni、Grok）",
-      "link": "https://oai.oooai.cc",
+      "link": "https://www.chatwo.cn/list/#/register?inviter=0EASGS",
       "target": "_self",
       "img": "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0"
     },
@@ -463,7 +463,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
           "img": "https://wework.qpic.cn/wwpic3az/985913_dVvSjdMVQR-QELc_1782721368/0",
-          "link": "https://oai.oooai.cc/list/#/register?inviter=0EASGS"
+          "link": "https://www.chatwo.cn/list/#/register?inviter=0EASGS"
         }
       ]
   /* PROMO_SLIDES:END */
