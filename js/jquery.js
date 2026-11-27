@@ -156,11 +156,11 @@ function getPromoData() {
       "img": "https://wework.qpic.cn/wwpic3az/592908_aizpWJyXReKoJLG_1767945702/0"
     },
     {
-      "title": "大家帮忙点一下链接「跳转微信」涨涨新文章阅读量吧",
-      "content": "文章主要教大家怎么白薅 10 元天猫卡＋18 元咖啡免单卡👇",
-      "link": "https://ad.zamae.cn/l/dPOq32fGmDlO3oH",
+      "title": "这些免费网页AI翻译扩展，吊打2000W用户的沉浸式翻译！",
+      "content": "辛苦写的文章被限流了，根本没啥人刷到。感兴趣的粉丝点一下查看「跳转微信」看看文章吧，感谢🙏",
+      "link": "https://ad.zamae.cn/l/DpopLFsLbaLo3O3",
       "target": "_self",
-      "img": "https://img30.360buyimg.com/imgzone/jfs/t20271228/583203/18/13584/649233/00512c01F29af6442/0936168168697a86.gif"
+      "img": "https://img30.360buyimg.com/imgzone/jfs/t20280101/591005/35/7044/49126/6b08f79aF6fa784e4/093617f17f07891b.png"
     }
   ];
   /* PROMO_DATA:END */
